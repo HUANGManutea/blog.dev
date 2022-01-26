@@ -1,0 +1,42 @@
+baseURL: 'https://huangmanutea.github.io/blog.dev/'
+languageCode: 'fr-FR'
+title: 'HUANG Manutea'
+theme: 'PaperMod'
+paginate: 5
+
+minify:
+    disableXML: true
+    
+outputs:
+    home:
+        - HTML
+        - RSS
+        - JSON
+        
+params:
+    header_image: "static/Papeete.JPG"
+    title: "Yet Another Tahitian Blog"
+    description: "Dev, software engineering, Tahiti, and so on"
+    author: HUANG Manutea
+    ShowShareButtons: true
+    ShowReadingTime: true
+    ShowPostNavLinks: true
+    ShowBreadCrumbs: true
+    ShowCodeCopyButtons: true
+    ShowToc: true
+    images: ["Papeete.JPG"]
+    homeInfoParams:
+        Title: "Yet Another Tahitian Blog"
+        Content: >
+        Dev, software engineering, Tahiti, and so on
+        
+socialIcons:
+    - name: github
+      url: "https://github.com/HUANGManutea"
+    - name: twitter
+      url: "https://twitter.com/HManutea"
+    
+markup:
+    goldmark:
+        renderer:
+            unsafe: true
