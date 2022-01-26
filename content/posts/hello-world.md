@@ -8,6 +8,6 @@ Ia'orana !
 
 Ce post marque le début du blog hébergé sur Github.
 
-Vous trouverez ici surtout des articles de développement et des POCs.
+Vous trouverez ici de temps en temps des articles de développement et des POCs.
 
 Bonne lecture !
