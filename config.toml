@@ -1,0 +1,12 @@
+baseURL = 'http://HUANGManutea.github.io/'
+languageCode = 'fr-FR'
+title = 'HUANG Manutea'
+theme = 'PaperMod'
+paginate = 50
+
+[params]
+  header_image = "static/Papeete.JPG"
+  title = "Yet Another Tahitian Blog"
+  slogan = "Dev, software engineering, and so on"
+  SEOTitle = "HUANG Manutea Blog"
+  keyword = "HUANG, Manutea"
