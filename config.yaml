@@ -28,7 +28,7 @@ params:
     homeInfoParams:
         Title: "Yet Another Tahitian Blog"
         Content: >
-        Dev, software engineering, Tahiti, and so on
+            Dev, software engineering, Tahiti, and so on.
         
 socialIcons:
     - name: github
