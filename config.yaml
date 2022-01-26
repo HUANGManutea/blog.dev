@@ -30,11 +30,11 @@ params:
         Content: >
             Dev, software engineering, Tahiti, and so on.
         
-socialIcons:
-    - name: github
-      url: "https://github.com/HUANGManutea"
-    - name: twitter
-      url: "https://twitter.com/HManutea"
+    socialIcons:
+        - name: github
+        url: "https://github.com/HUANGManutea"
+        - name: twitter
+        url: "https://twitter.com/HManutea"
     
 markup:
     goldmark:
