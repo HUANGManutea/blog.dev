@@ -1,7 +1,7 @@
 ---
 title: "Hello World"
 date: 2022-01-25T23:29:43-10:00
-draft: true
+draft: false
 ---
 
 Ia'orana !
