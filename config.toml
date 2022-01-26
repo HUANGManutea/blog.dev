@@ -1,4 +1,4 @@
-baseURL = 'https://huangmanutea.github.io/blog/'
+baseURL = 'https://huangmanutea.github.io/blog.dev/'
 languageCode = 'fr-FR'
 title = 'HUANG Manutea'
 theme = 'PaperMod'
