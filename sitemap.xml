@@ -2,14 +2,19 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>https://huangmanutea.github.io/blog.dev/</loc>
+    <lastmod>2022-05-07T19:18:54-10:00</lastmod>
+  </url><url>
+    <loc>https://huangmanutea.github.io/blog.dev/posts/intro-moyens-paiement/</loc>
+    <lastmod>2022-05-07T19:18:54-10:00</lastmod>
+  </url><url>
+    <loc>https://huangmanutea.github.io/blog.dev/posts/</loc>
+    <lastmod>2022-05-07T19:18:54-10:00</lastmod>
+  </url><url>
     <loc>https://huangmanutea.github.io/blog.dev/posts/hello-world/</loc>
     <lastmod>2022-01-25T23:29:43-10:00</lastmod>
   </url><url>
-    <loc>https://huangmanutea.github.io/blog.dev/</loc>
-    <lastmod>2022-01-25T23:29:43-10:00</lastmod>
-  </url><url>
-    <loc>https://huangmanutea.github.io/blog.dev/posts/</loc>
-    <lastmod>2022-01-25T23:29:43-10:00</lastmod>
+    <loc>https://huangmanutea.github.io/blog.dev/posts/payzen_e-shopping_formulaire/</loc>
   </url><url>
     <loc>https://huangmanutea.github.io/blog.dev/categories/</loc>
   </url><url>
