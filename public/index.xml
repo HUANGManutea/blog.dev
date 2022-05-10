@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>HUANG Manutea</title>
+    <link>https://huangmanutea.github.io/blog.dev/</link>
+    <description>Recent content on HUANG Manutea</description>
+    <image>
+      <url>https://huangmanutea.github.io/blog.dev/Papeete.JPG</url>
+      <link>https://huangmanutea.github.io/blog.dev/Papeete.JPG</link>
+    </image>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>fr-FR</language>
+    <lastBuildDate>Sat, 07 May 2022 21:26:05 -1000</lastBuildDate><atom:link href="https://huangmanutea.github.io/blog.dev/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Creation E Shopping</title>
+      <link>https://huangmanutea.github.io/blog.dev/posts/creation-e-shopping/</link>
+      <pubDate>Sat, 07 May 2022 21:26:05 -1000</pubDate>
+      
+      <guid>https://huangmanutea.github.io/blog.dev/posts/creation-e-shopping/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Paiement en ligne en Polynésie Française</title>
+      <link>https://huangmanutea.github.io/blog.dev/posts/paiement-en-ligne-pf/</link>
+      <pubDate>Sat, 07 May 2022 19:18:54 -1000</pubDate>
+      
+      <guid>https://huangmanutea.github.io/blog.dev/posts/paiement-en-ligne-pf/</guid>
+      <description>Contexte Je souhaite que la Polynésie Française se modernise technologiquement parlant, les moyens de paiement sont un des axes d&amp;rsquo;amélioration où je peux aider. Dans ce but, je pense créer une série d&amp;rsquo;articles et de tutoriels sur les moyens de paiement, à commencer par cet article concernant le paiement en ligne en Polynésie Française.
+Disclaimer: Au moment où j&amp;rsquo;écris cet article, je travaille à OSB, mes articles seront orientés vers les solutions d&amp;rsquo;OSB car ce sont celles avec lesquelles je suis le plus familier.</description>
+    </item>
+    
+    <item>
+      <title>Hello World</title>
+      <link>https://huangmanutea.github.io/blog.dev/posts/hello-world/</link>
+      <pubDate>Tue, 25 Jan 2022 23:29:43 -1000</pubDate>
+      
+      <guid>https://huangmanutea.github.io/blog.dev/posts/hello-world/</guid>
+      <description>Ia&amp;rsquo;orana, bonjour !
+Ce post marque le début du blog hébergé sur Github.
+Vous trouverez ici de temps en temps des articles de développement et des POCs.
+Bonne lecture !</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Tags on HUANG Manutea</title>
+    <link>https://huangmanutea.github.io/blog.dev/tags/</link>
+    <description>Recent content in Tags on HUANG Manutea</description>
+    <image>
+      <url>https://huangmanutea.github.io/blog.dev/Papeete.JPG</url>
+      <link>https://huangmanutea.github.io/blog.dev/Papeete.JPG</link>
+    </image>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>fr-FR</language><atom:link href="https://huangmanutea.github.io/blog.dev/tags/index.xml" rel="self" type="application/rss+xml" />
+  </channel>
+</rss>
