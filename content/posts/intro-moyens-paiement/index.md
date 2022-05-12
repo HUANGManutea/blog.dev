@@ -43,7 +43,7 @@ Pour les cartes privatives, ce sont les banques de la place qui imposent leur r�
 
 Ces réglementations sont suivies par les banques centrales des pays, par exemple l'IEOM en Polynésie Française. 
 
-J'ai inclus la carte Tiare de la Banque de Tahiti dans les cartes privatives car elle a les mêmes limitations géographiques que celle-ci, mais il s'agit bien d'une CB, donc elle est soumise aux réglementations CB.
+J'ai inclus la carte Tiare de la Banque de Tahiti dans les cartes privatives car elle a les mêmes limitations géographiques que celles-ci, mais il s'agit bien d'une CB, donc elle est soumise aux réglementations CB.
 
 Les cartes Socredo privatives sont maintenant co-brandées UPI, mais il y a bien 2 applications dans la carte, sur le territoire, c'est l'application privative qui est utilisée, à l'international, c'est l'application UPI qui est utilisée.
 
