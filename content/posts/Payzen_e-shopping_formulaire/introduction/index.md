@@ -83,7 +83,7 @@ mkdir tutorial-payzen-e-shopping
 cd tutorial-payzen-e-shopping
 ```
 
-## Initialisation du Backend
+## Initialisation du backend
 
 Initialiser le projet backend avec npm
 
