@@ -6,7 +6,9 @@ paginate: 5
 
 minify:
     disableXML: true
-    
+
+googleAnalytics: UA-228910148-1
+
 outputs:
     home:
         - HTML
@@ -20,6 +22,7 @@ params:
     keywords: [Tahiti, Software Development, Payzen, Payment Systems, Web]
     header_image: "static/Papeete.JPG"
     author: HUANG Manutea
+    defaultTheme: dark
     ShowShareButtons: true
     ShowReadingTime: true
     ShowPostNavLinks: true
@@ -37,7 +40,16 @@ params:
           url: "https://github.com/HUANGManutea"
         - name: twitter
           url: "https://twitter.com/HManutea"
-    
+menu:
+    main:
+        - identifier: categories
+          name: Categories
+          url: /categories/
+          weight: 20
+        - identifier: tags
+          name: Tags
+          url: /tags/
+          weight: 20
 markup:
     goldmark:
         renderer:
