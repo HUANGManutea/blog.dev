@@ -10,7 +10,20 @@
     </image>
     <generator>Hugo -- gohugo.io</generator>
     <language>fr-FR</language>
-    <lastBuildDate>Sat, 07 May 2022 19:18:54 -1000</lastBuildDate><atom:link href="https://huangmanutea.github.io/blog.dev/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 07 May 2022 21:26:05 -1000</lastBuildDate><atom:link href="https://huangmanutea.github.io/blog.dev/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Payzen e-shopping formulaire - Introduction</title>
+      <link>https://huangmanutea.github.io/blog.dev/posts/payzen_e-shopping_formulaire/introduction/</link>
+      <pubDate>Sat, 07 May 2022 21:26:05 -1000</pubDate>
+      
+      <guid>https://huangmanutea.github.io/blog.dev/posts/payzen_e-shopping_formulaire/introduction/</guid>
+      <description>Introduction Dans cette série d&amp;rsquo;articles nous verrons ensemble comment implémenter Payzen By OSB dans une application web fullstack d&amp;rsquo;e-shopping basique.
+Une liste de produits, accompagnés de leur prix, sera affichée,. L&amp;rsquo;utilisateur pourra acheter un produit.
+Afin d&amp;rsquo;avoir une meilleure idée de l&amp;rsquo;architecture finale de l&amp;rsquo;application, nous allons tout d&amp;rsquo;abord expliquer Payzen By OSB, que j&amp;rsquo;appellerai Payzen pour aller plus vite.
+Note:
+Je ne vais pas créer de bases de données pour les produits et l&amp;rsquo;inventaire, ni pour la gestion des clients.</description>
+    </item>
+    
     <item>
       <title>Introduction aux moyens de paiement en Polynésie Française</title>
       <link>https://huangmanutea.github.io/blog.dev/posts/intro-moyens-paiement/</link>
