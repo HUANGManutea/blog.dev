@@ -2,6 +2,8 @@
 title: "Payzen e-shopping formulaire - Introduction"
 date: 2022-05-07T21:26:05-10:00
 draft: false
+tags: [Payzen, Web]
+categories: [Tutoriel]
 ---
 
 # Introduction

@@ -2,6 +2,8 @@
 title: "Introduction aux moyens de paiement en Polynésie Française"
 date: 2022-05-07T19:18:54-10:00
 draft: false
+tags: [Monétique, Payzen]
+categories: [Informatif]
 ---
 
 # Introduction
