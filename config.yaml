@@ -14,9 +14,11 @@ outputs:
         - JSON
         
 params:
-    header_image: "static/Papeete.JPG"
+    env: production
     title: "Yet Another Tahitian Blog"
     description: "Dev, software engineering, Tahiti, and so on"
+    keywords: [Tahiti, Software Development, Payzen, Payment Systems, Web]
+    header_image: "static/Papeete.JPG"
     author: HUANG Manutea
     ShowShareButtons: true
     ShowReadingTime: true
