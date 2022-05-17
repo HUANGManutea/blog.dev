@@ -45,15 +45,17 @@ Pour les cartes privatives, ce sont les banques de la place qui imposent leur r�
 
 Ces réglementations sont suivies par les banques centrales des pays, par exemple l'IEOM en Polynésie Française. 
 
-J'ai inclus la carte Tiare de la Banque de Tahiti dans les cartes privatives car elle a les mêmes limitations géographiques que celles-ci, mais il s'agit bien d'une CB, donc elle est soumise aux réglementations CB.
+J'ai inclus la carte Tiare de la Banque de Tahiti dans les cartes privatives car elle a les mêmes limitations géographiques que celles-ci[1], mais il s'agit bien d'une CB, donc elle est soumise aux réglementations CB.
 
 Les cartes Socredo privatives sont maintenant co-brandées UPI, mais il y a bien 2 applications dans la carte, sur le territoire, c'est l'application privative qui est utilisée, à l'international, c'est l'application UPI qui est utilisée.
+
+[1]: update(16/05/2022): La carte Tiare est une CB nationale, elle fonctionne également en France, mais pas à l'étranger.
 
 # Fonctionnement des transactions
 
 Le schéma à 4 coins est l'un des schémas de référence de la monétique. Il explique les entités qui entrent en jeu dans une transaction.
 
-![Schéma à 4 coins](schema_4_coins.png "Schéma à 4 coins")
+![Schéma à 4 coins](schema_4_coins.png#center "Schéma à 4 coins")
 
 La banque émettrice émet la carte et la fournit au porteur.
 
