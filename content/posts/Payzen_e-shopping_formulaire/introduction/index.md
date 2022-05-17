@@ -6,11 +6,11 @@ draft: true
 
 # Introduction
 
-Dans cette série d'articles nous verrons ensemble comment implémenter Payzen By OSB dans une application web fullstack de e-shopping basique.
+Dans cette série d'articles nous verrons ensemble comment implémenter Payzen By OSB dans une application web fullstack d'e-shopping basique.
 
-Une liste de produits sera affichée, accompagnés de leur prix. L'utilisateur pourra acheter un produit.
+Une liste de produits, accompagnés de leur prix, sera affichée,. L'utilisateur pourra acheter un produit.
 
-Afin d'avoir une meilleure idée de l'architecture finale de l'application, nous allons tout d'abord expliquer Payzen.
+Afin d'avoir une meilleure idée de l'architecture finale de l'application, nous allons tout d'abord expliquer Payzen By OSB, que j'appellerai Payzen pour aller plus vite.
 
 Note:
 
@@ -44,7 +44,7 @@ La documentation de Payzen nous informe que nous avons besoin de la clé d'API, 
 
 Nous allons forcément faire un frontend, mais nous ne voulons **surtout pas** stocker la clé d'API dans le frontend. Pour cela nous aurons besoin d'un backend que nous appellerons pour calculer la signature à chaque création de formulaire.
 
-Notre architecure finale devrait ressembler à ceci:
+Notre architecture finale devrait ressembler à ceci:
 
 ![Architecture](payzen-e-shopping-architecture.png#center "Architecture")
 
@@ -55,19 +55,19 @@ Et le diagramme de séquence:
 La cinématique étant la suivante:
 - l'utilisateur clique sur un bouton pour payer,
 - le front envoie les données de paiement au back pour récupérer le calcul de la signature du formulaire,
-- une fois la signature reçue, le front envoie les données de paiement + la signature à secure.osb.pf qui est la plateforme de paiement de Payzen By OSB,
+- une fois la signature reçue, le front envoie les données de paiement + la signature à secure.osb.pf qui est la plateforme de paiement de Payzen,
 - la plateforme de paiement vérifie la signature, et retourne le formulaire,
 - l'utilisateur pourra ensuite renseigner ses informations de carte dans le formulaire et valider,
 - enfin, la plateforme de paiement retournera un résultat OK ou KO, qui redirigera l'utilisateur sur la page /success ou /fail du front.
 
-En terme de stack technologique, nous allons utiliser:
+Concernant la stack technologique, nous allons utiliser:
 
 - [Node.js](https://nodejs.org/en/) pour le backend,
 - [Next.js](https://nextjs.org/) pour le frontend, avec la librairie [PayzenJS](https://www.npmjs.com/package/PayzenJS) qui permettra d'intégrer facilement l'iFrame dans notre frontend.
 
 Notes:
 
-Avec Next.js il est tout à fait possible de placer le calcul de la signature dans *pages/api*, mais je péfère créer un backend dédié car certains parmi vous ont peut-être un microservice dédié au paiement.
+Avec Next.js il est tout à fait possible de placer le calcul de la signature dans *pages/api*, mais je préfère créer un backend dédié car certains parmi vous ont peut-être un microservice dédié au paiement.
 
 # Structure des articles
 
@@ -113,7 +113,7 @@ Rajouter les dépendances utiles dans le package.json, ainsi que le script start
   "express": "4.17.2",    # serveur
   "cors": "2.8.5",        # middleware CORS
   "crypto-js": "4.1.1",   # librairie de cryptographie
-  "dotenv": "16.0.0"      # lecture du fichier .env qui contiendra notre clé d'API
+  "dotenv": "16.0.0"      # librairie de lecture du fichier .env qui contiendra notre clé d'API
 },
 ```
 
@@ -175,10 +175,10 @@ En utilisant un navigateur, allez à [http://localhost:3000](http://localhost:30
 
 # Conclusion
 
-Nous avons parcouru la documentation de Payzen By OSB. Cette documentation nous a indiqué comment récupérer les informations importantes d'identifiant boutique et de clé d'API.
+Nous avons parcouru la documentation de Payzen. Cette documentation nous a indiqué comment récupérer les informations importantes d'identifiant boutique et de clé d'API.
 
 Elle nous a également informé que pour générer un formulaire, la plateforme de paiement a besoin d'une signature permettant de signer la requête de création de formulaire.
 
 De ce fait, nous avons conçu une architecture backend/frontend et nous les avons initialisé.
 
-Par la suite, nous allons implémenter les fonctionnalités nécessaires à notre application web de e-shopping.
+Par la suite, nous allons implémenter les fonctionnalités nécessaires à notre application web d'e-shopping.
