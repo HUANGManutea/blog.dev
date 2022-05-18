@@ -10,11 +10,29 @@
     </image>
     <generator>Hugo -- gohugo.io</generator>
     <language>fr-FR</language>
-    <lastBuildDate>Sat, 07 May 2022 21:26:05 -1000</lastBuildDate><atom:link href="https://huangmanutea.github.io/blog.dev/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 16 May 2022 21:49:19 -1000</lastBuildDate><atom:link href="https://huangmanutea.github.io/blog.dev/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Next.js</title>
+      <link>https://huangmanutea.github.io/blog.dev/tags/next.js/</link>
+      <pubDate>Mon, 16 May 2022 21:49:19 -1000</pubDate>
+      
+      <guid>https://huangmanutea.github.io/blog.dev/tags/next.js/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Node.js</title>
+      <link>https://huangmanutea.github.io/blog.dev/tags/node.js/</link>
+      <pubDate>Mon, 16 May 2022 21:49:19 -1000</pubDate>
+      
+      <guid>https://huangmanutea.github.io/blog.dev/tags/node.js/</guid>
+      <description></description>
+    </item>
+    
     <item>
       <title>Payzen</title>
       <link>https://huangmanutea.github.io/blog.dev/tags/payzen/</link>
-      <pubDate>Sat, 07 May 2022 21:26:05 -1000</pubDate>
+      <pubDate>Mon, 16 May 2022 21:49:19 -1000</pubDate>
       
       <guid>https://huangmanutea.github.io/blog.dev/tags/payzen/</guid>
       <description></description>
@@ -23,7 +41,7 @@
     <item>
       <title>Web</title>
       <link>https://huangmanutea.github.io/blog.dev/tags/web/</link>
-      <pubDate>Sat, 07 May 2022 21:26:05 -1000</pubDate>
+      <pubDate>Mon, 16 May 2022 21:49:19 -1000</pubDate>
       
       <guid>https://huangmanutea.github.io/blog.dev/tags/web/</guid>
       <description></description>

@@ -10,7 +10,18 @@
     </image>
     <generator>Hugo -- gohugo.io</generator>
     <language>fr-FR</language>
-    <lastBuildDate>Sat, 07 May 2022 21:26:05 -1000</lastBuildDate><atom:link href="https://huangmanutea.github.io/blog.dev/categories/tutoriel/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 16 May 2022 21:49:19 -1000</lastBuildDate><atom:link href="https://huangmanutea.github.io/blog.dev/categories/tutoriel/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Payzen e-shopping formulaire - Inventaire</title>
+      <link>https://huangmanutea.github.io/blog.dev/posts/payzen_e-shopping_formulaire/inventaire/</link>
+      <pubDate>Mon, 16 May 2022 21:49:19 -1000</pubDate>
+      
+      <guid>https://huangmanutea.github.io/blog.dev/posts/payzen_e-shopping_formulaire/inventaire/</guid>
+      <description>Cet article fait partie d&amp;rsquo;une suite de tutoriels d&amp;rsquo;intégration Payzen dans une application web d&amp;rsquo;e-shopping. Vous trouverez le précédent article ici.
+Introduction L&amp;rsquo;une des composantes principales d&amp;rsquo;une application de e-shopping est d&amp;rsquo;avoir une base de données de produits, chaque article possédant différentes propriétés, comme le prix à l&amp;rsquo;unité par exemple.
+Afin de nous focaliser sur le paiement, nous n&amp;rsquo;allons pas créer de base de données, nous n&amp;rsquo;allons pas implémenter une API, ni faire d&amp;rsquo;appel d&amp;rsquo;API.</description>
+    </item>
+    
     <item>
       <title>Payzen e-shopping formulaire - Introduction</title>
       <link>https://huangmanutea.github.io/blog.dev/posts/payzen_e-shopping_formulaire/introduction/</link>

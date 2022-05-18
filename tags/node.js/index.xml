@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
-    <title>HUANG Manutea</title>
-    <link>https://huangmanutea.github.io/blog.dev/posts/payzen_e-shopping_formulaire/</link>
-    <description>Recent content on HUANG Manutea</description>
+    <title>Node.js on HUANG Manutea</title>
+    <link>https://huangmanutea.github.io/blog.dev/tags/node.js/</link>
+    <description>Recent content in Node.js on HUANG Manutea</description>
     <image>
       <url>https://huangmanutea.github.io/blog.dev/Papeete.JPG</url>
       <link>https://huangmanutea.github.io/blog.dev/Papeete.JPG</link>
     </image>
     <generator>Hugo -- gohugo.io</generator>
     <language>fr-FR</language>
-    <lastBuildDate>Mon, 16 May 2022 21:49:19 -1000</lastBuildDate><atom:link href="https://huangmanutea.github.io/blog.dev/posts/payzen_e-shopping_formulaire/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 16 May 2022 21:49:19 -1000</lastBuildDate><atom:link href="https://huangmanutea.github.io/blog.dev/tags/node.js/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Payzen e-shopping formulaire - Inventaire</title>
       <link>https://huangmanutea.github.io/blog.dev/posts/payzen_e-shopping_formulaire/inventaire/</link>
