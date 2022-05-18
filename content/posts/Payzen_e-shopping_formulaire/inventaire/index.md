@@ -9,11 +9,13 @@ Cet article fait partie d'une suite de tutoriels d'intégration Payzen dans une 
 
 # Introduction
 
-L'une des composantes principales d'une application de e-shopping est d'avoir une base de données de produits, chaque article possédant différentes propriétés, comme le prix à l'unité par exemple.
+L'une des composantes principales d'une application de e-shopping est d'avoir une base de données de produits.
+
+Chaque produit possède différentes propriétés, comme le prix à l'unité et le nom du produit.
 
 Afin de nous focaliser sur le paiement, nous n'allons pas créer de base de données, nous n'allons pas implémenter une API, ni faire d'appel d'API.
 
-Nous allons uniquement instancier une liste de produits en guise d'inventaire.
+Nous allons uniquement instancier une liste d'objets *produits* en guise d'inventaire.
 
 
 # User Story
@@ -137,7 +139,7 @@ export default function Item({item}) {
 }
 ```
 
-Dans le but de ressembler à ça:
+Il devrait ressembler à ça:
 
 ![Item](item.png#center "Item")
 
