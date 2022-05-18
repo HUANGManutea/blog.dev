@@ -18,7 +18,8 @@
       
       <guid>https://huangmanutea.github.io/blog.dev/posts/payzen_e-shopping_formulaire/inventaire/</guid>
       <description>Cet article fait partie d&amp;rsquo;une suite de tutoriels d&amp;rsquo;intégration Payzen dans une application web d&amp;rsquo;e-shopping. Vous trouverez le précédent article ici.
-Introduction L&amp;rsquo;une des composantes principales d&amp;rsquo;une application de e-shopping est d&amp;rsquo;avoir une base de données de produits, chaque article possédant différentes propriétés, comme le prix à l&amp;rsquo;unité par exemple.
+Introduction L&amp;rsquo;une des composantes principales d&amp;rsquo;une application de e-shopping est d&amp;rsquo;avoir une base de données de produits.
+Chaque produit possède différentes propriétés, comme le prix à l&amp;rsquo;unité et le nom du produit.
 Afin de nous focaliser sur le paiement, nous n&amp;rsquo;allons pas créer de base de données, nous n&amp;rsquo;allons pas implémenter une API, ni faire d&amp;rsquo;appel d&amp;rsquo;API.</description>
     </item>
     
