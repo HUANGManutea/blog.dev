@@ -228,3 +228,8 @@ Elle nous a également informé que pour générer un formulaire, la plateforme 
 De ce fait, nous avons conçu une architecture backend/frontend et nous les avons initialisé.
 
 Par la suite, nous allons implémenter les fonctionnalités nécessaires à notre application web d'e-shopping.
+
+La liste des articles tutoriels:
+
+- [Payzen e-shopping formulaire - Inventaire](https://huangmanutea.github.io/blog.dev/posts/payzen_e-shopping_formulaire/inventaire/)
+- TODO

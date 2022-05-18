@@ -5,6 +5,7 @@ draft: false
 tags: [Payzen, Web, Node.js, Next.js]
 categories: [Tutoriel]
 ---
+Cet article fait partie d'une suite de tutoriels d'intégration Payzen dans une application web d'e-shopping. Vous trouverez le précédent article [ici](https://huangmanutea.github.io/blog.dev/posts/payzen_e-shopping_formulaire/introduction/).
 
 # Introduction
 
