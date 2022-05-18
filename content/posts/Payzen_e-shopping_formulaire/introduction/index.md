@@ -2,7 +2,7 @@
 title: "Payzen e-shopping formulaire - Introduction"
 date: 2022-05-07T21:26:05-10:00
 draft: false
-tags: [Payzen, Web]
+tags: [Payzen, Web, Node.js, Next.js]
 categories: [Tutoriel]
 ---
 
@@ -166,10 +166,54 @@ cd ..
 npx create-next-app frontend --use-npm --example "https://github.com/vercel/next-learn/tree/master/basics/learn-starter"
 ```
 
-Lancer le front en mode développement
+Pour styliser l'affichage, nous allons utiliser [TailwindCSS](https://tailwindcss.com/docs/guides/nextjs)
 
 ```bash
 cd frontend
+npm install -D tailwindcss postcss autoprefixer
+npx tailwindcss init -p
+```
+
+Ajouter nos composants au path de tailwind
+
+```javascript
+// tailwind.config.js
+module.exports = {
+  content: [
+    "./pages/**/*.{js,ts,jsx,tsx}",
+    "./components/**/*.{js,ts,jsx,tsx}",
+  ],
+  theme: {
+    extend: {},
+  },
+  plugins: [],
+}
+```
+
+Créer un fichier styles/global.css
+
+```css
+/* styles/global.css */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+```
+
+Créer un fichier pages/_app.js
+
+```javascript
+// pages/_app.js
+import '../styles/global.css';
+
+export default function MyApp({ Component, pageProps }) {
+  return <Component {...pageProps} />
+}
+```
+
+
+Lancer le front en mode développement
+
+```bash
 npm run dev
 ```
 
