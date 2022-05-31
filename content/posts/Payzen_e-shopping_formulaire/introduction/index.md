@@ -104,18 +104,15 @@ npm init
 >license: (ISC) MIT
 ```
 
-Rajouter les dépendances utiles dans le package.json, ainsi que le script start:
+Rajouter la dépendance *express* dans le package.json, ainsi que le script start
 
-```bash
+```json
 "scripts": {
   ...,
   "start": "node main.js"
 },
 "dependencies": {
-  "express": "4.17.2",    # serveur
-  "cors": "2.8.5",        # middleware CORS
-  "crypto-js": "4.1.1",   # librairie de cryptographie
-  "dotenv": "16.0.0"      # librairie de lecture du fichier .env qui contiendra notre clé d'API
+  "express": "4.17.2",
 },
 ```
 
@@ -154,6 +151,8 @@ Dans un autre terminal, lancer curl
 curl -X POST http://localhost:3001/sign
 >hello world!
 ```
+
+>Update (30/05/2022): un ami m'a dit que curl -X POST n'existe pas en Powershell, vous pouvez également utiliser Postman ou Insomnia si vous voulez.
 
 ## Initialisation du frontend
 

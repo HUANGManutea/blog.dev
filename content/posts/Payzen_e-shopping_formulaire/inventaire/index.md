@@ -189,7 +189,7 @@ export async function getServerSideProps() {
     ]
   }
 
-  // Pass data to the page via props
+  // Envoi des données à la page via props
   return { props: { data } }
 }
 

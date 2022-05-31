@@ -10,7 +10,7 @@ categories: [Informatif]
 
 Je souhaite que la Polynésie Française se modernise, les moyens de paiement sont un des axes d'amélioration où je peux aider. Dans ce but, je pense créer une série d'articles et de tutoriels sur les moyens de paiement, et plus particulièrement sur Payzen By OSB, à commencer par cet article.
 
-Update 12/05/2022: suite à quelques feedback, je me rend compte que cet article est à destination des développeurs de site de e-shopping, des commerçants, de mes confrères monéticiens. Cet article sera complexe à lire si vous n'avez jamais travaillé avec un TPE, avec une plateforme de paiement, avec des cartes bancaires.
+>Update (12/05/2022): suite à quelques feedback, je me rend compte que cet article est à destination des développeurs de site de e-shopping, des commerçants, de mes confrères monéticiens. Cet article sera complexe à lire si vous n'avez jamais travaillé avec un TPE, avec une plateforme de paiement, avec des cartes bancaires.
 
 **Disclaimer**: Au moment où j'écris cet article, je travaille à l'Océanienne des Services Bancaires (OSB), mes articles seront orientés vers les solutions d'OSB car ce sont celles avec lesquelles je suis le plus familier. Ces articles ne sont pas sponsorisés par OSB, et j'encourage les gens à faire des tutoriels pour les solutions des autres fournisseurs de solutions de paiement.
 
@@ -51,7 +51,7 @@ J'ai inclus la carte Tiare de la Banque de Tahiti dans les cartes privatives car
 
 Les cartes Socredo privatives sont maintenant co-brandées UPI, mais il y a bien 2 applications dans la carte, sur le territoire, c'est l'application privative qui est utilisée, à l'international, c'est l'application UPI qui est utilisée.
 
-[1]: update(16/05/2022): La carte Tiare est une CB nationale, elle fonctionne également en France, mais pas à l'étranger.
+[1]: Update (16/05/2022): La carte Tiare est une CB nationale, elle fonctionne également en France, mais pas à l'étranger.
 
 # Fonctionnement des transactions
 
