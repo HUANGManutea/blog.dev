@@ -1,7 +1,7 @@
 ---
 title: "Payzen e-shopping formulaire - Paiement"
 date: 2022-05-21T22:31:25-10:00
-draft: true
+draft: false
 ---
 Cet article fait partie d'une suite de tutoriels d'intégration Payzen dans une application web d'e-shopping. Vous trouverez le précédent article [ici](https://huangmanutea.github.io/blog.dev/posts/payzen_e-shopping_formulaire/inventaire/).
 
@@ -18,19 +18,19 @@ Après voir créé l'inventaire, nous allons maintenant implémenter le paiement
 
 # Déroulement
 
-Pour faire ce paiement, nous allons utiliser la librairie [PayzenJS](https://www.npmjs.com/package/PayzenJS).
+Pour faire ce paiement, nous utilisons la librairie [PayzenJS](https://www.npmjs.com/package/PayzenJS).
 
 La documentation de cette librairie nous indique que nous devons signer notre requête de génération de formulaire via une requête POST vers un backend, ce qui coïncide avec la documentation Payzen de paiement comptant immédiat.
 
 ![signature](payzenjs_signature.png#center "signature")
 
-Nous allons donc tout d'abord créer un formulaire dans notre frontend, puis nous passerons les valeurs des inputs dans la propriété *orderData* de la librarie.
+Nous allons donc tout d'abord créer un formulaire dans notre frontend, puis nous passerons les valeurs des champs dans la propriété *orderData* de la librarie.
 
-Ensuite nous allons implémenter la génération de signature dans le backend, pour enfin renseigner l'url de l'endpoint dans la propriété *credentials* de la librairie.
+Ensuite nous implémenterons la génération de signature dans le backend, pour enfin renseigner l'url de l'endpoint dans la propriété *credentials* de la librairie.
 
-Nous allons également renseigner la propriété *target* comme étant égale à **secure.osb.pf**, afin d'utiliser la plateforme spécifique à OSB, car c'est celle-ci qui ***accepte les cartes privatives***.
+Nous renseignerons également la propriété *target* comme étant égale à **secure.osb.pf**, afin d'utiliser la plateforme spécifique à OSB, car c'est celle-ci qui ***accepte les cartes privatives***.
 
-Enfin, nous allons renseigner la propriété *canvas*, qui contiendra l'iframe contenant le formulaire de paiement final.
+Enfin, nous renseignerons la propriété *canvas*, qui contiendra l'iframe contenant le formulaire de paiement final.
 
 La librarie s'occupera de faire la requête POST vers le backend, de récupérer la signature, d'envoyer la requêté signée à la plateforme, et enfin d'afficher le formulaire dans l'iframe.
 
@@ -38,7 +38,7 @@ La librarie s'occupera de faire la requête POST vers le backend, de récupérer
 
 ## Item
 
-Dans un premier temps, nous allons modifier notre composant *Item* comme suit :
+Dans un premier temps, modifions notre composant *Item* comme suit :
 
 ```react
 // components/item.js
@@ -63,11 +63,12 @@ export default function Item({item, buy}) {
   )
 }
 ```
+
 Nous avons enlevé la classe *cursor-pointer* de la div principale, afin d'utiliser un bouton à la place (meilleur pour l'accessibilité web).
 
 Ensuite nous avons placé la fonction buy dans les props du composant afin que le parent ait le contrôle de la fonction à exécuter.
 
-Enfin, si vous voulez savoir comment est stylisé le bouton, le style se trouve dans mon fichier global.css :
+Enfin, si vous voulez savoir comment est stylisé le bouton, le style se trouve dans le fichier global.css :
 
 ```css
 /* styles/global.css */
@@ -94,9 +95,9 @@ Maintenant nous devons implémenter la fonction *buy* dans le parent, qui est le
 
 Nous ne voulons pas afficher l'iframe telle quelle dans la page, ce n'est pas très esthétique.
 
-À la place, nous allons afficher cette iframe dans un composant *Modal*, qui sera par défaut cachée, qui s'affichera au clic sur un bouton *Buy*, et qui pourra être fermée.
+À la place, nous voulons afficher cette iframe dans un composant *Modal*, qui sera par défaut cachée, qui s'affichera au clic sur un bouton *Buy*, et qui pourra être fermée.
 
-Afin de d'avoir un meilleur affichage de l'iframe dans la modale, nous allons utiliser la librarie *@tailwindcss/aspect-ratio* et plus particulièrement les classes *aspect-w-1* et *aspect-h-1*.
+Afin d'avoir un meilleur affichage de l'iframe dans la modale, nous allons utiliser la librarie *@tailwindcss/aspect-ratio* et plus particulièrement les classes *aspect-w-1* et *aspect-h-1*.
 
 ```json
 /* package.json */
@@ -138,6 +139,7 @@ export default function Modal({content, close}) {
   )
 }
 ```
+
 La prop *content* est un slot, c'est dans cette prop qu'on mettra l'iframe.
 
 La prop *close* est une fonction qui sera appelée lorsqu'on voudra fermer la modale sans poursuivre le paiement.
@@ -326,11 +328,11 @@ C'est tout pour notre frontend, passons maintenant au backend.
 
 # Backend
 
-Pour notre backend, nous allons d'abord stocker notre certificat dans un fichier *.env* afin de ne pas le mettre en dur dans le code (et de ne pas le mettre dans git), en utilisant la librarie *dotenv*.
+Pour notre backend, nous stockerons d'abord notre certificat dans un fichier *.env* afin de ne pas le mettre en dur dans le code (et de ne pas le mettre dans git), en utilisant la librarie *dotenv*.
 
-Nous allons faire des requêtes à partir d'un autre serveur (le frontend est sur le port 3000, et le backend sur le port 3001), et donc être confrontés à un problème de CORS, c'est pourquoi nous utiliserons le module *cors*.
+Nous ferons des requêtes à partir d'un autre serveur (le frontend est sur le port 3000, et le backend sur le port 3001), et donc être confrontés à un problème de CORS, c'est pourquoi nous utiliserons le module *cors*.
 
-De plus, la librarie PayzenJS va nous envoyer un formulaire sous forme d'objet JSON, pour pouvoir l'interpréter, nous utilisons *body-parser*.
+De plus, la librarie PayzenJS nous enverra un formulaire sous forme d'objet JSON, pour pouvoir l'interpréter, nous utilisons *body-parser*.
 
 Enfin, nous devrons hasher et signer les données de notre formulaire, nous utiliserons la librarie *crypto-js* pour cela.
 
@@ -362,7 +364,7 @@ touch .env
 
 ```bash
 # .env
-CERTIFICATE=1122334455667788
+CERTIFICATE=<secret>
 ```
 
 Et récupérez-le dans le serveur :
@@ -414,7 +416,7 @@ app.use(bodyParser.json());
 
 Avant de commencer à utiliser *crypto-js*, nous devons savoir quelles fonctions de cette librarie nous allons utiliser.
 
-[Cette documentation](https://secure.osb.pf/doc/fr-FR/form-payment/standard-payment/calculer-la-signature.html) nous indique que nous devons utiliser *hmacSHA256* et *Base64*.
+[Cette documentation](https://secure.osb.pf/doc/fr-FR/form-payment/standard-payment/calculer-la-signature.html) nous indique que nous devons utiliser ***hmacSHA256*** et ***Base64***.
 
 ![fonctions crypto](fonctions_crypto.png#center "fonctions crypto")
 
@@ -480,6 +482,45 @@ Nous sommes maintenant prêts à tester notre application.
 
 ![Home test](home_test.png#center "Home test")
 
-En cliquant sur le bouton *Buy* du premier *Item* nous avons :
+En cliquant sur le bouton *Buy* du premier *Item* nous voyons le formulaire de paiement s'afficher dans la modale.
 
-TODO
+![Formulaire de paiement](formulaire_paiement.png#center "Formulaire de paiement")
+
+Attention: les données de test sont uniquement possibles si vous avez bien spécifié la valeur ***TEST*** dans le paramètre ***vads_ctx_mode***.
+
+En cliquant sur une des cartes, par exemple "Banque Socredo Verte", nous voyons une liste de cartes de test. En cliquant sur l'une d'entre elle, le formulaire va automatiquement remplir les champs.
+
+
+![Formulaire - Carte Socredo Verte](formulaire_carte_socredo.png#center "Formulaire - carte Socredo Verte")
+
+Remarque : À côté de chaque carte se trouve un scénario associé, si vous voulez tester un paiement accepté, vous devez choisir la 1ère carte.
+
+Puis, en cliquant sur valider, vous verrez le formulaire pour le code reçu par SMS, aussi appelé OTP pour *One Time Password*.
+
+En mode TEST, vous pouvez juste recopier la valeur affichée, ou cliquer sur la valeur.
+
+![Formulaire - OTP](formulaire_OTP.png#center "Formulaire - OTP")
+
+Enfin, si vous avez bien choisi la carte associé au "paiement accepté", vous obtiendrez l'écran de commande validée.
+
+![Formulaire - Paiement validé](formulaire_paiement_valide.png#center "Formulaire - Paiement validé")
+
+Vous pouvez ensuite soit attendre la redirection automatique, soit cliquer sur "retourner à la boutique", pour aller sur la page /payment-result/success.
+
+![Page paiement validé](page_paiement_reussi.png#center "Page paiement validé")
+
+Nous voyons dans les DevTools que cette redirection est en fait une requête POST, avec les données suivantes.
+
+![Page paiement validé - Data](page_paiement_reussi_data.png#center "Page paiement validé - Data")
+
+# Conclusion
+
+Dans cet article, nous avons utilisé la librarie PayzenJS afin d'afficher le formulaire de paiement dans une iframe contenue dans une modale.
+
+Nous avons ainsi réussi à faire un paiement, et nous avons été redirigé vers la page de paiement réussi de notre application web.
+
+Mais le travail ne s'arrête pas ici, en effet, une fois que le paiement est effectué, validé ou non, il nous reste à exploiter les données de retour afin de déclencher la suite de la commande, ou d'avertir le client que sa commande n'est pas passée.
+
+De plus, nous devons valider qu'il s'agit bien de notre transaction, et non d'une requête forgée.
+
+Nous verrons cela dans le prochain article.

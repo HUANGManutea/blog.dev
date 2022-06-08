@@ -36,9 +36,9 @@ Pour préparer notre implémentation, nous devons récupérer notre **identifian
 
 Pour ma part, je vais utiliser ces informations de test:
 
->identifiant boutique: 12345678
+>identifiant boutique: 97409611 (boutique de test de l'OSB)
 >
->clé d'API: 1122334455667788
+>clé d'API: \<secret\>
 
 # Architecture
 
