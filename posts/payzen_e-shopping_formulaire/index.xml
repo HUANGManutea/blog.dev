@@ -10,7 +10,19 @@
     </image>
     <generator>Hugo -- gohugo.io</generator>
     <language>fr-FR</language>
-    <lastBuildDate>Mon, 16 May 2022 21:49:19 -1000</lastBuildDate><atom:link href="https://huangmanutea.github.io/blog.dev/posts/payzen_e-shopping_formulaire/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 21 May 2022 22:31:25 -1000</lastBuildDate><atom:link href="https://huangmanutea.github.io/blog.dev/posts/payzen_e-shopping_formulaire/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Payzen e-shopping formulaire - Paiement</title>
+      <link>https://huangmanutea.github.io/blog.dev/posts/payzen_e-shopping_formulaire/paiement/</link>
+      <pubDate>Sat, 21 May 2022 22:31:25 -1000</pubDate>
+      
+      <guid>https://huangmanutea.github.io/blog.dev/posts/payzen_e-shopping_formulaire/paiement/</guid>
+      <description>Cet article fait partie d&amp;rsquo;une suite de tutoriels d&amp;rsquo;intégration Payzen dans une application web d&amp;rsquo;e-shopping. Vous trouverez le précédent article ici.
+Introduction Après voir créé l&amp;rsquo;inventaire, nous allons maintenant implémenter le paiement, et plus particulièrement le paiement comptant immédiat.
+User Story En tant qu&amp;rsquo;utilisateur Je veux payer le produit sélectionné Afin de créer une commande Déroulement Pour faire ce paiement, nous utilisons la librairie PayzenJS.
+La documentation de cette librairie nous indique que nous devons signer notre requête de génération de formulaire via une requête POST vers un backend, ce qui coïncide avec la documentation Payzen de paiement comptant immédiat.</description>
+    </item>
+    
     <item>
       <title>Payzen e-shopping formulaire - Inventaire</title>
       <link>https://huangmanutea.github.io/blog.dev/posts/payzen_e-shopping_formulaire/inventaire/</link>
