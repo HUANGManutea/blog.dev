@@ -119,10 +119,10 @@ On remarque qu'il n'y a plus la case (vide) et le nombre d'élements change.
 Pour permettre cette souplesse, la liste est plus gourmande en calculs:
 - calcul à la volée du nombre d'éléments,
 - réallocation de mémoire.
-{{% /miroir-informatique-vraie-vie-instant-dev %}}
 
 Mais en vrai, à moins que tu ne codes un satellite, une carte embarquée, ou une console des années 80, où chaque octet compte, il y a peu de raisons d’utiliser un tableau fixe.
 Une liste dynamique t'évitera bien des migraines.
+{{% /miroir-informatique-vraie-vie-instant-dev %}}
 
 Le tableau et la liste sont des structures très basiques et très puissantes, elles sont les bases de beaucoup d'autres structures qu'on verra par la suite.
 
@@ -192,12 +192,12 @@ En informatique, on peut combiner les structures, plutôt que d'**associer** un 
   </tr>
   <tr>
     <td style="border: 0px"></td>
-    <td style="border-bottom: 0px"></td>
-    <td style="border-bottom: 0px">↓</td>
-    <td style="border-bottom: 0px">↓</td>
-    <td style="border-bottom: 0px">↓</td>
-    <td style="border-bottom: 0px">↓</td>
-    <td style="border-bottom: 0px">↓</td>
+    <td style="border-bottom: 0px;font-size: 1.5em;"></td>
+    <td style="border-bottom: 0px;font-size: 1.5em;">↓</td>
+    <td style="border-bottom: 0px;font-size: 1.5em;">↓</td>
+    <td style="border-bottom: 0px;font-size: 1.5em;">↓</td>
+    <td style="border-bottom: 0px;font-size: 1.5em;">↓</td>
+    <td style="border-bottom: 0px;font-size: 1.5em;">↓</td>
   </tr>
 </table>
 
@@ -255,7 +255,7 @@ Si comme moi tu fais ta liste de courses durant la semaine en prévision des gra
 - salade
 - oeufs
 
-Tu remarques que les **oeufs** apparaissent. On appelle ça un **doublon**.
+Tu remarques que les **oeufs** apparaissent 2 fois. On appelle ça un **doublon**.
 
 Ça peut arriver si lundi tu t'es fait une omelette avec les derniers oeufs, tu les as notés pour en racheter.
 Puis que vendredi, tu voulais faire un gâteau, mais tu t'es souvenu que tu n'avais plus d'oeufs... et alors tu les as réécrits.
@@ -298,10 +298,8 @@ Les liens entre ces personnes peuvent être représentés par un **graphe** (ou 
 
 Et ce que tu viens de faire, sans t'en rendre compte, c'est un **parcours de graphe**, un algorithme !
 
+<figure>
 {{< mermaid >}}
----
-title: Graphe de relation entre les personnes
----
 graph TD
     A[Toi] --- B[Manutea]
     A --- C[Vai]
@@ -312,6 +310,8 @@ graph TD
     D --- H[Tiare]
     H --- I[Paul]
 {{< /mermaid >}}
+<figcaption>Graphe de relation entre les personnes</figcaption>
+</figure>
 
 Ce graphe est **non orienté**, c'est-à-dire qu'il n'y a pas de sens entre les éléments.
 
@@ -319,10 +319,8 @@ Effectivement pour éviter de fâcher les personnes, on ne va pas dire *"Purotu 
 
 Par contre, on peut utiliser un graphe **orienté** pour représenter les appels que tu as passé.
 
+<figure>
 {{< mermaid >}}
----
-title: Graphe des appels que tu as passé
----
 graph TD
     A[Toi] --> B[Manutea]
     A --> C[Vai]
@@ -333,6 +331,8 @@ graph TD
     A --> H[Tiare]
     A --> I[Paul]
 {{< /mermaid >}}
+<figcaption>Graphe des appels que tu as passé</figcaption>
+</figure>
 
 **On a donc les mêmes données, mais on utilise la structure adaptée à ce qu'on veut représenter.**
 

@@ -1,3 +1,10 @@
+body:not(.dark) {
+  --theme: #f4f4f4;     /* couleur d’arrière-plan principale */
+  --entry: #ffffff;     /* fond des blocs (cartes) */
+  --code-bg: #f7f7f7;   /* fond des blocs de code */
+  --border: #e0e0e0;    /* bordures */
+}
+
 blockquote {
     border-left: 4px solid #007acc; /* bleu clair */
     padding-left: 1em;
@@ -33,4 +40,11 @@ blockquote {
   justify-content: center;
   max-width: 100%;
   width: 100%;
+}
+
+figcaption {
+  text-align: center;
+  font-size: 0.9em;
+  color: var(--fg);
+  margin-top: 0.5em;
 }
