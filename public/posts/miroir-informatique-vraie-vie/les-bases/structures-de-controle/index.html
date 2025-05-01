@@ -1,0 +1,518 @@
+<!DOCTYPE html>
+<html lang="fr" dir="auto">
+
+<head><script src="/blog.dev/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=blog.dev/livereload" data-no-instant defer></script><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="noindex, nofollow">
+<title>IMVV - Section 1 - Chapitre 3 - Structures de contrôle et algorithme, apprendre à réfléchir | Encore un autre blog d&#39;un tahitien</title>
+<meta name="keywords" content="Informatique, IMMV">
+<meta name="description" content="Dans l&rsquo;article précédent IMVV - Section 1 - Chapitre 2 - Autres structure de données, j&rsquo;organise mon bordel, on s&rsquo;était arrêté sur ta question:
+
+Et c&rsquo;est quoi le parcours de graphe?
+Dans cet article, on va parler des structures de contrôle (control flow statements en anglais), qu&rsquo;on utilise dans des algorithmes (algorithms en anglais).
+Avant d&rsquo;expliquer l&rsquo;algorithme que tu as fait, le parcours de graphe, on doit expliquer les structures de contrôle.">
+<meta name="author" content="">
+<link rel="canonical" href="http://localhost:1313/blog.dev/posts/miroir-informatique-vraie-vie/les-bases/structures-de-controle/">
+<link crossorigin="anonymous" href="/blog.dev/assets/css/stylesheet.649a89ab5b3ace9a56ef6ec2dcd42ebba6add9c9cfe080c18aa59761d20f9080.css" integrity="sha256-ZJqJq1s6zppW727C3NQuu6at2cnP4IDBiqWXYdIPkIA=" rel="preload stylesheet" as="style">
+<link rel="icon" href="http://localhost:1313/blog.dev/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="http://localhost:1313/blog.dev/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="http://localhost:1313/blog.dev/favicon-32x32.png">
+<link rel="apple-touch-icon" href="http://localhost:1313/blog.dev/apple-touch-icon.png">
+<link rel="mask-icon" href="http://localhost:1313/blog.dev/safari-pinned-tab.svg">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<link rel="alternate" hreflang="fr" href="http://localhost:1313/blog.dev/posts/miroir-informatique-vraie-vie/les-bases/structures-de-controle/">
+<noscript>
+    <style>
+        #theme-toggle,
+        .top-link {
+            display: none;
+        }
+
+    </style>
+    <style>
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --theme: rgb(29, 30, 32);
+                --entry: rgb(46, 46, 51);
+                --primary: rgb(218, 218, 219);
+                --secondary: rgb(155, 156, 157);
+                --tertiary: rgb(65, 66, 68);
+                --content: rgb(196, 196, 197);
+                --code-block-bg: rgb(46, 46, 51);
+                --code-bg: rgb(55, 56, 62);
+                --border: rgb(51, 51, 51);
+            }
+
+            .list {
+                background: var(--theme);
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-track {
+                background: 0 0;
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-thumb {
+                border-color: var(--theme);
+            }
+        }
+
+    </style>
+</noscript><script type="module">
+    import mermaid from "https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs";
+  
+    function getMermaidTheme() {
+      return document.body.classList.contains("dark") ? "dark" : "default";
+    }
+  
+    function renderMermaid() {
+      mermaid.initialize({ startOnLoad: false, theme: getMermaidTheme() });
+      mermaid.init(undefined, document.querySelectorAll(".mermaid"));
+    }
+  
+    document.addEventListener("DOMContentLoaded", () => {
+      renderMermaid();
+    });
+  
+    
+    const observer = new MutationObserver(() => {
+      renderMermaid();
+    });
+  
+    observer.observe(document.body, {
+      attributes: true,
+      attributeFilter: ["class"]
+    });
+  </script>
+</head>
+
+<body class="" id="top">
+<script>
+    if (localStorage.getItem("pref-theme") === "dark") {
+        document.body.classList.add('dark');
+    } else if (localStorage.getItem("pref-theme") === "light") {
+        document.body.classList.remove('dark')
+    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.body.classList.add('dark');
+    }
+
+</script>
+
+<header class="header">
+    <nav class="nav">
+        <div class="logo">
+            <a href="http://localhost:1313/blog.dev/" accesskey="h" title="Encore un autre blog d&#39;un tahitien (Alt + H)">Encore un autre blog d&#39;un tahitien</a>
+            <div class="logo-switches">
+                <button id="theme-toggle" accesskey="t" title="(Alt + T)" aria-label="Toggle theme">
+                    <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                    <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <ul id="menu">
+        </ul>
+    </nav>
+</header>
+<main class="main">
+
+<article class="post-single">
+  <header class="post-header">
+    
+    <h1 class="post-title entry-hint-parent">
+      IMVV - Section 1 - Chapitre 3 - Structures de contrôle et algorithme, apprendre à réfléchir
+    </h1>
+    <div class="post-meta"><span title='2025-04-30 14:30:37 -1000 -10'>avril 30, 2025</span>
+
+</div>
+  </header> <div class="toc">
+    <details >
+        <summary accesskey="c" title="(Alt + C)">
+            <span class="details">Table des matières</span>
+        </summary>
+
+        <div class="inner"><ul>
+                <li>
+                    <a href="#pseudo-code--lart-de-la-cuisine" aria-label="Pseudo-code — l&rsquo;art de la cuisine">Pseudo-code — l&rsquo;art de la cuisine</a></li>
+                <li>
+                    <a href="#la-boucle-for--ou-comment-%c3%aatre-fiu" aria-label="La boucle for — ou comment être fiu">La boucle for — ou comment être fiu</a></li>
+                <li>
+                    <a href="#la-boucle-while--ou-comment-faire-ses-devoirs-avant-daller-jouer" aria-label="La boucle while — ou comment faire ses devoirs avant d&rsquo;aller jouer">La boucle while — ou comment faire ses devoirs avant d&rsquo;aller jouer</a></li>
+                <li>
+                    <a href="#linstruction-conditionnelle--ou-pourquoi-il-faut-respecter-le-code-de-la-route" aria-label="L&rsquo;instruction conditionnelle — ou pourquoi il faut respecter le code de la route">L&rsquo;instruction conditionnelle — ou pourquoi il faut respecter le code de la route</a></li>
+                <li>
+                    <a href="#revenons-%c3%a0-notre-parcours-de-graphe" aria-label="Revenons à notre parcours de graphe">Revenons à notre parcours de graphe</a><ul>
+                        
+                <li>
+                    <a href="#rappels" aria-label="Rappels">Rappels</a></li></ul>
+                </li>
+                <li>
+                    <a href="#conclusion" aria-label="Conclusion">Conclusion</a>
+                </li>
+            </ul>
+        </div>
+    </details>
+</div>
+
+  <div class="post-content"><p>Dans l&rsquo;article précédent <a href="../structures-de-donnees/">IMVV - Section 1 - Chapitre 2 - Autres structure de données, j&rsquo;organise mon bordel</a>, on s&rsquo;était arrêté sur ta question:</p>
+<blockquote>
+<p>Et c&rsquo;est quoi le parcours de graphe?</p></blockquote>
+<p>Dans cet article, on va parler des <strong>structures de contrôle</strong> (<em>control flow statements</em> en anglais), qu&rsquo;on utilise dans des <strong>algorithmes</strong> (<em>algorithms</em> en anglais).</p>
+<p>Avant d&rsquo;expliquer l&rsquo;algorithme que tu as fait, le <strong>parcours de graphe</strong>, on doit expliquer les structures de contrôle.</p>
+<p>N&rsquo;oublie pas que les objectifs de ces articles sont :</p>
+<ul>
+<li>Te donner une meilleure compréhension des bases de l’informatique,</li>
+<li>T&rsquo;inspirer pour analyser ou optimiser les situations du quotidien,</li>
+<li>ou peut-être, qui sait, te donner envie d&rsquo;explorer encore plus loin&hellip; jusqu’à en faire ton métier.</li>
+</ul>
+<h2 id="pseudo-code--lart-de-la-cuisine">Pseudo-code — l&rsquo;art de la cuisine<a hidden class="anchor" aria-hidden="true" href="#pseudo-code--lart-de-la-cuisine">#</a></h2>
+<p>Quand tu fais un gâteau, tu réalises les actions suivantes:</p>
+<pre tabindex="0"><code>Préchauffer le four
+Verser la farine dans le saladier
+Casser les oeufs et mettre le contenu dans le saladier
+Verser le lait dans le saladier
+Remuer
+Verser la préparation dans un moule
+Mettre le moule au four
+Attendre 20 minutes
+</code></pre><p>Toute cette suite d&rsquo;étape est ce qu&rsquo;on appelle un <strong>algorithme</strong>, et la façon dont on l&rsquo;a écrit, ça s&rsquo;appelle du <strong>pseudo-code</strong>, parce que ça ressemble à un langage de programmation, mais ce n&rsquo;en est pas un.</p>
+<blockquote>
+<p>Mais pourquoi on appelle ça un algorithme? on peut pas juste dire une suite d&rsquo;actions?</p></blockquote>
+<p>Je te laisse chercher sur internet pourquoi on appelle ça un <a href="https://fr.wikipedia.org/wiki/Algorithme">algorithme</a>.</p>
+<h2 id="la-boucle-for--ou-comment-être-fiu">La boucle for — ou comment être <em>fiu</em><a hidden class="anchor" aria-hidden="true" href="#la-boucle-for--ou-comment-être-fiu">#</a></h2>
+<p>Ton meilleur ami Manutea te demande <em>&ldquo;Comment tu as fait pour inviter toutes ces personnes à ton anniversaire ?&rdquo;</em>. Laquelle de ces 2 phrases dirais-tu :</p>
+<ul>
+<li>J&rsquo;ai appelé Manutea, puis j&rsquo;ai appelé Vai, puis j&rsquo;ai appelé Purotu, puis j&rsquo;ai appelé Heiarii, puis j&rsquo;ai appelé Reva, puis j&rsquo;ai appelé Jean, puis j&rsquo;ai appelé Tiare, puis j&rsquo;ai appelé Paul</li>
+<li>J&rsquo;ai pris mon carnet d&rsquo;adresses, puis <strong>pour chaque</strong> contact, j&rsquo;ai appelé le numéro correspondant</li>
+</ul>
+<p>La 1ère phrase est un <strong>algorithme</strong> sans <strong>boucle</strong> (<em>loop</em> en anglais) : chaque action est écrite explicitement.</p>
+<p>La 2ème, elle, utilise une <strong>boucle</strong> — tu répètes la même action pour chaque contact.
+Sans forcément y penser, tu utilises aussi une <strong>variable</strong> : un espace dans ta tête pour mémoriser un numéro, que tu remplaces à chaque nouvel appel.</p>
+<p>Cette manière de répéter une action avec une variable, c’est exactement ce qu’un ordinateur fait quand on lui demande de parcourir une liste.</p>
+<p>Si tu relis bien la 2ème phrase, tu verras que <strong>pour chaque</strong> est en gras. En anglais, <em>pour chaque</em> se dit <em>for each</em>, c&rsquo;est pour ça qu&rsquo;on l&rsquo;appelle la <strong>boucle for</strong> dans la plupart des langages.</p>
+<p>Si on essayait d&rsquo;écrire un <strong>algorithme</strong>, sous forme de <strong>pseudo-code</strong> simple pour décrire la 2ème phrase, ça donnerait :</p>
+<pre tabindex="0"><code>Dans mon carnet d&#39;adresses, pour chaque contact:
+    J&#39;ai appelé le numéro correspondant au contact
+    J&#39;ai invité l&#39;ami
+Fin pour
+</code></pre><p><em>&ldquo;Dans mon carnet d&rsquo;adresses, pour chaque contact&rdquo;</em> marque le <strong>début</strong> de la boucle, et <em>&ldquo;Fin pour&rdquo;</em> marque la <strong>fin</strong> de la boucle.</p>
+<p>Entre ces 2 lignes, les actions <em>&ldquo;J&rsquo;ai appelé le numéro correspondant au contact&rdquo;</em> et <em>&ldquo;J&rsquo;ai invité l&rsquo;ami&rdquo;</em> forment ce qu&rsquo;on appelle un <strong>bloc</strong> d&rsquo;instructions.</p>
+<p>Par convention, on <strong>indente</strong> ce bloc — on le décale vers la droite — pour montrer visuellement qu&rsquo;il est à l&rsquo;intérieur de la boucle.</p>
+<blockquote>
+<p>Ok, et quel est le rapport entre la boucle for et <em>fiu</em> comme marqué dans le titre ?</p></blockquote>
+<p>Si on devait écrire l&rsquo;algorithme de la 1ère phrase, ça donnerait :</p>
+<pre tabindex="0"><code>J&#39;ai appelé Manutea
+J&#39;ai appelé Vai
+J&#39;ai appelé Purotu
+J&#39;ai appelé Heiarii
+J&#39;ai appelé Reva
+J&#39;ai appelé Jean
+J&#39;ai appelé Tiare
+J&#39;ai appelé Paul
+</code></pre><p>Chaque ligne est une action, donc il faut écrire autant de lignes qu&rsquo;il y a de contacts dans ta liste de contacts. Maintenant, que se passerait-il si tu devais inviter 100 personnes? Tu serais <em>fiu</em>.</p>
+<p>Alors qu&rsquo;avec la boucle, tu n&rsquo;as pas besoin de changer ton algorithme, c&rsquo;est le même, que tu aies 6 contacts ou 100.</p>
+<blockquote>
+<p>Oui mais dans la vraie vie je dois quand même appeler les amis un par un</p></blockquote>
+<p>Cet exemple n’est pas là pour dire que tu vas programmer ton téléphone —
+mais pour te faire sentir la puissance de la boucle : un seul bloc, quelle que soit la longueur de ta liste.</p>
+<p>Dans la vraie vie, tu fais un groupe Facebook avec tous tes amis et tu postes des messages d&rsquo;informations dans le groupe pour organiser, idem pour un groupe SMS. Si t&rsquo;es old school, tu postes un message dans le journal local et viendra qui verra. D&rsquo;ailleurs j&rsquo;en parlerai dans de prochains articles.</p>
+<h2 id="la-boucle-while--ou-comment-faire-ses-devoirs-avant-daller-jouer">La boucle while — ou comment faire ses devoirs avant d&rsquo;aller jouer<a hidden class="anchor" aria-hidden="true" href="#la-boucle-while--ou-comment-faire-ses-devoirs-avant-daller-jouer">#</a></h2>
+<p>Quand tu étais plus jeune, on t&rsquo;a sûrement déjà dit <em>&ldquo;Fais d&rsquo;abord tes devoirs, ensuite tu peux aller jouer&rdquo;</em>, ou autrement dit <em>&quot;<strong>Tant que</strong> tu n&rsquo;a pas fini tes devoirs, tu travailles, ensuite tu peux aller jouer&quot;</em>.</p>
+<p>Si on devait écrire cet algorithme, ça donnerait:</p>
+<pre tabindex="0"><code>Tant que je n&#39;ai pas fini mes devoirs:
+    Je fais mes devoirs
+Fin tant que
+
+Je vais jouer
+</code></pre><p><em>&ldquo;Tant que je n&rsquo;ai pas fini mes devoirs&rdquo;</em> marque le <strong>début</strong> de la boucle, et &ldquo;Fin tant que&rdquo; marque la <strong>fin</strong> de la boucle.</p>
+<p>Entre ces 2 lignes, l&rsquo;action <em>&ldquo;Je fais mes devoirs&rdquo;</em> forme le <strong>bloc</strong> d&rsquo;instructions.</p>
+<p>Tu l&rsquo;auras remarqué, c&rsquo;est très similaire à la <strong>boucle for</strong>, sauf qu&rsquo;au lieu de parcourir des éléments, on vérifie une <strong>condition</strong>, et on répète la boucle si la condition n&rsquo;est remplie.</p>
+<p>On appelle ça une <strong>boucle while</strong>, car <em>Tant que</em> se dit <em>while</em> en anglais.</p>
+<p>Ensuite, une fois que les devoirs sont finis, on <em>sort de la boucle</em>, on fait la suite des instructions, donc <em>&ldquo;Je vais jouer&rdquo;</em>. On aurait aussi pu avoir d&rsquo;autres instructions après la <strong>boucle for</strong>, c&rsquo;est juste que l&rsquo;exemple ne s&rsquo;y prêtait pas.</p>
+<blockquote>
+<p>Mais alors… pourquoi deux types de boucles si elles font (presque) la même chose ? Pourquoi une boucle for, et une boucle while ?</p></blockquote>
+<p>En fait, en fonction du problème qu&rsquo;on veut résoudre :</p>
+<ul>
+<li>dans certains cas on pourra compter, et dans ce cas on préfèrera utiliser une <strong>boucle for</strong></li>
+<li>dans certains cas on ne pourra pas compter, et dans ce cas on préfèrera utiliser une <strong>boucle while</strong></li>
+</ul>
+<p>Par exemple, pour un enfant qui joue dehors:</p>
+<pre tabindex="0"><code>Tant qu&#39;il fait beau:
+    Je joue
+Fin tant que
+</code></pre><p>Ici, impossible de compter.</p>
+<p>Mais tu commences peut-être à te rendre compte d&rsquo;une supercherie.</p>
+<div class="instant-dev">
+  <strong>Instant Dev</strong>
+  <div class="instant-dev-content">
+    <p>💡 En réalité, <strong>toutes les boucles for peuvent être réécrites en boucle while</strong>.<br>
+La <strong>boucle for</strong> n’est qu’une <strong>boucle while optimisée</strong>, écrite pour être plus simple à lire… quand on sait compter.</p>
+<p>Les 2 types de boucles sont des <strong>instructions d&rsquo;itération</strong>, à la différence des <strong>instructions</strong> simples comme <em>&ldquo;Je joue&rdquo;</em>, les <strong>instructions d&rsquo;itération</strong> permettre d&rsquo;exécuter des <strong>blocs</strong> d&rsquo;instructions de manière répétée.</p>
+  </div>
+</div>
+<p>Bravo, tu commences à réfléchir comme un développeur !</p>
+<p><strong>Explications</strong></p>
+<p>Pour rappel:</p>
+<ul>
+<li>dans une liste, l&rsquo;index commence à 0,</li>
+<li>dans une liste, le dernier index est égal au nombre d&rsquo;éléments de la liste moins 1
+<table>
+  <thead>
+      <tr>
+          <th>Amis</th>
+          <th>Manutea</th>
+          <th>Vai</th>
+          <th>Purotu</th>
+          <th>Heiarii</th>
+          <th>Reva</th>
+          <th>Jean</th>
+          <th>Tiare</th>
+          <th>Paul</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>index</td>
+          <td>0</td>
+          <td>1</td>
+          <td>2</td>
+          <td>3</td>
+          <td>4</td>
+          <td>5</td>
+          <td>6</td>
+          <td>7</td>
+      </tr>
+  </tbody>
+</table>
+</li>
+</ul>
+<p>Nombre d&rsquo;éléments: 8</p>
+<ul>
+<li>une variable c&rsquo;est juste un espace mémoire où on stocke une donnée (un tableau, une liste, un prénom, un numéro de téléphone)</li>
+</ul>
+<p>Si on reprend l&rsquo;exemple de la <strong>boucle for</strong>:</p>
+<pre tabindex="0"><code>Dans mon carnet d&#39;adresses, pour chaque contact:
+    J&#39;appelle le numéro correspondant au contact
+    J&#39;invite l&#39;ami
+Fin pour
+</code></pre><p>Derrière, voici plutôt ce que fait un ordinateur (de manière simplifiée) :</p>
+<pre tabindex="0"><code>Je crée une variable &#34;index&#34;, qui vaut 0
+Tant que &#34;index&#34; est inférieur au nombre d&#39;éléments (8) du carnet d&#39;adresses:
+    Je regarde le contact qui se trouve à l&#39;&#34;index&#34; dans le carnet d&#39;adresses
+    Je récupère son numéro
+    Je l&#39;invite
+    &#34;index&#34; prend la valeur &#34;index&#34; + 1
+Fin tant que
+</code></pre><p>Comme tu le vois, c&rsquo;est un peu plus compliqué, c&rsquo;est pour ça qu&rsquo;on préfère utiliser une <strong>boucle for</strong> quand on peut compter.</p>
+<h2 id="linstruction-conditionnelle--ou-pourquoi-il-faut-respecter-le-code-de-la-route">L&rsquo;instruction conditionnelle — ou pourquoi il faut respecter le code de la route<a hidden class="anchor" aria-hidden="true" href="#linstruction-conditionnelle--ou-pourquoi-il-faut-respecter-le-code-de-la-route">#</a></h2>
+<p>Juste au-dessus, on parlait de <strong>condition</strong> dans la <strong>boucle while</strong>. Mais on n&rsquo;a jamais expliqué ce que c&rsquo;était.</p>
+<p>Une condition est une question qu&rsquo;on se pose, et la réponse est soit “oui”, soit “non” — jamais les deux, jamais &ldquo;un peu&rdquo;.</p>
+<p>Quand on écrit <em>&ldquo;Tant que je n&rsquo;ai pas fini mes devoirs&rdquo;</em>, à chaque répétition on pose la question &ldquo;Est-ce que j&rsquo;ai fini mes devoirs?&rdquo;.</p>
+<p>En informatique, comme dans la vraie vie, une condition doit être claire.</p>
+<p>On peut utiliser ce concept pour faire des branchements dans notre code, dans une <strong>instruction conditionnelle</strong> (<em>conditional statement</em> en anglais).</p>
+<p>Prenons un exemple simple : tu es en voiture, tu approches un feu tricolore. Il est vert.</p>
+<p>Que fais-tu si le feu passe à l’orange juste devant toi ?</p>
+<p>Voici un algorithme qui représente cette situation :</p>
+<pre tabindex="0"><code>Si le feu passe au orange, alors:
+    Tu t&#39;arrêtes
+Sinon (c&#39;est toujours vert):
+    Tu continues et traverse l&#39;intersection
+Fin si
+</code></pre><p><em>&ldquo;Si le feu passe au orange,&rdquo;</em> marque le <strong>début</strong> de l&rsquo;instruction conditionnelle, <em>&ldquo;alors&rdquo;</em> marque la <strong>branche</strong> du <strong>si</strong>, <em>&ldquo;Sinon&rdquo;</em> marque la <strong>branche</strong> du sinon, et <em>&ldquo;Fin si&rdquo;</em> marque la fin de l&rsquo;instruction conditionnelle.</p>
+<p>De la même manière que pour les <strong>boucles</strong>, chaque <strong>branche</strong> est un <strong>bloc</strong> d&rsquo;instructions. Comme pour les boucles, chaque branche forme un bloc d’instructions, qu’on indente pour bien le repérer.</p>
+<p>Pour visualiser, imagine un arbre : chaque fois qu’une condition est testée, tu choisis une <strong>branche</strong> à suivre. Le chemin dépend de tes réponses.</p>
+<h2 id="revenons-à-notre-parcours-de-graphe">Revenons à notre parcours de graphe<a hidden class="anchor" aria-hidden="true" href="#revenons-à-notre-parcours-de-graphe">#</a></h2>
+<h3 id="rappels">Rappels<a hidden class="anchor" aria-hidden="true" href="#rappels">#</a></h3>
+<p>Tu avais appelé tes amis pour les inviter à ton anniversaire, et tu avais été jusqu&rsquo;au bout du monde, en sautant de relations en relations, pour inviter Paul. Tu avais fait ces actions :</p>
+<pre tabindex="0"><code>Tu comptes inviter tout ton carnet d&#39;adresses.
+
+Tu réalises que tu n’as pas le contact de Paul. Tu l&#39;as croisé en soirée et il était cool, tu voudrais l&#39;inviter... mais t&#39;as oublié de lui demander son numéro.
+
+Heureusement, tu sais que Purotu le connaît.
+
+Tu l&#39;appelles... zut, elle n&#39;a pas son numéro. Mais elle te donne le numéro de Tiare, une autre amie de Paul.
+Tu appelles Tiare, tu te présentes, tu l&#39;invite également car tu n&#39;es pas un sauvage. Et tu lui demandes le numéro de Paul.
+
+Bingo, elle l&#39;a, tu appelles Paul et il est chaud pour venir à ton anniversaire.
+</code></pre><p>Ci-dessous se trouve le graphe de relation entre les personnes, un graphe <strong>non orienté</strong>.</p>
+<figure>
+<div class="mermaid-wrapper">
+	<div class="mermaid">
+		%%{
+			init: {
+			  'theme': 'base',
+			  'themeVariables': {
+				'primaryColor': '#ddd',
+				'primaryTextColor': '#007acc',
+				'primaryBorderColor': '#007acc',
+				'lineColor': '#007acc'
+			  }
+			}
+		  }%%
+		
+graph TD
+    A[Toi] --- B[Manutea]
+    A --- C[Vai]
+    A --- D[Purotu]
+    A --- E[Heiarii]
+    A --- F[Reva]
+    A --- G[Jean]
+    D --- H[Tiare]
+    H --- I[Paul]
+
+	</div>
+</div>
+<figcaption>Graphe de relation entre les personnes</figcaption>
+</figure>
+<p>En se basant sur ce qu&rsquo;on a appris dans cet article, on va écrire un algorithme pour représenter les actions que tu as réalisé pour inviter tes amis :</p>
+<pre tabindex="0"><code># Étape 1 : inviter tous mes amis directs (les noeuds les plus proches de &#34;Toi&#34; dans le graphe)
+Je crée une variable &#34;liste d&#39;amis&#34;, contenant tous mes amis directs
+Je crée une variable &#34;ami&#34;, le contact courant
+
+Dans la &#34;liste d&#39;amis&#34;, pour chaque &#34;ami&#34; :
+    J&#39;appelle &#34;ami&#34;
+    Si &#34;ami&#34; répond, alors :
+        Je l&#39;invite à mon anniversaire
+    Fin si
+Fin pour
+
+# Étape 2 : retrouver Paul (en parcourant le graphe en largeur)
+Je crée une variable &#34;file&#34;, initialisée avec la &#34;liste d&#39;amis&#34;
+Je crée une variable &#34;visités&#34;, une liste vide
+
+Tant que la &#34;file&#34; n’est pas vide :
+    Je prends le premier élément de la &#34;file&#34;, je le stocke dans &#34;ami&#34;
+    Si &#34;ami&#34; n’est pas dans &#34;visités&#34;, alors :
+        J’ajoute &#34;ami&#34; à &#34;visités&#34;
+        J&#39;appelle &#34;ami&#34;
+        Si &#34;ami&#34; répond, alors :
+            Je lui demande s’il connaît Paul
+            Si &#34;ami&#34; me donne le numéro de Paul :
+                Je crée une variable &#34;Paul&#34;
+                J&#39;appelle &#34;Paul&#34;
+                Si &#34;Paul&#34; répond, alors :
+                    Je l’invite à mon anniversaire
+                    Je termine la recherche
+                Fin si
+            Sinon :
+                Je récupère la liste des amis de &#34;ami&#34;
+                Pour chaque &#34;contact&#34; dans cette liste :
+                    J’ajoute &#34;contact&#34; à la &#34;file&#34;
+                Fin pour
+            Fin si
+        Fin si
+    Fin si
+Fin tant que
+</code></pre><p>D&rsquo;un premier regard, ça a l&rsquo;air compliqué. Mais en fait si tu prends le temps de décortiquer, de bien regarder, tu verras que ce sont juste les actions que tu as réalisés plus haut, mais dans un langage plus proche de ce que fait un ordinateur.</p>
+<p>La seule chose qu&rsquo;on a fait en plus des concepts de bases, c&rsquo;est qu&rsquo;on a combiné les structures de contrôles et les structures de données, et le tout nous donne notre <strong>algorithme de parcours de graphe</strong> !</p>
+<h2 id="conclusion">Conclusion<a hidden class="anchor" aria-hidden="true" href="#conclusion">#</a></h2>
+<p>Dans cet article on a appris ce que sont :</p>
+<ul>
+<li>les boucles</li>
+<li>les conditions</li>
+<li>les variables</li>
+<li>les algorithmes</li>
+</ul>
+<p>Il existe d&rsquo;autres structures conditionnelles, des types de variables, et des algorithmes qu&rsquo;on peut réutiliser pour répondre à beaucoup de problèmes. Comme d&rsquo;habitude, je te laisse chercher sur internet si tu veux aller plus loin.</p>
+<p>Mais le plus important, c&rsquo;est que tu commences à réfléchir comme un développeur, et à comprendre le <strong>pseudo-code</strong>. Dans la vraie vie, si tu as un problème complexe à résoudre, tu peux essayer de l&rsquo;écrire comme on l&rsquo;a fait pour le parcours de graphe. Prends ton temps et décompose le problèmes.</p>
+
+
+  </div>
+
+  <footer class="post-footer">
+    <ul class="post-tags">
+      <li><a href="http://localhost:1313/blog.dev/tags/informatique/">Informatique</a></li>
+      <li><a href="http://localhost:1313/blog.dev/tags/immv/">IMMV</a></li>
+    </ul>
+  </footer>
+</article>
+    </main>
+    
+<footer class="footer">
+        <span>&copy; 2025 <a href="http://localhost:1313/blog.dev/">Encore un autre blog d&#39;un tahitien</a></span> · 
+
+    <span>
+        Powered by
+        <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &
+        <a href="https://github.com/adityatelange/hugo-PaperMod/" rel="noopener" target="_blank">PaperMod</a>
+    </span>
+</footer>
+<a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
+        <path d="M12 6H0l6-6z" />
+    </svg>
+</a>
+
+<script>
+    let menu = document.getElementById('menu')
+    if (menu) {
+        menu.scrollLeft = localStorage.getItem("menu-scroll-position");
+        menu.onscroll = function () {
+            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
+        }
+    }
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            var id = this.getAttribute("href").substr(1);
+            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+                    behavior: "smooth"
+                });
+            } else {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
+            }
+            if (id === "top") {
+                history.replaceState(null, null, " ");
+            } else {
+                history.pushState(null, null, `#${id}`);
+            }
+        });
+    });
+
+</script>
+<script>
+    var mybutton = document.getElementById("top-link");
+    window.onscroll = function () {
+        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
+            mybutton.style.visibility = "visible";
+            mybutton.style.opacity = "1";
+        } else {
+            mybutton.style.visibility = "hidden";
+            mybutton.style.opacity = "0";
+        }
+    };
+
+</script>
+<script>
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        if (document.body.className.includes("dark")) {
+            document.body.classList.remove('dark');
+            localStorage.setItem("pref-theme", 'light');
+        } else {
+            document.body.classList.add('dark');
+            localStorage.setItem("pref-theme", 'dark');
+        }
+    })
+
+</script>
+</body>
+
+</html>

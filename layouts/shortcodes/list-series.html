@@ -1,8 +1,19 @@
-<ul>
-  {{ $current := .Page }}
-  {{ range sort $current.Parent.Pages "Weight" }}
-    {{ if and (not .Draft) (ne .RelPermalink $current.RelPermalink) }}
-      <li><a href="{{ .RelPermalink }}">{{ .Title }}</a></li>
-    {{ end }}
+{{ $current := .Page }}
+{{ $root := site.GetPage "miroir-informatique-vraie-vie" }}
+
+{{ range sort $root.Sections "Weight" }}
+  {{ $section := . }}
+  {{ $articles := sort (where $section.RegularPages "Params.draft" "ne" true) "Weight" }}
+  {{ if gt (len $articles) 0 }}
+    <h3>{{ .Title }}</h3>
+    <ul>
+      {{ range $articles }}
+        {{ if ne .RelPermalink $current.RelPermalink }}
+          <li><a href="{{ .RelPermalink }}">{{ .Title }}</a></li>
+        {{ else }}
+          <li><em>En cours de rédaction</em></li>
+        {{ end }}
+      {{ end }}
+    </ul>
   {{ end }}
-</ul>
+{{ end }}

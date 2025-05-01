@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
-    <title>Encore un autre blog d&#39;un tahitien</title>
-    <link>http://localhost:1313/blog.dev/</link>
-    <description>Recent content on Encore un autre blog d&#39;un tahitien</description>
+    <title>IMMV - Section 1 - Les Bases : structures et contrôle on Encore un autre blog d&#39;un tahitien</title>
+    <link>http://localhost:1313/blog.dev/posts/miroir-informatique-vraie-vie/les-bases/</link>
+    <description>Recent content in IMMV - Section 1 - Les Bases : structures et contrôle on Encore un autre blog d&#39;un tahitien</description>
     <generator>Hugo -- 0.147.0</generator>
     <language>fr</language>
     <lastBuildDate>Wed, 30 Apr 2025 14:30:37 -1000</lastBuildDate>
-    <atom:link href="http://localhost:1313/blog.dev/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/blog.dev/posts/miroir-informatique-vraie-vie/les-bases/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>IMVV - Section 1 - Chapitre 1 - File ou Pile ? L&#39;art de passer avant les autres</title>
       <link>http://localhost:1313/blog.dev/posts/miroir-informatique-vraie-vie/les-bases/file-et-pile/</link>
@@ -42,38 +42,6 @@ Tu manipules sans le savoir des concepts qu’on appelle en informatique des str
 &lt;p&gt;Et c&amp;rsquo;est quoi le parcours de graphe?&lt;/p&gt;&lt;/blockquote&gt;
 &lt;p&gt;Dans cet article, on va parler des &lt;strong&gt;structures de contrôle&lt;/strong&gt; (&lt;em&gt;control flow statements&lt;/em&gt; en anglais), qu&amp;rsquo;on utilise dans des &lt;strong&gt;algorithmes&lt;/strong&gt; (&lt;em&gt;algorithms&lt;/em&gt; en anglais).&lt;/p&gt;
 &lt;p&gt;Avant d&amp;rsquo;expliquer l&amp;rsquo;algorithme que tu as fait, le &lt;strong&gt;parcours de graphe&lt;/strong&gt;, on doit expliquer les structures de contrôle.&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>IMMV - Introduction - L&#39;informatique, un miroir de la vraie vie</title>
-      <link>http://localhost:1313/blog.dev/posts/miroir-informatique-vraie-vie/introduction/</link>
-      <pubDate>Tue, 29 Apr 2025 14:05:13 -1000</pubDate>
-      <guid>http://localhost:1313/blog.dev/posts/miroir-informatique-vraie-vie/introduction/</guid>
-      <description>&lt;p&gt;L&amp;rsquo;informatique semble souvent obscure pour beaucoup. Quand je dis que je suis ingénieur informatique, on me demande régulièrement : « Mais tu fais quoi exactement ? »
-Avec le temps, j’ai pris l’habitude de vulgariser mon métier. Et ce qui fonctionne le mieux, ce sont les exemples concrets tirés de la vie quotidienne.&lt;/p&gt;
-&lt;p&gt;En école d&amp;rsquo;ingénieur, j&amp;rsquo;apprenais beaucoup plus facilement l&amp;rsquo;informatique en partant de situations réelles.
-À travers cette série d’articles, &lt;strong&gt;&amp;ldquo;L’informatique, un miroir de la vraie vie&amp;rdquo;&lt;/strong&gt; (abrégé &lt;em&gt;IMVV&lt;/em&gt;), je vais tenter d’expliquer des concepts informatiques en m’appuyant sur des scènes familières du quotidien, sur un ton léger.
-Parce que finalement, coder un programme ou gérer une file d’attente au magasin, ce n’est pas si différent.&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>Introduction aux moyens de paiement en Polynésie Française</title>
-      <link>http://localhost:1313/blog.dev/posts/intro-moyens-paiement/</link>
-      <pubDate>Sat, 07 May 2022 19:18:54 -1000</pubDate>
-      <guid>http://localhost:1313/blog.dev/posts/intro-moyens-paiement/</guid>
-      <description>&lt;h1 id=&#34;introduction&#34;&gt;Introduction&lt;/h1&gt;
-&lt;p&gt;Cet article est un aperçu très rapide des moyens de paiement en Polynésie Française.&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;Update (12/05/2022): suite à quelques feedback, je me rend compte que cet article est à destination des développeurs de site de e-shopping, des commerçants, de mes confrères monéticiens. Cet article sera complexe à lire si vous n&amp;rsquo;avez jamais travaillé avec un TPE, avec une plateforme de paiement, avec des cartes bancaires.&lt;/p&gt;&lt;/blockquote&gt;
-&lt;p&gt;&lt;strong&gt;Disclaimer&lt;/strong&gt;: Au moment où j&amp;rsquo;écris cet article, je travaille à l&amp;rsquo;Océanienne des Services Bancaires (OSB), Ces articles ne sont pas sponsorisés par OSB, et j&amp;rsquo;encourage les gens à faire des tutoriels pour les solutions des autres fournisseurs de solutions de paiement.&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>Hello World</title>
-      <link>http://localhost:1313/blog.dev/posts/hello-world/</link>
-      <pubDate>Tue, 25 Jan 2022 23:29:43 -1000</pubDate>
-      <guid>http://localhost:1313/blog.dev/posts/hello-world/</guid>
-      <description>&lt;p&gt;Ia&amp;rsquo;orana, bonjour !&lt;/p&gt;
-&lt;p&gt;Ce post marque le début du blog hébergé sur Github.&lt;/p&gt;
-&lt;p&gt;Vous trouverez ici de temps en temps des articles de développement et des POCs.&lt;/p&gt;
-&lt;p&gt;Bonne lecture !&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>

@@ -1,12 +1,12 @@
 ---
-title: "IMVV - Chapitre 1 - File ou Pile ? L'art de passer avant les autres"
+title: "IMVV - Section 1 - Chapitre 1 - File ou Pile ? L'art de passer avant les autres"
 weight: 1
 #description: <descriptive text here>
 date: 2025-04-29T14:34:21-10:00
 draft: false
 showToc: true
 image: ""
-tags: [Informatique, Miroir de la vraie vie]
+tags: [Informatique, IMMV]
 categories: [Vulgarisation]
 ---
 
@@ -70,6 +70,6 @@ Mais c’est très utile pour remonter dans le temps, ou revenir sur ses pas, ex
     info="Le bouton 'Retour' (←) de ton navigateur||Les annulations successives (Undo, CTRL+Z) dans un éditeur de texte"
 >}}
 
-Si tu veux connaître d'autres structures de données, tu peux regarder le prochain article : [IMVV - Chapitre 2 - Autres structure de données, j'organise mon bordel](../structures-de-donnees/)
+Si tu veux connaître d'autres structures de données, tu peux regarder le prochain article : [IMVV - Section 1 - Chapitre 2 - Autres structure de données, j'organise mon bordel](../structures-de-donnees/)
 
 [← Retour à l’introduction](../introduction/)

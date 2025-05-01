@@ -1,12 +1,12 @@
 ---
-title: "IMMV - Chapitre 0 - L'informatique, un miroir de la vraie vie"
+title: "IMMV - Introduction - L'informatique, un miroir de la vraie vie"
 weight: 0
 #description: <descriptive text here>
 date: 2025-04-29T14:05:13-10:00
 draft: false
 showToc: false
 image: ""
-tags: [Informatique, Miroir de la vraie vie]
+tags: [Informatique, IMMV]
 categories: [Vulgarisation]
 ---
 
@@ -47,7 +47,6 @@ Après tout, peut-on vraiment expliquer entièrement l'informatique... un domain
 
 *: cette analogie est à prendre avec recul : l’informatique ne reflète pas toute la complexité de la vie.
 
-## Les articles de la série
+## Les articles de la série (En cours de rédaction)
 
 {{< list-series >}}
-- En cours de rédaction

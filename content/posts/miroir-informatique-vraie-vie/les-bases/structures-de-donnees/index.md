@@ -1,16 +1,16 @@
 ---
-title: "IMVV - Chapitre 2 - Autres structure de données, j'organise mon bordel"
+title: "IMVV - Section 1 - Chapitre 2 - Autres structure de données, j'organise mon bordel"
 weight: 2
 #description: <descriptive text here>
 date: 2025-04-29T15:41:48-10:00
 draft: false
 showToc: true
 image: ""
-tags: [Informatique, Miroir de la vraie vie]
+tags: [Informatique, IMMV]
 categories: [Vulgarisation]
 ---
 
-Dans le précédent article [IMVV - Chapitre 1 - File ou Pile ? L'art de passer avant les autres](../file-et-pile/) on a découvert les files et les piles. Cette fois, on va survoler plusieurs autres **structures de données** (*data structures* en anglais) qu'on utilise très souvent en informatique... et dans la vraie vie.
+Dans le précédent article [IMVV - Section 1 - Chapitre 1 - File ou Pile ? L'art de passer avant les autres](../file-et-pile/) on a découvert les files et les piles. Cette fois, on va survoler plusieurs autres **structures de données** (*data structures* en anglais) qu'on utilise très souvent en informatique... et dans la vraie vie.
 
 N'oublie pas que les objectifs de ces articles sont :
 - Te donner une meilleure compréhension des bases de l’informatique,
@@ -39,21 +39,21 @@ Et ce tableau peut se comporter différemment selon la manière dont on **ajoute
 Par exemple, on peut le faire fonctionner comme une **file** ou une **pile**, simplement en changeant les règles du jeu.
 
 ### Si c'est une file :
-- On **ajoute** les amis à la fin. Par exemple, Jean arrive après Reva :
+- On **ajoute** les amis à la fin, par exemple, Jean arrive après Reva :
 |Amis|Manutea|Vai|Purotu|Heiarii|Reva|Jean|
 |---|---|---|---|---|---|---|
 |index|0|1|2|3|4|5|
-- Et on **traite** depuis le début : on retire Manutea du tableau :
+- Et on **traite** depuis le début, on retire Manutea du tableau :
 |Amis|Vai|Purotu|Heiarii|Reva|Jean|(vide)|
 |---|---|---|---|---|---|---|
 |index|0|1|2|3|4|5|
 
 ### Pour une pile :
-- On **ajoute** les amis au début. Jean arrive avant Manutea :
+- On **ajoute** les amis au début, Jean arrive avant Manutea :
 |Amis|Jean|Manutea|Vai|Purotu|Heiarii|Reva|
 |---|---|---|---|---|---|---|
 |index|0|1|2|3|4|5|
-- Et on **traite** toujours depuis le début : Jean passe en premier :
+- Et on **traite** toujours depuis le début, on retire Jean du tableau :
 |Amis|Manutea|Vai|Purotu|Heiarii|Reva|(vide)|
 |---|---|---|---|---|---|---|
 |index|0|1|2|3|4|5|
@@ -84,14 +84,14 @@ C’est la version souple du tableau, celle qu’on trouve dans la majorité des
 Refaisons les exemples de pile et de file, mais cette fois-ci avec des listes.
 
 ### Si c'est une file :
-- On **ajoute** les amis à la fin. Par exemple, Jean arrive après Reva :
+- On **ajoute** les amis à la fin, par exemple, Jean arrive après Reva :
 |Amis|Manutea|Vai|Purotu|Heiarii|Reva|Jean|
 |---|---|---|---|---|---|---|
 |index|0|1|2|3|4|5|
 
 Nombre d'éléments: 6
 
-- Et on **traite** depuis le début : on retire Manutea du tableau :
+- Et on **traite** depuis le début, on retire Manutea du tableau :
 |Amis|Vai|Purotu|Heiarii|Reva|Jean|
 |---|---|---|---|---|---|
 |index|0|1|2|3|4|
@@ -99,14 +99,14 @@ Nombre d'éléments: 6
 Nombre d'éléments: 5
 
 ### Pour une pile :
-- On **ajoute** les amis au début. Jean arrive avant Manutea :
+- On **ajoute** les amis au début, Jean arrive avant Manutea :
 |Amis|Jean|Manutea|Vai|Purotu|Heiarii|Reva|
 |---|---|---|---|---|---|---|
 |index|0|1|2|3|4|5|
 
 Nombre d'éléments: 6
 
-- Et on **traite** toujours depuis le début : Jean passe en premier :
+- Et on **traite** toujours depuis le début, on retire Jean du tableau :
 |Amis|Manutea|Vai|Purotu|Heiarii|Reva|
 |---|---|---|---|---|---|
 |index|0|1|2|3|4|
@@ -169,6 +169,13 @@ En vrai, pour calculer l'index, on utilise une fonction de hachage (*hash* en an
 >Oui mais moi je n'ai pas envie de m'embêter à compter sur mes doigts à quelle position est la lettre V...
 
 Tu as raison, dans la vraie vie, dans ton carnet d'adresse pour chaque lettre tu as une encoche où la lettre y est marquée, et tu notes les informations dans les pages qui correspondent à cette lettre.
+
+<figure>
+
+![Carnet d'adresses](/carnet_adresses.jpg#center)
+
+<figcaption>Carnet d'adresses papier, en rouge les encoches - source: Wikimédia</figcaption>
+</figure>
 
 En informatique c'est le même principe, sauf qu'on ne peut pas utiliser de lettre comme index, alors on est obligé de trouver cette astuce.
 
@@ -313,7 +320,7 @@ graph TD
 <figcaption>Graphe de relation entre les personnes</figcaption>
 </figure>
 
-Ce graphe est **non orienté**, c'est-à-dire qu'il n'y a pas de sens entre les éléments.
+Ce graphe est **non orienté**, c'est-à-dire qu'il n'y a pas de sens entre les éléments. Chaque case est un **noeud**, est chaque trait est une **arête**.
 
 Effectivement pour éviter de fâcher les personnes, on ne va pas dire *"Purotu est l'ami de Tiare, mais Tiare n'est pas l'ami de Purotu"*.
 
@@ -334,6 +341,8 @@ graph TD
 <figcaption>Graphe des appels que tu as passé</figcaption>
 </figure>
 
+Ici, chaque case est un **noeud**, tout comme le graphe **non orienté**, mais cette fois-ci, chaque *flèche* est une **arête**, et donne le sens d'appel.
+
 **On a donc les mêmes données, mais on utilise la structure adaptée à ce qu'on veut représenter.**
 
 >Et c'est quoi le parcours de graphe?
@@ -346,7 +355,6 @@ On a déjà vu pas mal de choses, je te laisse relire, essayer de combiner les s
 
 Il existe beaucoup de structures de données, celles qui sont présentées dans cet article sont juste les plus basiques, celles qu'on apprend dans les premières heures de cours de programmation.
 
-**Le prochain article est en cours de rédaction.**
-<!-- Si tu souhaites continuer cette aventure, tu peux regarder la suite ici: [IMVV - Chapitre 3 - Structures de contrôle et algorithme, apprendre à réfléchir](../structures-de-controle/) -->
+Si tu souhaites continuer cette aventure, tu peux regarder la suite ici: [IMVV - Section 1 - Chapitre 3 - Structures de contrôle et algorithme, apprendre à réfléchir](../structures-de-controle/)
 
 [← Retour à l’introduction](../introduction/)

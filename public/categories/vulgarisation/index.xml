@@ -9,20 +9,20 @@
     <lastBuildDate>Wed, 30 Apr 2025 14:30:37 -1000</lastBuildDate>
     <atom:link href="http://localhost:1313/blog.dev/categories/vulgarisation/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>IMVV - Chapitre 1 - File ou Pile ? L&#39;art de passer avant les autres</title>
-      <link>http://localhost:1313/blog.dev/posts/miroir-informatique-vraie-vie/file-et-pile/</link>
+      <title>IMVV - Section 1 - Chapitre 1 - File ou Pile ? L&#39;art de passer avant les autres</title>
+      <link>http://localhost:1313/blog.dev/posts/miroir-informatique-vraie-vie/les-bases/file-et-pile/</link>
       <pubDate>Tue, 29 Apr 2025 14:34:21 -1000</pubDate>
-      <guid>http://localhost:1313/blog.dev/posts/miroir-informatique-vraie-vie/file-et-pile/</guid>
+      <guid>http://localhost:1313/blog.dev/posts/miroir-informatique-vraie-vie/les-bases/file-et-pile/</guid>
       <description>&lt;p&gt;Quand tu prends un ticket pour attendre ton tour, que tu fais la queue à la caisse, que tu prends l’assiette du haut de la pile pour mettre la table, ou que tu cliques sur le bouton &amp;lsquo;Retour&amp;rsquo; (←) du navigateur internet…
 Tu manipules sans le savoir des concepts qu’on appelle en informatique des structures de données, et les algorithmes associés qui les font vivre.&lt;/p&gt;
 &lt;p&gt;Dans cet article, on va mettre un peu de clarté là-dedans : pas besoin de coder pour comprendre, on va illustrer tout ça avec des situations de la vie courante.&lt;/p&gt;</description>
     </item>
     <item>
-      <title>IMVV - Chapitre 2 - Autres structure de données, j&#39;organise mon bordel</title>
-      <link>http://localhost:1313/blog.dev/posts/miroir-informatique-vraie-vie/structures-de-donnees/</link>
+      <title>IMVV - Section 1 - Chapitre 2 - Autres structure de données, j&#39;organise mon bordel</title>
+      <link>http://localhost:1313/blog.dev/posts/miroir-informatique-vraie-vie/les-bases/structures-de-donnees/</link>
       <pubDate>Tue, 29 Apr 2025 15:41:48 -1000</pubDate>
-      <guid>http://localhost:1313/blog.dev/posts/miroir-informatique-vraie-vie/structures-de-donnees/</guid>
-      <description>&lt;p&gt;Dans le précédent article &lt;a href=&#34;../file-et-pile/&#34;&gt;IMVV - Chapitre 1 - File ou Pile ? L&amp;rsquo;art de passer avant les autres&lt;/a&gt; on a découvert les files et les piles. Cette fois, on va survoler plusieurs autres &lt;strong&gt;structures de données&lt;/strong&gt; (&lt;em&gt;data structures&lt;/em&gt; en anglais) qu&amp;rsquo;on utilise très souvent en informatique&amp;hellip; et dans la vraie vie.&lt;/p&gt;
+      <guid>http://localhost:1313/blog.dev/posts/miroir-informatique-vraie-vie/les-bases/structures-de-donnees/</guid>
+      <description>&lt;p&gt;Dans le précédent article &lt;a href=&#34;../file-et-pile/&#34;&gt;IMVV - Section 1 - Chapitre 1 - File ou Pile ? L&amp;rsquo;art de passer avant les autres&lt;/a&gt; on a découvert les files et les piles. Cette fois, on va survoler plusieurs autres &lt;strong&gt;structures de données&lt;/strong&gt; (&lt;em&gt;data structures&lt;/em&gt; en anglais) qu&amp;rsquo;on utilise très souvent en informatique&amp;hellip; et dans la vraie vie.&lt;/p&gt;
 &lt;p&gt;N&amp;rsquo;oublie pas que les objectifs de ces articles sont :&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;Te donner une meilleure compréhension des bases de l’informatique,&lt;/li&gt;
@@ -33,22 +33,18 @@ Tu manipules sans le savoir des concepts qu’on appelle en informatique des str
 &lt;p&gt;Tu as peut-être remarqué dans le précédent article que la &lt;strong&gt;file&lt;/strong&gt; et la &lt;strong&gt;pile&lt;/strong&gt; se ressemblent beaucoup. En réalité, on peut les représenter toutes les deux avec la même structure : un &lt;strong&gt;tableau&lt;/strong&gt;.&lt;/p&gt;</description>
     </item>
     <item>
-      <title>IMVV - Chapitre 3 - Structures de contrôle et algorithme, apprendre à réfléchir</title>
-      <link>http://localhost:1313/blog.dev/posts/miroir-informatique-vraie-vie/structures-de-controle/</link>
+      <title>IMVV - Section 1 - Chapitre 3 - Structures de contrôle et algorithme, apprendre à réfléchir</title>
+      <link>http://localhost:1313/blog.dev/posts/miroir-informatique-vraie-vie/les-bases/structures-de-controle/</link>
       <pubDate>Wed, 30 Apr 2025 14:30:37 -1000</pubDate>
-      <guid>http://localhost:1313/blog.dev/posts/miroir-informatique-vraie-vie/structures-de-controle/</guid>
-      <description>&lt;p&gt;Dans l&amp;rsquo;article précédent, on s&amp;rsquo;était arrêté sur ta question:&lt;/p&gt;
+      <guid>http://localhost:1313/blog.dev/posts/miroir-informatique-vraie-vie/les-bases/structures-de-controle/</guid>
+      <description>&lt;p&gt;Dans l&amp;rsquo;article précédent &lt;a href=&#34;../structures-de-donnees/&#34;&gt;IMVV - Section 1 - Chapitre 2 - Autres structure de données, j&amp;rsquo;organise mon bordel&lt;/a&gt;, on s&amp;rsquo;était arrêté sur ta question:&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;Et c&amp;rsquo;est quoi le parcours de graphe?&lt;/p&gt;&lt;/blockquote&gt;
 &lt;p&gt;Dans cet article, on va parler des &lt;strong&gt;structures de contrôle&lt;/strong&gt; (&lt;em&gt;control flow statements&lt;/em&gt; en anglais), qu&amp;rsquo;on utilise dans des &lt;strong&gt;algorithmes&lt;/strong&gt; (&lt;em&gt;algorithms&lt;/em&gt; en anglais).&lt;/p&gt;
-&lt;p&gt;Avant d&amp;rsquo;expliquer l&amp;rsquo;algorithme que tu as fait, le &lt;strong&gt;parcours de graphe&lt;/strong&gt;, on doit expliquer les structures de contrôle.&lt;/p&gt;
-&lt;h2 id=&#34;la-boucle--ou-comment-avoir-la-flemme&#34;&gt;La boucle — ou comment avoir la flemme&lt;/h2&gt;
-&lt;h2 id=&#34;la-condition--ou-pourquoi-il-faut-respecter-le-code-de-la-route&#34;&gt;La condition — ou pourquoi il faut respecter le code de la route&lt;/h2&gt;
-&lt;h2 id=&#34;revenons-à-notre-parcours-de-graphe&#34;&gt;Revenons à notre parcours de graphe&lt;/h2&gt;
-&lt;p&gt;Pour rappel, tu avais appelé tes amis pour les inviter à ton anniversaire, et tu avais été jusqu&amp;rsquo;au bout du monde, en sautant de relations en relations, pour inviter Paul.&lt;/p&gt;</description>
+&lt;p&gt;Avant d&amp;rsquo;expliquer l&amp;rsquo;algorithme que tu as fait, le &lt;strong&gt;parcours de graphe&lt;/strong&gt;, on doit expliquer les structures de contrôle.&lt;/p&gt;</description>
     </item>
     <item>
-      <title>IMMV - Chapitre 0 - L&#39;informatique, un miroir de la vraie vie</title>
+      <title>IMMV - Introduction - L&#39;informatique, un miroir de la vraie vie</title>
       <link>http://localhost:1313/blog.dev/posts/miroir-informatique-vraie-vie/introduction/</link>
       <pubDate>Tue, 29 Apr 2025 14:05:13 -1000</pubDate>
       <guid>http://localhost:1313/blog.dev/posts/miroir-informatique-vraie-vie/introduction/</guid>
