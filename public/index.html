@@ -1,26 +1,27 @@
 <!DOCTYPE html>
-<html lang="en" dir="auto">
+<html lang="fr" dir="auto">
 
-<head><meta charset="utf-8">
+<head>
+	<meta name="generator" content="Hugo 0.147.0"><script src="/blog.dev/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=blog.dev/livereload" data-no-instant defer></script><meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<meta name="robots" content="index, follow">
-<title>HUANG Manutea</title>
+<meta name="robots" content="noindex, nofollow">
+<title>Encore un autre blog d&#39;un tahitien</title>
 
-<meta name="description" content="Dev, software engineering, Tahiti, and so on">
-<meta name="author" content="HUANG Manutea">
-<link rel="canonical" href="https://huangmanutea.github.io/blog.dev/" />
-<link crossorigin="anonymous" href="/blog.dev/assets/css/stylesheet.min.c88963fe2d79462000fd0fb1b3737783c32855d340583e4523343f8735c787f0.css" integrity="sha256-yIlj/i15RiAA/Q&#43;xs3N3g8MoVdNAWD5FIzQ/hzXHh/A=" rel="preload stylesheet" as="style">
-<link rel="icon" href="https://huangmanutea.github.io/blog.dev/favicon.ico">
-<link rel="icon" type="image/png" sizes="16x16" href="https://huangmanutea.github.io/blog.dev/favicon-16x16.png">
-<link rel="icon" type="image/png" sizes="32x32" href="https://huangmanutea.github.io/blog.dev/favicon-32x32.png">
-<link rel="apple-touch-icon" href="https://huangmanutea.github.io/blog.dev/apple-touch-icon.png">
-<link rel="mask-icon" href="https://huangmanutea.github.io/blog.dev/safari-pinned-tab.svg">
+<meta name="description" content="">
+<meta name="author" content="">
+<link rel="canonical" href="http://localhost:1313/blog.dev/">
+<link crossorigin="anonymous" href="/blog.dev/assets/css/stylesheet.b6d1e897fde6d9991139e897aedf7cb8e2b3bb38133419e854cf35287da683e6.css" integrity="sha256-ttHol/3m2ZkROeiXrt98uOKzuzgTNBnoVM81KH2mg&#43;Y=" rel="preload stylesheet" as="style">
+<link rel="icon" href="http://localhost:1313/blog.dev/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="http://localhost:1313/blog.dev/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="http://localhost:1313/blog.dev/favicon-32x32.png">
+<link rel="apple-touch-icon" href="http://localhost:1313/blog.dev/apple-touch-icon.png">
+<link rel="mask-icon" href="http://localhost:1313/blog.dev/safari-pinned-tab.svg">
 <meta name="theme-color" content="#2e2e33">
 <meta name="msapplication-TileColor" content="#2e2e33">
-<meta name="generator" content="Hugo 0.92.0" />
-<link rel="alternate" type="application/rss+xml" href="https://huangmanutea.github.io/blog.dev/index.xml">
-<link rel="alternate" type="application/json" href="https://huangmanutea.github.io/blog.dev/index.json">
+<link rel="alternate" type="application/rss+xml" href="http://localhost:1313/blog.dev/index.xml">
+<link rel="alternate" type="application/json" href="http://localhost:1313/blog.dev/index.json">
+<link rel="alternate" hreflang="fr" href="http://localhost:1313/blog.dev/">
 <noscript>
     <style>
         #theme-toggle,
@@ -38,7 +39,7 @@
                 --secondary: rgb(155, 156, 157);
                 --tertiary: rgb(65, 66, 68);
                 --content: rgb(196, 196, 197);
-                --hljs-bg: rgb(46, 46, 51);
+                --code-block-bg: rgb(46, 46, 51);
                 --code-bg: rgb(55, 56, 62);
                 --border: rgb(51, 51, 51);
             }
@@ -57,30 +58,32 @@
         }
 
     </style>
-</noscript><meta property="og:title" content="HUANG Manutea" />
-<meta property="og:description" content="Dev, software engineering, Tahiti, and so on" />
-<meta property="og:type" content="website" />
-<meta property="og:url" content="https://huangmanutea.github.io/blog.dev/" /><meta property="og:image" content="https://huangmanutea.github.io/blog.dev/Papeete.JPG"/><meta property="og:site_name" content="Yet Another Tahitian Blog" />
-
-<meta name="twitter:card" content="summary_large_image"/>
-<meta name="twitter:image" content="https://huangmanutea.github.io/blog.dev/Papeete.JPG"/>
-
-<meta name="twitter:title" content="HUANG Manutea"/>
-<meta name="twitter:description" content="Dev, software engineering, Tahiti, and so on"/>
-
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "Organization",
-  "name": "HUANG Manutea",
-  "url": "https://huangmanutea.github.io/blog.dev/",
-  "description": "Dev, software engineering, Tahiti, and so on",
-  "thumbnailUrl": "https://huangmanutea.github.io/blog.dev/favicon.ico",
-  "sameAs": [
-      "https://github.com/HUANGManutea", "https://twitter.com/HManutea"
-  ]
-}
-</script>
+</noscript><script type="module">
+    import mermaid from "https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs";
+  
+    function getMermaidTheme() {
+      return document.body.classList.contains("dark") ? "dark" : "default";
+    }
+  
+    function renderMermaid() {
+      mermaid.initialize({ startOnLoad: false, theme: getMermaidTheme() });
+      mermaid.init(undefined, document.querySelectorAll(".mermaid"));
+    }
+  
+    document.addEventListener("DOMContentLoaded", () => {
+      renderMermaid();
+    });
+  
+    
+    const observer = new MutationObserver(() => {
+      renderMermaid();
+    });
+  
+    observer.observe(document.body, {
+      attributes: true,
+      attributeFilter: ["class"]
+    });
+  </script>
 </head>
 
 <body class="list" id="top">
@@ -98,15 +101,15 @@
 <header class="header">
     <nav class="nav">
         <div class="logo">
-            <a href="https://huangmanutea.github.io/blog.dev/" accesskey="h" title="HUANG Manutea (Alt + H)">HUANG Manutea</a>
-            <span class="logo-switches">
-                <button id="theme-toggle" accesskey="t" title="(Alt + T)">
-                    <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+            <a href="http://localhost:1313/blog.dev/" accesskey="h" title="Encore un autre blog d&#39;un tahitien (Alt + H)">Encore un autre blog d&#39;un tahitien</a>
+            <div class="logo-switches">
+                <button id="theme-toggle" accesskey="t" title="(Alt + T)" aria-label="Toggle theme">
+                    <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
                         fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
                         stroke-linejoin="round">
                         <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
                     </svg>
-                    <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                    <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
                         fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
                         stroke-linejoin="round">
                         <circle cx="12" cy="12" r="5"></circle>
@@ -120,90 +123,113 @@
                         <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
                     </svg>
                 </button>
-            </span>
+            </div>
         </div>
         <ul id="menu">
         </ul>
     </nav>
 </header>
 <main class="main"> 
-<article class="first-entry home-info">
-    <header class="entry-header">
-        <h1>Yet Another Tahitian Blog</h1>
-    </header>
-    <section class="entry-content">
-        <p>Dev, software engineering, Tahiti, and so on.</p>
-    </section>
-    <footer class="entry-footer">
-        <div class="social-icons">
-    <a href="https://github.com/HUANGManutea" target="_blank" rel="noopener noreferrer me" title="Github">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-    stroke-linecap="round" stroke-linejoin="round">
-    <path
-        d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22">
-    </path>
-</svg>
-    </a>
-    <a href="https://twitter.com/HManutea" target="_blank" rel="noopener noreferrer me" title="Twitter">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-    stroke-linecap="round" stroke-linejoin="round">
-    <path
-        d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z">
-    </path>
-</svg>
-    </a>
-</div>
 
-    </footer>
+<article class="first-entry"> 
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">Autres structure de données, j&#39;organise mon bordel
+      <span class="entry-hint" title="Draft">
+        <svg xmlns="http://www.w3.org/2000/svg" height="20" viewBox="0 -960 960 960" fill="currentColor">
+          <path
+            d="M160-410v-60h300v60H160Zm0-165v-60h470v60H160Zm0-165v-60h470v60H160Zm360 580v-123l221-220q9-9 20-13t22-4q12 0 23 4.5t20 13.5l37 37q9 9 13 20t4 22q0 11-4.5 22.5T862.09-380L643-160H520Zm300-263-37-37 37 37ZM580-220h38l121-122-18-19-19-18-122 121v38Zm141-141-19-18 37 37-18-19Z" />
+        </svg>
+      </span>
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>Dans le précédent article File ou Pile ? L’art de passer avant les autres on a découvert les files et les piles. Cette fois, on va survoler plusieurs autres structures de données qu’on utilise très souvent en informatique… et dans la vraie vie.
+Le tableau - la base de presque tout Tu as peut-être remarqué dans le précédent article que la file et la pile se ressemblent beaucoup. En réalité, on peut les représenter toutes les deux avec la même structure : un tableau.
+...</p>
+  </div>
+  <footer class="entry-footer"><span title='2025-04-29 15:41:48 -1000 -10'>avril 29, 2025</span></footer>
+  <a class="entry-link" aria-label="post link to Autres structure de données, j&#39;organise mon bordel" href="http://localhost:1313/blog.dev/posts/miroir-informatique-vraie-vie/structures-de-donnees/"></a>
 </article>
 
 <article class="post-entry"> 
   <header class="entry-header">
-    <h2>Creation E Shopping<sup><span class="entry-isdraft">&nbsp;&nbsp;[draft]</span></sup>
+    <h2 class="entry-hint-parent">File ou Pile ? L&#39;art de passer avant les autres
+      <span class="entry-hint" title="Draft">
+        <svg xmlns="http://www.w3.org/2000/svg" height="20" viewBox="0 -960 960 960" fill="currentColor">
+          <path
+            d="M160-410v-60h300v60H160Zm0-165v-60h470v60H160Zm0-165v-60h470v60H160Zm360 580v-123l221-220q9-9 20-13t22-4q12 0 23 4.5t20 13.5l37 37q9 9 13 20t4 22q0 11-4.5 22.5T862.09-380L643-160H520Zm300-263-37-37 37 37ZM580-220h38l121-122-18-19-19-18-122 121v38Zm141-141-19-18 37 37-18-19Z" />
+        </svg>
+      </span>
     </h2>
   </header>
-  <section class="entry-content">
-    <p></p>
-  </section>
-  <footer class="entry-footer"><span title='2022-05-07 21:26:05 -1000 HST'>May 7, 2022</span>&nbsp;·&nbsp;0 min&nbsp;·&nbsp;HUANG Manutea</footer>
-  <a class="entry-link" aria-label="post link to Creation E Shopping" href="https://huangmanutea.github.io/blog.dev/posts/creation-e-shopping/"></a>
+  <div class="entry-content">
+    <p>Quand tu prends un ticket pour attendre ton tour, que tu fais la queue à la caisse, que tu prends l’assiette du haut de la pile pour mettre la table, ou que tu cliques sur le bouton ‘Retour’ (←) du navigateur internet… Tu manipules sans le savoir des concepts qu’on appelle en informatique des structures de données, et les algorithmes associés qui les font vivre.
+Dans cet article, on va mettre un peu de clarté là-dedans : pas besoin de coder pour comprendre, on va illustrer tout ça avec des situations de la vie courante.
+...</p>
+  </div>
+  <footer class="entry-footer"><span title='2025-04-29 14:34:21 -1000 -10'>avril 29, 2025</span></footer>
+  <a class="entry-link" aria-label="post link to File ou Pile ? L&#39;art de passer avant les autres" href="http://localhost:1313/blog.dev/posts/miroir-informatique-vraie-vie/file-et-pile/"></a>
 </article>
 
 <article class="post-entry"> 
   <header class="entry-header">
-    <h2>Paiement en ligne en Polynésie Française<sup><span class="entry-isdraft">&nbsp;&nbsp;[draft]</span></sup>
+    <h2 class="entry-hint-parent">L&#39;informatique, un miroir de la vraie vie - introduction
+      <span class="entry-hint" title="Draft">
+        <svg xmlns="http://www.w3.org/2000/svg" height="20" viewBox="0 -960 960 960" fill="currentColor">
+          <path
+            d="M160-410v-60h300v60H160Zm0-165v-60h470v60H160Zm0-165v-60h470v60H160Zm360 580v-123l221-220q9-9 20-13t22-4q12 0 23 4.5t20 13.5l37 37q9 9 13 20t4 22q0 11-4.5 22.5T862.09-380L643-160H520Zm300-263-37-37 37 37ZM580-220h38l121-122-18-19-19-18-122 121v38Zm141-141-19-18 37 37-18-19Z" />
+        </svg>
+      </span>
     </h2>
   </header>
-  <section class="entry-content">
-    <p>Contexte Je souhaite que la Polynésie Française se modernise technologiquement parlant, les moyens de paiement sont un des axes d’amélioration où je peux aider. Dans ce but, je pense créer une série d’articles et de tutoriels sur les moyens de paiement, à commencer par cet article concernant le paiement en ligne en Polynésie Française.
-Disclaimer: Au moment où j’écris cet article, je travaille à OSB, mes articles seront orientés vers les solutions d’OSB car ce sont celles avec lesquelles je suis le plus familier....</p>
-  </section>
-  <footer class="entry-footer"><span title='2022-05-07 19:18:54 -1000 HST'>May 7, 2022</span>&nbsp;·&nbsp;3 min&nbsp;·&nbsp;HUANG Manutea</footer>
-  <a class="entry-link" aria-label="post link to Paiement en ligne en Polynésie Française" href="https://huangmanutea.github.io/blog.dev/posts/paiement-en-ligne-pf/"></a>
+  <div class="entry-content">
+    <p>L’informatique semble souvent obscure pour beaucoup. Quand je dis que je suis ingénieur informatique, on me demande régulièrement : « Mais tu fais quoi exactement ? » Avec le temps, j’ai pris l’habitude de vulgariser mon métier. Et ce qui fonctionne le mieux, ce sont les exemples concrets tirés de la vie quotidienne.
+En école d’ingénieur, j’apprenais beaucoup plus facilement l’informatique en partant de situations réelles. À travers cette série d’articles, “L’informatique, un miroir de la vraie vie”, je vais tenter d’expliquer des concepts informatiques en m’appuyant sur des scènes familières du quotidien. Parce que finalement, coder un programme ou gérer une file d’attente au magasin, ce n’est pas si différent.
+...</p>
+  </div>
+  <footer class="entry-footer"><span title='2025-04-29 14:05:13 -1000 -10'>avril 29, 2025</span></footer>
+  <a class="entry-link" aria-label="post link to L&#39;informatique, un miroir de la vraie vie - introduction" href="http://localhost:1313/blog.dev/posts/miroir-informatique-vraie-vie/introduction/"></a>
 </article>
 
 <article class="post-entry"> 
   <header class="entry-header">
-    <h2>Hello World
+    <h2 class="entry-hint-parent">Introduction aux moyens de paiement en Polynésie Française
     </h2>
   </header>
-  <section class="entry-content">
+  <div class="entry-content">
+    <p>Introduction Cet article est un aperçu très rapide des moyens de paiement en Polynésie Française.
+Update (12/05/2022): suite à quelques feedback, je me rend compte que cet article est à destination des développeurs de site de e-shopping, des commerçants, de mes confrères monéticiens. Cet article sera complexe à lire si vous n’avez jamais travaillé avec un TPE, avec une plateforme de paiement, avec des cartes bancaires.
+Disclaimer: Au moment où j’écris cet article, je travaille à l’Océanienne des Services Bancaires (OSB), Ces articles ne sont pas sponsorisés par OSB, et j’encourage les gens à faire des tutoriels pour les solutions des autres fournisseurs de solutions de paiement.
+...</p>
+  </div>
+  <footer class="entry-footer"><span title='2022-05-07 19:18:54 -1000 -10'>mai 7, 2022</span></footer>
+  <a class="entry-link" aria-label="post link to Introduction aux moyens de paiement en Polynésie Française" href="http://localhost:1313/blog.dev/posts/intro-moyens-paiement/"></a>
+</article>
+
+<article class="post-entry"> 
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">Hello World
+    </h2>
+  </header>
+  <div class="entry-content">
     <p>Ia’orana, bonjour !
 Ce post marque le début du blog hébergé sur Github.
 Vous trouverez ici de temps en temps des articles de développement et des POCs.
-Bonne lecture !</p>
-  </section>
-  <footer class="entry-footer"><span title='2022-01-25 23:29:43 -1000 HST'>January 25, 2022</span>&nbsp;·&nbsp;1 min&nbsp;·&nbsp;HUANG Manutea</footer>
-  <a class="entry-link" aria-label="post link to Hello World" href="https://huangmanutea.github.io/blog.dev/posts/hello-world/"></a>
+Bonne lecture !
+</p>
+  </div>
+  <footer class="entry-footer"><span title='2022-01-25 23:29:43 -1000 -10'>janvier 25, 2022</span></footer>
+  <a class="entry-link" aria-label="post link to Hello World" href="http://localhost:1313/blog.dev/posts/hello-world/"></a>
 </article>
     </main>
     
 <footer class="footer">
-    <span>&copy; 2022 <a href="https://huangmanutea.github.io/blog.dev/">HUANG Manutea</a></span>
+        <span>&copy; 2025 <a href="http://localhost:1313/blog.dev/">Encore un autre blog d&#39;un tahitien</a></span> · 
+
     <span>
         Powered by
         <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &
-        <a href="https://git.io/hugopapermod" rel="noopener" target="_blank">PaperMod</a>
+        <a href="https://github.com/adityatelange/hugo-PaperMod/" rel="noopener" target="_blank">PaperMod</a>
     </span>
 </footer>
 <a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">

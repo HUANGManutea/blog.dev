@@ -1,0 +1,8 @@
+<ul>
+  {{ $current := .Page }}
+  {{ range $current.Parent.Pages }}
+    {{ if ne .RelPermalink $current.RelPermalink }}
+      <li><a href="{{ .RelPermalink }}">{{ .Title }}</a></li>
+    {{ end }}
+  {{ end }}
+</ul>

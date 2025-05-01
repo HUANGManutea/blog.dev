@@ -2,17 +2,17 @@
 title: "Introduction aux moyens de paiement en Polynésie Française"
 date: 2022-05-07T19:18:54-10:00
 draft: false
-tags: [Monétique, Payzen]
+tags: [Monétique]
 categories: [Informatif]
 ---
 
 # Introduction
 
-Je souhaite que la Polynésie Française se modernise, les moyens de paiement sont un des axes d'amélioration où je peux aider. Dans ce but, je pense créer une série d'articles et de tutoriels sur les moyens de paiement, et plus particulièrement sur Payzen By OSB, à commencer par cet article.
+Cet article est un aperçu très rapide des moyens de paiement en Polynésie Française.
 
 >Update (12/05/2022): suite à quelques feedback, je me rend compte que cet article est à destination des développeurs de site de e-shopping, des commerçants, de mes confrères monéticiens. Cet article sera complexe à lire si vous n'avez jamais travaillé avec un TPE, avec une plateforme de paiement, avec des cartes bancaires.
 
-**Disclaimer**: Au moment où j'écris cet article, je travaille à l'Océanienne des Services Bancaires (OSB), mes articles seront orientés vers les solutions d'OSB car ce sont celles avec lesquelles je suis le plus familier. Ces articles ne sont pas sponsorisés par OSB, et j'encourage les gens à faire des tutoriels pour les solutions des autres fournisseurs de solutions de paiement.
+**Disclaimer**: Au moment où j'écris cet article, je travaille à l'Océanienne des Services Bancaires (OSB), Ces articles ne sont pas sponsorisés par OSB, et j'encourage les gens à faire des tutoriels pour les solutions des autres fournisseurs de solutions de paiement.
 
 # Les différents types de carte
 
@@ -31,33 +31,31 @@ Les 3 derniers types de cartes sont surtout utilisés par les touristes.
 
 # Pourquoi autant de personnes ont une carte privative ?
 
-Les cartes privatives sont proposées par les différentes banques de la place (à l'exception d'OFINA qui émet exclusivement les cartes AMEX). Il s'agit des banques Socredo, Banque de Tahiti, Banque de Polynésie, et Fare Rata.
+Les cartes privatives sont proposées par les différentes banques locales (à l'exception d'OFINA qui émet exclusivement les cartes AMEX). Il s'agit des banques Socredo, Banque de Tahiti, Banque de Polynésie, et Fare Rata.
 
 Les cartes privatives sont soumises à des réglementations et des frais moins coûteux que les cartes internationales.
 
-En outre, elles sont uniquement régulées par les banques de la place, contrairement aux cartes bancaires internationales, qui sont non seulement régulées par les banques de la place, mais aussi par les réseaux internationaux (CB, Visa, Mastercard, Union Pay, etc.).
+En outre, elles sont uniquement régulées par les banques locales contrairement aux cartes bancaires internationales, qui sont non seulement régulées par les banques locales, mais aussi par les réseaux internationaux (CB, Visa, Mastercard, Union Pay, etc.).
 
-***C'est en partie à cause de ces réglementations et frais moins coûteux que les clients des banques doivent remplir moins de conditions pour avoir une carte locale. C'est pour cela que les cartes privatives sont plus répandues sur le territoire.***
+***C'est en partie à cause de ces réglementations et frais moins coûteux que les clients des banques doivent remplir moins de conditions pour avoir une carte privative. C'est pour cela que les cartes privatives sont plus répandues sur le territoire.***
 
 Notes:
 
 Les réseaux peuvent décider d'appliquer des amendes voire de désactiver le flux vers un acteur monétaire (banque, processeur de paiement, etc.) si celui-ci ne respecte pas la réglementation. Cette réglementation est mise à jour régulièrement.
 
-Pour les cartes privatives, ce sont les banques de la place qui imposent leur réglementation, par abus de langage, on parle aussi de réseau privatif pour désigner l'ensemble de ces banques.
+Pour les cartes privatives, ce sont les banques locales qui imposent leur réglementation, par abus de langage, on parle aussi de réseau privatif pour désigner l'ensemble de ces banques.
 
 Ces réglementations sont suivies par les banques centrales des pays, par exemple l'IEOM en Polynésie Française. 
 
-J'ai inclus la carte Tiare de la Banque de Tahiti dans les cartes privatives car elle a les mêmes limitations géographiques que celles-ci[1], mais il s'agit bien d'une CB, donc elle est soumise aux réglementations CB.
+J'ai inclus la carte Tiare de la Banque de Tahiti dans les cartes privatives car elle a les mêmes limitations géographiques que celles-ci, et elle fonctionne aussi en métropole, mais il s'agit bien d'une CB, donc elle est soumise aux réglementations CB.
 
 Les cartes Socredo privatives sont maintenant co-brandées UPI, mais il y a bien 2 applications dans la carte, sur le territoire, c'est l'application privative qui est utilisée, à l'international, c'est l'application UPI qui est utilisée.
-
-[1]: Update (16/05/2022): La carte Tiare est une CB nationale, elle fonctionne également en France, mais pas à l'étranger.
 
 # Fonctionnement des transactions
 
 Le schéma à 4 coins est l'un des schémas de référence de la monétique. Il explique les entités qui entrent en jeu dans une transaction.
 
-![Schéma à 4 coins](schema_4_coins.png#center "Schéma à 4 coins")
+![schéma à 4 coins](/schema_4_coins.png#center)
 
 La banque émettrice émet la carte et la fournit au porteur.
 
@@ -94,24 +92,30 @@ De la même manière, pour une plateforme de paiement en ligne, celle-ci ne pour
 
 Comme énoncé précédemment, les cartes privatives sont majoritaires en Polynésie Française, et elles ne sont pas reconnues à l'étranger (sauf pour les cartes Socredo co-brandées UPI, comme cité précédemment) car les BIN privatifs ne sont pas déclarés dans le monde.
 
-C'est pour cela qu'on ne peut pas payer avec une carte privative sur la plupart des plateformes de paiement en ligne (Paypal, Stripe, etc.).
+C'est pour cela qu'on ne peut pas payer avec une carte privative sur la plupart des plateformes de paiement en ligne (Paypal, Stripe, etc.), qui sont internationales.
  
-Pour remédier à ce problème, OSB propose Payzen, qui est actuellement la solution la plus connue qui accepte les cartes privatives. La Banque de Tahiti quant à elle vient de lancer SystemPay, un produit concurrent.
+Pour remédier à ce problème, OSB propose Payzen, et la Banque de Tahiti propose SystemPay.
 
 À mon avis, à l'heure actuelle, c'est vers ces solutions que je conseille les commerçants d'aller, car ***il serait dommage de se priver des cartes privatives, alors qu'elles sont plus nombreuses.***
 
 Notes:
 
-Les 2 solutions sont en réalité basées sur les solutions Payzen et SystemPay de Lyra, société située en France. Certains d'entre vous ont d'ailleurs peut-être déjà été confus en recherchant de la documentation sur ces solutions et se sont perdus entre la documentation Payzen d'OSB, la documentation Payzen de Lyra, la documentation SystemPay de la Banque de Tahiti, et la documentation SystemPay de Lyra.
+Les 2 solutions sont en réalité basées sur les solutions Payzen et SystemPay de Lyra, société située en France. Certains d'entre vous ont d'ailleurs peut-être déjà été confus en recherchant de la documentation technique de ces solutions et se sont perdus entre:
+- la documentation Payzen d'OSB,
+- la documentation Payzen de Lyra,
+- la documentation SystemPay de la Banque de Tahiti,
+- la documentation SystemPay de Lyra.
 
 ***Je vous conseille de vous focaliser sur les documentations locales, et ensuite de compléter avec les documentations de Lyra.***
 
 # Conclusion
 
-En Polynésie Française, la plus grande part des cartes bancaires sont des cartes privatives, pour des raisons économiques et réglementaires.
+Il existe plusieurs types de cartes.
 
-Le fonctionnement même des systèmes d'acceptation impose quels types de cartes ils peuvent accepter, de ce fait, un commerçant local qui cherche une solution de paiement en ligne devrait se tourner vers les plateformes qui acceptent les cartes privatives.
+Les protocoles de paiement s'inscrivent dans un schéma à 4 coins, il y a plusieurs acteurs qui entrent en jeu.
 
-C'est à partir de ce raisonnement que dans les articles suivants, je présenterai comment implémenter Payzen By OSB sur une application web fullstack.
+Il y a une réglementation générale qui englobe tous les types de cartes, et chaque type a également sa réglementation spécifique. Les banques sont soumises à ces réglementations, l'IEOM et les réseaux (VISA, Mastercard, AMEX, etc.) veillent à ce que les banques respectent ces réglementations.
 
-Si vous utilisez un CMS du style Odoo ou Prestashop, il existe des modules déjà tout faits pour intégrer Payzen dans votre site. Je ne parlerai pas des CMS dans cette série d'articles.
+La géographie et les accords entre les acteurs sont importants pour comprendre les contraintes des systèmes de paiement locaux.
+
+En Polynésie Française, la majorité des cartes bancaires sont des cartes privatives, pour des raisons économiques et réglementaires.

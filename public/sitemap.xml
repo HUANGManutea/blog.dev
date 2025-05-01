@@ -2,23 +2,49 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://huangmanutea.github.io/blog.dev/posts/creation-e-shopping/</loc>
-    <lastmod>2022-05-07T21:26:05-10:00</lastmod>
+    <loc>http://localhost:1313/blog.dev/posts/miroir-informatique-vraie-vie/</loc>
+    <lastmod>2025-04-29T15:41:48-10:00</lastmod>
   </url><url>
-    <loc>https://huangmanutea.github.io/blog.dev/</loc>
-    <lastmod>2022-05-07T21:26:05-10:00</lastmod>
+    <loc>http://localhost:1313/blog.dev/posts/miroir-informatique-vraie-vie/structures-de-donnees/</loc>
+    <lastmod>2025-04-29T15:41:48-10:00</lastmod>
   </url><url>
-    <loc>https://huangmanutea.github.io/blog.dev/posts/</loc>
-    <lastmod>2022-05-07T21:26:05-10:00</lastmod>
+    <loc>http://localhost:1313/blog.dev/categories/</loc>
+    <lastmod>2025-04-29T15:41:48-10:00</lastmod>
   </url><url>
-    <loc>https://huangmanutea.github.io/blog.dev/posts/paiement-en-ligne-pf/</loc>
+    <loc>http://localhost:1313/blog.dev/</loc>
+    <lastmod>2025-04-29T15:41:48-10:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/blog.dev/tags/informatique/</loc>
+    <lastmod>2025-04-29T15:41:48-10:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/blog.dev/tags/miroir-de-la-vraie-vie/</loc>
+    <lastmod>2025-04-29T15:41:48-10:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/blog.dev/posts/</loc>
+    <lastmod>2025-04-29T15:41:48-10:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/blog.dev/tags/</loc>
+    <lastmod>2025-04-29T15:41:48-10:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/blog.dev/categories/vulgarisation/</loc>
+    <lastmod>2025-04-29T15:41:48-10:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/blog.dev/posts/miroir-informatique-vraie-vie/file-et-pile/</loc>
+    <lastmod>2025-04-29T14:34:21-10:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/blog.dev/posts/miroir-informatique-vraie-vie/introduction/</loc>
+    <lastmod>2025-04-29T14:05:13-10:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/blog.dev/categories/informatif/</loc>
     <lastmod>2022-05-07T19:18:54-10:00</lastmod>
   </url><url>
-    <loc>https://huangmanutea.github.io/blog.dev/posts/hello-world/</loc>
+    <loc>http://localhost:1313/blog.dev/posts/intro-moyens-paiement/</loc>
+    <lastmod>2022-05-07T19:18:54-10:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/blog.dev/tags/mon%C3%A9tique/</loc>
+    <lastmod>2022-05-07T19:18:54-10:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/blog.dev/posts/hello-world/</loc>
     <lastmod>2022-01-25T23:29:43-10:00</lastmod>
-  </url><url>
-    <loc>https://huangmanutea.github.io/blog.dev/categories/</loc>
-  </url><url>
-    <loc>https://huangmanutea.github.io/blog.dev/tags/</loc>
   </url>
 </urlset>

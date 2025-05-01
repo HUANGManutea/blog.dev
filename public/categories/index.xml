@@ -1,14 +1,26 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
-    <title>Categories on HUANG Manutea</title>
-    <link>https://huangmanutea.github.io/blog.dev/categories/</link>
-    <description>Recent content in Categories on HUANG Manutea</description>
-    <image>
-      <url>https://huangmanutea.github.io/blog.dev/Papeete.JPG</url>
-      <link>https://huangmanutea.github.io/blog.dev/Papeete.JPG</link>
-    </image>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>fr-FR</language><atom:link href="https://huangmanutea.github.io/blog.dev/categories/index.xml" rel="self" type="application/rss+xml" />
+    <title>Categories on Encore un autre blog d&#39;un tahitien</title>
+    <link>http://localhost:1313/blog.dev/categories/</link>
+    <description>Recent content in Categories on Encore un autre blog d&#39;un tahitien</description>
+    <generator>Hugo -- 0.147.0</generator>
+    <language>fr</language>
+    <lastBuildDate>Tue, 29 Apr 2025 15:41:48 -1000</lastBuildDate>
+    <atom:link href="http://localhost:1313/blog.dev/categories/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Vulgarisation</title>
+      <link>http://localhost:1313/blog.dev/categories/vulgarisation/</link>
+      <pubDate>Tue, 29 Apr 2025 15:41:48 -1000</pubDate>
+      <guid>http://localhost:1313/blog.dev/categories/vulgarisation/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Informatif</title>
+      <link>http://localhost:1313/blog.dev/categories/informatif/</link>
+      <pubDate>Sat, 07 May 2022 19:18:54 -1000</pubDate>
+      <guid>http://localhost:1313/blog.dev/categories/informatif/</guid>
+      <description></description>
+    </item>
   </channel>
 </rss>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Monétique on Encore un autre blog d&#39;un tahitien</title>
+    <link>http://localhost:1313/blog.dev/tags/mon%C3%A9tique/</link>
+    <description>Recent content in Monétique on Encore un autre blog d&#39;un tahitien</description>
+    <generator>Hugo -- 0.147.0</generator>
+    <language>fr</language>
+    <lastBuildDate>Sat, 07 May 2022 19:18:54 -1000</lastBuildDate>
+    <atom:link href="http://localhost:1313/blog.dev/tags/mon%C3%A9tique/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Introduction aux moyens de paiement en Polynésie Française</title>
+      <link>http://localhost:1313/blog.dev/posts/intro-moyens-paiement/</link>
+      <pubDate>Sat, 07 May 2022 19:18:54 -1000</pubDate>
+      <guid>http://localhost:1313/blog.dev/posts/intro-moyens-paiement/</guid>
+      <description>&lt;h1 id=&#34;introduction&#34;&gt;Introduction&lt;/h1&gt;
+&lt;p&gt;Cet article est un aperçu très rapide des moyens de paiement en Polynésie Française.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Update (12/05/2022): suite à quelques feedback, je me rend compte que cet article est à destination des développeurs de site de e-shopping, des commerçants, de mes confrères monéticiens. Cet article sera complexe à lire si vous n&amp;rsquo;avez jamais travaillé avec un TPE, avec une plateforme de paiement, avec des cartes bancaires.&lt;/p&gt;&lt;/blockquote&gt;
+&lt;p&gt;&lt;strong&gt;Disclaimer&lt;/strong&gt;: Au moment où j&amp;rsquo;écris cet article, je travaille à l&amp;rsquo;Océanienne des Services Bancaires (OSB), Ces articles ne sont pas sponsorisés par OSB, et j&amp;rsquo;encourage les gens à faire des tutoriels pour les solutions des autres fournisseurs de solutions de paiement.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

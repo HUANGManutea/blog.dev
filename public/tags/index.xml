@@ -1,14 +1,33 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
-    <title>Tags on HUANG Manutea</title>
-    <link>https://huangmanutea.github.io/blog.dev/tags/</link>
-    <description>Recent content in Tags on HUANG Manutea</description>
-    <image>
-      <url>https://huangmanutea.github.io/blog.dev/Papeete.JPG</url>
-      <link>https://huangmanutea.github.io/blog.dev/Papeete.JPG</link>
-    </image>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>fr-FR</language><atom:link href="https://huangmanutea.github.io/blog.dev/tags/index.xml" rel="self" type="application/rss+xml" />
+    <title>Tags on Encore un autre blog d&#39;un tahitien</title>
+    <link>http://localhost:1313/blog.dev/tags/</link>
+    <description>Recent content in Tags on Encore un autre blog d&#39;un tahitien</description>
+    <generator>Hugo -- 0.147.0</generator>
+    <language>fr</language>
+    <lastBuildDate>Tue, 29 Apr 2025 15:41:48 -1000</lastBuildDate>
+    <atom:link href="http://localhost:1313/blog.dev/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Informatique</title>
+      <link>http://localhost:1313/blog.dev/tags/informatique/</link>
+      <pubDate>Tue, 29 Apr 2025 15:41:48 -1000</pubDate>
+      <guid>http://localhost:1313/blog.dev/tags/informatique/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Miroir De La Vraie Vie</title>
+      <link>http://localhost:1313/blog.dev/tags/miroir-de-la-vraie-vie/</link>
+      <pubDate>Tue, 29 Apr 2025 15:41:48 -1000</pubDate>
+      <guid>http://localhost:1313/blog.dev/tags/miroir-de-la-vraie-vie/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Monétique</title>
+      <link>http://localhost:1313/blog.dev/tags/mon%C3%A9tique/</link>
+      <pubDate>Sat, 07 May 2022 19:18:54 -1000</pubDate>
+      <guid>http://localhost:1313/blog.dev/tags/mon%C3%A9tique/</guid>
+      <description></description>
+    </item>
   </channel>
 </rss>

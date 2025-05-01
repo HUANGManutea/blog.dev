@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="fr" dir="auto">
+
+<head><script src="/blog.dev/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=blog.dev/livereload" data-no-instant defer></script><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="noindex, nofollow">
+<title>Introduction aux moyens de paiement en Polynésie Française | Encore un autre blog d&#39;un tahitien</title>
+<meta name="keywords" content="Monétique">
+<meta name="description" content="Introduction
+Cet article est un aperçu très rapide des moyens de paiement en Polynésie Française.
+
+Update (12/05/2022): suite à quelques feedback, je me rend compte que cet article est à destination des développeurs de site de e-shopping, des commerçants, de mes confrères monéticiens. Cet article sera complexe à lire si vous n&rsquo;avez jamais travaillé avec un TPE, avec une plateforme de paiement, avec des cartes bancaires.
+Disclaimer: Au moment où j&rsquo;écris cet article, je travaille à l&rsquo;Océanienne des Services Bancaires (OSB), Ces articles ne sont pas sponsorisés par OSB, et j&rsquo;encourage les gens à faire des tutoriels pour les solutions des autres fournisseurs de solutions de paiement.">
+<meta name="author" content="">
+<link rel="canonical" href="http://localhost:1313/blog.dev/posts/intro-moyens-paiement/">
+<link crossorigin="anonymous" href="/blog.dev/assets/css/stylesheet.b6d1e897fde6d9991139e897aedf7cb8e2b3bb38133419e854cf35287da683e6.css" integrity="sha256-ttHol/3m2ZkROeiXrt98uOKzuzgTNBnoVM81KH2mg&#43;Y=" rel="preload stylesheet" as="style">
+<link rel="icon" href="http://localhost:1313/blog.dev/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="http://localhost:1313/blog.dev/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="http://localhost:1313/blog.dev/favicon-32x32.png">
+<link rel="apple-touch-icon" href="http://localhost:1313/blog.dev/apple-touch-icon.png">
+<link rel="mask-icon" href="http://localhost:1313/blog.dev/safari-pinned-tab.svg">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<link rel="alternate" hreflang="fr" href="http://localhost:1313/blog.dev/posts/intro-moyens-paiement/">
+<noscript>
+    <style>
+        #theme-toggle,
+        .top-link {
+            display: none;
+        }
+
+    </style>
+    <style>
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --theme: rgb(29, 30, 32);
+                --entry: rgb(46, 46, 51);
+                --primary: rgb(218, 218, 219);
+                --secondary: rgb(155, 156, 157);
+                --tertiary: rgb(65, 66, 68);
+                --content: rgb(196, 196, 197);
+                --code-block-bg: rgb(46, 46, 51);
+                --code-bg: rgb(55, 56, 62);
+                --border: rgb(51, 51, 51);
+            }
+
+            .list {
+                background: var(--theme);
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-track {
+                background: 0 0;
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-thumb {
+                border-color: var(--theme);
+            }
+        }
+
+    </style>
+</noscript><script type="module">
+    import mermaid from "https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs";
+  
+    function getMermaidTheme() {
+      return document.body.classList.contains("dark") ? "dark" : "default";
+    }
+  
+    function renderMermaid() {
+      mermaid.initialize({ startOnLoad: false, theme: getMermaidTheme() });
+      mermaid.init(undefined, document.querySelectorAll(".mermaid"));
+    }
+  
+    document.addEventListener("DOMContentLoaded", () => {
+      renderMermaid();
+    });
+  
+    
+    const observer = new MutationObserver(() => {
+      renderMermaid();
+    });
+  
+    observer.observe(document.body, {
+      attributes: true,
+      attributeFilter: ["class"]
+    });
+  </script>
+</head>
+
+<body class="" id="top">
+<script>
+    if (localStorage.getItem("pref-theme") === "dark") {
+        document.body.classList.add('dark');
+    } else if (localStorage.getItem("pref-theme") === "light") {
+        document.body.classList.remove('dark')
+    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.body.classList.add('dark');
+    }
+
+</script>
+
+<header class="header">
+    <nav class="nav">
+        <div class="logo">
+            <a href="http://localhost:1313/blog.dev/" accesskey="h" title="Encore un autre blog d&#39;un tahitien (Alt + H)">Encore un autre blog d&#39;un tahitien</a>
+            <div class="logo-switches">
+                <button id="theme-toggle" accesskey="t" title="(Alt + T)" aria-label="Toggle theme">
+                    <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                    <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <ul id="menu">
+        </ul>
+    </nav>
+</header>
+<main class="main">
+
+<article class="post-single">
+  <header class="post-header">
+    
+    <h1 class="post-title entry-hint-parent">
+      Introduction aux moyens de paiement en Polynésie Française
+    </h1>
+    <div class="post-meta"><span title='2022-05-07 19:18:54 -1000 -10'>mai 7, 2022</span>
+
+</div>
+  </header> 
+  <div class="post-content"><h1 id="introduction">Introduction<a hidden class="anchor" aria-hidden="true" href="#introduction">#</a></h1>
+<p>Cet article est un aperçu très rapide des moyens de paiement en Polynésie Française.</p>
+<blockquote>
+<p>Update (12/05/2022): suite à quelques feedback, je me rend compte que cet article est à destination des développeurs de site de e-shopping, des commerçants, de mes confrères monéticiens. Cet article sera complexe à lire si vous n&rsquo;avez jamais travaillé avec un TPE, avec une plateforme de paiement, avec des cartes bancaires.</p></blockquote>
+<p><strong>Disclaimer</strong>: Au moment où j&rsquo;écris cet article, je travaille à l&rsquo;Océanienne des Services Bancaires (OSB), Ces articles ne sont pas sponsorisés par OSB, et j&rsquo;encourage les gens à faire des tutoriels pour les solutions des autres fournisseurs de solutions de paiement.</p>
+<h1 id="les-différents-types-de-carte">Les différents types de carte<a hidden class="anchor" aria-hidden="true" href="#les-différents-types-de-carte">#</a></h1>
+<p>En Polynésie Française, il est possible de payer avec plusieurs types de cartes.</p>
+<ul>
+<li>Carte Bancaire (anciennement Carte Bleue, co-brandées ou non de Visa ou Mastercard),</li>
+<li>American Express (AMEX),</li>
+<li>Cartes privatives (Socredo Verte / Gold, Banque de Polynésie Hoa, CCP de Fare Rata, Carte Tiare de la Banque de Tahiti),</li>
+<li>Union Pay International (UPI),</li>
+<li>Discover,</li>
+<li>Japan Credit Bureau (JCB)</li>
+</ul>
+<p>Les 3 derniers types de cartes sont surtout utilisés par les touristes.</p>
+<p><em><strong>Les cartes privatives composent la majorité des cartes détenues par les habitants de la Polynésie Française.</strong></em></p>
+<h1 id="pourquoi-autant-de-personnes-ont-une-carte-privative-">Pourquoi autant de personnes ont une carte privative ?<a hidden class="anchor" aria-hidden="true" href="#pourquoi-autant-de-personnes-ont-une-carte-privative-">#</a></h1>
+<p>Les cartes privatives sont proposées par les différentes banques locales (à l&rsquo;exception d&rsquo;OFINA qui émet exclusivement les cartes AMEX). Il s&rsquo;agit des banques Socredo, Banque de Tahiti, Banque de Polynésie, et Fare Rata.</p>
+<p>Les cartes privatives sont soumises à des réglementations et des frais moins coûteux que les cartes internationales.</p>
+<p>En outre, elles sont uniquement régulées par les banques locales contrairement aux cartes bancaires internationales, qui sont non seulement régulées par les banques locales, mais aussi par les réseaux internationaux (CB, Visa, Mastercard, Union Pay, etc.).</p>
+<p><em><strong>C&rsquo;est en partie à cause de ces réglementations et frais moins coûteux que les clients des banques doivent remplir moins de conditions pour avoir une carte privative. C&rsquo;est pour cela que les cartes privatives sont plus répandues sur le territoire.</strong></em></p>
+<p>Notes:</p>
+<p>Les réseaux peuvent décider d&rsquo;appliquer des amendes voire de désactiver le flux vers un acteur monétaire (banque, processeur de paiement, etc.) si celui-ci ne respecte pas la réglementation. Cette réglementation est mise à jour régulièrement.</p>
+<p>Pour les cartes privatives, ce sont les banques locales qui imposent leur réglementation, par abus de langage, on parle aussi de réseau privatif pour désigner l&rsquo;ensemble de ces banques.</p>
+<p>Ces réglementations sont suivies par les banques centrales des pays, par exemple l&rsquo;IEOM en Polynésie Française.</p>
+<p>J&rsquo;ai inclus la carte Tiare de la Banque de Tahiti dans les cartes privatives car elle a les mêmes limitations géographiques que celles-ci, et elle fonctionne aussi en métropole, mais il s&rsquo;agit bien d&rsquo;une CB, donc elle est soumise aux réglementations CB.</p>
+<p>Les cartes Socredo privatives sont maintenant co-brandées UPI, mais il y a bien 2 applications dans la carte, sur le territoire, c&rsquo;est l&rsquo;application privative qui est utilisée, à l&rsquo;international, c&rsquo;est l&rsquo;application UPI qui est utilisée.</p>
+<h1 id="fonctionnement-des-transactions">Fonctionnement des transactions<a hidden class="anchor" aria-hidden="true" href="#fonctionnement-des-transactions">#</a></h1>
+<p>Le schéma à 4 coins est l&rsquo;un des schémas de référence de la monétique. Il explique les entités qui entrent en jeu dans une transaction.</p>
+<p><img alt="schéma à 4 coins" loading="lazy" src="/blog.dev/posts/intro-moyens-paiement/schema_4_coins.png#center"></p>
+<p>La banque émettrice émet la carte et la fournit au porteur.</p>
+<p>La banque acquéreuse fournit un contrat accepteur au commerçant, afin que celui-ci puisse encaisser les paiements avec les cartes, moyennant une commission, en plus des services annexes autour de l&rsquo;encaissement (exemple: relevé TPE). Les TPE et solutions de paiement en ligne sont des services d&rsquo;encaissement.</p>
+<p>Un système d&rsquo;acceptation est un logiciel ou un ensemble de logiciels, qui permet d&rsquo;encaisser une carte bancaire, par exemple les TPE et les plateformes de paiement en ligne.</p>
+<p>Il existe 2 modes de fonctionnement pour le déroulement d&rsquo;un paiement:</p>
+<ul>
+<li>le mode single message</li>
+<li>le mode dual message</li>
+</ul>
+<p>Lorsque vous payez avec votre carte, vous réalisez une transaction. Si toutes les règles de gestion sont validées, la transaction est autorisée.</p>
+<p>En single message, la transaction autorisée est directement transformée en mouvement financier, i.e. un enregistrement est créé chez la banque acquéreuse qui dit &ldquo;M. Client doit 1000 XPF à M. Commerçant&rdquo;.</p>
+<p>En dual message, la transaction est enregistrée sur le TPE, ou sur la plateforme de paiement, puis, tous les jours à une certaine heure, l&rsquo;ensemble des transactions de la journée sont envoyées à la banque acquéreuse sous forme de mouvement financier.</p>
+<p>En Polynésie Française, le mode dual message est le plus répandu, c&rsquo;est d&rsquo;ailleurs pour ça que l&rsquo;on vous demande de ne pas débrancher votre TPE, votre internet, votre réseau électrique.</p>
+<h1 id="les-cartes-et-les-systèmes-dacceptation">Les cartes et les systèmes d&rsquo;acceptation<a hidden class="anchor" aria-hidden="true" href="#les-cartes-et-les-systèmes-dacceptation">#</a></h1>
+<p>Pour qu&rsquo;un système d&rsquo;acceptation puisse encaisser une carte, elle doit reconnaître la carte.</p>
+<p>Pour reconnaître une carte, on utilise le BIN, qui sont les <em>N</em> premiers chiffres du numéro de la carte, <em>N</em> étant défini par le réseau.</p>
+<p>De plus, seule une application spécifique à ce réseau peut reconnaître cette carte. Par exemple, pour une transaction avec une carte AMEX sur un TPE, c&rsquo;est uniquement une application TPE AMEX qui pourra la reconnaître, mais <em><strong>seulement si la carte fait partie d&rsquo;une plage de BIN acceptée par l&rsquo;application</strong></em>.</p>
+<p>Note: Dans un TPE, il peut y avoir plusieurs applications, quand une carte est insérée, le TPE demande à chaque application &ldquo;Peux-tu accepter cette carte?&rdquo;.</p>
+<p>De la même manière, pour une plateforme de paiement en ligne, celle-ci ne pourra accepter que des cartes qui font partie de ses plages de BIN déclarées.</p>
+<h1 id="zoom-sur-le-paiement-en-ligne-en-polynésie-française">Zoom sur le paiement en ligne en Polynésie Française<a hidden class="anchor" aria-hidden="true" href="#zoom-sur-le-paiement-en-ligne-en-polynésie-française">#</a></h1>
+<p>Comme énoncé précédemment, les cartes privatives sont majoritaires en Polynésie Française, et elles ne sont pas reconnues à l&rsquo;étranger (sauf pour les cartes Socredo co-brandées UPI, comme cité précédemment) car les BIN privatifs ne sont pas déclarés dans le monde.</p>
+<p>C&rsquo;est pour cela qu&rsquo;on ne peut pas payer avec une carte privative sur la plupart des plateformes de paiement en ligne (Paypal, Stripe, etc.), qui sont internationales.</p>
+<p>Pour remédier à ce problème, OSB propose Payzen, et la Banque de Tahiti propose SystemPay.</p>
+<p>À mon avis, à l&rsquo;heure actuelle, c&rsquo;est vers ces solutions que je conseille les commerçants d&rsquo;aller, car <em><strong>il serait dommage de se priver des cartes privatives, alors qu&rsquo;elles sont plus nombreuses.</strong></em></p>
+<p>Notes:</p>
+<p>Les 2 solutions sont en réalité basées sur les solutions Payzen et SystemPay de Lyra, société située en France. Certains d&rsquo;entre vous ont d&rsquo;ailleurs peut-être déjà été confus en recherchant de la documentation technique de ces solutions et se sont perdus entre:</p>
+<ul>
+<li>la documentation Payzen d&rsquo;OSB,</li>
+<li>la documentation Payzen de Lyra,</li>
+<li>la documentation SystemPay de la Banque de Tahiti,</li>
+<li>la documentation SystemPay de Lyra.</li>
+</ul>
+<p><em><strong>Je vous conseille de vous focaliser sur les documentations locales, et ensuite de compléter avec les documentations de Lyra.</strong></em></p>
+<h1 id="conclusion">Conclusion<a hidden class="anchor" aria-hidden="true" href="#conclusion">#</a></h1>
+<p>Il existe plusieurs types de cartes.</p>
+<p>Les protocoles de paiement s&rsquo;inscrivent dans un schéma à 4 coins, il y a plusieurs acteurs qui entrent en jeu.</p>
+<p>Il y a une réglementation générale qui englobe tous les types de cartes, et chaque type a également sa réglementation spécifique. Les banques sont soumises à ces réglementations, l&rsquo;IEOM et les réseaux (VISA, Mastercard, AMEX, etc.) veillent à ce que les banques respectent ces réglementations.</p>
+<p>La géographie et les accords entre les acteurs sont importants pour comprendre les contraintes des systèmes de paiement locaux.</p>
+<p>En Polynésie Française, la majorité des cartes bancaires sont des cartes privatives, pour des raisons économiques et réglementaires.</p>
+
+
+  </div>
+
+  <footer class="post-footer">
+    <ul class="post-tags">
+      <li><a href="http://localhost:1313/blog.dev/tags/mon%C3%A9tique/">Monétique</a></li>
+    </ul>
+  </footer>
+</article>
+    </main>
+    
+<footer class="footer">
+        <span>&copy; 2025 <a href="http://localhost:1313/blog.dev/">Encore un autre blog d&#39;un tahitien</a></span> · 
+
+    <span>
+        Powered by
+        <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &
+        <a href="https://github.com/adityatelange/hugo-PaperMod/" rel="noopener" target="_blank">PaperMod</a>
+    </span>
+</footer>
+<a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
+        <path d="M12 6H0l6-6z" />
+    </svg>
+</a>
+
+<script>
+    let menu = document.getElementById('menu')
+    if (menu) {
+        menu.scrollLeft = localStorage.getItem("menu-scroll-position");
+        menu.onscroll = function () {
+            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
+        }
+    }
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            var id = this.getAttribute("href").substr(1);
+            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+                    behavior: "smooth"
+                });
+            } else {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
+            }
+            if (id === "top") {
+                history.replaceState(null, null, " ");
+            } else {
+                history.pushState(null, null, `#${id}`);
+            }
+        });
+    });
+
+</script>
+<script>
+    var mybutton = document.getElementById("top-link");
+    window.onscroll = function () {
+        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
+            mybutton.style.visibility = "visible";
+            mybutton.style.opacity = "1";
+        } else {
+            mybutton.style.visibility = "hidden";
+            mybutton.style.opacity = "0";
+        }
+    };
+
+</script>
+<script>
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        if (document.body.className.includes("dark")) {
+            document.body.classList.remove('dark');
+            localStorage.setItem("pref-theme", 'light');
+        } else {
+            document.body.classList.add('dark');
+            localStorage.setItem("pref-theme", 'dark');
+        }
+    })
+
+</script>
+</body>
+
+</html>

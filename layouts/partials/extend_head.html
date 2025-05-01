@@ -1,0 +1,26 @@
+<script type="module">
+    import mermaid from "https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs";
+  
+    function getMermaidTheme() {
+      return document.body.classList.contains("dark") ? "dark" : "default";
+    }
+  
+    function renderMermaid() {
+      mermaid.initialize({ startOnLoad: false, theme: getMermaidTheme() });
+      mermaid.init(undefined, document.querySelectorAll(".mermaid"));
+    }
+  
+    document.addEventListener("DOMContentLoaded", () => {
+      renderMermaid();
+    });
+  
+    // Observe changes on <body> class (light/dark toggle)
+    const observer = new MutationObserver(() => {
+      renderMermaid();
+    });
+  
+    observer.observe(document.body, {
+      attributes: true,
+      attributeFilter: ["class"]
+    });
+  </script>
