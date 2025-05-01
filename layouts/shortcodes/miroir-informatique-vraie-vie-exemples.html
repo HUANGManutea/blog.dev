@@ -1,11 +1,11 @@
 <div class="exemples-bloc">
-  <h4>📌 Exemples dans la vie réelle</h4>
+  <strong>📌 Exemples dans la vie réelle</strong>
   <ul>
     {{ range (split .Params.reel "||") }}
       <li>{{ . }}</li>
     {{ end }}
   </ul>
-  <h4>💻 Exemples en informatique</h4>
+  <strong>💻 Exemples en informatique</strong>
   <ul>
     {{ range (split .Params.info "||") }}
       <li>{{ . }}</li>

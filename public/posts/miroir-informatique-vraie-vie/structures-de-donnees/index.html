@@ -5,10 +5,16 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <meta name="robots" content="noindex, nofollow">
-<title>Autres structure de données, j&#39;organise mon bordel | Encore un autre blog d&#39;un tahitien</title>
+<title>IMVV - Chapitre 2 - Autres structure de données, j&#39;organise mon bordel | Encore un autre blog d&#39;un tahitien</title>
 <meta name="keywords" content="Informatique, Miroir de la vraie vie">
-<meta name="description" content="Dans le précédent article File ou Pile ? L&rsquo;art de passer avant les autres on a découvert les files et les piles. Cette fois, on va survoler plusieurs autres structures de données (data structures en anglais) qu&rsquo;on utilise très souvent en informatique&hellip; et dans la vraie vie.
-Le tableau - la base de presque tout
+<meta name="description" content="Dans le précédent article IMVV - Chapitre 1 - File ou Pile ? L&rsquo;art de passer avant les autres on a découvert les files et les piles. Cette fois, on va survoler plusieurs autres structures de données (data structures en anglais) qu&rsquo;on utilise très souvent en informatique&hellip; et dans la vraie vie.
+N&rsquo;oublie pas que les objectifs de ces articles sont :
+
+Te donner une meilleure compréhension des bases de l’informatique,
+T&rsquo;inspirer pour analyser ou optimiser les situations du quotidien,
+ou peut-être, qui sait, te donner envie d&rsquo;explorer encore plus loin&hellip; jusqu’à en faire ton métier.
+
+Le tableau — la base de presque tout
 Tu as peut-être remarqué dans le précédent article que la file et la pile se ressemblent beaucoup. En réalité, on peut les représenter toutes les deux avec la même structure : un tableau.">
 <meta name="author" content="">
 <link rel="canonical" href="http://localhost:1313/blog.dev/posts/miroir-informatique-vraie-vie/structures-de-donnees/">
@@ -134,21 +140,57 @@ Tu as peut-être remarqué dans le précédent article que la file et la pile se
   <header class="post-header">
     
     <h1 class="post-title entry-hint-parent">
-      Autres structure de données, j&#39;organise mon bordel
-      <span class="entry-hint" title="Draft">
-        <svg xmlns="http://www.w3.org/2000/svg" height="35" viewBox="0 -960 960 960" fill="currentColor">
-          <path
-            d="M160-410v-60h300v60H160Zm0-165v-60h470v60H160Zm0-165v-60h470v60H160Zm360 580v-123l221-220q9-9 20-13t22-4q12 0 23 4.5t20 13.5l37 37q9 9 13 20t4 22q0 11-4.5 22.5T862.09-380L643-160H520Zm300-263-37-37 37 37ZM580-220h38l121-122-18-19-19-18-122 121v38Zm141-141-19-18 37 37-18-19Z" />
-        </svg>
-      </span>
+      IMVV - Chapitre 2 - Autres structure de données, j&#39;organise mon bordel
     </h1>
     <div class="post-meta"><span title='2025-04-29 15:41:48 -1000 -10'>avril 29, 2025</span>
 
 </div>
-  </header> 
-  <div class="post-content"><p>Dans le précédent article <a href="../file-et-pile/">File ou Pile ? L&rsquo;art de passer avant les autres</a> on a découvert les files et les piles. Cette fois, on va survoler plusieurs autres <strong>structures de données</strong> (<em>data structures</em> en anglais) qu&rsquo;on utilise très souvent en informatique&hellip; et dans la vraie vie.</p>
-<h2 id="le-tableau---la-base-de-presque-tout">Le tableau - la base de presque tout<a hidden class="anchor" aria-hidden="true" href="#le-tableau---la-base-de-presque-tout">#</a></h2>
-<p>Tu as peut-être remarqué dans le précédent article que la file et la pile se ressemblent beaucoup. En réalité, on peut les représenter toutes les deux avec la même structure : un <strong>tableau</strong>.</p>
+  </header> <div class="toc">
+    <details >
+        <summary accesskey="c" title="(Alt + C)">
+            <span class="details">Table des matières</span>
+        </summary>
+
+        <div class="inner"><ul>
+                <li>
+                    <a href="#le-tableau--la-base-de-presque-tout" aria-label="Le tableau — la base de presque tout">Le tableau — la base de presque tout</a><ul>
+                        
+                <li>
+                    <a href="#si-cest-une-file-" aria-label="Si c&rsquo;est une file :">Si c&rsquo;est une file :</a></li>
+                <li>
+                    <a href="#pour-une-pile-" aria-label="Pour une pile :">Pour une pile :</a></li></ul>
+                </li>
+                <li>
+                    <a href="#la-liste--comme-le-tableau-mais-dynamique" aria-label="La liste — comme le tableau, mais dynamique">La liste — comme le tableau, mais dynamique</a><ul>
+                        
+                <li>
+                    <a href="#si-cest-une-file--1" aria-label="Si c&rsquo;est une file :">Si c&rsquo;est une file :</a></li>
+                <li>
+                    <a href="#pour-une-pile--1" aria-label="Pour une pile :">Pour une pile :</a></li></ul>
+                </li>
+                <li>
+                    <a href="#le-tableau-associatif--ou-comment-indexer" aria-label="Le tableau associatif — ou comment indexer">Le tableau associatif — ou comment indexer</a></li>
+                <li>
+                    <a href="#lensemble--une-structure-unique" aria-label="L&rsquo;ensemble — une structure unique">L&rsquo;ensemble — une structure unique</a></li>
+                <li>
+                    <a href="#le-graphe--ou-comment-appeler-lami-dun-ami-dun-ami" aria-label="Le graphe — ou comment appeler l&rsquo;ami d&rsquo;un ami d&rsquo;un ami">Le graphe — ou comment appeler l&rsquo;ami d&rsquo;un ami d&rsquo;un ami</a></li>
+                <li>
+                    <a href="#conclusion" aria-label="Conclusion">Conclusion</a>
+                </li>
+            </ul>
+        </div>
+    </details>
+</div>
+
+  <div class="post-content"><p>Dans le précédent article <a href="../file-et-pile/">IMVV - Chapitre 1 - File ou Pile ? L&rsquo;art de passer avant les autres</a> on a découvert les files et les piles. Cette fois, on va survoler plusieurs autres <strong>structures de données</strong> (<em>data structures</em> en anglais) qu&rsquo;on utilise très souvent en informatique&hellip; et dans la vraie vie.</p>
+<p>N&rsquo;oublie pas que les objectifs de ces articles sont :</p>
+<ul>
+<li>Te donner une meilleure compréhension des bases de l’informatique,</li>
+<li>T&rsquo;inspirer pour analyser ou optimiser les situations du quotidien,</li>
+<li>ou peut-être, qui sait, te donner envie d&rsquo;explorer encore plus loin&hellip; jusqu’à en faire ton métier.</li>
+</ul>
+<h2 id="le-tableau--la-base-de-presque-tout">Le tableau — la base de presque tout<a hidden class="anchor" aria-hidden="true" href="#le-tableau--la-base-de-presque-tout">#</a></h2>
+<p>Tu as peut-être remarqué dans le précédent article que la <strong>file</strong> et la <strong>pile</strong> se ressemblent beaucoup. En réalité, on peut les représenter toutes les deux avec la même structure : un <strong>tableau</strong>.</p>
 <p>En informatique, le tableau (ou <em>array</em> en anglais) est l’une des structures les plus simples : on range des éléments les uns à la suite des autres, dans un espace de taille fixe, et chaque élément est repéré par sa position (ou <strong>index</strong>).</p>
 <p>Prenons un exemple simple : un tableau d&rsquo;amis à inviter pour un anniversaire, mais dans mon carnet d&rsquo;adresse je n&rsquo;ai que 6 places.</p>
 <table>
@@ -175,9 +217,9 @@ Tu as peut-être remarqué dans le précédent article que la file et la pile se
       </tr>
   </tbody>
 </table>
-<p>L’<strong>index</strong> est simplement la position de la personne dans le tableau, ce n&rsquo;est pas un ordre.
-Dans la plupart des langages informatiques, l&rsquo;<strong>index</strong> commence à 0, et pas à 1.
-Cet index nous permet d&rsquo;accéder directement à Vai, l&rsquo;amie à l&rsquo;index 2 (ou 3ème élément), pour voir son numéro de téléphone par exemple.</p>
+<p>L’<strong>index</strong> est simplement la position de la personne dans le tableau, ce n&rsquo;est pas un ordre.</p>
+<p>Dans la plupart des langages informatiques, l&rsquo;<strong>index</strong> commence à 0, et pas à 1.</p>
+<p>Cet index nous permet d&rsquo;accéder directement à Vai, l&rsquo;amie à l&rsquo;index 2 (ou 3ème élément), pour voir son numéro de téléphone par exemple.</p>
 <p>Et ce tableau peut se comporter différemment selon la manière dont on <strong>ajoute</strong> et <strong>retire</strong> les éléments.
 Par exemple, on peut le faire fonctionner comme une <strong>file</strong> ou une <strong>pile</strong>, simplement en changeant les règles du jeu.</p>
 <h3 id="si-cest-une-file-">Si c&rsquo;est une file :<a hidden class="anchor" aria-hidden="true" href="#si-cest-une-file-">#</a></h3>
@@ -292,13 +334,14 @@ Par exemple, on peut le faire fonctionner comme une <strong>file</strong> ou une
 </ul>
 <p>Dans les deux cas, on utilise un <strong>tableau</strong> pour stocker les amis.
 C’est la <strong>logique d’ajout et de retrait</strong> qui transforme ce tableau en pile ou en file.</p>
-<p>Et c’est exactement pour ça que, lorsqu’on traite des dossiers empilés, il vaut mieux <strong>commencer par ceux du bas</strong>.
-Sinon, on inverse l’ordre d’arrivée… et ce n’est plus une file d’attente, mais une injustice organisée.</p>
-<p>Tu as sûrement remarqué un problème: s&rsquo;il n&rsquo;y a que 6 place, que se passe-t-il si j&rsquo;ai 7 amis ?</p>
-<p>D&rsquo;abord, je te félicite d&rsquo;avoir autant d&rsquo;amis, ensuite… on peut s&rsquo;en sortir, en achetant un carnet d&rsquo;adresse qui a plus de places, et on recopie nos amis dans ce nouveau carnet.</p>
+<p>🎯 Et c’est exactement pour ça que, lorsqu’on traite des dossiers empilés, il vaut mieux <strong>commencer par ceux du bas</strong>.
+Sinon, on inverse l’ordre d’arrivée… et ce n’est plus une file d’attente, mais une <strong>injustice organisée</strong>.</p>
+<blockquote>
+<p>S&rsquo;il n&rsquo;y a que 6 places, que se passe-t-il si j&rsquo;ai 7 amis ?</p></blockquote>
+<p>D&rsquo;abord, je te félicite d&rsquo;avoir autant d&rsquo;amis. Ensuite, on peut s&rsquo;en sortir, en achetant un carnet d&rsquo;adresse qui a plus de places, et on recopie nos amis dans ce nouveau carnet.</p>
 <p>C&rsquo;est similaire en informatique, on fait un nouveau tableau, plus grand, et on recopie.</p>
 <p>Heureusement, en informatique on a inventé une autre structure.</p>
-<h2 id="la-liste---comme-le-tableau-mais-dynamique">La liste - comme le tableau, mais dynamique<a hidden class="anchor" aria-hidden="true" href="#la-liste---comme-le-tableau-mais-dynamique">#</a></h2>
+<h2 id="la-liste--comme-le-tableau-mais-dynamique">La liste — comme le tableau, mais dynamique<a hidden class="anchor" aria-hidden="true" href="#la-liste--comme-le-tableau-mais-dynamique">#</a></h2>
 <p>La liste (ou <em>list</em> en anglais), c’est comme un tableau, <strong>mais en mieux</strong> : <strong>la taille n’est pas fixe</strong>.</p>
 <p>Tu peux ajouter ou supprimer des éléments à tout moment, sans te soucier du nombre de places prévues au départ.
 Et à tout moment, tu peux demander : “Combien d’éléments j’ai dans cette liste ?” — et obtenir une réponse fiable.</p>
@@ -430,9 +473,9 @@ Et à tout moment, tu peux demander : “Combien d’éléments j’ai dans cett
   </div>
 </div>
 <p>Mais en vrai, à moins que tu ne codes un satellite, une carte embarquée, ou une console des années 80, où chaque octet compte, il y a peu de raisons d’utiliser un tableau fixe.
-Une liste dynamique t&rsquo;éviteras bien des migraines.</p>
+Une liste dynamique t&rsquo;évitera bien des migraines.</p>
 <p>Le tableau et la liste sont des structures très basiques et très puissantes, elles sont les bases de beaucoup d&rsquo;autres structures qu&rsquo;on verra par la suite.</p>
-<h2 id="le-tableau-associatif---ou-comment-indexer">Le tableau associatif - ou comment indexer<a hidden class="anchor" aria-hidden="true" href="#le-tableau-associatif---ou-comment-indexer">#</a></h2>
+<h2 id="le-tableau-associatif--ou-comment-indexer">Le tableau associatif — ou comment indexer<a hidden class="anchor" aria-hidden="true" href="#le-tableau-associatif--ou-comment-indexer">#</a></h2>
 <p>On avait pris l&rsquo;exemple d&rsquo;un carnet d&rsquo;adresses qu&rsquo;on avait mis dans un tableau ou dans une liste. C&rsquo;est déjà très bien de pouvoir stocker ta liste d&rsquo;amis, mais si tu as des centaines d&rsquo;amis et que tu veux appeler Vai pour aller à la mer, tu vas galérer pour chercher dans ce carnet d&rsquo;adresse.</p>
 <p>En effet, avec les 2 dernières structures, tu dois parcourir les éléments un par un, jusqu&rsquo;à tomber sur Vai. Tu vas perdre beaucoup de temps à chercher son numéro, ça va t&rsquo;énerver, tu vas l&rsquo;appeler, lui dire &ldquo;mais quelle idée d&rsquo;avoir un prénom qui commence par V!&rdquo;, elle va s&rsquo;énerver, vous ne serez plus amis, alors que tu voulais juste aller surfer.</p>
 <p>Je m&rsquo;emporte un peu? Peut-être.</p>
@@ -530,7 +573,7 @@ valeur: Heiarii</p>
 <p>En informatique c&rsquo;est le même principe, sauf qu&rsquo;on ne peut pas utiliser de lettre comme index, alors on est obligé de trouver cette astuce.</p>
 <blockquote>
 <p>Et en plus, il est nul ton carnet d&rsquo;adresse, comment je fais si j&rsquo;ai 2 amis qui s&rsquo;appellent Vai et Vahine?
-Je met Vahine dans la case juste après?
+Je mets Vahine dans la case juste après?
 Et si j&rsquo;ai des centaines d&rsquo;amis comme tu le disais au début, je fais comment pour les mettre dans les 26 cases?</p></blockquote>
 <p>Ok, tranquille, pas de stress.</p>
 <p>En informatique, on peut combiner les structures, plutôt que d&rsquo;<strong>associer</strong> un prénom à une lettre, on va associer une <strong>liste</strong> de prénoms à une lettre. Ci-dessous on réécrit notre <strong>map</strong> et on ajoute Vahine :</p>
@@ -595,7 +638,7 @@ Et si j&rsquo;ai des centaines d&rsquo;amis comme tu le disais au début, je fai
 <p>Comme tu l&rsquo;as remarqué, au lieu de mettre directement les prénoms dans les cases, il y a des flèches qui <strong>pointent vers des listes</strong>. On appelle ça un <strong>pointeur</strong> (ou <em>pointer</em> en anglais). c’est un mécanisme qui permet à l’ordinateur de dire <em>&ldquo;Va chercher les données ailleurs.&rdquo;</em>
 Plutôt que de stocker directement les valeurs, on stocke l’<strong>endroit</strong> où elles se trouvent.</p>
 <p>C&rsquo;est la plus grande force de l&rsquo;informatique, on peut combiner différents concepts abstraits pour répondre à notre besoin.</p>
-<h2 id="lensemble---une-structure-unique">L&rsquo;ensemble - une structure unique<a hidden class="anchor" aria-hidden="true" href="#lensemble---une-structure-unique">#</a></h2>
+<h2 id="lensemble--une-structure-unique">L&rsquo;ensemble — une structure unique<a hidden class="anchor" aria-hidden="true" href="#lensemble--une-structure-unique">#</a></h2>
 <p>Si comme moi tu fais ta liste de courses durant la semaine en prévision des grandes courses du dimanche, tu as peut-être déjà eu la liste qui ressemble à :</p>
 <ul>
 <li>lait</li>
@@ -605,18 +648,18 @@ Plutôt que de stocker directement les valeurs, on stocke l’<strong>endroit</s
 <li>salade</li>
 <li>oeufs</li>
 </ul>
-<p>Tu remarques qu&rsquo;il y a 2 fois des <strong>oeufs</strong>. On appelle ça un <strong>doublon</strong>.</p>
+<p>Tu remarques que les <strong>oeufs</strong> apparaissent. On appelle ça un <strong>doublon</strong>.</p>
 <p>Ça peut arriver si lundi tu t&rsquo;es fait une omelette avec les derniers oeufs, tu les as notés pour en racheter.
-Puis que vendredi, tu voulais faire un gâteau, mais tu t&rsquo;es souvenu que tu n&rsquo;avais plus d&rsquo;oeufs&hellip; et alors tu les as réécris.</p>
+Puis que vendredi, tu voulais faire un gâteau, mais tu t&rsquo;es souvenu que tu n&rsquo;avais plus d&rsquo;oeufs&hellip; et alors tu les as réécrits.</p>
 <blockquote>
 <p>C&rsquo;est très spécifique comme explication&hellip; C&rsquo;est ce qui t&rsquo;es arrivé, pas vrai?</p></blockquote>
 <p><strong>Tu n&rsquo;as pas de preuve. Cette accusation est fausse.</strong></p>
 <p>Bref, la liste et le tableau n&rsquo;ont <strong>aucun moyen d&rsquo;empêcher la présence de doublons</strong> dans leurs éléments. C&rsquo;est pour ça qu&rsquo;en informatique on a inventé l&rsquo;<strong>ensemble</strong> (ou <em>set</em> en anglais), une structure où <strong>chaque élément est unique</strong>.</p>
-<p>Par contre, <strong>le set n&rsquo;est par ordonné</strong> comme le tableau et la liste. Il n&rsquo;y a <strong>pas d&rsquo;index</strong> permettant d&rsquo;accéder directement au 2ème ou 6ème élément.</p>
+<p>Par contre, <strong>le set n&rsquo;est pas ordonné</strong> comme le tableau et la liste. Il n&rsquo;y a <strong>pas d&rsquo;index</strong> permettant d&rsquo;accéder directement au 2ème ou 6ème élément.</p>
 <div class="instant-dev">
   <strong>Instant Dev</strong>
   <div class="instant-dev-content">
-    <p>En informatique, pour faire un <strong>set</strong>, on utilise en fait une <strong>map</strong> où la clé est l&rsquo;élément. Le calcul de <strong>hash</strong> nous garantie qu&rsquo;il ne peut pas y avoir de doublon. Et on met une valeur arbitraire dans la valeur associée, comme 1 ou PRESENT.</p>
+    <p>En informatique, pour faire un <strong>set</strong>, on utilise en fait une <strong>map</strong> où la clé est l&rsquo;élément. Le calcul de <strong>hash</strong> nous garantit qu&rsquo;il ne peut pas y avoir de doublon. Et on met une valeur arbitraire dans la valeur associée, comme 1 ou PRESENT.</p>
 <p>Si on veut une structure <strong>ordonnée sans doublons</strong>, on peut :</p>
 <ul>
 <li>coder une liste avec une fonction d&rsquo;ajout qui rejette les doublons,</li>
@@ -626,7 +669,7 @@ Puis que vendredi, tu voulais faire un gâteau, mais tu t&rsquo;es souvenu que t
   </div>
 </div>
 <div class="exemples-bloc">
-  <h4>📌 Exemples dans la vie réelle</h4>
+  <strong>📌 Exemples dans la vie réelle</strong>
   <ul>
     
       <li>L&#39;ensemble des ingrédients qu’il te reste dans le frigo</li>
@@ -634,7 +677,7 @@ Puis que vendredi, tu voulais faire un gâteau, mais tu t&rsquo;es souvenu que t
       <li>L&#39;ensemble des invités à ton anniversaire</li>
     
   </ul>
-  <h4>💻 Exemples en informatique</h4>
+  <strong>💻 Exemples en informatique</strong>
   <ul>
     
       <li>L&#39;ensemble des numéros de passeport en Polynésie française</li>
@@ -643,12 +686,12 @@ Puis que vendredi, tu voulais faire un gâteau, mais tu t&rsquo;es souvenu que t
     
   </ul>
 </div>
-<h2 id="le-graphe---ou-comment-appeler-lami-dun-ami-dun-ami">Le graphe - ou comment appeler l&rsquo;ami d&rsquo;un ami d&rsquo;un ami<a hidden class="anchor" aria-hidden="true" href="#le-graphe---ou-comment-appeler-lami-dun-ami-dun-ami">#</a></h2>
+<h2 id="le-graphe--ou-comment-appeler-lami-dun-ami-dun-ami">Le graphe — ou comment appeler l&rsquo;ami d&rsquo;un ami d&rsquo;un ami<a hidden class="anchor" aria-hidden="true" href="#le-graphe--ou-comment-appeler-lami-dun-ami-dun-ami">#</a></h2>
 <p>Tu prépares ta liste d’invités pour ton anniversaire, tu comptes inviter tout ton carnet d&rsquo;adresses.</p>
 <p>Et là, tu réalises que tu n’as pas le contact de <strong>Paul</strong>. Tu l&rsquo;as croisé en soirée et il était cool, tu voudrais l&rsquo;inviter&hellip; mais t&rsquo;as oublié de lui demander son numéro.</p>
 <p>Heureusement, tu sais que <strong>Purotu</strong> le connaît.</p>
-<p>Tu l&rsquo;appelles&hellip; zut, elle n&rsquo;a pas son numéro. Mais elle te donne celui de Tiare, une autre amie de Paul.
-Tu appelles <strong>Tiare</strong>, tu te présentes, tu lui l&rsquo;invite également car tu n&rsquo;es pas un sauvage. Et tu lui demande le numéro de Paul.</p>
+<p>Tu l&rsquo;appelles&hellip; zut, elle n&rsquo;a pas son numéro. Mais elle te donne le numéro de Tiare, une autre amie de Paul.
+Tu appelles <strong>Tiare</strong>, tu te présentes, tu l&rsquo;invite également car tu n&rsquo;es pas un sauvage. Et tu lui demandes le numéro de Paul.</p>
 <p><strong>Bingo</strong>, elle l&rsquo;a, tu appelles Paul et il est chaud pour venir à ton anniversaire.</p>
 <p>Les liens entre ces personnes peuvent être représentés par un <strong>graphe</strong> (ou <em>graph</em> en anglais).</p>
 <p>Et ce que tu viens de faire, sans t&rsquo;en rendre compte, c&rsquo;est un <strong>parcours de graphe</strong>, un algorithme !</p>
@@ -695,46 +738,12 @@ graph TD
 <blockquote>
 <p>Et c&rsquo;est quoi le parcours de graphe?</p></blockquote>
 <p>Je suis heureux que tu poses cette question, mais ta question dépasse le cadre de cet article.</p>
-<p>Si tu souhaites continuer cette aventure, tu peux regarder la suite ici:
-On a déjà vu pas mal de choses, je te laisse relire, essayer de combiner les structures entre elles, te renseigner sur internet en cherchant &ldquo;structure de données&rdquo; ou &ldquo;data structure&rdquo;.</p>
-<p>Pour information, en informatique, on trouve beaucoup plus d&rsquo;informations en anglais. C&rsquo;est pour ça qu&rsquo;on conseille aux développeur de savoir lire en anglais.</p>
-<p>La succession d&rsquo;étapes que tu as fait pour appeler tes amis peut être écrit comme ceci:</p>
-<pre tabindex="0"><code>Dans ta liste d&#39;amis, pour chaque ami:
-    Tu l&#39;appelles
-    Si il répond, alors:
-        Tu l&#39;invites à ton anniversaire
-    Fin si
-Fin pour
-</code></pre><p>&ldquo;Dans ta liste d&rsquo;amis, pour chaque ami&rdquo; marque le début d&rsquo;une <strong>boucle</strong> (<em>loop</em> en anglais), et &ldquo;Fin pour&rdquo; marque la fin de la boucle.
-La boucle te permet de répéter la même action pour un ensemble d&rsquo;éléments, en l&rsquo;occurence, appeler un ami.</p>
-<p>&ldquo;Si il répond, alors&rdquo; marque le début d&rsquo;une <strong>condition</strong>, et &ldquo;Fin si&rdquo; marque la fin de la condition.
-La condition te permet de faire une action uniquement si cette condition est respectée. En effet, on peut inviter un ami <strong>si et seulement si</strong> il répond à ton appel.</p>
-<p>La <strong>boucle</strong> et la <strong>condition</strong> sont des <strong>structures de contrôle</strong> (<em>control flow statements</em> en anglais).</p>
-<p>Si on se représente ça :</p>
-<p>La liste d&rsquo;amis:</p>
-<table>
-  <thead>
-      <tr>
-          <th>Manutea</th>
-          <th>Vai</th>
-          <th>Purotu</th>
-          <th>Heiarii</th>
-          <th>Reva</th>
-          <th>Jean</th>
-      </tr>
-  </thead>
-  <tbody>
-  </tbody>
-</table>
-<p><em>Pour chaque ami</em> veut dire que tu as parcouru la liste:</p>
-<ul>
-<li>d&rsquo;abord tu as pris Manutea, puis tu as effectué l&rsquo;action: tu as appelé Manutea,</li>
-<li>puis tu as pris Vai, puis tu as appelé Vai,</li>
-<li>etc. jusqu&rsquo;à Jean</li>
-</ul>
-<blockquote>
-<p>Et Paul?</p></blockquote>
-<p>C&rsquo;est là où ça devient plus compliqué.</p>
+<h2 id="conclusion">Conclusion<a hidden class="anchor" aria-hidden="true" href="#conclusion">#</a></h2>
+<p>On a déjà vu pas mal de choses, je te laisse relire, essayer de combiner les structures entre elles, te renseigner sur internet en cherchant &ldquo;structure de données&rdquo; ou &ldquo;data structure&rdquo;.</p>
+<p>Il existe beaucoup de structures de données, celles qui sont présentées dans cet article sont juste les plus basiques, celles qu&rsquo;on apprend dans les premières heures de cours de programmation.</p>
+<p><strong>Le prochain article est en cours de rédaction.</strong></p>
+<!-- Si tu souhaites continuer cette aventure, tu peux regarder la suite ici: [IMVV - Chapitre 3 - Structures de contrôle et algorithme, apprendre à réfléchir](../structures-de-controle/) -->
+<p><a href="../introduction/">← Retour à l’introduction</a></p>
 
 
   </div>

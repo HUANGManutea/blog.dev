@@ -1,19 +1,25 @@
 ---
-title: "Autres structure de données, j'organise mon bordel"
+title: "IMVV - Chapitre 2 - Autres structure de données, j'organise mon bordel"
+weight: 2
 #description: <descriptive text here>
 date: 2025-04-29T15:41:48-10:00
-draft: true
-toc: false
+draft: false
+showToc: true
 image: ""
 tags: [Informatique, Miroir de la vraie vie]
 categories: [Vulgarisation]
 ---
 
-Dans le précédent article [File ou Pile ? L'art de passer avant les autres](../file-et-pile/) on a découvert les files et les piles. Cette fois, on va survoler plusieurs autres **structures de données** (*data structures* en anglais) qu'on utilise très souvent en informatique... et dans la vraie vie.
+Dans le précédent article [IMVV - Chapitre 1 - File ou Pile ? L'art de passer avant les autres](../file-et-pile/) on a découvert les files et les piles. Cette fois, on va survoler plusieurs autres **structures de données** (*data structures* en anglais) qu'on utilise très souvent en informatique... et dans la vraie vie.
 
-## Le tableau - la base de presque tout
+N'oublie pas que les objectifs de ces articles sont :
+- Te donner une meilleure compréhension des bases de l’informatique,
+- T'inspirer pour analyser ou optimiser les situations du quotidien,
+- ou peut-être, qui sait, te donner envie d'explorer encore plus loin... jusqu’à en faire ton métier.
 
-Tu as peut-être remarqué dans le précédent article que la file et la pile se ressemblent beaucoup. En réalité, on peut les représenter toutes les deux avec la même structure : un **tableau**.
+## Le tableau — la base de presque tout
+
+Tu as peut-être remarqué dans le précédent article que la **file** et la **pile** se ressemblent beaucoup. En réalité, on peut les représenter toutes les deux avec la même structure : un **tableau**.
 
 En informatique, le tableau (ou *array* en anglais) est l’une des structures les plus simples : on range des éléments les uns à la suite des autres, dans un espace de taille fixe, et chaque élément est repéré par sa position (ou **index**).
 
@@ -24,7 +30,9 @@ Prenons un exemple simple : un tableau d'amis à inviter pour un anniversaire, m
 |index|0|1|2|3|4|5|
 
 L’**index** est simplement la position de la personne dans le tableau, ce n'est pas un ordre.
+
 Dans la plupart des langages informatiques, l'**index** commence à 0, et pas à 1.
+
 Cet index nous permet d'accéder directement à Vai, l'amie à l'index 2 (ou 3ème élément), pour voir son numéro de téléphone par exemple.
 
 Et ce tableau peut se comporter différemment selon la manière dont on **ajoute** et **retire** les éléments.
@@ -53,10 +61,10 @@ Par exemple, on peut le faire fonctionner comme une **file** ou une **pile**, si
 Dans les deux cas, on utilise un **tableau** pour stocker les amis.
 C’est la **logique d’ajout et de retrait** qui transforme ce tableau en pile ou en file.
 
-Et c’est exactement pour ça que, lorsqu’on traite des dossiers empilés, il vaut mieux **commencer par ceux du bas**.
-Sinon, on inverse l’ordre d’arrivée… et ce n’est plus une file d’attente, mais une injustice organisée.
+🎯 Et c’est exactement pour ça que, lorsqu’on traite des dossiers empilés, il vaut mieux **commencer par ceux du bas**.
+Sinon, on inverse l’ordre d’arrivée… et ce n’est plus une file d’attente, mais une **injustice organisée**.
 
-Tu as sûrement remarqué un problème: s'il n'y a que 6 places, que se passe-t-il si j'ai 7 amis ?
+>S'il n'y a que 6 places, que se passe-t-il si j'ai 7 amis ?
 
 D'abord, je te félicite d'avoir autant d'amis. Ensuite, on peut s'en sortir, en achetant un carnet d'adresse qui a plus de places, et on recopie nos amis dans ce nouveau carnet.
 
@@ -64,7 +72,7 @@ C'est similaire en informatique, on fait un nouveau tableau, plus grand, et on r
 
 Heureusement, en informatique on a inventé une autre structure.
 
-## La liste - comme le tableau, mais dynamique
+## La liste — comme le tableau, mais dynamique
 
 La liste (ou *list* en anglais), c’est comme un tableau, **mais en mieux** : **la taille n’est pas fixe**.
 
@@ -118,7 +126,7 @@ Une liste dynamique t'évitera bien des migraines.
 
 Le tableau et la liste sont des structures très basiques et très puissantes, elles sont les bases de beaucoup d'autres structures qu'on verra par la suite.
 
-## Le tableau associatif - ou comment indexer
+## Le tableau associatif — ou comment indexer
 
 On avait pris l'exemple d'un carnet d'adresses qu'on avait mis dans un tableau ou dans une liste. C'est déjà très bien de pouvoir stocker ta liste d'amis, mais si tu as des centaines d'amis et que tu veux appeler Vai pour aller à la mer, tu vas galérer pour chercher dans ce carnet d'adresse.
 
@@ -237,7 +245,7 @@ Plutôt que de stocker directement les valeurs, on stocke l’**endroit** où el
 
 C'est la plus grande force de l'informatique, on peut combiner différents concepts abstraits pour répondre à notre besoin.
 
-## L'ensemble - une structure unique
+## L'ensemble — une structure unique
 
 Si comme moi tu fais ta liste de courses durant la semaine en prévision des grandes courses du dimanche, tu as peut-être déjà eu la liste qui ressemble à :
 - lait
@@ -273,7 +281,7 @@ Si on veut une structure **ordonnée sans doublons**, on peut :
     info="L'ensemble des numéros de passeport en Polynésie française||L'ensemble de tes amis Facebook"
 >}}
 
-## Le graphe - ou comment appeler l'ami d'un ami d'un ami
+## Le graphe — ou comment appeler l'ami d'un ami d'un ami
 
 Tu prépares ta liste d’invités pour ton anniversaire, tu comptes inviter tout ton carnet d'adresses.
 
@@ -332,10 +340,13 @@ graph TD
 
 Je suis heureux que tu poses cette question, mais ta question dépasse le cadre de cet article.
 
-Si tu souhaites continuer cette aventure, tu peux regarder la suite ici: [Structures de contrôle et algorithme, apprendre à réfléchir](../structures-de-controle/)
+## Conclusion
 
 On a déjà vu pas mal de choses, je te laisse relire, essayer de combiner les structures entre elles, te renseigner sur internet en cherchant "structure de données" ou "data structure".
 
 Il existe beaucoup de structures de données, celles qui sont présentées dans cet article sont juste les plus basiques, celles qu'on apprend dans les premières heures de cours de programmation.
+
+**Le prochain article est en cours de rédaction.**
+<!-- Si tu souhaites continuer cette aventure, tu peux regarder la suite ici: [IMVV - Chapitre 3 - Structures de contrôle et algorithme, apprendre à réfléchir](../structures-de-controle/) -->
 
 [← Retour à l’introduction](../introduction/)

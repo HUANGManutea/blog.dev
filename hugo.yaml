@@ -39,6 +39,7 @@ params:
   background: /images/site/Papeete.JPG
   gitRepo: https://github.com/HUANGManutea/blog.dev
   gitBranch: main
+  disableSpecial1stPost: true
   features:
     theme:
       enable: true

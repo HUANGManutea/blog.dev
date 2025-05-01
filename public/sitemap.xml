@@ -2,35 +2,38 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>http://localhost:1313/blog.dev/posts/miroir-informatique-vraie-vie/</loc>
-    <lastmod>2025-04-29T15:41:48-10:00</lastmod>
+    <loc>http://localhost:1313/blog.dev/posts/miroir-informatique-vraie-vie/file-et-pile/</loc>
+    <lastmod>2025-04-29T14:34:21-10:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/blog.dev/posts/miroir-informatique-vraie-vie/structures-de-donnees/</loc>
     <lastmod>2025-04-29T15:41:48-10:00</lastmod>
   </url><url>
+    <loc>http://localhost:1313/blog.dev/posts/miroir-informatique-vraie-vie/structures-de-controle/</loc>
+    <lastmod>2025-04-30T14:30:37-10:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/blog.dev/posts/miroir-informatique-vraie-vie/</loc>
+    <lastmod>2025-04-30T14:30:37-10:00</lastmod>
+  </url><url>
     <loc>http://localhost:1313/blog.dev/categories/</loc>
-    <lastmod>2025-04-29T15:41:48-10:00</lastmod>
+    <lastmod>2025-04-30T14:30:37-10:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/blog.dev/</loc>
-    <lastmod>2025-04-29T15:41:48-10:00</lastmod>
+    <lastmod>2025-04-30T14:30:37-10:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/blog.dev/tags/informatique/</loc>
-    <lastmod>2025-04-29T15:41:48-10:00</lastmod>
+    <lastmod>2025-04-30T14:30:37-10:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/blog.dev/tags/miroir-de-la-vraie-vie/</loc>
-    <lastmod>2025-04-29T15:41:48-10:00</lastmod>
+    <lastmod>2025-04-30T14:30:37-10:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/blog.dev/posts/</loc>
-    <lastmod>2025-04-29T15:41:48-10:00</lastmod>
+    <lastmod>2025-04-30T14:30:37-10:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/blog.dev/tags/</loc>
-    <lastmod>2025-04-29T15:41:48-10:00</lastmod>
+    <lastmod>2025-04-30T14:30:37-10:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/blog.dev/categories/vulgarisation/</loc>
-    <lastmod>2025-04-29T15:41:48-10:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/blog.dev/posts/miroir-informatique-vraie-vie/file-et-pile/</loc>
-    <lastmod>2025-04-29T14:34:21-10:00</lastmod>
+    <lastmod>2025-04-30T14:30:37-10:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/blog.dev/posts/miroir-informatique-vraie-vie/introduction/</loc>
     <lastmod>2025-04-29T14:05:13-10:00</lastmod>

@@ -5,14 +5,14 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <meta name="robots" content="noindex, nofollow">
-<title>File ou Pile ? L&#39;art de passer avant les autres | Encore un autre blog d&#39;un tahitien</title>
+<title>IMVV - Chapitre 1 - File ou Pile ? L&#39;art de passer avant les autres | Encore un autre blog d&#39;un tahitien</title>
 <meta name="keywords" content="Informatique, Miroir de la vraie vie">
 <meta name="description" content="Quand tu prends un ticket pour attendre ton tour, que tu fais la queue à la caisse, que tu prends l’assiette du haut de la pile pour mettre la table, ou que tu cliques sur le bouton &lsquo;Retour&rsquo; (←) du navigateur internet…
 Tu manipules sans le savoir des concepts qu’on appelle en informatique des structures de données, et les algorithmes associés qui les font vivre.
 Dans cet article, on va mettre un peu de clarté là-dedans : pas besoin de coder pour comprendre, on va illustrer tout ça avec des situations de la vie courante.">
 <meta name="author" content="">
 <link rel="canonical" href="http://localhost:1313/blog.dev/posts/miroir-informatique-vraie-vie/file-et-pile/">
-<link crossorigin="anonymous" href="/blog.dev/assets/css/stylesheet.b6d1e897fde6d9991139e897aedf7cb8e2b3bb38133419e854cf35287da683e6.css" integrity="sha256-ttHol/3m2ZkROeiXrt98uOKzuzgTNBnoVM81KH2mg&#43;Y=" rel="preload stylesheet" as="style">
+<link crossorigin="anonymous" href="/blog.dev/assets/css/stylesheet.b4822ba5c6eca5bd42fd008da052ba60ceb4f1daa409a7323956fcab7d5a1842.css" integrity="sha256-tIIrpcbspb1C/QCNoFK6YM608dqkCacyOVb8q31aGEI=" rel="preload stylesheet" as="style">
 <link rel="icon" href="http://localhost:1313/blog.dev/favicon.ico">
 <link rel="icon" type="image/png" sizes="16x16" href="http://localhost:1313/blog.dev/favicon-16x16.png">
 <link rel="icon" type="image/png" sizes="32x32" href="http://localhost:1313/blog.dev/favicon-32x32.png">
@@ -134,38 +134,55 @@ Dans cet article, on va mettre un peu de clarté là-dedans : pas besoin de code
   <header class="post-header">
     
     <h1 class="post-title entry-hint-parent">
-      File ou Pile ? L&#39;art de passer avant les autres
-      <span class="entry-hint" title="Draft">
-        <svg xmlns="http://www.w3.org/2000/svg" height="35" viewBox="0 -960 960 960" fill="currentColor">
-          <path
-            d="M160-410v-60h300v60H160Zm0-165v-60h470v60H160Zm0-165v-60h470v60H160Zm360 580v-123l221-220q9-9 20-13t22-4q12 0 23 4.5t20 13.5l37 37q9 9 13 20t4 22q0 11-4.5 22.5T862.09-380L643-160H520Zm300-263-37-37 37 37ZM580-220h38l121-122-18-19-19-18-122 121v38Zm141-141-19-18 37 37-18-19Z" />
-        </svg>
-      </span>
+      IMVV - Chapitre 1 - File ou Pile ? L&#39;art de passer avant les autres
     </h1>
     <div class="post-meta"><span title='2025-04-29 14:34:21 -1000 -10'>avril 29, 2025</span>
 
 </div>
-  </header> 
+  </header> <div class="toc">
+    <details >
+        <summary accesskey="c" title="(Alt + C)">
+            <span class="details">Table des matières</span>
+        </summary>
+
+        <div class="inner"><ul>
+                <li>
+                    <a href="#d%c3%a9finitions" aria-label="Définitions">Définitions</a></li>
+                <li>
+                    <a href="#file-et-pile--deux-mani%c3%a8res-dattendre-ou-de-repousser" aria-label="File et pile : deux manières d’attendre… ou de repousser">File et pile : deux manières d’attendre… ou de repousser</a><ul>
+                        
+                <li>
+                    <a href="#la-file--ou-comment-attendre-son-tour-fifo" aria-label="La file — ou comment attendre son tour (FIFO)">La file — ou comment attendre son tour (FIFO)</a></li>
+                <li>
+                    <a href="#la-pile--ou-comment-empiler-les-priorit%c3%a9s-lifo" aria-label="La pile — ou comment empiler les priorités (LIFO)">La pile — ou comment empiler les priorités (LIFO)</a>
+                </li>
+            </ul>
+            </li>
+            </ul>
+        </div>
+    </details>
+</div>
+
   <div class="post-content"><p>Quand tu prends un ticket pour attendre ton tour, que tu fais la queue à la caisse, que tu prends l’assiette du haut de la pile pour mettre la table, ou que tu cliques sur le bouton &lsquo;Retour&rsquo; (←) du navigateur internet…
 Tu manipules sans le savoir des concepts qu’on appelle en informatique des structures de données, et les algorithmes associés qui les font vivre.</p>
 <p>Dans cet article, on va mettre un peu de clarté là-dedans : pas besoin de coder pour comprendre, on va illustrer tout ça avec des situations de la vie courante.</p>
 <h1 id="définitions">Définitions<a hidden class="anchor" aria-hidden="true" href="#définitions">#</a></h1>
 <p>Avant d’aller plus loin, quelques définitions simples, histoire de parler le même langage :</p>
 <ul>
-<li>Donnée : une donnée, c’est une information numérique. Ça peut être un numéro de passeport, le nombre de dents d’une personne, la liste des tâches que tu as encore repoussé à demain, ou ton nombre d’amis sur Facebook.</li>
-<li>Structure de données : imagine une boîte, une étagère ou un sac à dos, dans lequel tu ranges tes information d’une certaine manière pour mieux les retrouver ou les traiter. C’est la façon dont on organise les données.</li>
-<li>Algorithme : un algorithme, c’est une suite d’étapes ou d’instructions pour manipuler ces données. Comme une recette de cuisine, ou une procédure à suivre pour obtenir un résultat.</li>
+<li><strong>Donnée</strong> : une donnée, c’est une information numérique. Ça peut être un numéro de passeport, le nombre de dents d’une personne, la liste des tâches que tu as encore repoussé à demain, ou ton nombre d’amis sur Facebook.</li>
+<li><strong>Structure de données</strong> : imagine une boîte, une étagère ou un sac à dos, dans lequel tu ranges tes information d’une certaine manière pour mieux les retrouver ou les traiter. C’est la façon dont on organise les données.</li>
+<li><strong>Algorithme</strong> : un algorithme, c’est une suite d’étapes ou d’instructions pour manipuler ces données. Comme une recette de cuisine, ou une procédure à suivre pour obtenir un résultat.</li>
 </ul>
 <h1 id="file-et-pile--deux-manières-dattendre-ou-de-repousser">File et pile : deux manières d’attendre… ou de repousser<a hidden class="anchor" aria-hidden="true" href="#file-et-pile--deux-manières-dattendre-ou-de-repousser">#</a></h1>
 <p>Maintenant qu’on a les bases, voyons deux structures de données très simples mais très puissantes : la file et la pile.
 On les retrouve partout dans notre quotidien, souvent sans s’en rendre compte.</p>
 <h2 id="la-file--ou-comment-attendre-son-tour-fifo">La file — ou comment attendre son tour (FIFO)<a hidden class="anchor" aria-hidden="true" href="#la-file--ou-comment-attendre-son-tour-fifo">#</a></h2>
 <p>Imagine une file d’attente devant un guichet. Le premier arrivé est le premier servi.
-C’est ce qu’on appelle en informatique une file (ou <em>queue</em> en anglais), avec une logique FIFO : First In, First Out (premier entré, premier sorti).</p>
+C’est ce qu’on appelle en informatique une <strong>file</strong> (ou <em>queue</em> en anglais), avec une logique <strong>FIFO : First In, First Out</strong> (premier entré, premier sorti).</p>
 <p>Dès que quelqu’un est servi, c’est le suivant dans la file qui avance.</p>
-<p>🎯 C’est une structure équitable : chacun attend selon son ordre d’arrivée.</p>
+<p>🎯 C’est une structure <strong>équitable</strong> : chacun attend selon son ordre d’arrivée.</p>
 <div class="exemples-bloc">
-  <h4>📌 Exemples dans la vie réelle</h4>
+  <strong>📌 Exemples dans la vie réelle</strong>
   <ul>
     
       <li>Faire la queue à la caisse du magasin</li>
@@ -173,7 +190,7 @@ C’est ce qu’on appelle en informatique une file (ou <em>queue</em> en anglai
       <li>La liste des courses (si on lit de haut en bas)</li>
     
   </ul>
-  <h4>💻 Exemples en informatique</h4>
+  <strong>💻 Exemples en informatique</strong>
   <ul>
     
       <li>Les systèmes de ticket dans les accueils (le numéro est généré par un programme, et les appels suivent cet ordre)</li>
@@ -187,18 +204,18 @@ C’est ce qu’on appelle en informatique une file (ou <em>queue</em> en anglai
 Tu prends celui du haut, tu le lis, puis tu prends celui juste en dessous, et ainsi de suite.
 Tu lis dans l’ordre inverse de celui dans lequel tu as empilé les livres.
 Tu viens de dépiler ta pile, toujours en commençant par le haut.</p>
-<p>C’est exactement le principe de la pile (ou stack en anglais), qui suit la logique LIFO : Last In, First Out (dernier entré, premier sorti).</p>
+<p>C’est exactement le principe de la <strong>pile</strong> (ou <em>stack</em> en anglais), qui suit la logique <strong>LIFO : Last In, First Out</strong> (dernier entré, premier sorti).</p>
 <p>Tu vas peut-être me dire :</p>
 <blockquote>
 <p>Oui mais je peux aussi prendre le livre du bas, non ?</p></blockquote>
 <p>C’est vrai. Alors prenons un autre exemple, un peu plus réaliste :</p>
 <p>Imagine que tu tombes sur un article de journal qui parle des <strong>nodules polymétalliques dans les fonds marins de la Polynésie française</strong>. Tu n’y connais pas grand-chose, mais ça t’intrigue.
-Tu lis l’article, puis tu ouvres une page Wikipédia pour comprendre ce qu’est un nodule polymétallique. Sur cette page, tu vois un lien vers les métaux rares, puis vers la transition énergétique, puis… tu vois où je veux en venir.</p>
+Tu lis l’article, puis tu ouvres une page <em>Wikipédia</em> pour comprendre ce qu’est un nodule polymétallique. Sur cette page, tu vois un lien vers les métaux rares, puis vers la transition énergétique, puis… tu vois où je veux en venir.</p>
 <p>En lisant ce premier article, tu ne soupçonnais pas toute la <strong>pile</strong> d’informations que tu allais explorer. Et tu viens de <strong>dépiler</strong> ce savoir, en commençant par la dernière page ouverte.</p>
 <p>🎯 Ce n’est pas une structure équitable : ce qui arrive en dernier est traité en premier.
 Mais c’est très utile pour remonter dans le temps, ou revenir sur ses pas, exactement comme le bouton &ldquo;retour&rdquo; de ton navigateur.</p>
 <div class="exemples-bloc">
-  <h4>📌 Exemples dans la vie réelle</h4>
+  <strong>📌 Exemples dans la vie réelle</strong>
   <ul>
     
       <li>Les cartons dans un coffre bien rempli</li>
@@ -206,7 +223,7 @@ Mais c’est très utile pour remonter dans le temps, ou revenir sur ses pas, ex
       <li>Les différentes strates de terre quand tu creuses dans ton jardin (c&#39;est de la terre empilée au cours du temps)</li>
     
   </ul>
-  <h4>💻 Exemples en informatique</h4>
+  <strong>💻 Exemples en informatique</strong>
   <ul>
     
       <li>Le bouton &#39;Retour&#39; (←) de ton navigateur</li>
@@ -215,7 +232,7 @@ Mais c’est très utile pour remonter dans le temps, ou revenir sur ses pas, ex
     
   </ul>
 </div>
-<p>Si tu veux connaître d&rsquo;autres structures de données, tu peux regarder le prochain article: <a href="../structures-de-donnees/">Autres structure de données, j&rsquo;organise mon bordel</a></p>
+<p>Si tu veux connaître d&rsquo;autres structures de données, tu peux regarder le prochain article: <a href="../structures-de-donnees/">IMVV - Chapitre 2 - Autres structure de données, j&rsquo;organise mon bordel</a></p>
 <p><a href="../introduction/">← Retour à l’introduction</a></p>
 
 

@@ -1,7 +1,7 @@
 <ul>
   {{ $current := .Page }}
-  {{ range $current.Parent.Pages }}
-    {{ if ne .RelPermalink $current.RelPermalink }}
+  {{ range sort $current.Parent.Pages "Weight" }}
+    {{ if and (not .Draft) (ne .RelPermalink $current.RelPermalink) }}
       <li><a href="{{ .RelPermalink }}">{{ .Title }}</a></li>
     {{ end }}
   {{ end }}

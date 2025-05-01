@@ -5,11 +5,19 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <meta name="robots" content="noindex, nofollow">
-<title>Informatif | Encore un autre blog d&#39;un tahitien</title>
-<meta name="keywords" content="">
-<meta name="description" content="">
+<title>IMVV - Chapitre 3 - Structures de contrôle et algorithme, apprendre à réfléchir | Encore un autre blog d&#39;un tahitien</title>
+<meta name="keywords" content="Informatique, Miroir de la vraie vie">
+<meta name="description" content="Dans l&rsquo;article précédent, on s&rsquo;était arrêté sur ta question:
+
+Et c&rsquo;est quoi le parcours de graphe?
+Dans cet article, on va parler des structures de contrôle (control flow statements en anglais), qu&rsquo;on utilise dans des algorithmes (algorithms en anglais).
+Avant d&rsquo;expliquer l&rsquo;algorithme que tu as fait, le parcours de graphe, on doit expliquer les structures de contrôle.
+La boucle — ou comment avoir la flemme
+La condition — ou pourquoi il faut respecter le code de la route
+Revenons à notre parcours de graphe
+Pour rappel, tu avais appelé tes amis pour les inviter à ton anniversaire, et tu avais été jusqu&rsquo;au bout du monde, en sautant de relations en relations, pour inviter Paul.">
 <meta name="author" content="">
-<link rel="canonical" href="http://localhost:1313/blog.dev/categories/informatif/">
+<link rel="canonical" href="http://localhost:1313/blog.dev/posts/miroir-informatique-vraie-vie/structures-de-controle/">
 <link crossorigin="anonymous" href="/blog.dev/assets/css/stylesheet.b4822ba5c6eca5bd42fd008da052ba60ceb4f1daa409a7323956fcab7d5a1842.css" integrity="sha256-tIIrpcbspb1C/QCNoFK6YM608dqkCacyOVb8q31aGEI=" rel="preload stylesheet" as="style">
 <link rel="icon" href="http://localhost:1313/blog.dev/favicon.ico">
 <link rel="icon" type="image/png" sizes="16x16" href="http://localhost:1313/blog.dev/favicon-16x16.png">
@@ -18,8 +26,7 @@
 <link rel="mask-icon" href="http://localhost:1313/blog.dev/safari-pinned-tab.svg">
 <meta name="theme-color" content="#2e2e33">
 <meta name="msapplication-TileColor" content="#2e2e33">
-<link rel="alternate" type="application/rss+xml" href="http://localhost:1313/blog.dev/categories/informatif/index.xml">
-<link rel="alternate" hreflang="fr" href="http://localhost:1313/blog.dev/categories/informatif/">
+<link rel="alternate" hreflang="fr" href="http://localhost:1313/blog.dev/posts/miroir-informatique-vraie-vie/structures-de-controle/">
 <noscript>
     <style>
         #theme-toggle,
@@ -84,7 +91,7 @@
   </script>
 </head>
 
-<body class="list" id="top">
+<body class="" id="top">
 <script>
     if (localStorage.getItem("pref-theme") === "dark") {
         document.body.classList.add('dark');
@@ -127,26 +134,98 @@
         </ul>
     </nav>
 </header>
-<main class="main"> 
-<header class="page-header">
-  <h1>
-    Informatif
-  </h1>
-</header>
+<main class="main">
 
-<article class="post-entry tag-entry"> 
-  <header class="entry-header">
-    <h2 class="entry-hint-parent">Introduction aux moyens de paiement en Polynésie Française
-    </h2>
-  </header>
-  <div class="entry-content">
-    <p>Introduction Cet article est un aperçu très rapide des moyens de paiement en Polynésie Française.
-Update (12/05/2022): suite à quelques feedback, je me rend compte que cet article est à destination des développeurs de site de e-shopping, des commerçants, de mes confrères monéticiens. Cet article sera complexe à lire si vous n’avez jamais travaillé avec un TPE, avec une plateforme de paiement, avec des cartes bancaires.
-Disclaimer: Au moment où j’écris cet article, je travaille à l’Océanienne des Services Bancaires (OSB), Ces articles ne sont pas sponsorisés par OSB, et j’encourage les gens à faire des tutoriels pour les solutions des autres fournisseurs de solutions de paiement.
-...</p>
+<article class="post-single">
+  <header class="post-header">
+    
+    <h1 class="post-title entry-hint-parent">
+      IMVV - Chapitre 3 - Structures de contrôle et algorithme, apprendre à réfléchir
+      <span class="entry-hint" title="Draft">
+        <svg xmlns="http://www.w3.org/2000/svg" height="35" viewBox="0 -960 960 960" fill="currentColor">
+          <path
+            d="M160-410v-60h300v60H160Zm0-165v-60h470v60H160Zm0-165v-60h470v60H160Zm360 580v-123l221-220q9-9 20-13t22-4q12 0 23 4.5t20 13.5l37 37q9 9 13 20t4 22q0 11-4.5 22.5T862.09-380L643-160H520Zm300-263-37-37 37 37ZM580-220h38l121-122-18-19-19-18-122 121v38Zm141-141-19-18 37 37-18-19Z" />
+        </svg>
+      </span>
+    </h1>
+    <div class="post-meta"><span title='2025-04-30 14:30:37 -1000 -10'>avril 30, 2025</span>
+
+</div>
+  </header> <div class="toc">
+    <details >
+        <summary accesskey="c" title="(Alt + C)">
+            <span class="details">Table des matières</span>
+        </summary>
+
+        <div class="inner"><ul>
+                <li>
+                    <a href="#la-boucle--ou-comment-avoir-la-flemme" aria-label="La boucle — ou comment avoir la flemme">La boucle — ou comment avoir la flemme</a></li>
+                <li>
+                    <a href="#la-condition--ou-pourquoi-il-faut-respecter-le-code-de-la-route" aria-label="La condition — ou pourquoi il faut respecter le code de la route">La condition — ou pourquoi il faut respecter le code de la route</a></li>
+                <li>
+                    <a href="#revenons-%c3%a0-notre-parcours-de-graphe" aria-label="Revenons à notre parcours de graphe">Revenons à notre parcours de graphe</a>
+                </li>
+            </ul>
+        </div>
+    </details>
+</div>
+
+  <div class="post-content"><p>Dans l&rsquo;article précédent, on s&rsquo;était arrêté sur ta question:</p>
+<blockquote>
+<p>Et c&rsquo;est quoi le parcours de graphe?</p></blockquote>
+<p>Dans cet article, on va parler des <strong>structures de contrôle</strong> (<em>control flow statements</em> en anglais), qu&rsquo;on utilise dans des <strong>algorithmes</strong> (<em>algorithms</em> en anglais).</p>
+<p>Avant d&rsquo;expliquer l&rsquo;algorithme que tu as fait, le <strong>parcours de graphe</strong>, on doit expliquer les structures de contrôle.</p>
+<h2 id="la-boucle--ou-comment-avoir-la-flemme">La boucle — ou comment avoir la flemme<a hidden class="anchor" aria-hidden="true" href="#la-boucle--ou-comment-avoir-la-flemme">#</a></h2>
+<h2 id="la-condition--ou-pourquoi-il-faut-respecter-le-code-de-la-route">La condition — ou pourquoi il faut respecter le code de la route<a hidden class="anchor" aria-hidden="true" href="#la-condition--ou-pourquoi-il-faut-respecter-le-code-de-la-route">#</a></h2>
+<h2 id="revenons-à-notre-parcours-de-graphe">Revenons à notre parcours de graphe<a hidden class="anchor" aria-hidden="true" href="#revenons-à-notre-parcours-de-graphe">#</a></h2>
+<p>Pour rappel, tu avais appelé tes amis pour les inviter à ton anniversaire, et tu avais été jusqu&rsquo;au bout du monde, en sautant de relations en relations, pour inviter Paul.</p>
+<p>La succession d&rsquo;étapes que tu as fait pour appeler tes amis peut être écrit comme ceci:</p>
+<pre tabindex="0"><code>Dans ta liste d&#39;amis, pour chaque ami:
+    Tu l&#39;appelles
+    Si il répond, alors:
+        Tu l&#39;invites à ton anniversaire
+    Fin si
+Fin pour
+</code></pre><p>&ldquo;Dans ta liste d&rsquo;amis, pour chaque ami&rdquo; marque le début d&rsquo;une <strong>boucle</strong> (<em>loop</em> en anglais), et &ldquo;Fin pour&rdquo; marque la fin de la boucle.
+La boucle te permet de répéter la même action pour un ensemble d&rsquo;éléments, en l&rsquo;occurence, appeler un ami.</p>
+<p>&ldquo;Si il répond, alors&rdquo; marque le début d&rsquo;une <strong>condition</strong>, et &ldquo;Fin si&rdquo; marque la fin de la condition.
+La condition te permet de faire une action uniquement si cette condition est respectée. En effet, on peut inviter un ami <strong>si et seulement si</strong> il répond à ton appel.</p>
+<p>La <strong>boucle</strong> et la <strong>condition</strong> sont des <strong>structures de contrôle</strong> (<em>control flow statements</em> en anglais).</p>
+<p>Si on se représente ça :</p>
+<p>La liste d&rsquo;amis:</p>
+<table>
+  <thead>
+      <tr>
+          <th>Manutea</th>
+          <th>Vai</th>
+          <th>Purotu</th>
+          <th>Heiarii</th>
+          <th>Reva</th>
+          <th>Jean</th>
+      </tr>
+  </thead>
+  <tbody>
+  </tbody>
+</table>
+<p><em>Pour chaque ami</em> veut dire que tu as parcouru la liste:</p>
+<ul>
+<li>d&rsquo;abord tu as pris Manutea, puis tu as effectué l&rsquo;action: tu as appelé Manutea,</li>
+<li>puis tu as pris Vai, puis tu as appelé Vai,</li>
+<li>etc. jusqu&rsquo;à Jean</li>
+</ul>
+<blockquote>
+<p>Et Paul?</p></blockquote>
+<p>C&rsquo;est là où ça devient plus compliqué.</p>
+
+
   </div>
-  <footer class="entry-footer"><span title='2022-05-07 19:18:54 -1000 -10'>mai 7, 2022</span></footer>
-  <a class="entry-link" aria-label="post link to Introduction aux moyens de paiement en Polynésie Française" href="http://localhost:1313/blog.dev/posts/intro-moyens-paiement/"></a>
+
+  <footer class="post-footer">
+    <ul class="post-tags">
+      <li><a href="http://localhost:1313/blog.dev/tags/informatique/">Informatique</a></li>
+      <li><a href="http://localhost:1313/blog.dev/tags/miroir-de-la-vraie-vie/">Miroir De La Vraie Vie</a></li>
+    </ul>
+  </footer>
 </article>
     </main>
     

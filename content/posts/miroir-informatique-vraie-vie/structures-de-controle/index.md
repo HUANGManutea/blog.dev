@@ -1,9 +1,10 @@
 ---
-title: "Structures de contrôle et algorithme, apprendre à réfléchir"
+title: "IMVV - Chapitre 3 - Structures de contrôle et algorithme, apprendre à réfléchir"
+weight: 3
 #description: <descriptive text here>
 date: 2025-04-30T14:30:37-10:00
 draft: true
-toc: false
+showToc: true
 image: ""
 tags: [Informatique, Miroir de la vraie vie]
 categories: [Vulgarisation]
@@ -17,9 +18,9 @@ Dans cet article, on va parler des **structures de contrôle** (*control flow st
 
 Avant d'expliquer l'algorithme que tu as fait, le **parcours de graphe**, on doit expliquer les structures de contrôle.
 
-## La boucle, ou comment avoir la flemme
+## La boucle — ou comment avoir la flemme
 
-## La condition, ou pourquoi il faut respecter le code de la route
+## La condition — ou pourquoi il faut respecter le code de la route
 
 ## Revenons à notre parcours de graphe
 
