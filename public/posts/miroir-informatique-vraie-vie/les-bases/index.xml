@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
-    <title>IMMV - Section 1 - Les Bases : structures et contrôle on Encore un autre blog d&#39;un tahitien</title>
+    <title>IMMV - Section 1 - Les bases : structures et contrôle on Encore un autre blog d&#39;un tahitien</title>
     <link>http://localhost:1313/blog.dev/posts/miroir-informatique-vraie-vie/les-bases/</link>
-    <description>Recent content in IMMV - Section 1 - Les Bases : structures et contrôle on Encore un autre blog d&#39;un tahitien</description>
+    <description>Recent content in IMMV - Section 1 - Les bases : structures et contrôle on Encore un autre blog d&#39;un tahitien</description>
     <generator>Hugo -- 0.147.0</generator>
     <language>fr</language>
-    <lastBuildDate>Wed, 30 Apr 2025 14:30:37 -1000</lastBuildDate>
+    <lastBuildDate>Wed, 30 Apr 2025 17:01:31 -1000</lastBuildDate>
     <atom:link href="http://localhost:1313/blog.dev/posts/miroir-informatique-vraie-vie/les-bases/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>IMVV - Section 1 - Chapitre 1 - File ou Pile ? L&#39;art de passer avant les autres</title>
@@ -42,6 +42,39 @@ Tu manipules sans le savoir des concepts qu’on appelle en informatique des str
 &lt;p&gt;Et c&amp;rsquo;est quoi le parcours de graphe?&lt;/p&gt;&lt;/blockquote&gt;
 &lt;p&gt;Dans cet article, on va parler des &lt;strong&gt;structures de contrôle&lt;/strong&gt; (&lt;em&gt;control flow statements&lt;/em&gt; en anglais), qu&amp;rsquo;on utilise dans des &lt;strong&gt;algorithmes&lt;/strong&gt; (&lt;em&gt;algorithms&lt;/em&gt; en anglais).&lt;/p&gt;
 &lt;p&gt;Avant d&amp;rsquo;expliquer l&amp;rsquo;algorithme que tu as fait, le &lt;strong&gt;parcours de graphe&lt;/strong&gt;, on doit expliquer les structures de contrôle.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>IMMV - Section 1 - Les bases : structures et contrôle</title>
+      <link>http://localhost:1313/blog.dev/posts/miroir-informatique-vraie-vie/les-bases/les-bases/</link>
+      <pubDate>Wed, 30 Apr 2025 17:01:31 -1000</pubDate>
+      <guid>http://localhost:1313/blog.dev/posts/miroir-informatique-vraie-vie/les-bases/les-bases/</guid>
+      <description>&lt;p&gt;Dans cette section, nous verrons les bases permettant de stocker et manipuler des données.&lt;/p&gt;
+&lt;h1 id=&#34;chapitres&#34;&gt;Chapitres&lt;/h1&gt;
+
+
+&lt;ul&gt;
+  
+		
+	
+		
+    	
+      	&lt;li&gt;&lt;a href=&#34;http://localhost:1313/blog.dev/posts/miroir-informatique-vraie-vie/les-bases/file-et-pile/&#34;&gt;IMVV - Section 1 - Chapitre 1 - File ou Pile ? L&amp;#39;art de passer avant les autres&lt;/a&gt;&lt;/li&gt;
+    	
+  	
+	
+		
+    	
+      	&lt;li&gt;&lt;a href=&#34;http://localhost:1313/blog.dev/posts/miroir-informatique-vraie-vie/les-bases/structures-de-donnees/&#34;&gt;IMVV - Section 1 - Chapitre 2 - Autres structure de données, j&amp;#39;organise mon bordel&lt;/a&gt;&lt;/li&gt;
+    	
+  	
+	
+		
+    	
+      	&lt;li&gt;&lt;a href=&#34;http://localhost:1313/blog.dev/posts/miroir-informatique-vraie-vie/les-bases/structures-de-controle/&#34;&gt;IMVV - Section 1 - Chapitre 3 - Structures de contrôle et algorithme, apprendre à réfléchir&lt;/a&gt;&lt;/li&gt;
+    	
+  	
+	
+&lt;/ul&gt;</description>
     </item>
   </channel>
 </rss>

@@ -1,0 +1,11 @@
+{{ $current := .Page }}
+
+<ul>
+  {{ range sort ($current.CurrentSection.Pages) "Weight" }}
+		{{ if ne .RelPermalink $current.RelPermalink }}
+    	{{ if not .Params.draft }}
+      	<li><a href="{{ .RelPermalink }}">{{ .Title }}</a></li>
+    	{{ end }}
+  	{{ end }}
+	{{ end }}
+</ul>

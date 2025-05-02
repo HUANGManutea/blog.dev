@@ -9,9 +9,8 @@ image: ""
 tags: [Informatique, IMMV]
 categories: [Vulgarisation]
 ---
-
 Quand tu prends un ticket pour attendre ton tour, que tu fais la queue à la caisse, que tu prends l’assiette du haut de la pile pour mettre la table, ou que tu cliques sur le bouton 'Retour' (←) du navigateur internet…
-Tu manipules sans le savoir des concepts qu’on appelle en informatique des structures de données, et les algorithmes associés qui les font vivre.
+Tu manipules sans le savoir des concepts appellés en informatique **des structures de données**, et **les algorithmes** associés qui les font vivre.
 
 Dans cet article, on va mettre un peu de clarté là-dedans : pas besoin de coder pour comprendre, on va illustrer tout ça avec des situations de la vie courante.
 
@@ -19,8 +18,8 @@ Dans cet article, on va mettre un peu de clarté là-dedans : pas besoin de code
 
 Avant d’aller plus loin, quelques définitions simples, histoire de parler le même langage :
 
-- **Donnée** : une donnée, c’est une information numérique. Ça peut être un numéro de passeport, le nombre de dents d’une personne, la liste des tâches que tu as encore repoussé à demain, ou ton nombre d’amis sur Facebook.
-- **Structure de données** : imagine une boîte, une étagère ou un sac à dos, dans lequel tu ranges tes information d’une certaine manière pour mieux les retrouver ou les traiter. C’est la façon dont on organise les données.
+- **Donnée** : une donnée, c’est une information numérique. Ça peut être un numéro de passeport, le nombre de dents d’une personne, la liste des tâches que tu as encore repoussées à demain, ou ton nombre d’amis sur Facebook.
+- **Structure de données** : imagine une boîte, une étagère ou un sac à dos, dans lequel tu ranges tes informations d’une certaine manière pour mieux les retrouver ou les traiter. C’est la façon dont on organise les données.
 - **Algorithme** : un algorithme, c’est une suite d’étapes ou d’instructions pour manipuler ces données. Comme une recette de cuisine, ou une procédure à suivre pour obtenir un résultat.
 
 # File et pile : deux manières d’attendre… ou de repousser
@@ -62,7 +61,7 @@ Tu lis l’article, puis tu ouvres une page *Wikipédia* pour comprendre ce qu�
 
 En lisant ce premier article, tu ne soupçonnais pas toute la **pile** d’informations que tu allais explorer. Et tu viens de **dépiler** ce savoir, en commençant par la dernière page ouverte.
 
-🎯 Ce n’est pas une structure équitable : ce qui arrive en dernier est traité en premier.
+🎯 Ce n’est **pas une structure équitable** : ce qui arrive en dernier est traité en premier.
 Mais c’est très utile pour remonter dans le temps, ou revenir sur ses pas, exactement comme le bouton "retour" de ton navigateur.
 
 {{<miroir-informatique-vraie-vie-exemples
@@ -70,6 +69,8 @@ Mais c’est très utile pour remonter dans le temps, ou revenir sur ses pas, ex
     info="Le bouton 'Retour' (←) de ton navigateur||Les annulations successives (Undo, CTRL+Z) dans un éditeur de texte"
 >}}
 
-Si tu veux connaître d'autres structures de données, tu peux regarder le prochain article : [IMVV - Section 1 - Chapitre 2 - Autres structure de données, j'organise mon bordel](../structures-de-donnees/)
+Si tu veux connaître d'autres structures de données, tu peux regarder le prochain article : [IMVV - Section 1 - Chapitre 2 - Autres structures de données, j'organise mon bordel](../structures-de-donnees/)
 
-[← Retour à l’introduction](../introduction/)
+[← Retour à la section](../../les-bases/les-bases/)
+
+[← Retour à l’introduction](../../introduction/)

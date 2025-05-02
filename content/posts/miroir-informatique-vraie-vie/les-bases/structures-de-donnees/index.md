@@ -1,5 +1,5 @@
 ---
-title: "IMVV - Section 1 - Chapitre 2 - Autres structure de données, j'organise mon bordel"
+title: "IMVV - Section 1 - Chapitre 2 - Autres structures de données, j'organise mon bordel"
 weight: 2
 #description: <descriptive text here>
 date: 2025-04-29T15:41:48-10:00
@@ -9,7 +9,6 @@ image: ""
 tags: [Informatique, IMMV]
 categories: [Vulgarisation]
 ---
-
 Dans le précédent article [IMVV - Section 1 - Chapitre 1 - File ou Pile ? L'art de passer avant les autres](../file-et-pile/) on a découvert les files et les piles. Cette fois, on va survoler plusieurs autres **structures de données** (*data structures* en anglais) qu'on utilise très souvent en informatique... et dans la vraie vie.
 
 N'oublie pas que les objectifs de ces articles sont :
@@ -23,7 +22,7 @@ Tu as peut-être remarqué dans le précédent article que la **file** et la **p
 
 En informatique, le tableau (ou *array* en anglais) est l’une des structures les plus simples : on range des éléments les uns à la suite des autres, dans un espace de taille fixe, et chaque élément est repéré par sa position (ou **index**).
 
-Prenons un exemple simple : un tableau d'amis à inviter pour un anniversaire, mais dans mon carnet d'adresse je n'ai que 6 places.
+Prenons un exemple simple : un tableau d'amis à inviter pour un anniversaire, mais dans mon carnet d'adresses je n'ai que 6 places.
 
 |Amis|Manutea|Vai|Purotu|Heiarii|Reva|(vide)|
 |---|---|---|---|---|---|---|
@@ -113,7 +112,7 @@ Nombre d'éléments: 6
 
 Nombre d'éléments: 5
 
-On remarque qu'il n'y a plus la case (vide) et le nombre d'élements change.
+On remarque qu'il n'y a plus la case *(vide)* et le nombre d'éléments change.
 
 {{% miroir-informatique-vraie-vie-instant-dev %}}
 Pour permettre cette souplesse, la liste est plus gourmande en calculs:
@@ -174,14 +173,14 @@ Tu as raison, dans la vraie vie, dans ton carnet d'adresse pour chaque lettre tu
 
 ![Carnet d'adresses](/carnet_adresses.jpg#center)
 
-<figcaption>Carnet d'adresses papier, en rouge les encoches - source: Wikimédia</figcaption>
+<figcaption>Carnet d'adresses papier, en rouge les encoches — source: Wikimédia</figcaption>
 </figure>
 
 En informatique c'est le même principe, sauf qu'on ne peut pas utiliser de lettre comme index, alors on est obligé de trouver cette astuce.
 
 >Et en plus, il est nul ton carnet d'adresse, comment je fais si j'ai 2 amis qui s'appellent Vai et Vahine? 
 >Je mets Vahine dans la case juste après?
->Et si j'ai des centaines d'amis comme tu le disais au début, je fais comment pour les mettre dans les 26 cases?
+>Et si j'ai des centaines d'amis comme tu le disais au début, je fais comment pour les mettre dans les 26 cases ?
 
 Ok, tranquille, pas de stress.
 
@@ -292,7 +291,7 @@ Si on veut une structure **ordonnée sans doublons**, on peut :
 
 Tu prépares ta liste d’invités pour ton anniversaire, tu comptes inviter tout ton carnet d'adresses.
 
-Et là, tu réalises que tu n’as pas le contact de **Paul**. Tu l'as croisé en soirée et il était cool, tu voudrais l'inviter... mais t'as oublié de lui demander son numéro.
+Et là, tu réalises que tu n’as pas le contact de **Paul**. Tu l'as croisé en soirée et il était cool, tu voudrais l'inviter... mais tu as oublié de lui demander son numéro.
 
 Heureusement, tu sais que **Purotu** le connaît.
 
@@ -320,11 +319,11 @@ graph TD
 <figcaption>Graphe de relation entre les personnes</figcaption>
 </figure>
 
-Ce graphe est **non orienté**, c'est-à-dire qu'il n'y a pas de sens entre les éléments. Chaque case est un **noeud**, est chaque trait est une **arête**.
+Ce graphe est **non orienté**, c'est-à-dire qu'il n'y a pas de sens entre les éléments. Chaque case est un **noeud**, et chaque trait est une **arête**.
 
 Effectivement pour éviter de fâcher les personnes, on ne va pas dire *"Purotu est l'ami de Tiare, mais Tiare n'est pas l'ami de Purotu"*.
 
-Par contre, on peut utiliser un graphe **orienté** pour représenter les appels que tu as passé.
+Par contre, on peut utiliser un graphe **orienté** pour représenter les appels que tu as passés.
 
 <figure>
 {{< mermaid >}}
@@ -351,10 +350,12 @@ Je suis heureux que tu poses cette question, mais ta question dépasse le cadre 
 
 ## Conclusion
 
-On a déjà vu pas mal de choses, je te laisse relire, essayer de combiner les structures entre elles, te renseigner sur internet en cherchant "structure de données" ou "data structure".
+On a déjà vu pas mal de choses, je te laisse relire, essayer de combiner les structures entre elles, te renseigner sur internet en cherchant "structures de données" ou "data structure".
 
 Il existe beaucoup de structures de données, celles qui sont présentées dans cet article sont juste les plus basiques, celles qu'on apprend dans les premières heures de cours de programmation.
 
 Si tu souhaites continuer cette aventure, tu peux regarder la suite ici: [IMVV - Section 1 - Chapitre 3 - Structures de contrôle et algorithme, apprendre à réfléchir](../structures-de-controle/)
 
-[← Retour à l’introduction](../introduction/)
+[← Retour à la section](../../les-bases/les-bases/)
+
+[← Retour à l’introduction](../../introduction/)

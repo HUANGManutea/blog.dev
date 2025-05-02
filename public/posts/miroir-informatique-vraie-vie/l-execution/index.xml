@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>IMMV - Section 2 - L&#39;exécution : comment faire des actions ? on Encore un autre blog d&#39;un tahitien</title>
+    <link>http://localhost:1313/blog.dev/posts/miroir-informatique-vraie-vie/l-execution/</link>
+    <description>Recent content in IMMV - Section 2 - L&#39;exécution : comment faire des actions ? on Encore un autre blog d&#39;un tahitien</description>
+    <generator>Hugo -- 0.147.0</generator>
+    <language>fr</language>
+    <lastBuildDate>Thu, 01 May 2025 10:40:55 -1000</lastBuildDate>
+    <atom:link href="http://localhost:1313/blog.dev/posts/miroir-informatique-vraie-vie/l-execution/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>IMMV - Section 2 - Chapitre 1 - Synchrone et Asynchrone, ou comment réagir au changement</title>
+      <link>http://localhost:1313/blog.dev/posts/miroir-informatique-vraie-vie/l-execution/sync-async/</link>
+      <pubDate>Thu, 01 May 2025 00:10:38 -1000</pubDate>
+      <guid>http://localhost:1313/blog.dev/posts/miroir-informatique-vraie-vie/l-execution/sync-async/</guid>
+      <description>&lt;p&gt;Dans le précédent article, &lt;a href=&#34;../../les-bases/structures-de-controle/&#34;&gt;IMVV - Section 1 - Chapitre 3 - Structures de contrôle et algorithme, apprendre à réfléchir&lt;/a&gt;, on a vu les différentes structures de contrôle et les algorithmes.&lt;/p&gt;
+&lt;p&gt;Maintenant on va parler de la manière dont on réalise un ensemble de tâches — c’est ce qu’on appelle en informatique un &lt;strong&gt;mode d’exécution&lt;/strong&gt;. C&amp;rsquo;est applicable aussi bien pour un humain que pour un ordinateur.&lt;/p&gt;
+&lt;p&gt;N&amp;rsquo;oublie pas que les objectifs de ces articles sont :&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>IMMV - Section 2 - Chapitre 2 - Monothread, Multithread, Parallélisme et Concurrence, je ne peux pas tout faire en même temps !</title>
+      <link>http://localhost:1313/blog.dev/posts/miroir-informatique-vraie-vie/l-execution/threads/</link>
+      <pubDate>Thu, 01 May 2025 10:40:55 -1000</pubDate>
+      <guid>http://localhost:1313/blog.dev/posts/miroir-informatique-vraie-vie/l-execution/threads/</guid>
+      <description>&lt;p&gt;Dans le précédent article, &lt;a href=&#34;../sync-async/&#34;&gt;IMMV - Section 2 - Chapitre 1 - Synchrone et Asynchrone, ou comment réagir au changement&lt;/a&gt;, on a vu les différents modes d&amp;rsquo;exécutions.&lt;/p&gt;
+&lt;p&gt;On s&amp;rsquo;était arrêté sur le problème suivant : Comment faire pour répondre à la montée en charge, à l&amp;rsquo;accumulation de tâches?&lt;/p&gt;
+&lt;p&gt;Eh bien, dans cet article, on va voir comment on résout ce problème, en informatique &lt;strong&gt;comme dans la vraie vie&lt;/strong&gt; : les mécanismes sont souvent très proches.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>IMMV - Section 2 - L&#39;exécution : comment faire des actions ?</title>
+      <link>http://localhost:1313/blog.dev/posts/miroir-informatique-vraie-vie/l-execution/l-execution/</link>
+      <pubDate>Thu, 01 May 2025 00:03:59 -1000</pubDate>
+      <guid>http://localhost:1313/blog.dev/posts/miroir-informatique-vraie-vie/l-execution/l-execution/</guid>
+      <description>&lt;p&gt;Dans cette section, nous verrons comment les actions sont exécutés, par les ordinateur ou par les personnes. Et on verras quelques pistes pour répondre à une accumulation de tâche.&lt;/p&gt;
+&lt;h1 id=&#34;chapitres&#34;&gt;Chapitres&lt;/h1&gt;
+
+
+&lt;ul&gt;
+  
+		
+	
+		
+    	
+      	&lt;li&gt;&lt;a href=&#34;http://localhost:1313/blog.dev/posts/miroir-informatique-vraie-vie/l-execution/sync-async/&#34;&gt;IMMV - Section 2 - Chapitre 1 - Synchrone et Asynchrone, ou comment réagir au changement&lt;/a&gt;&lt;/li&gt;
+    	
+  	
+	
+		
+    	
+      	&lt;li&gt;&lt;a href=&#34;http://localhost:1313/blog.dev/posts/miroir-informatique-vraie-vie/l-execution/threads/&#34;&gt;IMMV - Section 2 - Chapitre 2 - Monothread, Multithread, Parallélisme et Concurrence, je ne peux pas tout faire en même temps !&lt;/a&gt;&lt;/li&gt;
+    	
+  	
+	
+&lt;/ul&gt;</description>
+    </item>
+  </channel>
+</rss>

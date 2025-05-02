@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="fr" dir="auto">
+
+<head><script src="/blog.dev/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=blog.dev/livereload" data-no-instant defer></script><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="noindex, nofollow">
+<title>IMMV - Section 2 - L&#39;exécution : comment faire des actions ? | Encore un autre blog d&#39;un tahitien</title>
+<meta name="keywords" content="">
+<meta name="description" content="IMMV - Section 2 - L&#39;exécution : comment faire des actions ? - Encore un autre blog d&#39;un tahitien">
+<meta name="author" content="">
+<link rel="canonical" href="http://localhost:1313/blog.dev/posts/miroir-informatique-vraie-vie/l-execution/">
+<link crossorigin="anonymous" href="/blog.dev/assets/css/stylesheet.649a89ab5b3ace9a56ef6ec2dcd42ebba6add9c9cfe080c18aa59761d20f9080.css" integrity="sha256-ZJqJq1s6zppW727C3NQuu6at2cnP4IDBiqWXYdIPkIA=" rel="preload stylesheet" as="style">
+<link rel="icon" href="http://localhost:1313/blog.dev/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="http://localhost:1313/blog.dev/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="http://localhost:1313/blog.dev/favicon-32x32.png">
+<link rel="apple-touch-icon" href="http://localhost:1313/blog.dev/apple-touch-icon.png">
+<link rel="mask-icon" href="http://localhost:1313/blog.dev/safari-pinned-tab.svg">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<link rel="alternate" type="application/rss+xml" href="http://localhost:1313/blog.dev/posts/miroir-informatique-vraie-vie/l-execution/index.xml">
+<link rel="alternate" hreflang="fr" href="http://localhost:1313/blog.dev/posts/miroir-informatique-vraie-vie/l-execution/">
+<noscript>
+    <style>
+        #theme-toggle,
+        .top-link {
+            display: none;
+        }
+
+    </style>
+    <style>
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --theme: rgb(29, 30, 32);
+                --entry: rgb(46, 46, 51);
+                --primary: rgb(218, 218, 219);
+                --secondary: rgb(155, 156, 157);
+                --tertiary: rgb(65, 66, 68);
+                --content: rgb(196, 196, 197);
+                --code-block-bg: rgb(46, 46, 51);
+                --code-bg: rgb(55, 56, 62);
+                --border: rgb(51, 51, 51);
+            }
+
+            .list {
+                background: var(--theme);
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-track {
+                background: 0 0;
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-thumb {
+                border-color: var(--theme);
+            }
+        }
+
+    </style>
+</noscript><script type="module">
+    import mermaid from "https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs";
+  
+    function getMermaidTheme() {
+      return document.body.classList.contains("dark") ? "dark" : "default";
+    }
+  
+    function renderMermaid() {
+      mermaid.initialize({ startOnLoad: false, theme: getMermaidTheme() });
+      mermaid.init(undefined, document.querySelectorAll(".mermaid"));
+    }
+  
+    document.addEventListener("DOMContentLoaded", () => {
+      renderMermaid();
+    });
+  
+    
+    const observer = new MutationObserver(() => {
+      renderMermaid();
+    });
+  
+    observer.observe(document.body, {
+      attributes: true,
+      attributeFilter: ["class"]
+    });
+  </script>
+</head>
+
+<body class="list" id="top">
+<script>
+    if (localStorage.getItem("pref-theme") === "dark") {
+        document.body.classList.add('dark');
+    } else if (localStorage.getItem("pref-theme") === "light") {
+        document.body.classList.remove('dark')
+    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.body.classList.add('dark');
+    }
+
+</script>
+
+<header class="header">
+    <nav class="nav">
+        <div class="logo">
+            <a href="http://localhost:1313/blog.dev/" accesskey="h" title="Encore un autre blog d&#39;un tahitien (Alt + H)">Encore un autre blog d&#39;un tahitien</a>
+            <div class="logo-switches">
+                <button id="theme-toggle" accesskey="t" title="(Alt + T)" aria-label="Toggle theme">
+                    <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                    <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <ul id="menu">
+        </ul>
+    </nav>
+</header>
+<main class="main"> 
+<header class="page-header">
+  <h1>
+    IMMV - Section 2 - L&#39;exécution : comment faire des actions ?
+  </h1>
+</header>
+
+<article class="post-entry"> 
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">IMMV - Section 2 - Chapitre 1 - Synchrone et Asynchrone, ou comment réagir au changement
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>Dans le précédent article, IMVV - Section 1 - Chapitre 3 - Structures de contrôle et algorithme, apprendre à réfléchir, on a vu les différentes structures de contrôle et les algorithmes.
+Maintenant on va parler de la manière dont on réalise un ensemble de tâches — c’est ce qu’on appelle en informatique un mode d’exécution. C’est applicable aussi bien pour un humain que pour un ordinateur.
+N’oublie pas que les objectifs de ces articles sont :
+...</p>
+  </div>
+  <footer class="entry-footer"><span title='2025-05-01 00:10:38 -1000 -10'>mai 1, 2025</span></footer>
+  <a class="entry-link" aria-label="post link to IMMV - Section 2 - Chapitre 1 - Synchrone et Asynchrone, ou comment réagir au changement" href="http://localhost:1313/blog.dev/posts/miroir-informatique-vraie-vie/l-execution/sync-async/"></a>
+</article>
+
+<article class="post-entry"> 
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">IMMV - Section 2 - Chapitre 2 - Monothread, Multithread, Parallélisme et Concurrence, je ne peux pas tout faire en même temps !
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>Dans le précédent article, IMMV - Section 2 - Chapitre 1 - Synchrone et Asynchrone, ou comment réagir au changement, on a vu les différents modes d’exécutions.
+On s’était arrêté sur le problème suivant : Comment faire pour répondre à la montée en charge, à l’accumulation de tâches?
+Eh bien, dans cet article, on va voir comment on résout ce problème, en informatique comme dans la vraie vie : les mécanismes sont souvent très proches.
+...</p>
+  </div>
+  <footer class="entry-footer"><span title='2025-05-01 10:40:55 -1000 -10'>mai 1, 2025</span></footer>
+  <a class="entry-link" aria-label="post link to IMMV - Section 2 - Chapitre 2 - Monothread, Multithread, Parallélisme et Concurrence, je ne peux pas tout faire en même temps !" href="http://localhost:1313/blog.dev/posts/miroir-informatique-vraie-vie/l-execution/threads/"></a>
+</article>
+
+<article class="post-entry"> 
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">IMMV - Section 2 - L&#39;exécution : comment faire des actions ?
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>Dans cette section, nous verrons comment les actions sont exécutés, par les ordinateur ou par les personnes. Et on verras quelques pistes pour répondre à une accumulation de tâche.
+Chapitres IMMV - Section 2 - Chapitre 1 - Synchrone et Asynchrone, ou comment réagir au changement IMMV - Section 2 - Chapitre 2 - Monothread, Multithread, Parallélisme et Concurrence, je ne peux pas tout faire en même temps ! </p>
+  </div>
+  <footer class="entry-footer"><span title='2025-05-01 00:03:59 -1000 -10'>mai 1, 2025</span></footer>
+  <a class="entry-link" aria-label="post link to IMMV - Section 2 - L&#39;exécution : comment faire des actions ?" href="http://localhost:1313/blog.dev/posts/miroir-informatique-vraie-vie/l-execution/l-execution/"></a>
+</article>
+    </main>
+    
+<footer class="footer">
+        <span>&copy; 2025 <a href="http://localhost:1313/blog.dev/">Encore un autre blog d&#39;un tahitien</a></span> · 
+
+    <span>
+        Powered by
+        <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &
+        <a href="https://github.com/adityatelange/hugo-PaperMod/" rel="noopener" target="_blank">PaperMod</a>
+    </span>
+</footer>
+<a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
+        <path d="M12 6H0l6-6z" />
+    </svg>
+</a>
+
+<script>
+    let menu = document.getElementById('menu')
+    if (menu) {
+        menu.scrollLeft = localStorage.getItem("menu-scroll-position");
+        menu.onscroll = function () {
+            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
+        }
+    }
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            var id = this.getAttribute("href").substr(1);
+            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+                    behavior: "smooth"
+                });
+            } else {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
+            }
+            if (id === "top") {
+                history.replaceState(null, null, " ");
+            } else {
+                history.pushState(null, null, `#${id}`);
+            }
+        });
+    });
+
+</script>
+<script>
+    var mybutton = document.getElementById("top-link");
+    window.onscroll = function () {
+        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
+            mybutton.style.visibility = "visible";
+            mybutton.style.opacity = "1";
+        } else {
+            mybutton.style.visibility = "hidden";
+            mybutton.style.opacity = "0";
+        }
+    };
+
+</script>
+<script>
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        if (document.body.className.includes("dark")) {
+            document.body.classList.remove('dark');
+            localStorage.setItem("pref-theme", 'light');
+        } else {
+            document.body.classList.add('dark');
+            localStorage.setItem("pref-theme", 'dark');
+        }
+    })
+
+</script>
+</body>
+
+</html>

@@ -9,8 +9,7 @@ image: ""
 tags: [Informatique, IMMV]
 categories: [Vulgarisation]
 ---
-
-Dans l'article précédent [IMVV - Section 1 - Chapitre 2 - Autres structure de données, j'organise mon bordel](../structures-de-donnees/), on s'était arrêté sur ta question:
+Dans l'article précédent [IMVV - Section 1 - Chapitre 2 - Autres structures de données, j'organise mon bordel](../structures-de-donnees/), on s'était arrêté sur ta question :
 
 >Et c'est quoi le parcours de graphe?
 
@@ -36,9 +35,12 @@ Remuer
 Verser la préparation dans un moule
 Mettre le moule au four
 Attendre 20 minutes
+Eteindre le four
+Sortir le moule du four
+Démouler
 ```
 
-Toute cette suite d'étape est ce qu'on appelle un **algorithme**, et la façon dont on l'a écrit, ça s'appelle du **pseudo-code**, parce que ça ressemble à un langage de programmation, mais ce n'en est pas un.
+Toute cette suite d'étapes est ce qu'on appelle un **algorithme**, et la façon dont on l'a écrit, ça s'appelle du **pseudo-code**, parce que ça ressemble à un langage de programmation, mais ce n'en est pas un.
 
 >Mais pourquoi on appelle ça un algorithme? on peut pas juste dire une suite d'actions?
 
@@ -231,7 +233,7 @@ Tu réalises que tu n’as pas le contact de Paul. Tu l'as croisé en soirée et
 Heureusement, tu sais que Purotu le connaît.
 
 Tu l'appelles... zut, elle n'a pas son numéro. Mais elle te donne le numéro de Tiare, une autre amie de Paul.
-Tu appelles Tiare, tu te présentes, tu l'invite également car tu n'es pas un sauvage. Et tu lui demandes le numéro de Paul.
+Tu appelles Tiare, tu te présentes, tu l'invites également car tu n'es pas un sauvage. Et tu lui demandes le numéro de Paul.
 
 Bingo, elle l'a, tu appelles Paul et il est chaud pour venir à ton anniversaire.
 ```
@@ -253,7 +255,7 @@ graph TD
 <figcaption>Graphe de relation entre les personnes</figcaption>
 </figure>
 
-En se basant sur ce qu'on a appris dans cet article, on va écrire un algorithme pour représenter les actions que tu as réalisé pour inviter tes amis :
+En se basant sur ce qu'on a appris dans cet article, on va écrire un algorithme pour représenter les actions que tu as réalisées pour inviter tes amis :
 
 ```
 # Étape 1 : inviter tous mes amis directs (les noeuds les plus proches de "Toi" dans le graphe)
@@ -296,18 +298,33 @@ Tant que la "file" n’est pas vide :
 Fin tant que
 ```
 
-D'un premier regard, ça a l'air compliqué. Mais en fait si tu prends le temps de décortiquer, de bien regarder, tu verras que ce sont juste les actions que tu as réalisés plus haut, mais dans un langage plus proche de ce que fait un ordinateur.
+À première vue, ça a l'air compliqué. Mais en fait si tu prends le temps de décortiquer, de bien regarder, tu verras que ce sont juste les actions que tu as réalisés plus haut, mais dans un langage plus proche de ce que fait un ordinateur.
 
-La seule chose qu'on a fait en plus des concepts de bases, c'est qu'on a combiné les structures de contrôles et les structures de données, et le tout nous donne notre **algorithme de parcours de graphe** !
+La seule chose qu'on a fait en plus des concepts de base, c'est qu'on a combiné les structures de contrôle et les structures de données, et le tout nous donne notre **algorithme de parcours de graphe** !
+
+{{% miroir-informatique-vraie-vie-instant-dev %}}
+💡 On a parcouru le graphe en largeur, c'est-à-dire qu'on a d'abord regardé les noeuds voisins de notre point de départ.
+
+D'autres algorithmes connus et enseignés en informatique sont le parcours en profondeur, l'algorithme de Dijkstra, A* et Floyd-Warshall, tu peux regarder sur internet si ça t'intéresse.
+{{% /miroir-informatique-vraie-vie-instant-dev %}}
 
 ## Conclusion
 
 Dans cet article on a appris ce que sont :
-- les boucles
-- les conditions
-- les variables
-- les algorithmes
+- Les structures de contrôle,
+    - Les boucles,
+    - Les conditions,
+- Les variables,
+- Les algorithmes.
 
-Il existe d'autres structures conditionnelles, des types de variables, et des algorithmes qu'on peut réutiliser pour répondre à beaucoup de problèmes. Comme d'habitude, je te laisse chercher sur internet si tu veux aller plus loin.
+Il existe d'autres structures de contrôle, des types de variables, et des algorithmes qu'on peut réutiliser pour répondre à beaucoup de problèmes. Comme d'habitude, je te laisse chercher sur internet si tu veux aller plus loin.
 
-Mais le plus important, c'est que tu commences à réfléchir comme un développeur, et à comprendre le **pseudo-code**. Dans la vraie vie, si tu as un problème complexe à résoudre, tu peux essayer de l'écrire comme on l'a fait pour le parcours de graphe. Prends ton temps et décompose le problèmes.
+Mais le plus important, c'est que tu commences à réfléchir comme un développeur, et à comprendre le **pseudo-code**. Dans la vraie vie, si tu as un problème complexe à résoudre, tu peux essayer de l'écrire comme on l'a fait pour le parcours de graphe. Prends ton temps et décompose le problème.
+
+Nous avons fini cette section "IMMV - Section 1 - Les Bases : structures et contrôle", dans cette section, nous avons également vu les structures de données.
+
+Dans la prochaine section, [IMMV - Section 2 - L'exécution : comment faire des actions ?](../../l-execution/l-execution/), nous verrons que l'ordinateur et l'humain font les actions de manière très similaire.
+
+[← Retour à la section](../../les-bases/les-bases/)
+
+[← Retour à l’introduction](../../introduction/)

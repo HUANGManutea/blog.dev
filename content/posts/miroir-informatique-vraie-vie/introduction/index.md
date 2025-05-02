@@ -9,8 +9,10 @@ image: ""
 tags: [Informatique, IMMV]
 categories: [Vulgarisation]
 ---
+'Ia ora na,
 
-L'informatique semble souvent obscure pour beaucoup. Quand je dis que je suis ingénieur informatique, on me demande régulièrement : « Mais tu fais quoi exactement ? »
+L'informatique semble souvent obscure pour beaucoup. Quand je dis que je suis ingénieur informatique, on me demande régulièrement : « Mais tu fais quoi exactement ? ».
+
 Avec le temps, j’ai pris l’habitude de vulgariser mon métier. Et ce qui fonctionne le mieux, ce sont les exemples concrets tirés de la vie quotidienne.
 
 En école d'ingénieur, j'apprenais beaucoup plus facilement l'informatique en partant de situations réelles.
@@ -18,20 +20,21 @@ En école d'ingénieur, j'apprenais beaucoup plus facilement l'informatique en p
 Parce que finalement, coder un programme ou gérer une file d’attente au magasin, ce n’est pas si différent.
 
 ## Informations de lecture
-Avant de lire les articles listés en bas de cette page, quelques informations pour vous faciliter la lecture, vous trouverez :
+Avant de lire les articles listés en bas de cette page, quelques informations pour vous faciliter la lecture :
 
-- **Un mode sombre et un mode clair** : En haut de chaque page se trouve une icone <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg><svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg> pour interchanger entre les modes de lecture sombre et clair
+- **Il y a un mode sombre et un mode clair** : En haut de chaque page se trouve une icône <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg><svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg> pour interchanger entre les modes de lecture sombre et clair
 
-- **Des apartés pour les développeurs,**
+- **J'utiliserai des apartés pour les développeurs,**
 
 {{% miroir-informatique-vraie-vie-instant-dev %}}
 Ceci est un aparté pour les développeurs, si tu es non développeur tu peux lire, mais tu auras peut-être mal à la tête.
 {{% /miroir-informatique-vraie-vie-instant-dev %}}
 
-- **Des interjections de lecteur.**
+- **J'utiliserai des interjections de lecteur,**
 
 >J'interviens comme si j'étais toi, lecteur, pour aider l'auteur de ce blog à rendre ces articles dynamiques
 
+- **Cette série d'articles n'est pas un cours d'informatique, vous n'apprendrez pas à développer juste en suivant ces articles.**
 
 ## Mot de fin
 

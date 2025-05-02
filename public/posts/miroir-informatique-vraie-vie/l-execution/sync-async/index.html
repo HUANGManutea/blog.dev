@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="fr" dir="auto">
+
+<head><script src="/blog.dev/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=blog.dev/livereload" data-no-instant defer></script><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="noindex, nofollow">
+<title>IMMV - Section 2 - Chapitre 1 - Synchrone et Asynchrone, ou comment réagir au changement | Encore un autre blog d&#39;un tahitien</title>
+<meta name="keywords" content="Informatique, IMMV">
+<meta name="description" content="Dans le précédent article, IMVV - Section 1 - Chapitre 3 - Structures de contrôle et algorithme, apprendre à réfléchir, on a vu les différentes structures de contrôle et les algorithmes.
+Maintenant on va parler de la manière dont on réalise un ensemble de tâches — c’est ce qu’on appelle en informatique un mode d’exécution. C&rsquo;est applicable aussi bien pour un humain que pour un ordinateur.
+N&rsquo;oublie pas que les objectifs de ces articles sont :">
+<meta name="author" content="">
+<link rel="canonical" href="http://localhost:1313/blog.dev/posts/miroir-informatique-vraie-vie/l-execution/sync-async/">
+<link crossorigin="anonymous" href="/blog.dev/assets/css/stylesheet.649a89ab5b3ace9a56ef6ec2dcd42ebba6add9c9cfe080c18aa59761d20f9080.css" integrity="sha256-ZJqJq1s6zppW727C3NQuu6at2cnP4IDBiqWXYdIPkIA=" rel="preload stylesheet" as="style">
+<link rel="icon" href="http://localhost:1313/blog.dev/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="http://localhost:1313/blog.dev/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="http://localhost:1313/blog.dev/favicon-32x32.png">
+<link rel="apple-touch-icon" href="http://localhost:1313/blog.dev/apple-touch-icon.png">
+<link rel="mask-icon" href="http://localhost:1313/blog.dev/safari-pinned-tab.svg">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<link rel="alternate" hreflang="fr" href="http://localhost:1313/blog.dev/posts/miroir-informatique-vraie-vie/l-execution/sync-async/">
+<noscript>
+    <style>
+        #theme-toggle,
+        .top-link {
+            display: none;
+        }
+
+    </style>
+    <style>
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --theme: rgb(29, 30, 32);
+                --entry: rgb(46, 46, 51);
+                --primary: rgb(218, 218, 219);
+                --secondary: rgb(155, 156, 157);
+                --tertiary: rgb(65, 66, 68);
+                --content: rgb(196, 196, 197);
+                --code-block-bg: rgb(46, 46, 51);
+                --code-bg: rgb(55, 56, 62);
+                --border: rgb(51, 51, 51);
+            }
+
+            .list {
+                background: var(--theme);
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-track {
+                background: 0 0;
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-thumb {
+                border-color: var(--theme);
+            }
+        }
+
+    </style>
+</noscript><script type="module">
+    import mermaid from "https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs";
+  
+    function getMermaidTheme() {
+      return document.body.classList.contains("dark") ? "dark" : "default";
+    }
+  
+    function renderMermaid() {
+      mermaid.initialize({ startOnLoad: false, theme: getMermaidTheme() });
+      mermaid.init(undefined, document.querySelectorAll(".mermaid"));
+    }
+  
+    document.addEventListener("DOMContentLoaded", () => {
+      renderMermaid();
+    });
+  
+    
+    const observer = new MutationObserver(() => {
+      renderMermaid();
+    });
+  
+    observer.observe(document.body, {
+      attributes: true,
+      attributeFilter: ["class"]
+    });
+  </script>
+</head>
+
+<body class="" id="top">
+<script>
+    if (localStorage.getItem("pref-theme") === "dark") {
+        document.body.classList.add('dark');
+    } else if (localStorage.getItem("pref-theme") === "light") {
+        document.body.classList.remove('dark')
+    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.body.classList.add('dark');
+    }
+
+</script>
+
+<header class="header">
+    <nav class="nav">
+        <div class="logo">
+            <a href="http://localhost:1313/blog.dev/" accesskey="h" title="Encore un autre blog d&#39;un tahitien (Alt + H)">Encore un autre blog d&#39;un tahitien</a>
+            <div class="logo-switches">
+                <button id="theme-toggle" accesskey="t" title="(Alt + T)" aria-label="Toggle theme">
+                    <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                    <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <ul id="menu">
+        </ul>
+    </nav>
+</header>
+<main class="main">
+
+<article class="post-single">
+  <header class="post-header">
+    
+    <h1 class="post-title entry-hint-parent">
+      IMMV - Section 2 - Chapitre 1 - Synchrone et Asynchrone, ou comment réagir au changement
+    </h1>
+    <div class="post-meta"><span title='2025-05-01 00:10:38 -1000 -10'>mai 1, 2025</span>
+
+</div>
+  </header> <div class="toc">
+    <details >
+        <summary accesskey="c" title="(Alt + C)">
+            <span class="details">Table des matières</span>
+        </summary>
+
+        <div class="inner"><ul>
+                <li>
+                    <a href="#programme-et-application--cest-quoi-la-diff%c3%a9rence-" aria-label="Programme et application — c&rsquo;est quoi la différence ?">Programme et application — c&rsquo;est quoi la différence ?</a></li>
+                <li>
+                    <a href="#synchrone--avoir-un-serveur-d%c3%a9di%c3%a9-%c3%a0-sa-table-quel-luxe" aria-label="Synchrone — Avoir un serveur dédié à sa table, quel luxe">Synchrone — Avoir un serveur dédié à sa table, quel luxe</a></li>
+                <li>
+                    <a href="#asynchrone--un-serveur-pour-les-gouverner-tous" aria-label="Asynchrone — Un serveur pour les gouverner tous">Asynchrone — Un serveur pour les gouverner tous</a></li>
+                <li>
+                    <a href="#conclusion" aria-label="Conclusion">Conclusion</a>
+                </li>
+            </ul>
+        </div>
+    </details>
+</div>
+
+  <div class="post-content"><p>Dans le précédent article, <a href="../../les-bases/structures-de-controle/">IMVV - Section 1 - Chapitre 3 - Structures de contrôle et algorithme, apprendre à réfléchir</a>, on a vu les différentes structures de contrôle et les algorithmes.</p>
+<p>Maintenant on va parler de la manière dont on réalise un ensemble de tâches — c’est ce qu’on appelle en informatique un <strong>mode d’exécution</strong>. C&rsquo;est applicable aussi bien pour un humain que pour un ordinateur.</p>
+<p>N&rsquo;oublie pas que les objectifs de ces articles sont :</p>
+<ul>
+<li>Te donner une meilleure compréhension des bases de l’informatique,</li>
+<li>T&rsquo;inspirer pour analyser ou optimiser les situations du quotidien,</li>
+<li>ou peut-être, qui sait, te donner envie d&rsquo;explorer encore plus loin&hellip; jusqu’à en faire ton métier.</li>
+</ul>
+<h2 id="programme-et-application--cest-quoi-la-différence-">Programme et application — c&rsquo;est quoi la différence ?<a hidden class="anchor" aria-hidden="true" href="#programme-et-application--cest-quoi-la-différence-">#</a></h2>
+<p>Un programme informatique est un ensemble d&rsquo;algorithmes. Le mot <em>application</em> veut dire la même chose.<br>
+C’est juste que <em>application</em>, ça sonne plus moderne, même si ce mot existe depuis longtemps.</p>
+<p><a href="https://retrocomputing.stackexchange.com/questions/27236/difference-between-program-and-application">Merci le marketing Apple et son App Store. 😄</a></p>
+<h2 id="synchrone--avoir-un-serveur-dédié-à-sa-table-quel-luxe">Synchrone — Avoir un serveur dédié à sa table, quel luxe<a hidden class="anchor" aria-hidden="true" href="#synchrone--avoir-un-serveur-dédié-à-sa-table-quel-luxe">#</a></h2>
+<p>Prenons l&rsquo;exemple d&rsquo;un restaurant chic. Dans ce restaurant chic, il y a 2 tables. Chaque table a son serveur attitré, celui-ci répond uniquement aux besoins de sa table.</p>
+<p>Pour la suite de cet exercice de pensée, on va dire qu&rsquo;il y a :</p>
+<p>2 familles:</p>
+<ul>
+<li>famille 1</li>
+<li>famille 2</li>
+</ul>
+<p>2 tables:</p>
+<ul>
+<li>table 1</li>
+<li>table 2</li>
+</ul>
+<p>1 serveur</p>
+<p>1 chef</p>
+<p>La <strong>séquence d&rsquo;actions</strong> que le serveur doit faire, l&rsquo;<strong>algorithme</strong> est :</p>
+<pre tabindex="0"><code>Si une famille arrive:
+    Accueillir la famille
+    Installer la famille sur une table libre
+    Prendre la commande
+    Donner la commande au chef
+    Récupérer les plats
+    Servir les plats à la famille
+    Faire payer la famille
+Fin si
+</code></pre><p>La famille 1 arrive au restaurant, le serveur les accueille et les installe à la table 1. Il reste en attente de leur commande, à portée*.</p>
+<p>Quand la famille 1 est prête, vu que le serveur est à côté, ils passent commande. Le serveur s&rsquo;en va ensuite en cuisine pour donner la commande au chef. Le serveur attend les plats. Le chef prépare les plats.</p>
+<p>Une fois que les plats sont prêts, il les récupère et les sert à la famille 1. La famille 1 paie et s&rsquo;en va, heureuse de l&rsquo;attention portée.</p>
+<p>*: A ce moment, la famille 2 arrive au restaurant, ils ne sont pas accueillis, puisque le serveur est en attente de la commande de la famille 1. Alors la famille 2 repart, agacée, ils laisseront un mauvais avis sur internet.</p>
+<p>Dans cette configuration, le serveur exécute ses tâches de manière <strong>synchrone</strong>, cela veut dire qu&rsquo;il exécute l&rsquo;algorithme étape par étape <strong>sans interruption</strong>. Si une étape nécessite d&rsquo;attendre, par exemple quand il doit attendre que la famille choisisse sa commande, alors il attend, on dit que le mode synchrone est <strong>bloquant</strong>. Le serveur va au bout de son algorithme.</p>
+<blockquote>
+<p>Mais c&rsquo;est nul, il y a une famille qui n&rsquo;a pas été servie&hellip;</p></blockquote>
+<p>Si on reste dans le <strong>mode d&rsquo;exécution</strong> synchrone, le problème est qu&rsquo;il n&rsquo;y a pas assez de serveur. S&rsquo;il y avait autant de serveurs de tables et de chefs, il n&rsquo;y aurait aucun souci. Chaque famille aurait été ravie d&rsquo;avoir un serveur et un chef dédié. Mais on verrait plutôt cette disposition dans les restaurants luxueux, qui peuvent se permettre d&rsquo;avoir 100 tables, 100 serveurs et 100 chefs.</p>
+<p>Par défaut, les applications sont synchrones, car à part le problème de ressources, c’est bien plus simple de faire une tâche après l’autre, cependant, de nos jours, de plus en plus de systèmes sont asynchrones (exemple: navigateurs, certains serveurs applicatifs à la mode).</p>
+<div class="exemples-bloc">
+  <strong>📌 Exemples dans la vie réelle</strong>
+  <ul>
+    
+      <li>Une personne qui suit un procédure critique</li>
+    
+      <li>Préparer une salade</li>
+    
+  </ul>
+  <strong>💻 Exemples en informatique</strong>
+  <ul>
+    
+      <li>Un distributeur de billets</li>
+    
+      <li>Une imprimante partagée</li>
+    
+  </ul>
+</div>
+<h2 id="asynchrone--un-serveur-pour-les-gouverner-tous">Asynchrone — Un serveur pour les gouverner tous<a hidden class="anchor" aria-hidden="true" href="#asynchrone--un-serveur-pour-les-gouverner-tous">#</a></h2>
+<p>— Oui c&rsquo;est une référence au Seigneur des Anneaux 😄 —</p>
+<p>Reprenons l&rsquo;exemple du restaurant, toujours avec :</p>
+<p>2 familles:</p>
+<ul>
+<li>famille 1</li>
+<li>famille 2</li>
+</ul>
+<p>2 tables:</p>
+<ul>
+<li>table 1</li>
+<li>table 2</li>
+</ul>
+<p>1 serveur</p>
+<p>1 chef</p>
+<p>Mais cette fois, on change l&rsquo;<strong>algorithme</strong> :</p>
+<pre tabindex="0"><code>Quand une famille arrive, alors :
+    Le serveur les accueille
+    Il les installe à une table libre
+    Il leur donne un menu
+    Il passe à autre chose
+Fin quand
+
+Quand une famille appelle le serveur pour commander, alors :
+    Le serveur prend la commande
+    Il la transmet au chef
+    Il passe à autre chose
+Fin quand
+
+Quand la sonnette en cuisine retentit (plats prêts), alors :
+    Le serveur récupère les plats
+    Le serveur sert les plats à la bonne table
+    Il passe à autre chose
+Fin quand
+
+Quand une famille veut payer, alors :
+    Le serveur encaisse
+    Il libère la table
+    Il passe à autre chose
+Fin quand
+</code></pre><p>Cet algorithme est différent de ceux qu&rsquo;on a vus jusqu&rsquo;à présent.</p>
+<p><em>&ldquo;Quand &hellip;,&rdquo;</em> marque un <strong>événement</strong>, <em>&ldquo;alors&rdquo;</em> introduit le <strong>bloc</strong> d&rsquo;instructions à exécuter en <strong>réaction</strong>, et <em>&ldquo;Fin quand&rdquo;</em> marque la <strong>fin</strong> de ce bloc.</p>
+<p>On dit alors qu&rsquo;on fait de la <strong>programmation événementielle</strong> (ou <em>programmation réactive</em>) et que l&rsquo;algorithme est <strong>asynchrone</strong> : il fait de sorte à réagir aux événements extérieurs.</p>
+<p>Lorsqu’un événement se produit, le serveur y réagit immédiatement : il exécute les instructions associées, puis passe à l’événement suivant s’il y en a un. Sinon, il attend. Ce mode d&rsquo;exécution est donc <strong>non bloquant</strong>.</p>
+<p>Et dans les faits, c&rsquo;est ce que fait la plupart des personnes, serveurs ou non. Quand on fait une tâche, et qu&rsquo;on est interrompu par un bug, un appel, un collègue de travail qui pose une question, on est en <strong>réaction</strong>.</p>
+<p>Avec cet algorithme, un serveur seul pourra très bien gérer 2 tables.</p>
+<div class="exemples-bloc">
+  <strong>📌 Exemples dans la vie réelle</strong>
+  <ul>
+    
+      <li>Les serveurs dans la plupart des restaurants</li>
+    
+      <li>Mon chien quand il entend les croquettes</li>
+    
+  </ul>
+  <strong>💻 Exemples en informatique</strong>
+  <ul>
+    
+      <li>Les notifications sur ton smartphone</li>
+    
+      <li>Un arrosage automatique avec capteur d&#39;humidité</li>
+    
+  </ul>
+</div>
+<p>Attention : comme en mode <strong>synchrone</strong>, s&rsquo;il y a trop de table pour un seul serveur, plusieurs <strong>événements</strong> risquent de s&rsquo;accumuler en attente de traitement.</p>
+<blockquote>
+<p>Mais du coup, comment on fait pour résoudre ce problème?</p></blockquote>
+<p>On verra ça dans le prochain article.</p>
+<h2 id="conclusion">Conclusion<a hidden class="anchor" aria-hidden="true" href="#conclusion">#</a></h2>
+<p>Dans cet article, on a vu ce qu&rsquo;étaient les modes d&rsquo;exécutions <strong>synchrone</strong> et <strong>asynchrone</strong>.</p>
+<p>Si tu souhaites continuer cette aventure, tu peux regarder la suite ici: <a href="../threads/">IMMV - Section 2 - Chapitre 2 - Monothread et Multithread, je ne peux pas tout faire en même temps !</a></p>
+<p><a href="../../l-execution/l-execution/">← Retour à la section</a></p>
+<p><a href="../../introduction/">← Retour à l’introduction</a></p>
+
+
+  </div>
+
+  <footer class="post-footer">
+    <ul class="post-tags">
+      <li><a href="http://localhost:1313/blog.dev/tags/informatique/">Informatique</a></li>
+      <li><a href="http://localhost:1313/blog.dev/tags/immv/">IMMV</a></li>
+    </ul>
+  </footer>
+</article>
+    </main>
+    
+<footer class="footer">
+        <span>&copy; 2025 <a href="http://localhost:1313/blog.dev/">Encore un autre blog d&#39;un tahitien</a></span> · 
+
+    <span>
+        Powered by
+        <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &
+        <a href="https://github.com/adityatelange/hugo-PaperMod/" rel="noopener" target="_blank">PaperMod</a>
+    </span>
+</footer>
+<a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
+        <path d="M12 6H0l6-6z" />
+    </svg>
+</a>
+
+<script>
+    let menu = document.getElementById('menu')
+    if (menu) {
+        menu.scrollLeft = localStorage.getItem("menu-scroll-position");
+        menu.onscroll = function () {
+            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
+        }
+    }
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            var id = this.getAttribute("href").substr(1);
+            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+                    behavior: "smooth"
+                });
+            } else {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
+            }
+            if (id === "top") {
+                history.replaceState(null, null, " ");
+            } else {
+                history.pushState(null, null, `#${id}`);
+            }
+        });
+    });
+
+</script>
+<script>
+    var mybutton = document.getElementById("top-link");
+    window.onscroll = function () {
+        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
+            mybutton.style.visibility = "visible";
+            mybutton.style.opacity = "1";
+        } else {
+            mybutton.style.visibility = "hidden";
+            mybutton.style.opacity = "0";
+        }
+    };
+
+</script>
+<script>
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        if (document.body.className.includes("dark")) {
+            document.body.classList.remove('dark');
+            localStorage.setItem("pref-theme", 'light');
+        } else {
+            document.body.classList.add('dark');
+            localStorage.setItem("pref-theme", 'dark');
+        }
+    })
+
+</script>
+</body>
+
+</html>
