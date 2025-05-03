@@ -44,7 +44,7 @@ Amener les viandes dans le rayon
 Mettre les viandes dans l'armoire réfrigérée
 ```
 
-Pendant tout ce temps, le client ne peut prendre que les viandes qui sont encore dans l'armoire, il faut donc bien faire attention à ce que l'employé recharge l'armoire quand il reste encore un peu de boîtes.
+Pendant tout ce temps, le client ne peut prendre que les viandes qui sont encore dans l'armoire, il faut donc bien faire attention à ce que l'employé recharge l'armoire quand il reste encore un peu de viandes.
 
 Dans un ordinateur, la **mémoire vive** (*RAM* en anglais pour *Random Access Memory*), joue le rôle du stock réfrigéré très rapide qu'un programme peut utiliser, mais beaucoup moins rapide que la mémoire cache, environ 50x à 100x moins rapide.
 

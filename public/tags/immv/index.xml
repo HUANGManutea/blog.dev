@@ -39,14 +39,13 @@ Tu manipules sans le savoir des concepts appellés en informatique &lt;strong&gt
 &lt;p&gt;Dans cet article, on va mettre un peu de clarté là-dedans : pas besoin de coder pour comprendre, on va illustrer tout ça avec des situations de la vie courante.&lt;/p&gt;</description>
     </item>
     <item>
-      <title>IMVV — Section 3 — Chapitre 2 — Mémoïsation et Lazy loading, la technique du fainéant ultime</title>
+      <title>IMVV — Section 3 — Chapitre 2 — Mémoïsation et Lazy loading, les techniques du fainéant ultime</title>
       <link>http://localhost:1313/blog.dev/posts/miroir-informatique-vraie-vie/optimisation/memoisation/</link>
       <pubDate>Sat, 03 May 2025 09:43:10 -1000</pubDate>
       <guid>http://localhost:1313/blog.dev/posts/miroir-informatique-vraie-vie/optimisation/memoisation/</guid>
-      <description>&lt;p&gt;Être &lt;em&gt;fiu&lt;/em&gt; est un art, une vertu. &lt;strong&gt;Non, ce n&amp;rsquo;est pas une blague&lt;/strong&gt;. Tu ne me crois pas ?&lt;/p&gt;
-&lt;p&gt;&amp;ldquo;We will encourage you to develop the three great virtues of a programmer: laziness, impatience, and hubris.&amp;rdquo; — &lt;em&gt;Larry Wall, Programming perl (1991)&lt;/em&gt;.&lt;/p&gt;
-&lt;p&gt;&amp;ldquo;I choose a lazy person to do a hard job. Because a lazy person will find an easy way to do it.&amp;rdquo; — &lt;em&gt;Bill Gates&lt;/em&gt;.&lt;/p&gt;
-&lt;p&gt;Programmer une machine pour qu&amp;rsquo;elle fasse le travail à ta place, c&amp;rsquo;est de la fainéantise.&lt;/p&gt;</description>
+      <description>&lt;p&gt;Dans l&amp;rsquo;article précédent &lt;a href=&#34;../memoire/&#34;&gt;IMVV — Section 3 — Chapitre 1 — La mémoire, ou comment éviter les pénuries dans un magasin&lt;/a&gt;, on a vu qu&amp;rsquo;on pouvait optimiser notre utilisation de la mémoire / du stockage&amp;hellip; Mais ce n&amp;rsquo;est pas suffisant, on doit voir d&amp;rsquo;autres &lt;del&gt;jutsu&lt;/del&gt; techniques pour optimiser encore plus.&lt;/p&gt;
+&lt;p&gt;Être &lt;em&gt;fiu&lt;/em&gt; est un art, une vertu. &lt;strong&gt;Non, ce n&amp;rsquo;est pas une blague&lt;/strong&gt;. Tu ne me crois pas ?&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;&amp;ldquo;We will encourage you to develop the three great virtues of a programmer: laziness, impatience, and hubris.&amp;rdquo; — Larry Wall, Programming perl (1991)&lt;/em&gt;.&lt;/p&gt;</description>
     </item>
     <item>
       <title>IMMV — Section 2 — Chapitre 2 — Monothread, Multithread, Parallélisme et Concurrence, je ne peux pas tout faire en même temps !</title>
@@ -108,7 +107,8 @@ Tu manipules sans le savoir des concepts appellés en informatique &lt;strong&gt
     	
   	
 	
-&lt;/ul&gt;</description>
+&lt;/ul&gt;
+&lt;p&gt;&lt;a href=&#34;../../introduction/&#34;&gt;← Retour à l’introduction&lt;/a&gt;&lt;/p&gt;</description>
     </item>
     <item>
       <title>IMMV — Section 1 — Les bases : structures et contrôle</title>
@@ -141,7 +141,8 @@ Tu manipules sans le savoir des concepts appellés en informatique &lt;strong&gt
     	
   	
 	
-&lt;/ul&gt;</description>
+&lt;/ul&gt;
+&lt;p&gt;&lt;a href=&#34;../../introduction/&#34;&gt;← Retour à l’introduction&lt;/a&gt;&lt;/p&gt;</description>
     </item>
     <item>
       <title>IMMV - Introduction - L&#39;informatique, un miroir de la vraie vie</title>
