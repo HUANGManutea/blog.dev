@@ -21,7 +21,7 @@
 &lt;p&gt;La &lt;strong&gt;mémoire cache&lt;/strong&gt; est le stockage &lt;strong&gt;le plus rapide&lt;/strong&gt; qu&amp;rsquo;un programme peut utiliser. Pour un magasin, il s&amp;rsquo;agit des étagères et des armoires réfrigérées qui forment les rayons.&lt;/p&gt;</description>
     </item>
     <item>
-      <title>IMMV — Section 2 — Chapitre 1 — Synchrone et Asynchrone, ou comment réagir au changement</title>
+      <title>IMVV — Section 2 — Chapitre 1 — Synchrone et Asynchrone, ou comment réagir au changement</title>
       <link>http://localhost:1313/blog.dev/posts/miroir-informatique-vraie-vie/l-execution/sync-async/</link>
       <pubDate>Thu, 01 May 2025 00:10:38 -1000</pubDate>
       <guid>http://localhost:1313/blog.dev/posts/miroir-informatique-vraie-vie/l-execution/sync-async/</guid>
@@ -48,11 +48,11 @@ Tu manipules sans le savoir des concepts appellés en informatique &lt;strong&gt
 &lt;p&gt;&lt;em&gt;&amp;ldquo;We will encourage you to develop the three great virtues of a programmer: laziness, impatience, and hubris.&amp;rdquo; — Larry Wall, Programming perl (1991)&lt;/em&gt;.&lt;/p&gt;</description>
     </item>
     <item>
-      <title>IMMV — Section 2 — Chapitre 2 — Monothread, Multithread, Parallélisme et Concurrence, je ne peux pas tout faire en même temps !</title>
+      <title>IMVV — Section 2 — Chapitre 2 — Monothread, Multithread, Parallélisme et Concurrence, je ne peux pas tout faire en même temps !</title>
       <link>http://localhost:1313/blog.dev/posts/miroir-informatique-vraie-vie/l-execution/threads/</link>
       <pubDate>Thu, 01 May 2025 10:40:55 -1000</pubDate>
       <guid>http://localhost:1313/blog.dev/posts/miroir-informatique-vraie-vie/l-execution/threads/</guid>
-      <description>&lt;p&gt;Dans le précédent article, &lt;a href=&#34;../sync-async/&#34;&gt;IMMV — Section 2 — Chapitre 1 — Synchrone et Asynchrone, ou comment réagir au changement&lt;/a&gt;, on a vu les différents modes d&amp;rsquo;exécution.&lt;/p&gt;
+      <description>&lt;p&gt;Dans le précédent article, &lt;a href=&#34;../sync-async/&#34;&gt;IMVV — Section 2 — Chapitre 1 — Synchrone et Asynchrone, ou comment réagir au changement&lt;/a&gt;, on a vu les différents modes d&amp;rsquo;exécution.&lt;/p&gt;
 &lt;p&gt;On s&amp;rsquo;était arrêté sur le problème suivant : Comment faire pour répondre à la montée en charge, à l&amp;rsquo;accumulation de tâches ?&lt;/p&gt;
 &lt;p&gt;Eh bien, dans cet article, on va voir comment on résout ce problème, en informatique &lt;strong&gt;comme dans la vraie vie&lt;/strong&gt; : les mécanismes sont souvent très proches.&lt;/p&gt;</description>
     </item>
@@ -83,7 +83,7 @@ Tu manipules sans le savoir des concepts appellés en informatique &lt;strong&gt
 &lt;p&gt;Avant d&amp;rsquo;expliquer l&amp;rsquo;algorithme que tu as fait, le &lt;strong&gt;parcours de graphe&lt;/strong&gt;, on doit expliquer les structures de contrôle.&lt;/p&gt;</description>
     </item>
     <item>
-      <title>IMMV — Section 3 — L&#39;optimisation : comment se faire passer pour un coach de vie</title>
+      <title>IMVV — Section 3 — L&#39;optimisation : comment se faire passer pour un coach de vie</title>
       <link>http://localhost:1313/blog.dev/posts/miroir-informatique-vraie-vie/optimisation/optimisation/</link>
       <pubDate>Thu, 01 May 2025 14:34:25 -1000</pubDate>
       <guid>http://localhost:1313/blog.dev/posts/miroir-informatique-vraie-vie/optimisation/optimisation/</guid>
@@ -111,7 +111,7 @@ Tu manipules sans le savoir des concepts appellés en informatique &lt;strong&gt
 &lt;p&gt;&lt;a href=&#34;../../introduction/&#34;&gt;← Retour à l’introduction&lt;/a&gt;&lt;/p&gt;</description>
     </item>
     <item>
-      <title>IMMV — Section 2 — L&#39;exécution : comment faire des actions ?</title>
+      <title>IMVV — Section 2 — L&#39;exécution : comment faire des actions ?</title>
       <link>http://localhost:1313/blog.dev/posts/miroir-informatique-vraie-vie/l-execution/l-execution/</link>
       <pubDate>Thu, 01 May 2025 00:03:59 -1000</pubDate>
       <guid>http://localhost:1313/blog.dev/posts/miroir-informatique-vraie-vie/l-execution/l-execution/</guid>
@@ -125,13 +125,13 @@ Tu manipules sans le savoir des concepts appellés en informatique &lt;strong&gt
 	
 		
     	
-      	&lt;li&gt;&lt;a href=&#34;http://localhost:1313/blog.dev/posts/miroir-informatique-vraie-vie/l-execution/sync-async/&#34;&gt;IMMV — Section 2 — Chapitre 1 — Synchrone et Asynchrone, ou comment réagir au changement&lt;/a&gt;&lt;/li&gt;
+      	&lt;li&gt;&lt;a href=&#34;http://localhost:1313/blog.dev/posts/miroir-informatique-vraie-vie/l-execution/sync-async/&#34;&gt;IMVV — Section 2 — Chapitre 1 — Synchrone et Asynchrone, ou comment réagir au changement&lt;/a&gt;&lt;/li&gt;
     	
   	
 	
 		
     	
-      	&lt;li&gt;&lt;a href=&#34;http://localhost:1313/blog.dev/posts/miroir-informatique-vraie-vie/l-execution/threads/&#34;&gt;IMMV — Section 2 — Chapitre 2 — Monothread, Multithread, Parallélisme et Concurrence, je ne peux pas tout faire en même temps !&lt;/a&gt;&lt;/li&gt;
+      	&lt;li&gt;&lt;a href=&#34;http://localhost:1313/blog.dev/posts/miroir-informatique-vraie-vie/l-execution/threads/&#34;&gt;IMVV — Section 2 — Chapitre 2 — Monothread, Multithread, Parallélisme et Concurrence, je ne peux pas tout faire en même temps !&lt;/a&gt;&lt;/li&gt;
     	
   	
 	
@@ -139,7 +139,7 @@ Tu manipules sans le savoir des concepts appellés en informatique &lt;strong&gt
 &lt;p&gt;&lt;a href=&#34;../../introduction/&#34;&gt;← Retour à l’introduction&lt;/a&gt;&lt;/p&gt;</description>
     </item>
     <item>
-      <title>IMMV — Section 1 — Les bases : structures et contrôle</title>
+      <title>IMVV — Section 1 — Les bases : structures et contrôle</title>
       <link>http://localhost:1313/blog.dev/posts/miroir-informatique-vraie-vie/les-bases/les-bases/</link>
       <pubDate>Wed, 30 Apr 2025 17:01:31 -1000</pubDate>
       <guid>http://localhost:1313/blog.dev/posts/miroir-informatique-vraie-vie/les-bases/les-bases/</guid>
@@ -173,7 +173,7 @@ Tu manipules sans le savoir des concepts appellés en informatique &lt;strong&gt
 &lt;p&gt;&lt;a href=&#34;../../introduction/&#34;&gt;← Retour à l’introduction&lt;/a&gt;&lt;/p&gt;</description>
     </item>
     <item>
-      <title>IMMV - Introduction - L&#39;informatique, un miroir de la vraie vie</title>
+      <title>IMVV - Introduction - L&#39;informatique, un miroir de la vraie vie</title>
       <link>http://localhost:1313/blog.dev/posts/miroir-informatique-vraie-vie/introduction/</link>
       <pubDate>Tue, 29 Apr 2025 14:05:13 -1000</pubDate>
       <guid>http://localhost:1313/blog.dev/posts/miroir-informatique-vraie-vie/introduction/</guid>

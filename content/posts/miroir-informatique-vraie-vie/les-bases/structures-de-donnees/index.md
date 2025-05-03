@@ -6,7 +6,7 @@ date: 2025-04-29T15:41:48-10:00
 draft: false
 showToc: true
 image: ""
-tags: [Informatique, IMMV]
+tags: [Informatique, IMVV]
 categories: [Vulgarisation]
 ---
 Dans le précédent article [IMVV — Section 1 — Chapitre 1 — File ou Pile ? L'art de passer avant les autres](../file-et-pile/) on a découvert les files et les piles. Cette fois, on va survoler plusieurs autres **structures de données** (*data structures* en anglais) qu'on utilise très souvent en informatique... et dans la vraie vie.

@@ -1,12 +1,12 @@
 ---
-title: "IMMV - Introduction - L'informatique, un miroir de la vraie vie"
+title: "IMVV - Introduction - L'informatique, un miroir de la vraie vie"
 weight: 0
 #description: <descriptive text here>
 date: 2025-04-29T14:05:13-10:00
 draft: false
 showToc: false
 image: ""
-tags: [Informatique, IMMV]
+tags: [Informatique, IMVV]
 categories: [Vulgarisation]
 ---
 'Ia ora na,

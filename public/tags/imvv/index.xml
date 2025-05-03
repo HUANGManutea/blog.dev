@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
-    <title>Informatique on Encore un autre blog d&#39;un tahitien</title>
-    <link>http://localhost:1313/blog.dev/tags/informatique/</link>
-    <description>Recent content in Informatique on Encore un autre blog d&#39;un tahitien</description>
+    <title>IMVV on Encore un autre blog d&#39;un tahitien</title>
+    <link>http://localhost:1313/blog.dev/tags/imvv/</link>
+    <description>Recent content in IMVV on Encore un autre blog d&#39;un tahitien</description>
     <generator>Hugo -- 0.147.0</generator>
     <language>fr</language>
     <lastBuildDate>Sat, 03 May 2025 09:43:10 -1000</lastBuildDate>
-    <atom:link href="http://localhost:1313/blog.dev/tags/informatique/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/blog.dev/tags/imvv/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>IMVV — Section 3 — Chapitre 1 — La mémoire, ou comment éviter les pénuries dans un magasin</title>
       <link>http://localhost:1313/blog.dev/posts/miroir-informatique-vraie-vie/optimisation/memoire/</link>

@@ -1,12 +1,12 @@
 ---
-title: "IMMV — Section 2 — Chapitre 1 — Synchrone et Asynchrone, ou comment réagir au changement"
+title: "IMVV — Section 2 — Chapitre 1 — Synchrone et Asynchrone, ou comment réagir au changement"
 #description: <descriptive text here>
 date: 2025-05-01T00:10:38-10:00
 weight: 1
 draft: false
 showToc: true
 image: ""
-tags: [Informatique, IMMV]
+tags: [Informatique, IMVV]
 categories: [Vulgarisation]
 ---
 Dans le précédent article, [IMVV — Section 1 — Chapitre 3 — Structures de contrôle et algorithme, apprendre à réfléchir](../../les-bases/structures-de-controle/), on a vu les différentes structures de contrôle et les algorithmes.
@@ -126,7 +126,7 @@ On verra ça dans le prochain article.
 
 Dans cet article, on a vu ce qu'étaient les modes d'exécution **synchrone** et **asynchrone**.
 
-Si tu souhaites continuer cette aventure, tu peux regarder la suite ici: [IMMV — Section 2 — Chapitre 2 — Monothread et Multithread, je ne peux pas tout faire en même temps !](../threads/)
+Si tu souhaites continuer cette aventure, tu peux regarder la suite ici: [IMVV — Section 2 — Chapitre 2 — Monothread et Multithread, je ne peux pas tout faire en même temps !](../threads/)
 
 [← Retour à la section](../../l-execution/l-execution/)
 

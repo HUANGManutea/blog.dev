@@ -6,7 +6,7 @@ draft: false
 weight: 2
 showToc: true
 image: ""
-tags: [Informatique, IMMV]
+tags: [Informatique, IMVV]
 categories: [Vulgarisation]
 ---
 Dans l'article précédent [IMVV — Section 3 — Chapitre 1 — La mémoire, ou comment éviter les pénuries dans un magasin](../memoire/), on a vu qu'on pouvait optimiser notre utilisation de la mémoire / du stockage... Mais ce n'est pas suffisant, on doit voir d'autres ~~jutsu~~ techniques pour optimiser encore plus.
@@ -93,7 +93,7 @@ Quand un certain seuil de scroll est atteint (par exemple, 90% du contenu affich
 Fin quand
 ```
 
-Tu l'auras remarqué, c'est ce qu'on a vu dans l'article [IMMV — Section 2 — Chapitre 1 — Synchrone et Asynchrone, ou comment réagir au changement](../sync-async/).
+Tu l'auras remarqué, c'est ce qu'on a vu dans l'article [IMVV — Section 2 — Chapitre 1 — Synchrone et Asynchrone, ou comment réagir au changement](../sync-async/).
 
 ## Conclusion
 

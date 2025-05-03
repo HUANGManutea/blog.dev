@@ -6,7 +6,7 @@ weight: 1
 draft: false
 showToc: true
 image: ""
-tags: [Informatique, IMMV]
+tags: [Informatique, IMVV]
 categories: [Vulgarisation]
 ---
 La mémoire est une **ressource** au même titre que la fourchette dans le [précédent article](../../l-execution/threads/).

@@ -6,7 +6,7 @@ date: 2025-04-30T14:30:37-10:00
 draft: false
 showToc: true
 image: ""
-tags: [Informatique, IMMV]
+tags: [Informatique, IMVV]
 categories: [Vulgarisation]
 ---
 Dans l'article précédent [IMVV — Section 1 — Chapitre 2 — Autres structures de données, j'organise mon bordel](../structures-de-donnees/), on s'était arrêté sur ta question :
@@ -321,9 +321,9 @@ Il existe d'autres structures de contrôle, des types de variables, et des algor
 
 Mais le plus important, c'est que tu commences à réfléchir comme un développeur, et à comprendre le **pseudo-code**. Dans la vraie vie, si tu as un problème complexe à résoudre, tu peux essayer de l'écrire comme on l'a fait pour le parcours de graphe. Prends ton temps et décompose le problème.
 
-Nous avons fini cette section "IMMV — Section 1 — Les Bases : structures et contrôle", dans cette section, nous avons également vu les structures de données.
+Nous avons fini cette section "IMVV — Section 1 — Les Bases : structures et contrôle", dans cette section, nous avons également vu les structures de données.
 
-Dans la prochaine section, [IMMV — Section 2 — L'exécution : comment faire des actions ?](../../l-execution/l-execution/), nous verrons que l'ordinateur et l'humain font les actions de manière très similaire.
+Dans la prochaine section, [IMVV — Section 2 — L'exécution : comment faire des actions ?](../../l-execution/l-execution/), nous verrons que l'ordinateur et l'humain font les actions de manière très similaire.
 
 [← Retour à la section](../../les-bases/les-bases/)
 

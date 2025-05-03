@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
-    <title>IMMV — Section 1 — Les bases : structures et contrôle on Encore un autre blog d&#39;un tahitien</title>
+    <title>IMVV — Section 1 — Les bases : structures et contrôle on Encore un autre blog d&#39;un tahitien</title>
     <link>http://localhost:1313/blog.dev/posts/miroir-informatique-vraie-vie/les-bases/</link>
-    <description>Recent content in IMMV — Section 1 — Les bases : structures et contrôle on Encore un autre blog d&#39;un tahitien</description>
+    <description>Recent content in IMVV — Section 1 — Les bases : structures et contrôle on Encore un autre blog d&#39;un tahitien</description>
     <generator>Hugo -- 0.147.0</generator>
     <language>fr</language>
     <lastBuildDate>Wed, 30 Apr 2025 17:01:31 -1000</lastBuildDate>
@@ -44,7 +44,7 @@ Tu manipules sans le savoir des concepts appellés en informatique &lt;strong&gt
 &lt;p&gt;Avant d&amp;rsquo;expliquer l&amp;rsquo;algorithme que tu as fait, le &lt;strong&gt;parcours de graphe&lt;/strong&gt;, on doit expliquer les structures de contrôle.&lt;/p&gt;</description>
     </item>
     <item>
-      <title>IMMV — Section 1 — Les bases : structures et contrôle</title>
+      <title>IMVV — Section 1 — Les bases : structures et contrôle</title>
       <link>http://localhost:1313/blog.dev/posts/miroir-informatique-vraie-vie/les-bases/les-bases/</link>
       <pubDate>Wed, 30 Apr 2025 17:01:31 -1000</pubDate>
       <guid>http://localhost:1313/blog.dev/posts/miroir-informatique-vraie-vie/les-bases/les-bases/</guid>

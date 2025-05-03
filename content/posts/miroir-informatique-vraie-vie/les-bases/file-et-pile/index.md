@@ -6,7 +6,7 @@ date: 2025-04-29T14:34:21-10:00
 draft: false
 showToc: true
 image: ""
-tags: [Informatique, IMMV]
+tags: [Informatique, IMVV]
 categories: [Vulgarisation]
 ---
 Quand tu prends un ticket pour attendre ton tour, que tu fais la queue à la caisse, que tu prends l’assiette du haut de la pile pour mettre la table, ou que tu cliques sur le bouton 'Retour' (←) du navigateur internet…
