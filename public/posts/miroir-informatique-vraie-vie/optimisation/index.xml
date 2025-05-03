@@ -1,27 +1,41 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
-    <title>IMMV - Section 3 - L&#39;optimisation : comment se faire passer pour un coach de vie on Encore un autre blog d&#39;un tahitien</title>
+    <title>IMMV — Section 3 — L&#39;optimisation : comment se faire passer pour un coach de vie on Encore un autre blog d&#39;un tahitien</title>
     <link>http://localhost:1313/blog.dev/posts/miroir-informatique-vraie-vie/optimisation/</link>
-    <description>Recent content in IMMV - Section 3 - L&#39;optimisation : comment se faire passer pour un coach de vie on Encore un autre blog d&#39;un tahitien</description>
+    <description>Recent content in IMMV — Section 3 — L&#39;optimisation : comment se faire passer pour un coach de vie on Encore un autre blog d&#39;un tahitien</description>
     <generator>Hugo -- 0.147.0</generator>
     <language>fr</language>
-    <lastBuildDate>Thu, 01 May 2025 14:35:32 -1000</lastBuildDate>
+    <lastBuildDate>Sat, 03 May 2025 09:43:10 -1000</lastBuildDate>
     <atom:link href="http://localhost:1313/blog.dev/posts/miroir-informatique-vraie-vie/optimisation/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>IMVV - Section 3 - Chapitre 1 - La mémoire, ou comment éviter les pénuries dans un magasin</title>
-      <link>http://localhost:1313/blog.dev/posts/miroir-informatique-vraie-vie/optimisation/cache/</link>
+      <title>IMVV — Section 3 — Chapitre 1 — La mémoire, ou comment éviter les pénuries dans un magasin</title>
+      <link>http://localhost:1313/blog.dev/posts/miroir-informatique-vraie-vie/optimisation/memoire/</link>
       <pubDate>Thu, 01 May 2025 14:35:32 -1000</pubDate>
-      <guid>http://localhost:1313/blog.dev/posts/miroir-informatique-vraie-vie/optimisation/cache/</guid>
-      <description>&lt;p&gt;Dans le précédent article, &lt;a href=&#34;../../l-execution/threads/&#34;&gt;IMMV - Section 2 - Chapitre 2 - Monothread, Multithread, Parallélisme et Concurrence, je ne peux pas tout faire en même temps !&lt;/a&gt;, on a vu comment optimiser un programme/restaurant en terme de puissance d&amp;rsquo;exécution.&lt;/p&gt;
-&lt;p&gt;Dans cette&lt;/p&gt;</description>
+      <guid>http://localhost:1313/blog.dev/posts/miroir-informatique-vraie-vie/optimisation/memoire/</guid>
+      <description>&lt;p&gt;La mémoire est une &lt;strong&gt;ressource&lt;/strong&gt; au même titre que la fourchette dans le &lt;a href=&#34;../../l-execution/threads/&#34;&gt;précédent article&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Dans un ordinateur, il existe plusieurs types de mémoire que les programmes vont pouvoir utiliser en fonction de la manière dont ils veulent traiter les données.&lt;/p&gt;
+&lt;p&gt;Il faut voir la mémoire comme un endroit où on entrepose des données.&lt;/p&gt;
+&lt;p&gt;Pour cet article on va parler d&amp;rsquo;un magasin, mais ça marche aussi avec un restaurant.&lt;/p&gt;
+&lt;h2 id=&#34;la-mémoire-cache--larmoire-réfrigérée&#34;&gt;La mémoire cache — l&amp;rsquo;armoire réfrigérée&lt;/h2&gt;
+&lt;p&gt;La &lt;strong&gt;mémoire cache&lt;/strong&gt; est le stockage &lt;strong&gt;le plus rapide&lt;/strong&gt; qu&amp;rsquo;un programme peut utiliser. Pour un magasin, il s&amp;rsquo;agit des étagères et des armoires réfrigérées qui forment les rayons.&lt;/p&gt;</description>
     </item>
     <item>
-      <title>IMMV - Section 3 - L&#39;optimisation : comment se faire passer pour un coach de vie</title>
+      <title>IMVV — Section 3 — Chapitre 2 — Mémoïsation et Lazy loading, la technique du fainéant ultime</title>
+      <link>http://localhost:1313/blog.dev/posts/miroir-informatique-vraie-vie/optimisation/memoisation/</link>
+      <pubDate>Sat, 03 May 2025 09:43:10 -1000</pubDate>
+      <guid>http://localhost:1313/blog.dev/posts/miroir-informatique-vraie-vie/optimisation/memoisation/</guid>
+      <description>&lt;p&gt;Être &lt;em&gt;fiu&lt;/em&gt; est un art, une vertu. &lt;strong&gt;Non, ce n&amp;rsquo;est pas une blague&lt;/strong&gt;. Tu ne me crois pas ?&lt;/p&gt;
+&lt;p&gt;&amp;ldquo;We will encourage you to develop the three great virtues of a programmer: laziness, impatience, and hubris.&amp;rdquo; — &lt;em&gt;Larry Wall, Programming perl (1991)&lt;/em&gt;.&lt;/p&gt;
+&lt;p&gt;&amp;ldquo;I choose a lazy person to do a hard job. Because a lazy person will find an easy way to do it.&amp;rdquo; — &lt;em&gt;Bill Gates&lt;/em&gt;.&lt;/p&gt;
+&lt;p&gt;Programmer une machine pour qu&amp;rsquo;elle fasse le travail à ta place, c&amp;rsquo;est de la fainéantise.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>IMMV — Section 3 — L&#39;optimisation : comment se faire passer pour un coach de vie</title>
       <link>http://localhost:1313/blog.dev/posts/miroir-informatique-vraie-vie/optimisation/optimisation/</link>
       <pubDate>Thu, 01 May 2025 14:34:25 -1000</pubDate>
       <guid>http://localhost:1313/blog.dev/posts/miroir-informatique-vraie-vie/optimisation/optimisation/</guid>
-      <description>&lt;p&gt;Dans cette section on vera différents tips permettant d&amp;rsquo;optimiser un programme et la vie réelle.&lt;/p&gt;
+      <description>&lt;p&gt;Précédemment, on a vu qu&amp;rsquo;en rajoutant des serveurs, on pouvait servir plus de familles. Dans cette section on verra différents tips permettant d&amp;rsquo;optimiser un programme existant et la vie réelle.&lt;/p&gt;
 &lt;h1 id=&#34;chapitres&#34;&gt;Chapitres&lt;/h1&gt;
 
 
@@ -31,7 +45,13 @@
 	
 		
     	
-      	&lt;li&gt;&lt;a href=&#34;http://localhost:1313/blog.dev/posts/miroir-informatique-vraie-vie/optimisation/cache/&#34;&gt;IMVV - Section 3 - Chapitre 1 - La mémoire, ou comment éviter les pénuries dans un magasin&lt;/a&gt;&lt;/li&gt;
+      	&lt;li&gt;&lt;a href=&#34;http://localhost:1313/blog.dev/posts/miroir-informatique-vraie-vie/optimisation/memoire/&#34;&gt;IMVV — Section 3 — Chapitre 1 — La mémoire, ou comment éviter les pénuries dans un magasin&lt;/a&gt;&lt;/li&gt;
+    	
+  	
+	
+		
+    	
+      	&lt;li&gt;&lt;a href=&#34;http://localhost:1313/blog.dev/posts/miroir-informatique-vraie-vie/optimisation/memoisation/&#34;&gt;IMVV — Section 3 — Chapitre 2 — Mémoïsation et Lazy loading, la technique du fainéant ultime&lt;/a&gt;&lt;/li&gt;
     	
   	
 	

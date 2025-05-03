@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="fr" dir="auto">
+
+<head><script src="/blog.dev/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=blog.dev/livereload" data-no-instant defer></script><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="noindex, nofollow">
+<title>IMVV — Section 3 — Chapitre 2 — Mémoïsation et Lazy loading, les techniques du fainéant ultime | Encore un autre blog d&#39;un tahitien</title>
+<meta name="keywords" content="Informatique, IMMV">
+<meta name="description" content="Être fiu est un art, une vertu. Non, ce n&rsquo;est pas une blague. Tu ne me crois pas ?
+&ldquo;We will encourage you to develop the three great virtues of a programmer: laziness, impatience, and hubris.&rdquo; — Larry Wall, Programming perl (1991).
+&ldquo;I choose a lazy person to do a hard job. Because a lazy person will find an easy way to do it.&rdquo; — Bill Gates.
+Programmer une machine pour qu&rsquo;elle fasse le travail à ta place, c&rsquo;est de la fainéantise.">
+<meta name="author" content="">
+<link rel="canonical" href="http://localhost:1313/blog.dev/posts/miroir-informatique-vraie-vie/optimisation/memoisation/">
+<link crossorigin="anonymous" href="/blog.dev/assets/css/stylesheet.649a89ab5b3ace9a56ef6ec2dcd42ebba6add9c9cfe080c18aa59761d20f9080.css" integrity="sha256-ZJqJq1s6zppW727C3NQuu6at2cnP4IDBiqWXYdIPkIA=" rel="preload stylesheet" as="style">
+<link rel="icon" href="http://localhost:1313/blog.dev/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="http://localhost:1313/blog.dev/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="http://localhost:1313/blog.dev/favicon-32x32.png">
+<link rel="apple-touch-icon" href="http://localhost:1313/blog.dev/apple-touch-icon.png">
+<link rel="mask-icon" href="http://localhost:1313/blog.dev/safari-pinned-tab.svg">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<link rel="alternate" hreflang="fr" href="http://localhost:1313/blog.dev/posts/miroir-informatique-vraie-vie/optimisation/memoisation/">
+<noscript>
+    <style>
+        #theme-toggle,
+        .top-link {
+            display: none;
+        }
+
+    </style>
+    <style>
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --theme: rgb(29, 30, 32);
+                --entry: rgb(46, 46, 51);
+                --primary: rgb(218, 218, 219);
+                --secondary: rgb(155, 156, 157);
+                --tertiary: rgb(65, 66, 68);
+                --content: rgb(196, 196, 197);
+                --code-block-bg: rgb(46, 46, 51);
+                --code-bg: rgb(55, 56, 62);
+                --border: rgb(51, 51, 51);
+            }
+
+            .list {
+                background: var(--theme);
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-track {
+                background: 0 0;
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-thumb {
+                border-color: var(--theme);
+            }
+        }
+
+    </style>
+</noscript><script type="module">
+    import mermaid from "https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs";
+  
+    function getMermaidTheme() {
+      return document.body.classList.contains("dark") ? "dark" : "default";
+    }
+  
+    function renderMermaid() {
+      mermaid.initialize({ startOnLoad: false, theme: getMermaidTheme() });
+      mermaid.init(undefined, document.querySelectorAll(".mermaid"));
+    }
+  
+    document.addEventListener("DOMContentLoaded", () => {
+      renderMermaid();
+    });
+  
+    
+    const observer = new MutationObserver(() => {
+      renderMermaid();
+    });
+  
+    observer.observe(document.body, {
+      attributes: true,
+      attributeFilter: ["class"]
+    });
+  </script>
+</head>
+
+<body class="" id="top">
+<script>
+    if (localStorage.getItem("pref-theme") === "dark") {
+        document.body.classList.add('dark');
+    } else if (localStorage.getItem("pref-theme") === "light") {
+        document.body.classList.remove('dark')
+    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.body.classList.add('dark');
+    }
+
+</script>
+
+<header class="header">
+    <nav class="nav">
+        <div class="logo">
+            <a href="http://localhost:1313/blog.dev/" accesskey="h" title="Encore un autre blog d&#39;un tahitien (Alt + H)">Encore un autre blog d&#39;un tahitien</a>
+            <div class="logo-switches">
+                <button id="theme-toggle" accesskey="t" title="(Alt + T)" aria-label="Toggle theme">
+                    <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                    <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <ul id="menu">
+        </ul>
+    </nav>
+</header>
+<main class="main">
+
+<article class="post-single">
+  <header class="post-header">
+    
+    <h1 class="post-title entry-hint-parent">
+      IMVV — Section 3 — Chapitre 2 — Mémoïsation et Lazy loading, les techniques du fainéant ultime
+    </h1>
+    <div class="post-meta"><span title='2025-05-03 09:43:10 -1000 -10'>mai 3, 2025</span>
+
+</div>
+  </header> <div class="toc">
+    <details >
+        <summary accesskey="c" title="(Alt + C)">
+            <span class="details">Table des matières</span>
+        </summary>
+
+        <div class="inner"><ul>
+                <li>
+                    <a href="#m%c3%a9mo%c3%afsation--ou-comment-garder-une-information-dans-un-coin-de-la-t%c3%aate" aria-label="Mémoïsation — ou comment garder une information dans un coin de la tête">Mémoïsation — ou comment garder une information dans un coin de la tête</a></li>
+                <li>
+                    <a href="#eager-loading-et-lazy-loading--lart-d%c3%aatre-pr%c3%a9par%c3%a9-%c3%a0-toute-%c3%a9ventualit%c3%a9" aria-label="Eager loading et Lazy loading — l&rsquo;art d&rsquo;être préparé à toute éventualité">Eager loading et Lazy loading — l&rsquo;art d&rsquo;être préparé à toute éventualité</a></li>
+                <li>
+                    <a href="#conclusion" aria-label="Conclusion">Conclusion</a>
+                </li>
+            </ul>
+        </div>
+    </details>
+</div>
+
+  <div class="post-content"><p>Être <em>fiu</em> est un art, une vertu. <strong>Non, ce n&rsquo;est pas une blague</strong>. Tu ne me crois pas ?</p>
+<p><em>&ldquo;We will encourage you to develop the three great virtues of a programmer: laziness, impatience, and hubris.&rdquo; — Larry Wall, Programming perl (1991)</em>.</p>
+<p><em>&ldquo;I choose a lazy person to do a hard job. Because a lazy person will find an easy way to do it.&rdquo; — Bill Gates</em>.</p>
+<p>Programmer une machine pour qu&rsquo;elle fasse le travail à ta place, c&rsquo;est de la fainéantise.</p>
+<p>Et les développeurs sont des personnes qui ont atteint l&rsquo;apogée du <em>fiu</em>. Après tout, qui passe 2 heures à automatiser une tâche qui prend 2 minutes par jour, à part quelqu&rsquo;un de <strong>vraiment</strong> <em>fiu</em> ?</p>
+<p>Dans cet article, on verra deux techniques que les développeurs utilisent, mais que toi aussi tu utilises sans le savoir.</p>
+<h2 id="mémoïsation--ou-comment-garder-une-information-dans-un-coin-de-la-tête">Mémoïsation — ou comment garder une information dans un coin de la tête<a hidden class="anchor" aria-hidden="true" href="#mémoïsation--ou-comment-garder-une-information-dans-un-coin-de-la-tête">#</a></h2>
+<p>Supposons que tu sois responsable de la paie dans une petite entreprise. Pour ce mois-ci, tu dois calculer les salaires à verser à 2 employés.</p>
+<p>Tu sais que tous les deux ont un salaire brut de 200 000 XPF. De plus, ils ont fait un excellent travail, ton patron t&rsquo;a dit de leur rajouter une prime de 50% de leur salaire brut. Enfin, l&rsquo;un d&rsquo;eux a fait des heures supplémentaires, il faut donc lui rajouter 20 000 XPF brut sur sa paie.</p>
+<p>Pour le 1er salarié, tu pars de 200 000, tu rajoutes 50%, soit 100 000, ce qui lui fera 300 000 XPF brut pour ce mois.</p>
+<p>Pour le 2ème salarié, tu sais que le début du calcul est le même, alors tu réutilises le nombre 300 000, et tu rajoutes 20 000 d&rsquo;heures supplémentaires, donc 320 000 bruts.</p>
+<p>Mais tu t’es souvenu que le calcul <em>200 000 + 50 %</em> avait déjà été fait, donc tu as directement repris le résultat. Ce que tu viens de faire, c&rsquo;est de la <strong>mémoïsation</strong> (<em>memoization</em> en anglais).</p>
+<p>C’est exactement ce que fait ton navigateur web quand il te propose un résultat de recherche déjà visité, ou qu’un site charge plus vite la 2ᵉ fois.</p>
+<div class="instant-dev">
+  <strong>Instant Dev</strong>
+  <div class="instant-dev-content">
+    En informatique, on utilise un tableau ou un tableau associatif pour stocker les résultats intermédiares, ces structures sont stockées dans la RAM. De cette façon, on peut rapidement récupérer le résultat qui nous intéresse.
+  </div>
+</div>
+<p>Attention : En informatique, comme dans la vraie vie, garder des informations de côté peut conduire à une saturation de la mémoire. C&rsquo;est un des facteurs de burn-out. <strong>Ménagez votre cerveau</strong>, il n&rsquo;y a pas de mal à noter les choses, de plus, vous aurez moins de risque d&rsquo;oublier des informations importantes.</p>
+<h2 id="eager-loading-et-lazy-loading--lart-dêtre-préparé-à-toute-éventualité">Eager loading et Lazy loading — l&rsquo;art d&rsquo;être préparé à toute éventualité<a hidden class="anchor" aria-hidden="true" href="#eager-loading-et-lazy-loading--lart-dêtre-préparé-à-toute-éventualité">#</a></h2>
+<p>Supposons que tu aies invité tes amis à manger à la maison ce soir. Tu as invité 10 personnes, mais tu sais que 5 vont vraiment venir, les autres t&rsquo;ont dit &ldquo;peut-être&rdquo;.</p>
+<p>Pour éviter d&rsquo;être à court de nourriture, tu as préparé pour 10 personnes, au pire, ceux qui sont venus repartiront avec quelques plats, et tu termineras le reste durant la semaine.</p>
+<p>Les premiers invités vont arriver, tu n&rsquo;as pas encore préparé la table. Tu as 2 solutions :</p>
+<ul>
+<li>
+<p><strong>Tout préparer d&rsquo;avance</strong> : sortir toutes les assiettes, les verres, les chaises, les couverts, etc. (solution <strong>eager loading</strong> : tu charges tout dès le début).</p>
+</li>
+<li>
+<p><strong>Attendre de voir qui arrive</strong> : dès qu’un invité entre, tu sors une assiette, un verre, une chaise, etc. (solution <strong>lazy loading</strong> : tu ne charges que ce qui est nécessaire, au moment où c’est nécessaire).</p>
+</li>
+</ul>
+<blockquote>
+<p>Mais tu peux aussi exiger des invités qu&rsquo;ils te disent, la veille au plus tard, si oui ou non ils viennent !</p></blockquote>
+<p>Oui, et que se passe-t-il si l&rsquo;un d&rsquo;eux a un empêchement ? En mettant tous les couverts, tu as dépensé de l&rsquo;énergie pour mettre son couvert, et tu en as re-dépensé pour le ranger. Ce n&rsquo;est pas très optimisé.</p>
+<blockquote>
+<p>Si tous les invités arrivent, tu auras fait plusieurs allers-retours pour mettre les couverts, ce n&rsquo;est pas très optimisé non plus&hellip;</p></blockquote>
+<p>Ah, tu mets le doigt sur un point important : <strong>les techniques d&rsquo;optimisation doivent être utilisées uniquement si on est sûr de leur utilité</strong>.</p>
+<p><em>&ldquo;Premature optimization is the root of all evil&rdquo; — Sir Tony Hoare et Donald Knuth</em>.</p>
+<p>C&rsquo;est un piège dans lequel tombent plusieurs développeurs juniors. Les écoles supérieures enseignent différentes techniques d&rsquo;optimisation, on est conditionnés à détecter un problème et à appliquer immédiatement une solution : c&rsquo;est normal.</p>
+<p>Avec l&rsquo;expérience, on apprend qu&rsquo;on a besoin d&rsquo;optimiser uniquement quand une personne se plaint de lenteurs. Et dans ce cas, <strong>on cherche où se trouve la source du problème, on mesure, puis on optimise</strong>.</p>
+<blockquote>
+<p>Ok mais&hellip; ça me fait bizarre de ne pas préparer une belle table, c&rsquo;est pas un bon accueil.</p></blockquote>
+<p>Dans ce cas, le <strong>eager loading</strong> a une vraie plus-value. Tu charges tout d&rsquo;un coup pour l&rsquo;effet <em>waow</em>, pour que les personnes se disent que chez toi, on est bien reçu. La principale fonctionnalité n&rsquo;est pas d&rsquo;optimiser le fait de mettre la table, mais d&rsquo;impressionner tes convives.</p>
+<p>Je finis cette partie avec un exemple informatique : Facebook ne charge pas toutes les publications dès le début, seulement une partie.</p>
+<p>Quand tu commences à scroller, tu vois ces publications. Si tu te rapproches de la fin, Facebook charge les prochaines publications, on appelle ça <strong>infinite scroll</strong>.</p>
+<p>Ainsi, Facebook ne prend pas trop de temps à se charger au début.</p>
+<blockquote>
+<p>Attends mais&hellip; Dans l&rsquo;article précédent, on parlait des écrans de chargement des jeux vidéos, ça y ressemble un peu, non ?</p></blockquote>
+<p>Exactement, les écrans de chargement sont aussi du <strong>lazy loading</strong>, et pour rejoindre ce qu&rsquo;on disait sur ces écrans : <strong>le lazy loading économise de la mémoire</strong>.</p>
+<p>Enfin, à ton avis, comment Facebook sait qu&rsquo;il faut charger la suite des publications ?</p>
+<p>Eh bien en fait, l&rsquo;application est <strong>réactive</strong>, on peut écrire son <strong>algorithme de chargement</strong> comme ceci:</p>
+<pre tabindex="0"><code>Quand un certain seuil de scroll est atteint (par exemple, 90% du contenu affiché), alors:
+    Charge la suite du contenu
+    Passe à autre chose
+Fin quand
+</code></pre><p>Tu l&rsquo;auras remarqué, c&rsquo;est ce qu&rsquo;on a vu dans l&rsquo;article <a href="../sync-async/">IMMV — Section 2 — Chapitre 1 — Synchrone et Asynchrone, ou comment réagir au changement</a>.</p>
+<h2 id="conclusion">Conclusion<a hidden class="anchor" aria-hidden="true" href="#conclusion">#</a></h2>
+<p>Dans cet article, on a vu différents mécanimes d&rsquo;optimisation.</p>
+<p>Plus important encore, si on se rappelle des précédents articles, on a vu qu&rsquo;en informatique, en plus de combiner les <strong>structures de données</strong> et les <strong>structures de contrôle</strong>, on pouvait combiner les concepts d&rsquo;<strong>optimisation</strong> et de <strong>modes d&rsquo;exécution</strong>.</p>
+<p>Le prochaine article est <strong>en cours de rédaction</strong>, on parlera de <em>complexité</em>.</p>
+<p><a href="../../optimisation/optimisation/">← Retour à la section</a></p>
+<p><a href="../../introduction/">← Retour à l’introduction</a></p>
+
+
+  </div>
+
+  <footer class="post-footer">
+    <ul class="post-tags">
+      <li><a href="http://localhost:1313/blog.dev/tags/informatique/">Informatique</a></li>
+      <li><a href="http://localhost:1313/blog.dev/tags/immv/">IMMV</a></li>
+    </ul>
+  </footer>
+</article>
+    </main>
+    
+<footer class="footer">
+        <span>&copy; 2025 <a href="http://localhost:1313/blog.dev/">Encore un autre blog d&#39;un tahitien</a></span> · 
+
+    <span>
+        Powered by
+        <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &
+        <a href="https://github.com/adityatelange/hugo-PaperMod/" rel="noopener" target="_blank">PaperMod</a>
+    </span>
+</footer>
+<a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
+        <path d="M12 6H0l6-6z" />
+    </svg>
+</a>
+
+<script>
+    let menu = document.getElementById('menu')
+    if (menu) {
+        menu.scrollLeft = localStorage.getItem("menu-scroll-position");
+        menu.onscroll = function () {
+            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
+        }
+    }
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            var id = this.getAttribute("href").substr(1);
+            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+                    behavior: "smooth"
+                });
+            } else {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
+            }
+            if (id === "top") {
+                history.replaceState(null, null, " ");
+            } else {
+                history.pushState(null, null, `#${id}`);
+            }
+        });
+    });
+
+</script>
+<script>
+    var mybutton = document.getElementById("top-link");
+    window.onscroll = function () {
+        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
+            mybutton.style.visibility = "visible";
+            mybutton.style.opacity = "1";
+        } else {
+            mybutton.style.visibility = "hidden";
+            mybutton.style.opacity = "0";
+        }
+    };
+
+</script>
+<script>
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        if (document.body.className.includes("dark")) {
+            document.body.classList.remove('dark');
+            localStorage.setItem("pref-theme", 'light');
+        } else {
+            document.body.classList.add('dark');
+            localStorage.setItem("pref-theme", 'dark');
+        }
+    })
+
+</script>
+</body>
+
+</html>

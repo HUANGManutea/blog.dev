@@ -6,50 +6,63 @@
     <description>Recent content on Encore un autre blog d&#39;un tahitien</description>
     <generator>Hugo -- 0.147.0</generator>
     <language>fr</language>
-    <lastBuildDate>Thu, 01 May 2025 14:35:32 -1000</lastBuildDate>
+    <lastBuildDate>Sat, 03 May 2025 09:43:10 -1000</lastBuildDate>
     <atom:link href="http://localhost:1313/blog.dev/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>IMVV - Section 3 - Chapitre 1 - La mémoire, ou comment éviter les pénuries dans un magasin</title>
+      <title>IMVV — Section 3 — Chapitre 1 — La mémoire, ou comment éviter les pénuries dans un magasin</title>
       <link>http://localhost:1313/blog.dev/posts/miroir-informatique-vraie-vie/optimisation/memoire/</link>
       <pubDate>Thu, 01 May 2025 14:35:32 -1000</pubDate>
       <guid>http://localhost:1313/blog.dev/posts/miroir-informatique-vraie-vie/optimisation/memoire/</guid>
-      <description>&lt;p&gt;La mémoire est une &lt;strong&gt;ressource&lt;/strong&gt; à même titre que la fourchette dans le &lt;a href=&#34;../../l-execution/threads/&#34;&gt;précédent article&lt;/a&gt;.&lt;/p&gt;
-&lt;p&gt;Dans un ordinateur, il existe plusieurs types de mémoire, il faut voir ça comme du stockage. Les programmes vont utiliser différents types de mémoire/stockage, en fonction de la manière dont ils veulent traiter les données.&lt;/p&gt;
-&lt;h2 id=&#34;la-mémoire-cache---gotta-go-fast&#34;&gt;La mémoire cache - Gotta go fast&lt;/h2&gt;</description>
+      <description>&lt;p&gt;La mémoire est une &lt;strong&gt;ressource&lt;/strong&gt; au même titre que la fourchette dans le &lt;a href=&#34;../../l-execution/threads/&#34;&gt;précédent article&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Dans un ordinateur, il existe plusieurs types de mémoire que les programmes vont pouvoir utiliser en fonction de la manière dont ils veulent traiter les données.&lt;/p&gt;
+&lt;p&gt;Il faut voir la mémoire comme un endroit où on entrepose des données.&lt;/p&gt;
+&lt;p&gt;Pour cet article on va parler d&amp;rsquo;un magasin, mais ça marche aussi avec un restaurant.&lt;/p&gt;
+&lt;h2 id=&#34;la-mémoire-cache--larmoire-réfrigérée&#34;&gt;La mémoire cache — l&amp;rsquo;armoire réfrigérée&lt;/h2&gt;
+&lt;p&gt;La &lt;strong&gt;mémoire cache&lt;/strong&gt; est le stockage &lt;strong&gt;le plus rapide&lt;/strong&gt; qu&amp;rsquo;un programme peut utiliser. Pour un magasin, il s&amp;rsquo;agit des étagères et des armoires réfrigérées qui forment les rayons.&lt;/p&gt;</description>
     </item>
     <item>
-      <title>IMMV - Section 2 - Chapitre 1 - Synchrone et Asynchrone, ou comment réagir au changement</title>
+      <title>IMMV — Section 2 — Chapitre 1 — Synchrone et Asynchrone, ou comment réagir au changement</title>
       <link>http://localhost:1313/blog.dev/posts/miroir-informatique-vraie-vie/l-execution/sync-async/</link>
       <pubDate>Thu, 01 May 2025 00:10:38 -1000</pubDate>
       <guid>http://localhost:1313/blog.dev/posts/miroir-informatique-vraie-vie/l-execution/sync-async/</guid>
-      <description>&lt;p&gt;Dans le précédent article, &lt;a href=&#34;../../les-bases/structures-de-controle/&#34;&gt;IMVV - Section 1 - Chapitre 3 - Structures de contrôle et algorithme, apprendre à réfléchir&lt;/a&gt;, on a vu les différentes structures de contrôle et les algorithmes.&lt;/p&gt;
+      <description>&lt;p&gt;Dans le précédent article, &lt;a href=&#34;../../les-bases/structures-de-controle/&#34;&gt;IMVV — Section 1 — Chapitre 3 — Structures de contrôle et algorithme, apprendre à réfléchir&lt;/a&gt;, on a vu les différentes structures de contrôle et les algorithmes.&lt;/p&gt;
 &lt;p&gt;Maintenant on va parler de la manière dont on réalise un ensemble de tâches — c’est ce qu’on appelle en informatique un &lt;strong&gt;mode d’exécution&lt;/strong&gt;. C&amp;rsquo;est applicable aussi bien pour un humain que pour un ordinateur.&lt;/p&gt;
 &lt;p&gt;N&amp;rsquo;oublie pas que les objectifs de ces articles sont :&lt;/p&gt;</description>
     </item>
     <item>
-      <title>IMVV - Section 1 - Chapitre 1 - File ou Pile ? L&#39;art de passer avant les autres</title>
+      <title>IMVV — Section 1 — Chapitre 1 — File ou Pile ? L&#39;art de passer avant les autres</title>
       <link>http://localhost:1313/blog.dev/posts/miroir-informatique-vraie-vie/les-bases/file-et-pile/</link>
       <pubDate>Tue, 29 Apr 2025 14:34:21 -1000</pubDate>
       <guid>http://localhost:1313/blog.dev/posts/miroir-informatique-vraie-vie/les-bases/file-et-pile/</guid>
       <description>&lt;p&gt;Quand tu prends un ticket pour attendre ton tour, que tu fais la queue à la caisse, que tu prends l’assiette du haut de la pile pour mettre la table, ou que tu cliques sur le bouton &amp;lsquo;Retour&amp;rsquo; (←) du navigateur internet…
-Tu manipules sans le savoir des concepts qu’on appelle en informatique des structures de données, et les algorithmes associés qui les font vivre.&lt;/p&gt;
+Tu manipules sans le savoir des concepts appellés en informatique &lt;strong&gt;des structures de données&lt;/strong&gt;, et &lt;strong&gt;les algorithmes&lt;/strong&gt; associés qui les font vivre.&lt;/p&gt;
 &lt;p&gt;Dans cet article, on va mettre un peu de clarté là-dedans : pas besoin de coder pour comprendre, on va illustrer tout ça avec des situations de la vie courante.&lt;/p&gt;</description>
     </item>
     <item>
-      <title>IMMV - Section 2 - Chapitre 2 - Monothread, Multithread, Parallélisme et Concurrence, je ne peux pas tout faire en même temps !</title>
+      <title>IMVV — Section 3 — Chapitre 2 — Mémoïsation et Lazy loading, les techniques du fainéant ultime</title>
+      <link>http://localhost:1313/blog.dev/posts/miroir-informatique-vraie-vie/optimisation/memoisation/</link>
+      <pubDate>Sat, 03 May 2025 09:43:10 -1000</pubDate>
+      <guid>http://localhost:1313/blog.dev/posts/miroir-informatique-vraie-vie/optimisation/memoisation/</guid>
+      <description>&lt;p&gt;Être &lt;em&gt;fiu&lt;/em&gt; est un art, une vertu. &lt;strong&gt;Non, ce n&amp;rsquo;est pas une blague&lt;/strong&gt;. Tu ne me crois pas ?&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;&amp;ldquo;We will encourage you to develop the three great virtues of a programmer: laziness, impatience, and hubris.&amp;rdquo; — Larry Wall, Programming perl (1991)&lt;/em&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;&amp;ldquo;I choose a lazy person to do a hard job. Because a lazy person will find an easy way to do it.&amp;rdquo; — Bill Gates&lt;/em&gt;.&lt;/p&gt;
+&lt;p&gt;Programmer une machine pour qu&amp;rsquo;elle fasse le travail à ta place, c&amp;rsquo;est de la fainéantise.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>IMMV — Section 2 — Chapitre 2 — Monothread, Multithread, Parallélisme et Concurrence, je ne peux pas tout faire en même temps !</title>
       <link>http://localhost:1313/blog.dev/posts/miroir-informatique-vraie-vie/l-execution/threads/</link>
       <pubDate>Thu, 01 May 2025 10:40:55 -1000</pubDate>
       <guid>http://localhost:1313/blog.dev/posts/miroir-informatique-vraie-vie/l-execution/threads/</guid>
-      <description>&lt;p&gt;Dans le précédent article, &lt;a href=&#34;../sync-async/&#34;&gt;IMMV - Section 2 - Chapitre 1 - Synchrone et Asynchrone, ou comment réagir au changement&lt;/a&gt;, on a vu les différents modes d&amp;rsquo;exécutions.&lt;/p&gt;
-&lt;p&gt;On s&amp;rsquo;était arrêté sur le problème suivant : Comment faire pour répondre à la montée en charge, à l&amp;rsquo;accumulation de tâches?&lt;/p&gt;
+      <description>&lt;p&gt;Dans le précédent article, &lt;a href=&#34;../sync-async/&#34;&gt;IMMV — Section 2 — Chapitre 1 — Synchrone et Asynchrone, ou comment réagir au changement&lt;/a&gt;, on a vu les différents modes d&amp;rsquo;exécution.&lt;/p&gt;
+&lt;p&gt;On s&amp;rsquo;était arrêté sur le problème suivant : Comment faire pour répondre à la montée en charge, à l&amp;rsquo;accumulation de tâches ?&lt;/p&gt;
 &lt;p&gt;Eh bien, dans cet article, on va voir comment on résout ce problème, en informatique &lt;strong&gt;comme dans la vraie vie&lt;/strong&gt; : les mécanismes sont souvent très proches.&lt;/p&gt;</description>
     </item>
     <item>
-      <title>IMVV - Section 1 - Chapitre 2 - Autres structure de données, j&#39;organise mon bordel</title>
+      <title>IMVV — Section 1 — Chapitre 2 — Autres structures de données, j&#39;organise mon bordel</title>
       <link>http://localhost:1313/blog.dev/posts/miroir-informatique-vraie-vie/les-bases/structures-de-donnees/</link>
       <pubDate>Tue, 29 Apr 2025 15:41:48 -1000</pubDate>
       <guid>http://localhost:1313/blog.dev/posts/miroir-informatique-vraie-vie/les-bases/structures-de-donnees/</guid>
-      <description>&lt;p&gt;Dans le précédent article &lt;a href=&#34;../file-et-pile/&#34;&gt;IMVV - Section 1 - Chapitre 1 - File ou Pile ? L&amp;rsquo;art de passer avant les autres&lt;/a&gt; on a découvert les files et les piles. Cette fois, on va survoler plusieurs autres &lt;strong&gt;structures de données&lt;/strong&gt; (&lt;em&gt;data structures&lt;/em&gt; en anglais) qu&amp;rsquo;on utilise très souvent en informatique&amp;hellip; et dans la vraie vie.&lt;/p&gt;
+      <description>&lt;p&gt;Dans le précédent article &lt;a href=&#34;../file-et-pile/&#34;&gt;IMVV — Section 1 — Chapitre 1 — File ou Pile ? L&amp;rsquo;art de passer avant les autres&lt;/a&gt; on a découvert les files et les piles. Cette fois, on va survoler plusieurs autres &lt;strong&gt;structures de données&lt;/strong&gt; (&lt;em&gt;data structures&lt;/em&gt; en anglais) qu&amp;rsquo;on utilise très souvent en informatique&amp;hellip; et dans la vraie vie.&lt;/p&gt;
 &lt;p&gt;N&amp;rsquo;oublie pas que les objectifs de ces articles sont :&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;Te donner une meilleure compréhension des bases de l’informatique,&lt;/li&gt;
@@ -60,18 +73,18 @@ Tu manipules sans le savoir des concepts qu’on appelle en informatique des str
 &lt;p&gt;Tu as peut-être remarqué dans le précédent article que la &lt;strong&gt;file&lt;/strong&gt; et la &lt;strong&gt;pile&lt;/strong&gt; se ressemblent beaucoup. En réalité, on peut les représenter toutes les deux avec la même structure : un &lt;strong&gt;tableau&lt;/strong&gt;.&lt;/p&gt;</description>
     </item>
     <item>
-      <title>IMVV - Section 1 - Chapitre 3 - Structures de contrôle et algorithme, apprendre à réfléchir</title>
+      <title>IMVV — Section 1 — Chapitre 3 — Structures de contrôle et algorithme, apprendre à réfléchir</title>
       <link>http://localhost:1313/blog.dev/posts/miroir-informatique-vraie-vie/les-bases/structures-de-controle/</link>
       <pubDate>Wed, 30 Apr 2025 14:30:37 -1000</pubDate>
       <guid>http://localhost:1313/blog.dev/posts/miroir-informatique-vraie-vie/les-bases/structures-de-controle/</guid>
-      <description>&lt;p&gt;Dans l&amp;rsquo;article précédent &lt;a href=&#34;../structures-de-donnees/&#34;&gt;IMVV - Section 1 - Chapitre 2 - Autres structure de données, j&amp;rsquo;organise mon bordel&lt;/a&gt;, on s&amp;rsquo;était arrêté sur ta question:&lt;/p&gt;
+      <description>&lt;p&gt;Dans l&amp;rsquo;article précédent &lt;a href=&#34;../structures-de-donnees/&#34;&gt;IMVV — Section 1 — Chapitre 2 — Autres structures de données, j&amp;rsquo;organise mon bordel&lt;/a&gt;, on s&amp;rsquo;était arrêté sur ta question :&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;Et c&amp;rsquo;est quoi le parcours de graphe?&lt;/p&gt;&lt;/blockquote&gt;
 &lt;p&gt;Dans cet article, on va parler des &lt;strong&gt;structures de contrôle&lt;/strong&gt; (&lt;em&gt;control flow statements&lt;/em&gt; en anglais), qu&amp;rsquo;on utilise dans des &lt;strong&gt;algorithmes&lt;/strong&gt; (&lt;em&gt;algorithms&lt;/em&gt; en anglais).&lt;/p&gt;
 &lt;p&gt;Avant d&amp;rsquo;expliquer l&amp;rsquo;algorithme que tu as fait, le &lt;strong&gt;parcours de graphe&lt;/strong&gt;, on doit expliquer les structures de contrôle.&lt;/p&gt;</description>
     </item>
     <item>
-      <title>IMMV - Section 3 - L&#39;optimisation : comment se faire passer pour un coach de vie</title>
+      <title>IMMV — Section 3 — L&#39;optimisation : comment se faire passer pour un coach de vie</title>
       <link>http://localhost:1313/blog.dev/posts/miroir-informatique-vraie-vie/optimisation/optimisation/</link>
       <pubDate>Thu, 01 May 2025 14:34:25 -1000</pubDate>
       <guid>http://localhost:1313/blog.dev/posts/miroir-informatique-vraie-vie/optimisation/optimisation/</guid>
@@ -85,18 +98,24 @@ Tu manipules sans le savoir des concepts qu’on appelle en informatique des str
 	
 		
     	
-      	&lt;li&gt;&lt;a href=&#34;http://localhost:1313/blog.dev/posts/miroir-informatique-vraie-vie/optimisation/memoire/&#34;&gt;IMVV - Section 3 - Chapitre 1 - La mémoire, ou comment éviter les pénuries dans un magasin&lt;/a&gt;&lt;/li&gt;
+      	&lt;li&gt;&lt;a href=&#34;http://localhost:1313/blog.dev/posts/miroir-informatique-vraie-vie/optimisation/memoire/&#34;&gt;IMVV — Section 3 — Chapitre 1 — La mémoire, ou comment éviter les pénuries dans un magasin&lt;/a&gt;&lt;/li&gt;
+    	
+  	
+	
+		
+    	
+      	&lt;li&gt;&lt;a href=&#34;http://localhost:1313/blog.dev/posts/miroir-informatique-vraie-vie/optimisation/memoisation/&#34;&gt;IMVV — Section 3 — Chapitre 2 — Mémoïsation et Lazy loading, les techniques du fainéant ultime&lt;/a&gt;&lt;/li&gt;
     	
   	
 	
 &lt;/ul&gt;</description>
     </item>
     <item>
-      <title>IMMV - Section 2 - L&#39;exécution : comment faire des actions ?</title>
+      <title>IMMV — Section 2 — L&#39;exécution : comment faire des actions ?</title>
       <link>http://localhost:1313/blog.dev/posts/miroir-informatique-vraie-vie/l-execution/l-execution/</link>
       <pubDate>Thu, 01 May 2025 00:03:59 -1000</pubDate>
       <guid>http://localhost:1313/blog.dev/posts/miroir-informatique-vraie-vie/l-execution/l-execution/</guid>
-      <description>&lt;p&gt;Dans cette section, nous verrons comment les actions sont exécutées, par les ordinateurs et par les personnes. Et on verra quelques pistes pour répondre à une accumulation de tâche.&lt;/p&gt;
+      <description>&lt;p&gt;Dans cette section, nous verrons comment les actions sont exécutées, par les ordinateurs et par les personnes. Et on verra quelques pistes pour répondre à une accumulation de tâches.&lt;/p&gt;
 &lt;h1 id=&#34;chapitres&#34;&gt;Chapitres&lt;/h1&gt;
 
 
@@ -106,20 +125,20 @@ Tu manipules sans le savoir des concepts qu’on appelle en informatique des str
 	
 		
     	
-      	&lt;li&gt;&lt;a href=&#34;http://localhost:1313/blog.dev/posts/miroir-informatique-vraie-vie/l-execution/sync-async/&#34;&gt;IMMV - Section 2 - Chapitre 1 - Synchrone et Asynchrone, ou comment réagir au changement&lt;/a&gt;&lt;/li&gt;
+      	&lt;li&gt;&lt;a href=&#34;http://localhost:1313/blog.dev/posts/miroir-informatique-vraie-vie/l-execution/sync-async/&#34;&gt;IMMV — Section 2 — Chapitre 1 — Synchrone et Asynchrone, ou comment réagir au changement&lt;/a&gt;&lt;/li&gt;
     	
   	
 	
 		
     	
-      	&lt;li&gt;&lt;a href=&#34;http://localhost:1313/blog.dev/posts/miroir-informatique-vraie-vie/l-execution/threads/&#34;&gt;IMMV - Section 2 - Chapitre 2 - Monothread, Multithread, Parallélisme et Concurrence, je ne peux pas tout faire en même temps !&lt;/a&gt;&lt;/li&gt;
+      	&lt;li&gt;&lt;a href=&#34;http://localhost:1313/blog.dev/posts/miroir-informatique-vraie-vie/l-execution/threads/&#34;&gt;IMMV — Section 2 — Chapitre 2 — Monothread, Multithread, Parallélisme et Concurrence, je ne peux pas tout faire en même temps !&lt;/a&gt;&lt;/li&gt;
     	
   	
 	
 &lt;/ul&gt;</description>
     </item>
     <item>
-      <title>IMMV - Section 1 - Les bases : structures et contrôle</title>
+      <title>IMMV — Section 1 — Les bases : structures et contrôle</title>
       <link>http://localhost:1313/blog.dev/posts/miroir-informatique-vraie-vie/les-bases/les-bases/</link>
       <pubDate>Wed, 30 Apr 2025 17:01:31 -1000</pubDate>
       <guid>http://localhost:1313/blog.dev/posts/miroir-informatique-vraie-vie/les-bases/les-bases/</guid>
@@ -133,19 +152,19 @@ Tu manipules sans le savoir des concepts qu’on appelle en informatique des str
 	
 		
     	
-      	&lt;li&gt;&lt;a href=&#34;http://localhost:1313/blog.dev/posts/miroir-informatique-vraie-vie/les-bases/file-et-pile/&#34;&gt;IMVV - Section 1 - Chapitre 1 - File ou Pile ? L&amp;#39;art de passer avant les autres&lt;/a&gt;&lt;/li&gt;
+      	&lt;li&gt;&lt;a href=&#34;http://localhost:1313/blog.dev/posts/miroir-informatique-vraie-vie/les-bases/file-et-pile/&#34;&gt;IMVV — Section 1 — Chapitre 1 — File ou Pile ? L&amp;#39;art de passer avant les autres&lt;/a&gt;&lt;/li&gt;
     	
   	
 	
 		
     	
-      	&lt;li&gt;&lt;a href=&#34;http://localhost:1313/blog.dev/posts/miroir-informatique-vraie-vie/les-bases/structures-de-donnees/&#34;&gt;IMVV - Section 1 - Chapitre 2 - Autres structure de données, j&amp;#39;organise mon bordel&lt;/a&gt;&lt;/li&gt;
+      	&lt;li&gt;&lt;a href=&#34;http://localhost:1313/blog.dev/posts/miroir-informatique-vraie-vie/les-bases/structures-de-donnees/&#34;&gt;IMVV — Section 1 — Chapitre 2 — Autres structures de données, j&amp;#39;organise mon bordel&lt;/a&gt;&lt;/li&gt;
     	
   	
 	
 		
     	
-      	&lt;li&gt;&lt;a href=&#34;http://localhost:1313/blog.dev/posts/miroir-informatique-vraie-vie/les-bases/structures-de-controle/&#34;&gt;IMVV - Section 1 - Chapitre 3 - Structures de contrôle et algorithme, apprendre à réfléchir&lt;/a&gt;&lt;/li&gt;
+      	&lt;li&gt;&lt;a href=&#34;http://localhost:1313/blog.dev/posts/miroir-informatique-vraie-vie/les-bases/structures-de-controle/&#34;&gt;IMVV — Section 1 — Chapitre 3 — Structures de contrôle et algorithme, apprendre à réfléchir&lt;/a&gt;&lt;/li&gt;
     	
   	
 	

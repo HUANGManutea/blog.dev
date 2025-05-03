@@ -1,5 +1,5 @@
 ---
-title: "IMVV - Section 3 - Chapitre 1 - La mémoire, ou comment éviter les pénuries dans un magasin"
+title: "IMVV — Section 3 — Chapitre 1 — La mémoire, ou comment éviter les pénuries dans un magasin"
 #description: <descriptive text here>
 date: 2025-05-01T14:35:32-10:00
 weight: 1
@@ -93,3 +93,9 @@ Les écrans de chargement sont un compromis : plutôt que de risquer de crasher 
 ## Conclusion
 
 Dans cet article, on a vu les différentes mémoires utilisées par les programmes. À l'image d'un magasin qui évite les pénuries, un développeur doit jongler avec ces mémoires pour que son programme tourne correctement.
+
+Dans le prochain article, [IMVV — Section 3 — Chapitre 2 — Mémoïsation et Lazy loading, les technique du fainéant ultime](../memoisation/), nous verrons des techniques qui feront de toi un bon fainéant.
+
+[← Retour à la section](../../optimisation/optimisation/)
+
+[← Retour à l’introduction](../../introduction/)

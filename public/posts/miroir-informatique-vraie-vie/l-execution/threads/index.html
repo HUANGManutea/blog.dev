@@ -5,10 +5,10 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <meta name="robots" content="noindex, nofollow">
-<title>IMMV - Section 2 - Chapitre 2 - Monothread, Multithread, Parallélisme et Concurrence, je ne peux pas tout faire en même temps ! | Encore un autre blog d&#39;un tahitien</title>
+<title>IMMV — Section 2 — Chapitre 2 — Monothread, Multithread, Parallélisme et Concurrence, je ne peux pas tout faire en même temps ! | Encore un autre blog d&#39;un tahitien</title>
 <meta name="keywords" content="Informatique, IMMV">
-<meta name="description" content="Dans le précédent article, IMMV - Section 2 - Chapitre 1 - Synchrone et Asynchrone, ou comment réagir au changement, on a vu les différents modes d&rsquo;exécutions.
-On s&rsquo;était arrêté sur le problème suivant : Comment faire pour répondre à la montée en charge, à l&rsquo;accumulation de tâches?
+<meta name="description" content="Dans le précédent article, IMMV — Section 2 — Chapitre 1 — Synchrone et Asynchrone, ou comment réagir au changement, on a vu les différents modes d&rsquo;exécution.
+On s&rsquo;était arrêté sur le problème suivant : Comment faire pour répondre à la montée en charge, à l&rsquo;accumulation de tâches ?
 Eh bien, dans cet article, on va voir comment on résout ce problème, en informatique comme dans la vraie vie : les mécanismes sont souvent très proches.">
 <meta name="author" content="">
 <link rel="canonical" href="http://localhost:1313/blog.dev/posts/miroir-informatique-vraie-vie/l-execution/threads/">
@@ -134,7 +134,7 @@ Eh bien, dans cet article, on va voir comment on résout ce problème, en inform
   <header class="post-header">
     
     <h1 class="post-title entry-hint-parent">
-      IMMV - Section 2 - Chapitre 2 - Monothread, Multithread, Parallélisme et Concurrence, je ne peux pas tout faire en même temps !
+      IMMV — Section 2 — Chapitre 2 — Monothread, Multithread, Parallélisme et Concurrence, je ne peux pas tout faire en même temps !
     </h1>
     <div class="post-meta"><span title='2025-05-01 10:40:55 -1000 -10'>mai 1, 2025</span>
 
@@ -166,10 +166,10 @@ Eh bien, dans cet article, on va voir comment on résout ce problème, en inform
     </details>
 </div>
 
-  <div class="post-content"><p>Dans le précédent article, <a href="../sync-async/">IMMV - Section 2 - Chapitre 1 - Synchrone et Asynchrone, ou comment réagir au changement</a>, on a vu les différents modes d&rsquo;exécutions.</p>
-<p>On s&rsquo;était arrêté sur le problème suivant : Comment faire pour répondre à la montée en charge, à l&rsquo;accumulation de tâches?</p>
+  <div class="post-content"><p>Dans le précédent article, <a href="../sync-async/">IMMV — Section 2 — Chapitre 1 — Synchrone et Asynchrone, ou comment réagir au changement</a>, on a vu les différents modes d&rsquo;exécution.</p>
+<p>On s&rsquo;était arrêté sur le problème suivant : Comment faire pour répondre à la montée en charge, à l&rsquo;accumulation de tâches ?</p>
 <p>Eh bien, dans cet article, on va voir comment on résout ce problème, en informatique <strong>comme dans la vraie vie</strong> : les mécanismes sont souvent très proches.</p>
-<p>Pour cela on va continuer avec notre exemple de restaurant. Et on va expliciter différents termes que j&rsquo;avais regroupé en parlant d&rsquo;algorithmes et de programmes.</p>
+<p>Pour cela on va continuer avec notre exemple de restaurant. Et on va expliciter différents termes que j&rsquo;avais regroupés en parlant d&rsquo;algorithmes et de programmes.</p>
 <p>N&rsquo;oublie pas que les objectifs de ces articles sont :</p>
 <ul>
 <li>Te donner une meilleure compréhension des bases de l’informatique,</li>
@@ -178,20 +178,20 @@ Eh bien, dans cet article, on va voir comment on résout ce problème, en inform
 </ul>
 <h2 id="le-programme--lidée-de-restaurant">Le programme — l&rsquo;idée de restaurant<a hidden class="anchor" aria-hidden="true" href="#le-programme--lidée-de-restaurant">#</a></h2>
 <p>En informatique, quand on parle de <strong>programme</strong>, on parle uniquement d&rsquo;un ensemble d&rsquo;algorithmes, des tâches qui le composent. Il n&rsquo;est <strong>pas encore en train d&rsquo;être exécuté</strong>. Par exemple, Facebook est un programme — mais <strong>tant que tu ne l’ouvres pas, il ne fait rien</strong>.</p>
-<p>Et bien c&rsquo;est pareil pour un restaurant dans la vie de tous les jours, quand je parle du restaurant à un ami, je n&rsquo;y suis pas physiquement. Je parle juste du <strong>concept de restaurant</strong>, de l&rsquo;idée que je m&rsquo;en fais.</p>
+<p>Eh bien, c&rsquo;est pareil pour un restaurant dans la vie de tous les jours, quand je parle du restaurant à un ami, je n&rsquo;y suis pas physiquement. Je parle juste du <strong>concept de restaurant</strong>, de l&rsquo;idée que je m&rsquo;en fais.</p>
 <h2 id="le-processus---le-restaurant-ouvert">Le processus - le restaurant ouvert<a hidden class="anchor" aria-hidden="true" href="#le-processus---le-restaurant-ouvert">#</a></h2>
 <p>Si je veux parler du restaurant physiquement ouvert, avec les employés qui s&rsquo;activent, en informatique il faut plutôt utiliser le terme <strong>processus</strong>. C&rsquo;est le <strong>programme en cours d&rsquo;exécution</strong>.</p>
 <p>Un <strong>processus</strong> possède son propre <strong>contexte d&rsquo;exécution</strong>, c&rsquo;est un gros mot pour dire qu&rsquo;il a ses propres <strong>ressources</strong>, et que personne ne peut lui prendre ses ressources.</p>
-<p>En effet, quand le restaurant est ouvert, les assiettes qu&rsquo;il utilise sont <strong>ses propres assiettes</strong>, <strong>ses propres ressources</strong> il n&rsquo;y a pas un autre restaurant qui lui prend ses assiettes pendant qu&rsquo;il est ouvert, sinon il risque d&rsquo;avoir des assiettes manquantes.</p>
+<p>En effet, quand le restaurant est ouvert, les assiettes qu&rsquo;il utilise sont <strong>ses propres assiettes</strong>, <strong>ses propres ressources</strong>. Il n&rsquo;y a pas un autre restaurant qui lui prendrait ses assiettes pendant qu&rsquo;il est ouvert, sinon il risque d&rsquo;avoir des assiettes manquantes.</p>
 <p>Pour exécuter un algorithme, un processus est composé d&rsquo;un <strong>thread principal</strong>, et il peut avoir d&rsquo;autres thread.</p>
 <h2 id="le-thread--la-procédure-en-cours-dexécution-du-serveur">Le thread — la procédure en cours d&rsquo;exécution du serveur<a hidden class="anchor" aria-hidden="true" href="#le-thread--la-procédure-en-cours-dexécution-du-serveur">#</a></h2>
 <p>Le <strong>thread</strong> (<em>fil d&rsquo;exécution</em> en français) est ce qu’on appelle la <strong>procédure en train de s&rsquo;exécuter</strong>. C’est un peu comme un <strong>serveur qui suit activement une fiche d&rsquo;instructions</strong> à un instant donné. Attention, ce n&rsquo;est <strong>pas le serveur</strong>.</p>
-<p>En informatique, on dit que le thread est <strong>l’unité d’exécution</strong>, C’est la plus petite unité qu’un ordinateur puisse piloter pour exécuter du code. Tout comme il n’y a pas de &ldquo;un serveur qui est en train de réaliser les tâches&rdquo; &ldquo;plus petit&rdquo; pour faire tourner un service en salle.</p>
+<p>En informatique, on dit que le thread est <strong>l’unité d’exécution</strong>, C’est la plus petite unité qu’un ordinateur puisse piloter pour exécuter du code. il n’existe pas d’unité plus petite qu’un thread pour exécuter une tâche.</p>
 <p>Maintenant qu’on comprend ce qu’est un thread — une procédure en cours d&rsquo;exécution — il faut se demander <strong>qui exécute cette procédure</strong>.</p>
 <h2 id="le-coeur--le-serveur">Le coeur — le serveur<a hidden class="anchor" aria-hidden="true" href="#le-coeur--le-serveur">#</a></h2>
 <p>On y arrive enfin, dans un ordinateur, le composant physique qui exécute un thread s&rsquo;appelle un <strong>coeur</strong> (<em>core</em> en anglais). Pour notre restaurant, ce <strong>core</strong> est le serveur. C&rsquo;est lui, physiquement, qui prend les commandes, sert les plats, etc.</p>
 <h2 id="concurrence-parallélisme-multithread-et-monothread--ou-comment-servir-2-familles-en-même-temps">Concurrence, parallélisme, multithread et monothread — ou comment servir 2 familles en même temps<a hidden class="anchor" aria-hidden="true" href="#concurrence-parallélisme-multithread-et-monothread--ou-comment-servir-2-familles-en-même-temps">#</a></h2>
-<p>Un serveur ne peut faire qu&rsquo;une seule chose à la fois, quand il prend une commande à l&rsquo;instant T, il ne peut pas en même temps, servir des plats.</p>
+<p>Un serveur ne peut faire qu&rsquo;une seule chose à la fois, à un instant donné : quand il prend une commande à l&rsquo;instant T, il ne peut pas, en même temps, servir des plats.</p>
 <p>Par contre, il pourrait s&rsquo;interrompre pendant les tâches, par exemple, au lieu de prendre toutes les commandes de la famille, d&rsquo;un coup, il peut :</p>
 <ul>
 <li>prendre la commande d&rsquo;un 1er plat</li>
@@ -202,15 +202,15 @@ Eh bien, dans cet article, on va voir comment on résout ce problème, en inform
 <li>servir le plat</li>
 <li>etc.</li>
 </ul>
-<p>Attention: ici nous n&rsquo;avons pas découpé les actions. C&rsquo;est juste que le serveur a jonglé entre les 2 tâches <em>&ldquo;prendre la commande&rdquo;</em> et <em>&ldquo;servir les plats&rdquo;</em>. On appelle ce comportement la <strong>concurrence</strong>, car les 2 tâches sont en concurrence pour être terminés.</p>
+<p>Attention: ici nous n&rsquo;avons pas découpé les actions. C&rsquo;est juste que le serveur a jonglé entre les 2 tâches <em>&ldquo;prendre la commande&rdquo;</em> et <em>&ldquo;servir les plats&rdquo;</em>. On appelle ce comportement la <strong>concurrence</strong>, car les 2 tâches sont en concurrence pour être terminées.</p>
 <p>Dans un ordinateur, les <strong>threads sont concurrents</strong>, et comme énoncé plus haut, étant donné qu&rsquo;un <strong>processus</strong> est composé d&rsquo;un <strong>thread principal</strong>, on dit que les <strong>processus sont concurrents</strong>.</p>
 <blockquote>
 <p>Dans la vraie vie il y a des situations où on ne jongle pas avec les tâches, où il faut être concentré sur une tâche</p></blockquote>
-<p>Tout à fait, et dans ce cas, si il y a trop de tâches pour une seule personne, on fait intervenir une 2ème personne, une 3ème etc.</p>
-<p>Dans notre restaurant, avec 2 serveurs, pendant que l&rsquo;un prend les commandes de la famille 1, un autre peut servir les plats de la famille 2. On appelle ça le <strong>parallélisme</strong>, les procédures/threads sont effectués en parallèle.</p>
+<p>Tout à fait, et dans ce cas, s&rsquo;il y a trop de tâches pour une seule personne, on fait intervenir une 2ème personne, une 3ème etc.</p>
+<p>Dans notre restaurant, avec 2 serveurs, pendant que l&rsquo;un prend les commandes de la famille 1, un autre peut servir les plats de la famille 2. On appelle ça le <strong>parallélisme</strong>, les procédures/threads sont exécutés en parallèle.</p>
 <p>Enfin, dans un restaurant, si on ne peut avoir qu&rsquo;un seul <strong>serveur qui suit activement une fiche d&rsquo;instructions</strong> — un seul thread —, on dit que le restaurant/le programme est <strong>monothread</strong>. S&rsquo;il y en a plusieurs, on dit que le restaurant/serveur est <strong>multithread</strong>.</p>
 <blockquote>
-<p>Du coup la solution pour le restaurant est d&rsquo;embaucher plus de serveurs ?</p></blockquote>
+<p>Du coup, la solution pour le restaurant est d&rsquo;embaucher plus de serveurs ?</p></blockquote>
 <p>C&rsquo;est l&rsquo;une des solutions, oui, mais ce n&rsquo;est pas la seule. Il y a globalement 2 chemins pour répondre à une montée en charge. On peut :</p>
 <ul>
 <li>optimiser les algorithmes pour les rendre plus performants et/ou changer le mode d&rsquo;exécution,</li>
@@ -230,8 +230,8 @@ Eh bien, dans cet article, on va voir comment on résout ce problème, en inform
 <blockquote>
 <p>Ben ils mangent chacun leur tour, ou alors l&rsquo;un mange d&rsquo;abord, et l&rsquo;autre ensuite ?</p></blockquote>
 <p><strong>Bingo</strong>, que l&rsquo;un mange d&rsquo;abord, puis l&rsquo;autre, ou qu&rsquo;ils mangent à tour de rôle, dans tous les cas, ils doivent se <strong>partager une ressource</strong> : la fourchette. Donc l&rsquo;un <strong>prend le contrôle</strong> de la ressource/fourchette, fait des actions avec cette ressource, puis <strong>libère</strong> la ressource. L&rsquo;autre peut à son tour prendre le contrôle de la ressource, etc.</p>
-<p>Dans un ordinateur c&rsquo;est pareil, dans un processus, les threads doivent se partager les ressources. De même, les processus doivent se partager les ressources.</p>
-<p>C&rsquo;est pour ça que sur un ordinateur, quand tu ouvres un document Word partagé avec tes collègues, parfois tu as un message du genre <em>&ldquo;le fichier est déjà ouvert par &hellip;&rdquo;</em> car le document Word est une <del>fourchette</del> ressource partagée entre ton application Word, et celle de ton collègue.</p>
+<p>Dans un ordinateur, c&rsquo;est pareil, dans un processus, les threads doivent se partager les ressources. De même, les processus doivent se partager les ressources.</p>
+<p>C&rsquo;est pour ça que sur un ordinateur, quand tu ouvres un document Word partagé avec tes collègues, parfois tu as un message du genre <em>&ldquo;le fichier est déjà ouvert par&hellip;&rdquo;</em> car le document Word est une <del>fourchette</del> ressource partagée entre ton application Word, et celle de ton collègue.</p>
 <blockquote>
 <p>Elle est bizarre ton explication&hellip;</p></blockquote>
 <p><strong>Je ne vois pas de quoi tu parles.</strong></p>
@@ -245,8 +245,8 @@ Pour éviter que deux tâches utilisent la ressource en même temps, on utilise 
 </div>
 <h2 id="conclusion">Conclusion<a hidden class="anchor" aria-hidden="true" href="#conclusion">#</a></h2>
 <p>Dans cet article, on a vu différents termes informatiques qui permettent de comprendre un peu plus comment fonctionne un ordinateur, comment on pouvait répondre à la montée en charge de différentes manières, et que finalement, c&rsquo;est très proche de la vie réelle.</p>
-<p>Nous avons fini cette section &ldquo;IMMV - Section 2 - L&rsquo;exécution : comment faire des actions ?&rdquo;.</p>
-<p>Dans la prochaine section, <a href="../../optimisation/optimisation/">IMMV - Section 3 - L&rsquo;optimisation : comment se faire passer pour un coach de vie</a>, on verra comment optimiser des applications et la vie réelle.</p>
+<p>Nous avons fini cette section &ldquo;IMMV — Section 2 — L&rsquo;exécution : comment faire des actions ?&rdquo;.</p>
+<p>Dans la prochaine section, <a href="../../optimisation/optimisation/">IMMV — Section 3 — L&rsquo;optimisation : comment se faire passer pour un coach de vie</a>, on verra comment optimiser des applications et la vie réelle.</p>
 <p><a href="../../l-execution/l-execution/">← Retour à la section</a></p>
 <p><a href="../../introduction/">← Retour à l’introduction</a></p>
 

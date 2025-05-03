@@ -1,5 +1,5 @@
 ---
-title: "IMVV - Section 1 - Chapitre 2 - Autres structures de données, j'organise mon bordel"
+title: "IMVV — Section 1 — Chapitre 2 — Autres structures de données, j'organise mon bordel"
 weight: 2
 #description: <descriptive text here>
 date: 2025-04-29T15:41:48-10:00
@@ -9,7 +9,7 @@ image: ""
 tags: [Informatique, IMMV]
 categories: [Vulgarisation]
 ---
-Dans le précédent article [IMVV - Section 1 - Chapitre 1 - File ou Pile ? L'art de passer avant les autres](../file-et-pile/) on a découvert les files et les piles. Cette fois, on va survoler plusieurs autres **structures de données** (*data structures* en anglais) qu'on utilise très souvent en informatique... et dans la vraie vie.
+Dans le précédent article [IMVV — Section 1 — Chapitre 1 — File ou Pile ? L'art de passer avant les autres](../file-et-pile/) on a découvert les files et les piles. Cette fois, on va survoler plusieurs autres **structures de données** (*data structures* en anglais) qu'on utilise très souvent en informatique... et dans la vraie vie.
 
 N'oublie pas que les objectifs de ces articles sont :
 - Te donner une meilleure compréhension des bases de l’informatique,
@@ -354,7 +354,7 @@ On a déjà vu pas mal de choses, je te laisse relire, essayer de combiner les s
 
 Il existe beaucoup de structures de données, celles qui sont présentées dans cet article sont juste les plus basiques, celles qu'on apprend dans les premières heures de cours de programmation.
 
-Si tu souhaites continuer cette aventure, tu peux regarder la suite ici: [IMVV - Section 1 - Chapitre 3 - Structures de contrôle et algorithme, apprendre à réfléchir](../structures-de-controle/)
+Si tu souhaites continuer cette aventure, tu peux regarder la suite ici: [IMVV — Section 1 — Chapitre 3 — Structures de contrôle et algorithme, apprendre à réfléchir](../structures-de-controle/)
 
 [← Retour à la section](../../les-bases/les-bases/)
 

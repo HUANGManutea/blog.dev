@@ -5,9 +5,9 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <meta name="robots" content="noindex, nofollow">
-<title>IMVV - Section 1 - Chapitre 3 - Structures de contrôle et algorithme, apprendre à réfléchir | Encore un autre blog d&#39;un tahitien</title>
+<title>IMVV — Section 1 — Chapitre 3 — Structures de contrôle et algorithme, apprendre à réfléchir | Encore un autre blog d&#39;un tahitien</title>
 <meta name="keywords" content="Informatique, IMMV">
-<meta name="description" content="Dans l&rsquo;article précédent IMVV - Section 1 - Chapitre 2 - Autres structure de données, j&rsquo;organise mon bordel, on s&rsquo;était arrêté sur ta question:
+<meta name="description" content="Dans l&rsquo;article précédent IMVV — Section 1 — Chapitre 2 — Autres structures de données, j&rsquo;organise mon bordel, on s&rsquo;était arrêté sur ta question :
 
 Et c&rsquo;est quoi le parcours de graphe?
 Dans cet article, on va parler des structures de contrôle (control flow statements en anglais), qu&rsquo;on utilise dans des algorithmes (algorithms en anglais).
@@ -136,7 +136,7 @@ Avant d&rsquo;expliquer l&rsquo;algorithme que tu as fait, le parcours de graphe
   <header class="post-header">
     
     <h1 class="post-title entry-hint-parent">
-      IMVV - Section 1 - Chapitre 3 - Structures de contrôle et algorithme, apprendre à réfléchir
+      IMVV — Section 1 — Chapitre 3 — Structures de contrôle et algorithme, apprendre à réfléchir
     </h1>
     <div class="post-meta"><span title='2025-04-30 14:30:37 -1000 -10'>avril 30, 2025</span>
 
@@ -170,7 +170,7 @@ Avant d&rsquo;expliquer l&rsquo;algorithme que tu as fait, le parcours de graphe
     </details>
 </div>
 
-  <div class="post-content"><p>Dans l&rsquo;article précédent <a href="../structures-de-donnees/">IMVV - Section 1 - Chapitre 2 - Autres structure de données, j&rsquo;organise mon bordel</a>, on s&rsquo;était arrêté sur ta question:</p>
+  <div class="post-content"><p>Dans l&rsquo;article précédent <a href="../structures-de-donnees/">IMVV — Section 1 — Chapitre 2 — Autres structures de données, j&rsquo;organise mon bordel</a>, on s&rsquo;était arrêté sur ta question :</p>
 <blockquote>
 <p>Et c&rsquo;est quoi le parcours de graphe?</p></blockquote>
 <p>Dans cet article, on va parler des <strong>structures de contrôle</strong> (<em>control flow statements</em> en anglais), qu&rsquo;on utilise dans des <strong>algorithmes</strong> (<em>algorithms</em> en anglais).</p>
@@ -194,7 +194,7 @@ Attendre 20 minutes
 Eteindre le four
 Sortir le moule du four
 Démouler
-</code></pre><p>Toute cette suite d&rsquo;étape est ce qu&rsquo;on appelle un <strong>algorithme</strong>, et la façon dont on l&rsquo;a écrit, ça s&rsquo;appelle du <strong>pseudo-code</strong>, parce que ça ressemble à un langage de programmation, mais ce n&rsquo;en est pas un.</p>
+</code></pre><p>Toute cette suite d&rsquo;étapes est ce qu&rsquo;on appelle un <strong>algorithme</strong>, et la façon dont on l&rsquo;a écrit, ça s&rsquo;appelle du <strong>pseudo-code</strong>, parce que ça ressemble à un langage de programmation, mais ce n&rsquo;en est pas un.</p>
 <blockquote>
 <p>Mais pourquoi on appelle ça un algorithme? on peut pas juste dire une suite d&rsquo;actions?</p></blockquote>
 <p>Je te laisse chercher sur internet pourquoi on appelle ça un <a href="https://fr.wikipedia.org/wiki/Algorithme">algorithme</a>.</p>
@@ -350,7 +350,7 @@ Tu réalises que tu n’as pas le contact de Paul. Tu l&#39;as croisé en soiré
 Heureusement, tu sais que Purotu le connaît.
 
 Tu l&#39;appelles... zut, elle n&#39;a pas son numéro. Mais elle te donne le numéro de Tiare, une autre amie de Paul.
-Tu appelles Tiare, tu te présentes, tu l&#39;invite également car tu n&#39;es pas un sauvage. Et tu lui demandes le numéro de Paul.
+Tu appelles Tiare, tu te présentes, tu l&#39;invites également car tu n&#39;es pas un sauvage. Et tu lui demandes le numéro de Paul.
 
 Bingo, elle l&#39;a, tu appelles Paul et il est chaud pour venir à ton anniversaire.
 </code></pre><p>Ci-dessous se trouve le graphe de relation entre les personnes, un graphe <strong>non orienté</strong>.</p>
@@ -383,7 +383,7 @@ graph TD
 </div>
 <figcaption>Graphe de relation entre les personnes</figcaption>
 </figure>
-<p>En se basant sur ce qu&rsquo;on a appris dans cet article, on va écrire un algorithme pour représenter les actions que tu as réalisé pour inviter tes amis :</p>
+<p>En se basant sur ce qu&rsquo;on a appris dans cet article, on va écrire un algorithme pour représenter les actions que tu as réalisées pour inviter tes amis :</p>
 <pre tabindex="0"><code># Étape 1 : inviter tous mes amis directs (les noeuds les plus proches de &#34;Toi&#34; dans le graphe)
 Je crée une variable &#34;liste d&#39;amis&#34;, contenant tous mes amis directs
 Je crée une variable &#34;ami&#34;, le contact courant
@@ -422,8 +422,8 @@ Tant que la &#34;file&#34; n’est pas vide :
         Fin si
     Fin si
 Fin tant que
-</code></pre><p>D&rsquo;un premier regard, ça a l&rsquo;air compliqué. Mais en fait si tu prends le temps de décortiquer, de bien regarder, tu verras que ce sont juste les actions que tu as réalisés plus haut, mais dans un langage plus proche de ce que fait un ordinateur.</p>
-<p>La seule chose qu&rsquo;on a fait en plus des concepts de bases, c&rsquo;est qu&rsquo;on a combiné les structures de contrôles et les structures de données, et le tout nous donne notre <strong>algorithme de parcours de graphe</strong> !</p>
+</code></pre><p>À première vue, ça a l&rsquo;air compliqué. Mais en fait si tu prends le temps de décortiquer, de bien regarder, tu verras que ce sont juste les actions que tu as réalisés plus haut, mais dans un langage plus proche de ce que fait un ordinateur.</p>
+<p>La seule chose qu&rsquo;on a fait en plus des concepts de base, c&rsquo;est qu&rsquo;on a combiné les structures de contrôle et les structures de données, et le tout nous donne notre <strong>algorithme de parcours de graphe</strong> !</p>
 <div class="instant-dev">
   <strong>Instant Dev</strong>
   <div class="instant-dev-content">
@@ -443,10 +443,10 @@ Fin tant que
 <li>Les variables,</li>
 <li>Les algorithmes.</li>
 </ul>
-<p>Il existe d&rsquo;autres structures cd contrôle, des types de variables, et des algorithmes qu&rsquo;on peut réutiliser pour répondre à beaucoup de problèmes. Comme d&rsquo;habitude, je te laisse chercher sur internet si tu veux aller plus loin.</p>
-<p>Mais le plus important, c&rsquo;est que tu commences à réfléchir comme un développeur, et à comprendre le <strong>pseudo-code</strong>. Dans la vraie vie, si tu as un problème complexe à résoudre, tu peux essayer de l&rsquo;écrire comme on l&rsquo;a fait pour le parcours de graphe. Prends ton temps et décompose le problèmes.</p>
-<p>Nous avons fini cette section &ldquo;IMMV - Section 1 - Les Bases : structures et contrôle&rdquo;, dans cette section, nous avons également vu les structures de données.</p>
-<p>Dans la prochaine section, <a href="../../l-execution/l-execution/">IMMV - Section 2 - L&rsquo;exécution : comment faire des actions ?</a>, nous verrons que l&rsquo;ordinateur et l&rsquo;humain font les actions de manière très similaire.</p>
+<p>Il existe d&rsquo;autres structures de contrôle, des types de variables, et des algorithmes qu&rsquo;on peut réutiliser pour répondre à beaucoup de problèmes. Comme d&rsquo;habitude, je te laisse chercher sur internet si tu veux aller plus loin.</p>
+<p>Mais le plus important, c&rsquo;est que tu commences à réfléchir comme un développeur, et à comprendre le <strong>pseudo-code</strong>. Dans la vraie vie, si tu as un problème complexe à résoudre, tu peux essayer de l&rsquo;écrire comme on l&rsquo;a fait pour le parcours de graphe. Prends ton temps et décompose le problème.</p>
+<p>Nous avons fini cette section &ldquo;IMMV — Section 1 — Les Bases : structures et contrôle&rdquo;, dans cette section, nous avons également vu les structures de données.</p>
+<p>Dans la prochaine section, <a href="../../l-execution/l-execution/">IMMV — Section 2 — L&rsquo;exécution : comment faire des actions ?</a>, nous verrons que l&rsquo;ordinateur et l&rsquo;humain font les actions de manière très similaire.</p>
 <p><a href="../../les-bases/les-bases/">← Retour à la section</a></p>
 <p><a href="../../introduction/">← Retour à l’introduction</a></p>
 

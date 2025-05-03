@@ -1,5 +1,5 @@
 ---
-title: "IMMV - Section 2 - Chapitre 2 - Monothread, Multithread, Parallélisme et Concurrence, je ne peux pas tout faire en même temps !"
+title: "IMMV — Section 2 — Chapitre 2 — Monothread, Multithread, Parallélisme et Concurrence, je ne peux pas tout faire en même temps !"
 #description: <descriptive text here>
 date: 2025-05-01T10:40:55-10:00
 weight: 2
@@ -9,7 +9,7 @@ image: ""
 tags: [Informatique, IMMV]
 categories: [Vulgarisation]
 ---
-Dans le précédent article, [IMMV - Section 2 - Chapitre 1 - Synchrone et Asynchrone, ou comment réagir au changement](../sync-async/), on a vu les différents modes d'exécution.
+Dans le précédent article, [IMMV — Section 2 — Chapitre 1 — Synchrone et Asynchrone, ou comment réagir au changement](../sync-async/), on a vu les différents modes d'exécution.
 
 On s'était arrêté sur le problème suivant : Comment faire pour répondre à la montée en charge, à l'accumulation de tâches ?
 
@@ -120,9 +120,9 @@ Pour éviter que deux tâches utilisent la ressource en même temps, on utilise 
 
 Dans cet article, on a vu différents termes informatiques qui permettent de comprendre un peu plus comment fonctionne un ordinateur, comment on pouvait répondre à la montée en charge de différentes manières, et que finalement, c'est très proche de la vie réelle.
 
-Nous avons fini cette section "IMMV - Section 2 - L'exécution : comment faire des actions ?".
+Nous avons fini cette section "IMMV — Section 2 — L'exécution : comment faire des actions ?".
 
-Dans la prochaine section, [IMMV - Section 3 - L'optimisation : comment se faire passer pour un coach de vie](../../optimisation/optimisation/), on verra comment optimiser des applications et la vie réelle.
+Dans la prochaine section, [IMMV — Section 3 — L'optimisation : comment se faire passer pour un coach de vie](../../optimisation/optimisation/), on verra comment optimiser des applications et la vie réelle.
 
 [← Retour à la section](../../l-execution/l-execution/)
 

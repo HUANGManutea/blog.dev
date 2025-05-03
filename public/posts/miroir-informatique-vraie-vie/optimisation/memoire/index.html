@@ -5,11 +5,14 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <meta name="robots" content="noindex, nofollow">
-<title>IMVV - Section 3 - Chapitre 1 - La mémoire, ou comment éviter les pénuries dans un magasin | Encore un autre blog d&#39;un tahitien</title>
+<title>IMVV — Section 3 — Chapitre 1 — La mémoire, ou comment éviter les pénuries dans un magasin | Encore un autre blog d&#39;un tahitien</title>
 <meta name="keywords" content="Informatique, IMMV">
-<meta name="description" content="La mémoire est une ressource à même titre que la fourchette dans le précédent article.
-Dans un ordinateur, il existe plusieurs types de mémoire, il faut voir ça comme du stockage. Les programmes vont utiliser différents types de mémoire/stockage, en fonction de la manière dont ils veulent traiter les données.
-La mémoire cache - Gotta go fast">
+<meta name="description" content="La mémoire est une ressource au même titre que la fourchette dans le précédent article.
+Dans un ordinateur, il existe plusieurs types de mémoire que les programmes vont pouvoir utiliser en fonction de la manière dont ils veulent traiter les données.
+Il faut voir la mémoire comme un endroit où on entrepose des données.
+Pour cet article on va parler d&rsquo;un magasin, mais ça marche aussi avec un restaurant.
+La mémoire cache — l&rsquo;armoire réfrigérée
+La mémoire cache est le stockage le plus rapide qu&rsquo;un programme peut utiliser. Pour un magasin, il s&rsquo;agit des étagères et des armoires réfrigérées qui forment les rayons.">
 <meta name="author" content="">
 <link rel="canonical" href="http://localhost:1313/blog.dev/posts/miroir-informatique-vraie-vie/optimisation/memoire/">
 <link crossorigin="anonymous" href="/blog.dev/assets/css/stylesheet.649a89ab5b3ace9a56ef6ec2dcd42ebba6add9c9cfe080c18aa59761d20f9080.css" integrity="sha256-ZJqJq1s6zppW727C3NQuu6at2cnP4IDBiqWXYdIPkIA=" rel="preload stylesheet" as="style">
@@ -134,7 +137,7 @@ La mémoire cache - Gotta go fast">
   <header class="post-header">
     
     <h1 class="post-title entry-hint-parent">
-      IMVV - Section 3 - Chapitre 1 - La mémoire, ou comment éviter les pénuries dans un magasin
+      IMVV — Section 3 — Chapitre 1 — La mémoire, ou comment éviter les pénuries dans un magasin
     </h1>
     <div class="post-meta"><span title='2025-05-01 14:35:32 -1000 -10'>mai 1, 2025</span>
 
@@ -147,16 +150,72 @@ La mémoire cache - Gotta go fast">
 
         <div class="inner"><ul>
                 <li>
-                    <a href="#la-m%c3%a9moire-cache---gotta-go-fast" aria-label="La mémoire cache - Gotta go fast">La mémoire cache - Gotta go fast</a>
+                    <a href="#la-m%c3%a9moire-cache--larmoire-r%c3%a9frig%c3%a9r%c3%a9e" aria-label="La mémoire cache — l&rsquo;armoire réfrigérée">La mémoire cache — l&rsquo;armoire réfrigérée</a></li>
+                <li>
+                    <a href="#la-m%c3%a9moire-vive--larri%c3%a8re-du-magasin" aria-label="La mémoire vive — l&rsquo;arrière du magasin">La mémoire vive — l&rsquo;arrière du magasin</a></li>
+                <li>
+                    <a href="#le-stockage--la-ferme-en-nouvelle-z%c3%a9lande" aria-label="Le stockage — la ferme en Nouvelle-Zélande">Le stockage — la ferme en Nouvelle-Zélande</a></li>
+                <li>
+                    <a href="#optimiser-la-m%c3%a9moire--pas-besoin-d%c3%aatre-mentaliste" aria-label="Optimiser la mémoire — pas besoin d&rsquo;être mentaliste">Optimiser la mémoire — pas besoin d&rsquo;être mentaliste</a></li>
+                <li>
+                    <a href="#conclusion" aria-label="Conclusion">Conclusion</a>
                 </li>
             </ul>
         </div>
     </details>
 </div>
 
-  <div class="post-content"><p>La mémoire est une <strong>ressource</strong> à même titre que la fourchette dans le <a href="../../l-execution/threads/">précédent article</a>.</p>
-<p>Dans un ordinateur, il existe plusieurs types de mémoire, il faut voir ça comme du stockage. Les programmes vont utiliser différents types de mémoire/stockage, en fonction de la manière dont ils veulent traiter les données.</p>
-<h2 id="la-mémoire-cache---gotta-go-fast">La mémoire cache - Gotta go fast<a hidden class="anchor" aria-hidden="true" href="#la-mémoire-cache---gotta-go-fast">#</a></h2>
+  <div class="post-content"><p>La mémoire est une <strong>ressource</strong> au même titre que la fourchette dans le <a href="../../l-execution/threads/">précédent article</a>.</p>
+<p>Dans un ordinateur, il existe plusieurs types de mémoire que les programmes vont pouvoir utiliser en fonction de la manière dont ils veulent traiter les données.</p>
+<p>Il faut voir la mémoire comme un endroit où on entrepose des données.</p>
+<p>Pour cet article on va parler d&rsquo;un magasin, mais ça marche aussi avec un restaurant.</p>
+<h2 id="la-mémoire-cache--larmoire-réfrigérée">La mémoire cache — l&rsquo;armoire réfrigérée<a hidden class="anchor" aria-hidden="true" href="#la-mémoire-cache--larmoire-réfrigérée">#</a></h2>
+<p>La <strong>mémoire cache</strong> est le stockage <strong>le plus rapide</strong> qu&rsquo;un programme peut utiliser. Pour un magasin, il s&rsquo;agit des étagères et des armoires réfrigérées qui forment les rayons.</p>
+<p>Les clients (les threads du programme) ont rapidement accès aux viandes qui sont dans les armoires réfrigérées, ils n&rsquo;ont qu&rsquo;à tendre la main. Par contre, on ne peut pas stocker une grande quantité de viande dans ces armoires, pour l&rsquo;exemple on va dire une dizaine au maximum.</p>
+<p>Sur un ordinateur, cette mémoire cache se trouve directement dans le processeur sous les noms <strong>cache L3</strong>, <strong>cache L2</strong> et <strong>cache L1</strong>. On n&rsquo;ira pas dans le détail ici, mais sachez que plus le nombre est proche de 0, et plus le cache est rapide.</p>
+<p>Je prends l&rsquo;exemple de l&rsquo;armoire réfrigérée car il y a un mécanisme physique important dans un ordinateur: la mémoire cache peut accueillir des données <strong>uniquement si elle est alimentée en électricité</strong>, en cas de coupure de courant, on <strong>perd les données</strong> qui s&rsquo;y trouvent.</p>
+<p>De la même manière, dans un magasin, en cas de coupure de courant, il faut <strong>jeter toute la viande qui se trouve dans les armoires réfrigérées</strong>*.</p>
+<p>*: Oui c&rsquo;est pas tout à fait le cas, mais en cas de coupure prolongée ça l&rsquo;est.</p>
+<h2 id="la-mémoire-vive--larrière-du-magasin">La mémoire vive — l&rsquo;arrière du magasin<a hidden class="anchor" aria-hidden="true" href="#la-mémoire-vive--larrière-du-magasin">#</a></h2>
+<p>Au cours d&rsquo;une journée, le magasin souhaite vendre bien plus que dix viandes, c&rsquo;est bien normal. Pour cela, à l&rsquo;arrière du magasin il y a un stock réfrigéré qui peut en contenir 1000. Un employé viendra remplir les rayons au cours de la journée.</p>
+<p>Cette action prend du temps, l&rsquo;employé doit :</p>
+<pre tabindex="0"><code>Aller dans le stock réfrigéré
+Récupérer des viandes
+Amener les viandes dans le rayon
+Mettre les viandes dans l&#39;armoire réfrigérée
+</code></pre><p>Pendant tout ce temps, le client ne peut prendre que les viandes qui sont encore dans l&rsquo;armoire, il faut donc bien faire attention à ce que l&rsquo;employé recharge l&rsquo;armoire quand il reste encore un peu de boîtes.</p>
+<p>Dans un ordinateur, la <strong>mémoire vive</strong> (<em>RAM</em> en anglais pour <em>Random Access Memory</em>), joue le rôle du stock réfrigéré très rapide qu&rsquo;un programme peut utiliser, mais beaucoup moins rapide que la mémoire cache, environ 50x à 100x moins rapide.</p>
+<p>Et tout comme la <strong>mémoire cache</strong>, la RAM peut accueillir des données <strong>uniquement si elle est alimentée en électricité</strong>.</p>
+<p>C&rsquo;est pour ça qu&rsquo;on appelle ça de la mémoire <strong>vive</strong>, elle doit être <strong>alimentée</strong>.</p>
+<blockquote>
+<p>Attends, mais tu dis que la RAM est très rapide, mais le processus pour recharger la mémoire cache est lent ? On ne peut pas juste utiliser une grande quantité de mémoire cache?</p></blockquote>
+<p>La mémoire cache coûte très cher, beaucoup plus que la RAM. L&rsquo;état actuel est donc un compromis entre rapidité et coût, un problème typique en ingénierie.</p>
+<h2 id="le-stockage--la-ferme-en-nouvelle-zélande">Le stockage — la ferme en Nouvelle-Zélande<a hidden class="anchor" aria-hidden="true" href="#le-stockage--la-ferme-en-nouvelle-zélande">#</a></h2>
+<p>Le stockage d&rsquo;un ordinateur est composé des différents disques durs (<em>HDD</em>, <em>SDD</em>, etc.). Il s&rsquo;agit d&rsquo;une <strong>mémoire persistante</strong>, c&rsquo;est-à-dire que même en cas de coupure de courant, les données restent écrites dans les disques.</p>
+<p>Pour notre magasin, de la viande qui reste utilisable même en cas de coupure&hellip; Eh bien ce sont les boeufs vivants à la ferme.</p>
+<blockquote>
+<p>Ton analogie est dégoûtante</p></blockquote>
+<p>Oui je sais, j&rsquo;ai pas mieux, désolé. En même temps, je ne peux pas vous dire que de la viande fraîche, qui reste longtemps à l&rsquo;air libre, est encore utilisable.</p>
+<blockquote>
+<p>En plus, il y a plein d&rsquo;étapes entre un boeuf vivant et un steak dans l&rsquo;armoire !</p></blockquote>
+<p>Tout à fait, mais c&rsquo;est la meilleure analogie possible pour te faire comprendre pourquoi, en cas de coupure, si tu n&rsquo;as pas sauvegardé ton fichier Word depuis longtemps, tu perds tes données. <strong>Tant que tu n&rsquo;as pas sauvegardé, tes modifications restent dans le cache et la RAM</strong>.</p>
+<blockquote>
+<p>Et pourquoi en Nouvelle-Zélande ?</p></blockquote>
+<p>Oh, ça c&rsquo;est parce qu&rsquo;aller chercher une donnée dans un disque, c&rsquo;est très lent comparé à aller la chercher dans la RAM. Si tu as un disque SSD c&rsquo;est 10x plus lent, si tu as un disque HDD, c&rsquo;est 100x plus lent.</p>
+<p>Si tu joues à des jeux vidéo un peu gourmands en ressources, tu as sûrement remarqué des écrans de chargement plus ou moins longs. C&rsquo;est surtout parce que <strong>le programme récupère les données qui sont sur le disque</strong>.</p>
+<h2 id="optimiser-la-mémoire--pas-besoin-dêtre-mentaliste">Optimiser la mémoire — pas besoin d&rsquo;être mentaliste<a hidden class="anchor" aria-hidden="true" href="#optimiser-la-mémoire--pas-besoin-dêtre-mentaliste">#</a></h2>
+<p>Vous l&rsquo;aurez donc compris, un magasin a différents types de mémoire à sa disposition. La manière dont il orchestre les denrées à travers ces différents composants lui permet d&rsquo;anticiper les variations de stock, et limiter le risque de pénurie.</p>
+<p>Lorsqu&rsquo;un développeur code un programme, il peut aussi anticiper l&rsquo;utilisation des données et les charger avant d&rsquo;en avoir besoin.</p>
+<blockquote>
+<p>Dans l&rsquo;exemple du jeu vidéo, pourquoi est-ce que toutes les données ne sont pas chargées dès le début? Moi j&rsquo;en ai marre des écrans de chargement.</p></blockquote>
+<p>Tout d&rsquo;abord, ce chargement se fait du stockage vers la RAM (puis vers le cache), ensuite, si on chargeait toutes les données d&rsquo;un coup, il y a de fortes chances pour que ta RAM soit saturée.</p>
+<p>A priori, le développeur ne sait pas si tu as peu ou beaucoup de RAM disponible, et puis, maintenir deux versions du code, un qui charge toutes les données, et un qui charge via les écrans de chargement, c&rsquo;est du travail supplémentaire qui n&rsquo;apporte pas grand chose.</p>
+<p>Les écrans de chargement sont un compromis : plutôt que de risquer de crasher ton ordinateur, le développeur a codé le programme de sorte à charger uniquement le contenu qui sera utilisé dans le niveau, pour tous les niveaux.</p>
+<h2 id="conclusion">Conclusion<a hidden class="anchor" aria-hidden="true" href="#conclusion">#</a></h2>
+<p>Dans cet article, on a vu les différentes mémoires utilisées par les programmes. À l&rsquo;image d&rsquo;un magasin qui évite les pénuries, un développeur doit jongler avec ces mémoires pour que son programme tourne correctement.</p>
+<p>Dans le prochain article, <a href="../memoisation/">IMVV — Section 3 — Chapitre 2 — Mémoïsation et Lazy loading, les technique du fainéant ultime</a>, nous verrons des techniques qui feront de toi un bon fainéant.</p>
+<p><a href="../../optimisation/optimisation/">← Retour à la section</a></p>
+<p><a href="../../introduction/">← Retour à l’introduction</a></p>
 
 
   </div>
