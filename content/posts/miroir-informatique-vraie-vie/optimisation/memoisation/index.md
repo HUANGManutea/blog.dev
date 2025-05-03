@@ -9,6 +9,8 @@ image: ""
 tags: [Informatique, IMMV]
 categories: [Vulgarisation]
 ---
+Dans l'article précédent [IMVV — Section 3 — Chapitre 1 — La mémoire, ou comment éviter les pénuries dans un magasin](../memoire/), on a vu qu'on pouvait optimiser notre utilisation de la mémoire / du stockage... Mais ce n'est pas suffisant, on doit voir d'autres ~~jutsu~~ techniques pour optimiser encore plus.
+
 Être *fiu* est un art, une vertu. **Non, ce n'est pas une blague**. Tu ne me crois pas ?
 
 *"We will encourage you to develop the three great virtues of a programmer: laziness, impatience, and hubris." — Larry Wall, Programming perl (1991)*.
