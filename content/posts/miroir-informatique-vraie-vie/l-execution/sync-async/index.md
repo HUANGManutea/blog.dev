@@ -1,15 +1,15 @@
 ---
-title: "IMVV — Section 2 — Chapitre 1 — Synchrone et Asynchrone, ou comment réagir au changement"
+title: "IMVV — Section 2 — Chapitre 2 — Modes d'exécution synchrone et asynchrone, ou comment réagir au changement"
 #description: <descriptive text here>
 date: 2025-05-01T00:10:38-10:00
-weight: 1
+weight: 2
 draft: false
 showToc: true
 image: ""
 tags: [Informatique, IMVV]
 categories: [Vulgarisation]
 ---
-Dans le précédent article, [IMVV — Section 1 — Chapitre 3 — Structures de contrôle et algorithme, apprendre à réfléchir](../../les-bases/structures-de-controle/), on a vu les différentes structures de contrôle et les algorithmes.
+Dans le précédent article, [IMVV — Section 2 — Chapitre 1 — Paradigmes, ou comment réfléchir différemment](../paradigme/), on a vu différentes façons de réfléchir à un problème, pour trouver la meilleure approche.
 
 Maintenant on va parler de la manière dont on réalise un ensemble de tâches — c’est ce qu’on appelle en informatique un **mode d’exécution**. C'est applicable aussi bien pour un humain que pour un ordinateur.
 
@@ -71,41 +71,52 @@ Par défaut, les applications sont synchrones, car à part le problème de resso
 
 Reprenons l'exemple du restaurant, toujours avec 2 familles (famille 1, famille 2), 2 tables (table 1, table 2), 1 serveur, 1 chef.
 
-Mais cette fois, on change l'**algorithme** :
-```
-Quand une famille arrive, alors :
-    Le serveur les accueille
-    Il les installe à une table libre
-    Il leur donne un menu
-    Il passe à autre chose
-Fin quand
+Cette fois, le serveur fonctionne en mode **asynchrone**.
+Il commence une tâche, la confie à quelqu’un d’autre ou la met en attente, puis passe à la suivante immédiatement. Ce mode d'exécution est dit **non bloquant** : le serveur ne reste jamais à attendre qu’une tâche se termine.
 
-Quand une famille appelle le serveur pour commander, alors :
+Ce qui nous donne comme **algorithme** :
+
+```
+Si une famille arrive:
+    Le serveur les laisse s'installer à une table
+    Il continue avec d'autres tâches
+Fin si
+
+Si une famille s'est installée:
+    Le serveur leur donne le menu
+    Il continue avec d'autres tâches
+Fin si
+
+Si une famille appelle pour commander:
     Le serveur prend la commande
+    Il continue avec d'autres tâches
+Fin si
+
+Si la commande est prise:
     Il la transmet au chef
-    Il passe à autre chose
-Fin quand
+    Il continue avec d'autres tâches
+Fin si
 
-Quand la sonnette en cuisine retentit (plats prêts), alors :
+Si le chef signale que les plats sont prêts:
     Le serveur récupère les plats
-    Le serveur sert les plats à la bonne table
-    Il passe à autre chose
-Fin quand
+    Il continue avec d'autres tâches
+Fin si
 
-Quand une famille veut payer, alors :
+Si le serveur a récupéré les plats:
+    Il les sert à la bonne table
+    Il continue avec d'autres tâches
+Fin si
+
+Si une famille demande l’addition:
     Le serveur encaisse
-    Il libère la table
-    Il passe à autre chose
-Fin quand
+    Il continue avec d'autres tâches
+Fin si
+
+Si une famille a payé:
+    Le serveur libère la table
+    Il continue avec d'autres tâches
+Fin si
 ```
-
-Cet algorithme est différent de ceux qu'on a vus jusqu'à présent.
-
-*"Quand ...,"* marque un **événement**, *"alors"* introduit le **bloc** d'instructions à exécuter en **réaction**, et *"Fin quand"* marque la **fin** de ce bloc.
-
-On dit alors qu'on fait de la **programmation événementielle** (ou *programmation réactive*) et que l'algorithme est **asynchrone** : il fait de sorte à réagir aux événements extérieurs.
-
-Lorsqu’un événement se produit, le serveur y réagit immédiatement : il exécute les instructions associées, puis passe à l’événement suivant s’il y en a un. Sinon, il attend. Ce mode d'exécution est donc **non bloquant**.
 
 Et dans les faits, c'est ce que fait la plupart des personnes, serveurs ou non. Quand on fait une tâche, et qu'on est interrompu par un bug, un appel, un collègue de travail qui pose une question, on est en **réaction**.
 
@@ -116,7 +127,7 @@ Avec cet algorithme, un serveur seul pourra très bien gérer 2 tables.
     info="Les notifications sur ton smartphone||Un arrosage automatique avec capteur d'humidité"
 >}}
 
-Attention : comme en mode **synchrone**, s'il y a trop de table pour un seul serveur, plusieurs **événements** risquent de s'accumuler en attente de traitement.
+Attention : comme en mode **synchrone**, s'il y a trop de tables pour un seul serveur, plusieurs **événements** risquent de s'accumuler en attente de traitement.
 
 >Mais du coup, comment on fait pour résoudre ce problème ?
 
@@ -126,7 +137,7 @@ On verra ça dans le prochain article.
 
 Dans cet article, on a vu ce qu'étaient les modes d'exécution **synchrone** et **asynchrone**.
 
-Si tu souhaites continuer cette aventure, tu peux regarder la suite ici: [IMVV — Section 2 — Chapitre 2 — Monothread et Multithread, je ne peux pas tout faire en même temps !](../threads/)
+Si tu souhaites continuer cette aventure, tu peux regarder la suite ici: [IMVV — Section 2 — Chapitre 3 — Monothread et Multithread, je ne peux pas tout faire en même temps !](../threads/)
 
 [← Retour à la section](../../l-execution/l-execution/)
 

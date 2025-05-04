@@ -6,8 +6,25 @@
     <description>Recent content in Vulgarisation on Encore un autre blog d&#39;un tahitien</description>
     <generator>Hugo -- 0.147.0</generator>
     <language>fr</language>
-    <lastBuildDate>Sat, 03 May 2025 09:43:10 -1000</lastBuildDate>
+    <lastBuildDate>Sat, 03 May 2025 16:25:04 -1000</lastBuildDate>
     <atom:link href="http://localhost:1313/blog.dev/categories/vulgarisation/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>IMVV — Section 2 — Chapitre 1 — Paradigmes, ou comment réfléchir différemment</title>
+      <link>http://localhost:1313/blog.dev/posts/miroir-informatique-vraie-vie/l-execution/paradigme/</link>
+      <pubDate>Sat, 03 May 2025 16:25:04 -1000</pubDate>
+      <guid>http://localhost:1313/blog.dev/posts/miroir-informatique-vraie-vie/l-execution/paradigme/</guid>
+      <description>&lt;p&gt;Dans le précédent article, &lt;a href=&#34;../../les-bases/structures-de-controle/&#34;&gt;IMVV — Section 1 — Chapitre 3 — Structures de contrôle et algorithme, apprendre à réfléchir&lt;/a&gt;, on a vu les différentes structures de contrôle et les algorithmes.&lt;/p&gt;
+&lt;p&gt;Dans cet article, on verra comment écrire un programme, et qu&amp;rsquo;en changeant notre manière de réfléchir, certains problèmes sont plus simples à résoudre.&lt;/p&gt;
+&lt;p&gt;Rassure-toi, nous n&amp;rsquo;allons pas réellement développer.&lt;/p&gt;
+&lt;p&gt;N&amp;rsquo;oublie pas que les objectifs de ces articles sont :&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Te donner une meilleure compréhension des bases de l’informatique,&lt;/li&gt;
+&lt;li&gt;T&amp;rsquo;inspirer pour analyser ou optimiser les situations du quotidien,&lt;/li&gt;
+&lt;li&gt;ou peut-être, qui sait, te donner envie d&amp;rsquo;explorer encore plus loin&amp;hellip; jusqu’à en faire ton métier.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;programmation-impérative--je-tordonne-de-mobéir&#34;&gt;Programmation impérative — je t&amp;rsquo;ordonne de m&amp;rsquo;obéir&lt;/h2&gt;
+&lt;p&gt;Si je te demande un exemple de &lt;em&gt;d&amp;rsquo;ordre impératif&lt;/em&gt;, tu me diras peut-être : &lt;em&gt;&amp;ldquo;Range ta chambre&amp;rdquo;&lt;/em&gt;. Il en résulte que l&amp;rsquo;enfant range sa chambre — je parle d&amp;rsquo;un enfant qui écoute ses parents —.&lt;/p&gt;</description>
+    </item>
     <item>
       <title>IMVV — Section 3 — Chapitre 1 — La mémoire, ou comment éviter les pénuries dans un magasin</title>
       <link>http://localhost:1313/blog.dev/posts/miroir-informatique-vraie-vie/optimisation/memoire/</link>
@@ -19,15 +36,6 @@
 &lt;p&gt;Pour cet article on va parler d&amp;rsquo;un magasin, mais ça marche aussi avec un restaurant.&lt;/p&gt;
 &lt;h2 id=&#34;la-mémoire-cache--larmoire-réfrigérée&#34;&gt;La mémoire cache — l&amp;rsquo;armoire réfrigérée&lt;/h2&gt;
 &lt;p&gt;La &lt;strong&gt;mémoire cache&lt;/strong&gt; est le stockage &lt;strong&gt;le plus rapide&lt;/strong&gt; qu&amp;rsquo;un programme peut utiliser. Pour un magasin, il s&amp;rsquo;agit des étagères et des armoires réfrigérées qui forment les rayons.&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>IMVV — Section 2 — Chapitre 1 — Synchrone et Asynchrone, ou comment réagir au changement</title>
-      <link>http://localhost:1313/blog.dev/posts/miroir-informatique-vraie-vie/l-execution/sync-async/</link>
-      <pubDate>Thu, 01 May 2025 00:10:38 -1000</pubDate>
-      <guid>http://localhost:1313/blog.dev/posts/miroir-informatique-vraie-vie/l-execution/sync-async/</guid>
-      <description>&lt;p&gt;Dans le précédent article, &lt;a href=&#34;../../les-bases/structures-de-controle/&#34;&gt;IMVV — Section 1 — Chapitre 3 — Structures de contrôle et algorithme, apprendre à réfléchir&lt;/a&gt;, on a vu les différentes structures de contrôle et les algorithmes.&lt;/p&gt;
-&lt;p&gt;Maintenant on va parler de la manière dont on réalise un ensemble de tâches — c’est ce qu’on appelle en informatique un &lt;strong&gt;mode d’exécution&lt;/strong&gt;. C&amp;rsquo;est applicable aussi bien pour un humain que pour un ordinateur.&lt;/p&gt;
-&lt;p&gt;N&amp;rsquo;oublie pas que les objectifs de ces articles sont :&lt;/p&gt;</description>
     </item>
     <item>
       <title>IMVV — Section 1 — Chapitre 1 — File ou Pile ? L&#39;art de passer avant les autres</title>
@@ -48,13 +56,13 @@ Tu manipules sans le savoir des concepts appellés en informatique &lt;strong&gt
 &lt;p&gt;&lt;em&gt;&amp;ldquo;We will encourage you to develop the three great virtues of a programmer: laziness, impatience, and hubris.&amp;rdquo; — Larry Wall, Programming perl (1991)&lt;/em&gt;.&lt;/p&gt;</description>
     </item>
     <item>
-      <title>IMVV — Section 2 — Chapitre 2 — Monothread, Multithread, Parallélisme et Concurrence, je ne peux pas tout faire en même temps !</title>
-      <link>http://localhost:1313/blog.dev/posts/miroir-informatique-vraie-vie/l-execution/threads/</link>
-      <pubDate>Thu, 01 May 2025 10:40:55 -1000</pubDate>
-      <guid>http://localhost:1313/blog.dev/posts/miroir-informatique-vraie-vie/l-execution/threads/</guid>
-      <description>&lt;p&gt;Dans le précédent article, &lt;a href=&#34;../sync-async/&#34;&gt;IMVV — Section 2 — Chapitre 1 — Synchrone et Asynchrone, ou comment réagir au changement&lt;/a&gt;, on a vu les différents modes d&amp;rsquo;exécution.&lt;/p&gt;
-&lt;p&gt;On s&amp;rsquo;était arrêté sur le problème suivant : Comment faire pour répondre à la montée en charge, à l&amp;rsquo;accumulation de tâches ?&lt;/p&gt;
-&lt;p&gt;Eh bien, dans cet article, on va voir comment on résout ce problème, en informatique &lt;strong&gt;comme dans la vraie vie&lt;/strong&gt; : les mécanismes sont souvent très proches.&lt;/p&gt;</description>
+      <title>IMVV — Section 2 — Chapitre 2 — Modes d&#39;exécution synchrone et asynchrone, ou comment réagir au changement</title>
+      <link>http://localhost:1313/blog.dev/posts/miroir-informatique-vraie-vie/l-execution/sync-async/</link>
+      <pubDate>Thu, 01 May 2025 00:10:38 -1000</pubDate>
+      <guid>http://localhost:1313/blog.dev/posts/miroir-informatique-vraie-vie/l-execution/sync-async/</guid>
+      <description>&lt;p&gt;Dans le précédent article, &lt;a href=&#34;../paradigme/&#34;&gt;IMVV — Section 2 — Chapitre 1 — Paradigmes, ou comment réfléchir différemment&lt;/a&gt;, on a vu différentes façons de réfléchir à un problème, pour trouver la meilleure approche.&lt;/p&gt;
+&lt;p&gt;Maintenant on va parler de la manière dont on réalise un ensemble de tâches — c’est ce qu’on appelle en informatique un &lt;strong&gt;mode d’exécution&lt;/strong&gt;. C&amp;rsquo;est applicable aussi bien pour un humain que pour un ordinateur.&lt;/p&gt;
+&lt;p&gt;N&amp;rsquo;oublie pas que les objectifs de ces articles sont :&lt;/p&gt;</description>
     </item>
     <item>
       <title>IMVV — Section 1 — Chapitre 2 — Autres structures de données, j&#39;organise mon bordel</title>
@@ -72,6 +80,15 @@ Tu manipules sans le savoir des concepts appellés en informatique &lt;strong&gt
 &lt;p&gt;Tu as peut-être remarqué dans le précédent article que la &lt;strong&gt;file&lt;/strong&gt; et la &lt;strong&gt;pile&lt;/strong&gt; se ressemblent beaucoup. En réalité, on peut les représenter toutes les deux avec la même structure : un &lt;strong&gt;tableau&lt;/strong&gt;.&lt;/p&gt;</description>
     </item>
     <item>
+      <title>IMVV — Section 2 — Chapitre 3 — Monothread, Multithread, Parallélisme et Concurrence, je ne peux pas tout faire en même temps !</title>
+      <link>http://localhost:1313/blog.dev/posts/miroir-informatique-vraie-vie/l-execution/threads/</link>
+      <pubDate>Thu, 01 May 2025 10:40:55 -1000</pubDate>
+      <guid>http://localhost:1313/blog.dev/posts/miroir-informatique-vraie-vie/l-execution/threads/</guid>
+      <description>&lt;p&gt;Dans le précédent article, &lt;a href=&#34;../sync-async/&#34;&gt;IMVV — Section 2 — Chapitre 2 — Modes d&amp;rsquo;exécution synchrone et asynchrone, ou comment réagir au changement&lt;/a&gt;, on a vu les différents modes d&amp;rsquo;exécution.&lt;/p&gt;
+&lt;p&gt;On s&amp;rsquo;était arrêté sur le problème suivant : Comment faire pour répondre à la montée en charge, à l&amp;rsquo;accumulation de tâches ?&lt;/p&gt;
+&lt;p&gt;Eh bien, dans cet article, on va voir comment on résout ce problème, en informatique &lt;strong&gt;comme dans la vraie vie&lt;/strong&gt; : les mécanismes sont souvent très proches.&lt;/p&gt;</description>
+    </item>
+    <item>
       <title>IMVV — Section 1 — Chapitre 3 — Structures de contrôle et algorithme, apprendre à réfléchir</title>
       <link>http://localhost:1313/blog.dev/posts/miroir-informatique-vraie-vie/les-bases/structures-de-controle/</link>
       <pubDate>Wed, 30 Apr 2025 14:30:37 -1000</pubDate>
@@ -87,7 +104,12 @@ Tu manipules sans le savoir des concepts appellés en informatique &lt;strong&gt
       <link>http://localhost:1313/blog.dev/posts/miroir-informatique-vraie-vie/l-execution/l-execution/</link>
       <pubDate>Thu, 01 May 2025 00:03:59 -1000</pubDate>
       <guid>http://localhost:1313/blog.dev/posts/miroir-informatique-vraie-vie/l-execution/l-execution/</guid>
-      <description>&lt;p&gt;Dans cette section, nous verrons comment les actions sont exécutées, par les ordinateurs et par les personnes. Et on verra quelques pistes pour répondre à une accumulation de tâches.&lt;/p&gt;
+      <description>&lt;p&gt;Dans cette section, nous verrons :&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Comment on écrit le programme → Paradigmes&lt;/li&gt;
+&lt;li&gt;Comment il s’exécute → Modes d’exécution&lt;/li&gt;
+&lt;li&gt;Avec quelle infrastructure → Monothread, Multithread&amp;hellip;&lt;/li&gt;
+&lt;/ul&gt;
 &lt;h1 id=&#34;chapitres&#34;&gt;Chapitres&lt;/h1&gt;
 
 
@@ -97,13 +119,19 @@ Tu manipules sans le savoir des concepts appellés en informatique &lt;strong&gt
 	
 		
     	
-      	&lt;li&gt;&lt;a href=&#34;http://localhost:1313/blog.dev/posts/miroir-informatique-vraie-vie/l-execution/sync-async/&#34;&gt;IMVV — Section 2 — Chapitre 1 — Synchrone et Asynchrone, ou comment réagir au changement&lt;/a&gt;&lt;/li&gt;
+      	&lt;li&gt;&lt;a href=&#34;http://localhost:1313/blog.dev/posts/miroir-informatique-vraie-vie/l-execution/paradigme/&#34;&gt;IMVV — Section 2 — Chapitre 1 — Paradigmes, ou comment réfléchir différemment&lt;/a&gt;&lt;/li&gt;
     	
   	
 	
 		
     	
-      	&lt;li&gt;&lt;a href=&#34;http://localhost:1313/blog.dev/posts/miroir-informatique-vraie-vie/l-execution/threads/&#34;&gt;IMVV — Section 2 — Chapitre 2 — Monothread, Multithread, Parallélisme et Concurrence, je ne peux pas tout faire en même temps !&lt;/a&gt;&lt;/li&gt;
+      	&lt;li&gt;&lt;a href=&#34;http://localhost:1313/blog.dev/posts/miroir-informatique-vraie-vie/l-execution/sync-async/&#34;&gt;IMVV — Section 2 — Chapitre 2 — Modes d&amp;#39;exécution synchrone et asynchrone, ou comment réagir au changement&lt;/a&gt;&lt;/li&gt;
+    	
+  	
+	
+		
+    	
+      	&lt;li&gt;&lt;a href=&#34;http://localhost:1313/blog.dev/posts/miroir-informatique-vraie-vie/l-execution/threads/&#34;&gt;IMVV — Section 2 — Chapitre 3 — Monothread, Multithread, Parallélisme et Concurrence, je ne peux pas tout faire en même temps !&lt;/a&gt;&lt;/li&gt;
     	
   	
 	

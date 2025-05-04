@@ -9,7 +9,10 @@ image: ""
 tags: [Informatique, IMVV]
 categories: [Vulgarisation]
 ---
-Dans cette section, nous verrons comment les actions sont exécutées, par les ordinateurs et par les personnes. Et on verra quelques pistes pour répondre à une accumulation de tâches.
+Dans cette section, nous verrons :
+- Comment on écrit le programme → Paradigmes
+- Comment il s’exécute → Modes d’exécution
+- Avec quelle infrastructure → Monothread, Multithread...
 
 # Chapitres
 

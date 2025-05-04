@@ -5,9 +5,9 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <meta name="robots" content="noindex, nofollow">
-<title>IMVV — Section 2 — Chapitre 1 — Synchrone et Asynchrone, ou comment réagir au changement | Encore un autre blog d&#39;un tahitien</title>
+<title>IMVV — Section 2 — Chapitre 2 — Modes d&#39;exécution synchrone et asynchrone, ou comment réagir au changement | Encore un autre blog d&#39;un tahitien</title>
 <meta name="keywords" content="Informatique, IMVV">
-<meta name="description" content="Dans le précédent article, IMVV — Section 1 — Chapitre 3 — Structures de contrôle et algorithme, apprendre à réfléchir, on a vu les différentes structures de contrôle et les algorithmes.
+<meta name="description" content="Dans le précédent article, IMVV — Section 2 — Chapitre 1 — Paradigmes, ou comment réfléchir différemment, on a vu différentes façons de réfléchir à un problème, pour trouver la meilleure approche.
 Maintenant on va parler de la manière dont on réalise un ensemble de tâches — c’est ce qu’on appelle en informatique un mode d’exécution. C&rsquo;est applicable aussi bien pour un humain que pour un ordinateur.
 N&rsquo;oublie pas que les objectifs de ces articles sont :">
 <meta name="author" content="">
@@ -134,7 +134,7 @@ N&rsquo;oublie pas que les objectifs de ces articles sont :">
   <header class="post-header">
     
     <h1 class="post-title entry-hint-parent">
-      IMVV — Section 2 — Chapitre 1 — Synchrone et Asynchrone, ou comment réagir au changement
+      IMVV — Section 2 — Chapitre 2 — Modes d&#39;exécution synchrone et asynchrone, ou comment réagir au changement
     </h1>
     <div class="post-meta"><span title='2025-05-01 00:10:38 -1000 -10'>mai 1, 2025</span>
 
@@ -160,7 +160,7 @@ N&rsquo;oublie pas que les objectifs de ces articles sont :">
     </details>
 </div>
 
-  <div class="post-content"><p>Dans le précédent article, <a href="../../les-bases/structures-de-controle/">IMVV — Section 1 — Chapitre 3 — Structures de contrôle et algorithme, apprendre à réfléchir</a>, on a vu les différentes structures de contrôle et les algorithmes.</p>
+  <div class="post-content"><p>Dans le précédent article, <a href="../paradigme/">IMVV — Section 2 — Chapitre 1 — Paradigmes, ou comment réfléchir différemment</a>, on a vu différentes façons de réfléchir à un problème, pour trouver la meilleure approche.</p>
 <p>Maintenant on va parler de la manière dont on réalise un ensemble de tâches — c’est ce qu’on appelle en informatique un <strong>mode d’exécution</strong>. C&rsquo;est applicable aussi bien pour un humain que pour un ordinateur.</p>
 <p>N&rsquo;oublie pas que les objectifs de ces articles sont :</p>
 <ul>
@@ -215,36 +215,49 @@ Fin si
 <h2 id="asynchrone--un-serveur-pour-les-gouverner-tous">Asynchrone — Un serveur pour les gouverner tous<a hidden class="anchor" aria-hidden="true" href="#asynchrone--un-serveur-pour-les-gouverner-tous">#</a></h2>
 <p>— Oui c&rsquo;est une référence au Seigneur des Anneaux 😄 —</p>
 <p>Reprenons l&rsquo;exemple du restaurant, toujours avec 2 familles (famille 1, famille 2), 2 tables (table 1, table 2), 1 serveur, 1 chef.</p>
-<p>Mais cette fois, on change l&rsquo;<strong>algorithme</strong> :</p>
-<pre tabindex="0"><code>Quand une famille arrive, alors :
-    Le serveur les accueille
-    Il les installe à une table libre
-    Il leur donne un menu
-    Il passe à autre chose
-Fin quand
+<p>Cette fois, le serveur fonctionne en mode <strong>asynchrone</strong>.
+Il commence une tâche, la confie à quelqu’un d’autre ou la met en attente, puis passe à la suivante immédiatement. Ce mode d&rsquo;exécution est dit <strong>non bloquant</strong> : le serveur ne reste jamais à attendre qu’une tâche se termine.</p>
+<p>Ce qui nous donne comme <strong>algorithme</strong> :</p>
+<pre tabindex="0"><code>Si une famille arrive:
+    Le serveur les laisse s&#39;installer à une table
+    Il continue avec d&#39;autres tâches
+Fin si
 
-Quand une famille appelle le serveur pour commander, alors :
+Si une famille s&#39;est installée:
+    Le serveur leur donne le menu
+    Il continue avec d&#39;autres tâches
+Fin si
+
+Si une famille appelle pour commander:
     Le serveur prend la commande
+    Il continue avec d&#39;autres tâches
+Fin si
+
+Si la commande est prise:
     Il la transmet au chef
-    Il passe à autre chose
-Fin quand
+    Il continue avec d&#39;autres tâches
+Fin si
 
-Quand la sonnette en cuisine retentit (plats prêts), alors :
+Si le chef signale que les plats sont prêts:
     Le serveur récupère les plats
-    Le serveur sert les plats à la bonne table
-    Il passe à autre chose
-Fin quand
+    Il continue avec d&#39;autres tâches
+Fin si
 
-Quand une famille veut payer, alors :
+Si le serveur a récupéré les plats:
+    Il les sert à la bonne table
+    Il continue avec d&#39;autres tâches
+Fin si
+
+Si une famille demande l’addition:
     Le serveur encaisse
-    Il libère la table
-    Il passe à autre chose
-Fin quand
-</code></pre><p>Cet algorithme est différent de ceux qu&rsquo;on a vus jusqu&rsquo;à présent.</p>
-<p><em>&ldquo;Quand &hellip;,&rdquo;</em> marque un <strong>événement</strong>, <em>&ldquo;alors&rdquo;</em> introduit le <strong>bloc</strong> d&rsquo;instructions à exécuter en <strong>réaction</strong>, et <em>&ldquo;Fin quand&rdquo;</em> marque la <strong>fin</strong> de ce bloc.</p>
-<p>On dit alors qu&rsquo;on fait de la <strong>programmation événementielle</strong> (ou <em>programmation réactive</em>) et que l&rsquo;algorithme est <strong>asynchrone</strong> : il fait de sorte à réagir aux événements extérieurs.</p>
-<p>Lorsqu’un événement se produit, le serveur y réagit immédiatement : il exécute les instructions associées, puis passe à l’événement suivant s’il y en a un. Sinon, il attend. Ce mode d&rsquo;exécution est donc <strong>non bloquant</strong>.</p>
-<p>Et dans les faits, c&rsquo;est ce que fait la plupart des personnes, serveurs ou non. Quand on fait une tâche, et qu&rsquo;on est interrompu par un bug, un appel, un collègue de travail qui pose une question, on est en <strong>réaction</strong>.</p>
+    Il continue avec d&#39;autres tâches
+Fin si
+
+Si une famille a payé:
+    Le serveur libère la table
+    Il continue avec d&#39;autres tâches
+Fin si
+</code></pre><p>Et dans les faits, c&rsquo;est ce que fait la plupart des personnes, serveurs ou non. Quand on fait une tâche, et qu&rsquo;on est interrompu par un bug, un appel, un collègue de travail qui pose une question, on est en <strong>réaction</strong>.</p>
 <p>Avec cet algorithme, un serveur seul pourra très bien gérer 2 tables.</p>
 <div class="exemples-bloc">
   <strong>📌 Exemples dans la vie réelle</strong>
@@ -264,13 +277,13 @@ Fin quand
     
   </ul>
 </div>
-<p>Attention : comme en mode <strong>synchrone</strong>, s&rsquo;il y a trop de table pour un seul serveur, plusieurs <strong>événements</strong> risquent de s&rsquo;accumuler en attente de traitement.</p>
+<p>Attention : comme en mode <strong>synchrone</strong>, s&rsquo;il y a trop de tables pour un seul serveur, plusieurs <strong>événements</strong> risquent de s&rsquo;accumuler en attente de traitement.</p>
 <blockquote>
 <p>Mais du coup, comment on fait pour résoudre ce problème ?</p></blockquote>
 <p>On verra ça dans le prochain article.</p>
 <h2 id="conclusion">Conclusion<a hidden class="anchor" aria-hidden="true" href="#conclusion">#</a></h2>
 <p>Dans cet article, on a vu ce qu&rsquo;étaient les modes d&rsquo;exécution <strong>synchrone</strong> et <strong>asynchrone</strong>.</p>
-<p>Si tu souhaites continuer cette aventure, tu peux regarder la suite ici: <a href="../threads/">IMVV — Section 2 — Chapitre 2 — Monothread et Multithread, je ne peux pas tout faire en même temps !</a></p>
+<p>Si tu souhaites continuer cette aventure, tu peux regarder la suite ici: <a href="../threads/">IMVV — Section 2 — Chapitre 3 — Monothread et Multithread, je ne peux pas tout faire en même temps !</a></p>
 <p><a href="../../l-execution/l-execution/">← Retour à la section</a></p>
 <p><a href="../../introduction/">← Retour à l’introduction</a></p>
 

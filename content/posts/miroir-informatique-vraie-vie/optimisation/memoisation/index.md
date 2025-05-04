@@ -93,7 +93,7 @@ Quand un certain seuil de scroll est atteint (par exemple, 90% du contenu affich
 Fin quand
 ```
 
-Tu l'auras remarqué, c'est ce qu'on a vu dans l'article [IMVV — Section 2 — Chapitre 1 — Synchrone et Asynchrone, ou comment réagir au changement](../sync-async/).
+Tu l'auras remarqué, c'est de la **programmation réactive**, ce qu'on a vu dans l'article [IMVV — Section 2 — Chapitre 1 — Paradigmes, ou comment réfléchir différemment](../../l-execution/paradigme/).
 
 ## Conclusion
 

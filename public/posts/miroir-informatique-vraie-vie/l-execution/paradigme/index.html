@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="fr" dir="auto">
+
+<head><script src="/blog.dev/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=blog.dev/livereload" data-no-instant defer></script><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="noindex, nofollow">
+<title>IMVV — Section 2 — Chapitre 1 — Paradigmes, ou comment réfléchir différemment | Encore un autre blog d&#39;un tahitien</title>
+<meta name="keywords" content="Informatique, IMVV">
+<meta name="description" content="Dans le précédent article, IMVV — Section 1 — Chapitre 3 — Structures de contrôle et algorithme, apprendre à réfléchir, on a vu les différentes structures de contrôle et les algorithmes.
+Dans cet article, on verra comment écrire un programme, et qu&rsquo;en changeant notre manière de réfléchir, certains problèmes sont plus simples à résoudre.
+Rassure-toi, nous n&rsquo;allons pas réellement développer.
+N&rsquo;oublie pas que les objectifs de ces articles sont :
+
+Te donner une meilleure compréhension des bases de l’informatique,
+T&rsquo;inspirer pour analyser ou optimiser les situations du quotidien,
+ou peut-être, qui sait, te donner envie d&rsquo;explorer encore plus loin&hellip; jusqu’à en faire ton métier.
+
+Programmation impérative — je t&rsquo;ordonne de m&rsquo;obéir
+Si je te demande un exemple de d&rsquo;ordre impératif, tu me diras peut-être : &ldquo;Range ta chambre&rdquo;. Il en résulte que l&rsquo;enfant range sa chambre — je parle d&rsquo;un enfant qui écoute ses parents —.">
+<meta name="author" content="">
+<link rel="canonical" href="http://localhost:1313/blog.dev/posts/miroir-informatique-vraie-vie/l-execution/paradigme/">
+<link crossorigin="anonymous" href="/blog.dev/assets/css/stylesheet.649a89ab5b3ace9a56ef6ec2dcd42ebba6add9c9cfe080c18aa59761d20f9080.css" integrity="sha256-ZJqJq1s6zppW727C3NQuu6at2cnP4IDBiqWXYdIPkIA=" rel="preload stylesheet" as="style">
+<link rel="icon" href="http://localhost:1313/blog.dev/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="http://localhost:1313/blog.dev/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="http://localhost:1313/blog.dev/favicon-32x32.png">
+<link rel="apple-touch-icon" href="http://localhost:1313/blog.dev/apple-touch-icon.png">
+<link rel="mask-icon" href="http://localhost:1313/blog.dev/safari-pinned-tab.svg">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<link rel="alternate" hreflang="fr" href="http://localhost:1313/blog.dev/posts/miroir-informatique-vraie-vie/l-execution/paradigme/">
+<noscript>
+    <style>
+        #theme-toggle,
+        .top-link {
+            display: none;
+        }
+
+    </style>
+    <style>
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --theme: rgb(29, 30, 32);
+                --entry: rgb(46, 46, 51);
+                --primary: rgb(218, 218, 219);
+                --secondary: rgb(155, 156, 157);
+                --tertiary: rgb(65, 66, 68);
+                --content: rgb(196, 196, 197);
+                --code-block-bg: rgb(46, 46, 51);
+                --code-bg: rgb(55, 56, 62);
+                --border: rgb(51, 51, 51);
+            }
+
+            .list {
+                background: var(--theme);
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-track {
+                background: 0 0;
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-thumb {
+                border-color: var(--theme);
+            }
+        }
+
+    </style>
+</noscript><script type="module">
+    import mermaid from "https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs";
+  
+    function getMermaidTheme() {
+      return document.body.classList.contains("dark") ? "dark" : "default";
+    }
+  
+    function renderMermaid() {
+      mermaid.initialize({ startOnLoad: false, theme: getMermaidTheme() });
+      mermaid.init(undefined, document.querySelectorAll(".mermaid"));
+    }
+  
+    document.addEventListener("DOMContentLoaded", () => {
+      renderMermaid();
+    });
+  
+    
+    const observer = new MutationObserver(() => {
+      renderMermaid();
+    });
+  
+    observer.observe(document.body, {
+      attributes: true,
+      attributeFilter: ["class"]
+    });
+  </script>
+</head>
+
+<body class="" id="top">
+<script>
+    if (localStorage.getItem("pref-theme") === "dark") {
+        document.body.classList.add('dark');
+    } else if (localStorage.getItem("pref-theme") === "light") {
+        document.body.classList.remove('dark')
+    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.body.classList.add('dark');
+    }
+
+</script>
+
+<header class="header">
+    <nav class="nav">
+        <div class="logo">
+            <a href="http://localhost:1313/blog.dev/" accesskey="h" title="Encore un autre blog d&#39;un tahitien (Alt + H)">Encore un autre blog d&#39;un tahitien</a>
+            <div class="logo-switches">
+                <button id="theme-toggle" accesskey="t" title="(Alt + T)" aria-label="Toggle theme">
+                    <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                    <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <ul id="menu">
+        </ul>
+    </nav>
+</header>
+<main class="main">
+
+<article class="post-single">
+  <header class="post-header">
+    
+    <h1 class="post-title entry-hint-parent">
+      IMVV — Section 2 — Chapitre 1 — Paradigmes, ou comment réfléchir différemment
+    </h1>
+    <div class="post-meta"><span title='2025-05-03 16:25:04 -1000 -10'>mai 3, 2025</span>
+
+</div>
+  </header> <div class="toc">
+    <details >
+        <summary accesskey="c" title="(Alt + C)">
+            <span class="details">Table des matières</span>
+        </summary>
+
+        <div class="inner"><ul>
+                <li>
+                    <a href="#programmation-imp%c3%a9rative--je-tordonne-de-mob%c3%a9ir" aria-label="Programmation impérative — je t&rsquo;ordonne de m&rsquo;obéir">Programmation impérative — je t&rsquo;ordonne de m&rsquo;obéir</a></li>
+                <li>
+                    <a href="#programmation-orient%c3%a9e-objet--je-manipule-des-objets" aria-label="Programmation orientée objet — je manipule des objets">Programmation orientée objet — je manipule des objets</a></li>
+                <li>
+                    <a href="#la-programmation-r%c3%a9active--action-r%c3%a9action" aria-label="La programmation réactive — Action, réaction">La programmation réactive — Action, réaction</a></li>
+                <li>
+                    <a href="#conclusion" aria-label="Conclusion">Conclusion</a>
+                </li>
+            </ul>
+        </div>
+    </details>
+</div>
+
+  <div class="post-content"><p>Dans le précédent article, <a href="../../les-bases/structures-de-controle/">IMVV — Section 1 — Chapitre 3 — Structures de contrôle et algorithme, apprendre à réfléchir</a>, on a vu les différentes structures de contrôle et les algorithmes.</p>
+<p>Dans cet article, on verra comment écrire un programme, et qu&rsquo;en changeant notre manière de réfléchir, certains problèmes sont plus simples à résoudre.</p>
+<p>Rassure-toi, nous n&rsquo;allons pas réellement développer.</p>
+<p>N&rsquo;oublie pas que les objectifs de ces articles sont :</p>
+<ul>
+<li>Te donner une meilleure compréhension des bases de l’informatique,</li>
+<li>T&rsquo;inspirer pour analyser ou optimiser les situations du quotidien,</li>
+<li>ou peut-être, qui sait, te donner envie d&rsquo;explorer encore plus loin&hellip; jusqu’à en faire ton métier.</li>
+</ul>
+<h2 id="programmation-impérative--je-tordonne-de-mobéir">Programmation impérative — je t&rsquo;ordonne de m&rsquo;obéir<a hidden class="anchor" aria-hidden="true" href="#programmation-impérative--je-tordonne-de-mobéir">#</a></h2>
+<p>Si je te demande un exemple de <em>d&rsquo;ordre impératif</em>, tu me diras peut-être : <em>&ldquo;Range ta chambre&rdquo;</em>. Il en résulte que l&rsquo;enfant range sa chambre — je parle d&rsquo;un enfant qui écoute ses parents —.</p>
+<p>En informatique, la <strong>programmation impérative</strong> ou <strong>paradigme impératif</strong> est équivalent, le programme est la liste des ordres que l&rsquo;ordinateur doit suivre.</p>
+<p>Dans l&rsquo;exemple de la recette de gâteau :</p>
+<pre tabindex="0"><code>Préchauffer le four
+Verser la farine dans le saladier
+Casser les oeufs et mettre le contenu dans le saladier
+Verser le lait dans le saladier
+Remuer
+Verser la préparation dans un moule
+Mettre le moule au four
+Attendre 20 minutes
+Eteindre le four
+Sortir le moule du four
+Démouler
+</code></pre><p>Cette recette est une liste d&rsquo;ordres.</p>
+<blockquote>
+<p>Pourquoi on appelle ça un <em>paradigme</em> au lieu de dire une <em>manière de réfléchir</em> ?</p></blockquote>
+<p>Eh bien, c&rsquo;est exactement ce que veut dire le mot <strong>paradigme</strong> : une manière de réfléchir. C&rsquo;est le terme exact, et puis c&rsquo;est plus court.</p>
+<h2 id="programmation-orientée-objet--je-manipule-des-objets">Programmation orientée objet — je manipule des objets<a hidden class="anchor" aria-hidden="true" href="#programmation-orientée-objet--je-manipule-des-objets">#</a></h2>
+<p>La programmation impérative est centrée sur le fait de donner des ordres à un ordinateur. Mais si on résume un programme, finalement, c&rsquo;est juste des données et des fonctions qui modifient ces données.</p>
+<p>C&rsquo;est pourquoi nos prédécesseurs ont inventé la <strong>programmation orientée objet</strong>. On manipule des objets, on les transforme, l&rsquo;attention est maintenant sur les données.</p>
+<p>Un exemple :</p>
+<p>Supposons que tu souhaites acheter des chaussures. Tu vas au magasin de chaussures et tu vois une belle paire de chaussures. Ces chaussures sont exactement de ta <em>pointure</em>, de ta <em>couleur</em> préférée, c&rsquo;est une <em>marque</em> que tu aimes bien, et puis leur <em>design</em> est vraiment bien. Bref, c&rsquo;est un bel <strong>objet</strong>.</p>
+<p>Par contre, son prix est un peu au-dessous de ton budget. Heureusement, tu as une carte de fidélité qui pourrait faire baisser le prix.</p>
+<p>On peut représenter les chaussures en informatique eà l&rsquo;aide d&rsquo;une <strong>classe</strong>, qui est un modèle qu&rsquo;elles suivront toutes :</p>
+<figure>
+<div class="mermaid-wrapper">
+	<div class="mermaid">
+		%%{
+			init: {
+			  'theme': 'base',
+			  'themeVariables': {
+				'primaryColor': '#ddd',
+				'primaryTextColor': '#007acc',
+				'primaryBorderColor': '#007acc',
+				'lineColor': '#007acc'
+			  }
+			}
+		  }%%
+		
+classDiagram
+    class PaireDeChaussures {
+        - pointure
+        - couleur
+        - marque
+        - design
+        - prix
+        - utiliserCarteDeFidélité()
+    }
+
+	</div>
+</div>
+<figcaption>La paire de chaussures de tes rêves</figcaption>
+</figure>
+<p>Cette classe est une structure qui nous permet de stocker tous les attributs d&rsquo;une paire de chaussures au même endroit. Ainsi on pourrait avoir :</p>
+<pre tabindex="0"><code># La paire de chaussures que tu veux
+PaireDeChaussures1{
+    pointure: 45
+    couleur: noire
+    marque: Nike
+    design: espadrilles
+    prix: 30 000 XPF
+}
+
+# Une autre paire de chaussures
+PaireDeChaussures2{
+    pointure: 45
+    couleur: noire
+    marque: Nike
+    design: espadrilles
+    prix: 30 000 XPF
+}
+</code></pre><p>Et en utilisant la fonction <em>utiliserCarteDeFidélité()</em> d&rsquo;une chaussure, on pourrait faire baisser son attribut <em>prix</em>.</p>
+<h2 id="la-programmation-réactive--action-réaction">La programmation réactive — Action, réaction<a hidden class="anchor" aria-hidden="true" href="#la-programmation-réactive--action-réaction">#</a></h2>
+<p>Les précédents paradigmes sont très utiles pour manipuler des données et donner des ordres. Mais imaginons la situation suivante :</p>
+<p>Tu as passé un concours il y a un mois. L&rsquo;examinateur t&rsquo;a dit que les résultats seraient disponibles sur un site internet. Sur ce site :</p>
+<ul>
+<li>tu peux évidemment regarder les résultats s&rsquo;il y en a,</li>
+<li>mais tu peux aussi demander à recevoir une notification dès que les résultats sont publiés.</li>
+</ul>
+<p>Si tu essayais de programmer ton comportement, en programmation impérative ou orientée objet ça donnerait quelque chose comme ça :</p>
+<pre tabindex="0"><code>Tant que je n&#39;ai pas mes résultats:
+    je vais sur le site
+    S&#39;il y a mes résultats:
+        je les regarde (on sort de la boucle)
+    Fin si
+Fin tant que
+</code></pre><p>En <strong>programmation réactive</strong> :</p>
+<pre tabindex="0"><code>Quand je reçois une notification, alors:
+    je vais sur le site
+    je regarde mes résultats
+Fin quand
+</code></pre><p><em>&ldquo;Quand &hellip;,&rdquo;</em> marque un <strong>événement</strong>, <em>&ldquo;alors&rdquo;</em> introduit le <strong>bloc</strong> d&rsquo;instructions à exécuter en <strong>réaction</strong>, et <em>&ldquo;Fin quand&rdquo;</em> marque la <strong>fin</strong> de ce bloc.</p>
+<p>On dit alors qu&rsquo;on fait de la <strong>programmation événementielle</strong> (ou <em>programmation réactive</em>) : on réagit aux événements extérieurs. L&rsquo;avantage est qu&rsquo;avec cet algorithme, tu as dépensé moins d&rsquo;énergie, tu n&rsquo;es pas allé regarder tous les jours sur le site.</p>
+<p>Si tu es attentif, tu as remarqué que le <strong>bloc est en programmation impérative</strong> : ce qui est important de comprendre, c&rsquo;est que <strong>les paradigmes ne sont pas opposés</strong>, on peut les combiner.</p>
+<h2 id="conclusion">Conclusion<a hidden class="anchor" aria-hidden="true" href="#conclusion">#</a></h2>
+<p>Nous avons vu différents façons de réfléchir pour répondre à différents problèmes. Il existe d&rsquo;autres paradigmes de programmation, dont certains très connus, que je n&rsquo;ai pas abordé (fonctionnel, par contraintes, etc.).</p>
+<p>Toi aussi dans ta vie réelle, quand tu es face à un problème, essaie de changer de point de vue. Peut-être que tu trouveras ainsi solution plus naturelle.</p>
+<p>Tu peux lire la suite de cette série ici: <a href="../sync-async/">IMVV — Section 2 — Chapitre 2 — Modes d&rsquo;exécution synchrone et asynchrone, ou comment réagir au changement</a></p>
+<p><a href="../../l-execution/l-execution/">← Retour à la section</a></p>
+<p><a href="../../introduction/">← Retour à l’introduction</a></p>
+
+
+  </div>
+
+  <footer class="post-footer">
+    <ul class="post-tags">
+      <li><a href="http://localhost:1313/blog.dev/tags/informatique/">Informatique</a></li>
+      <li><a href="http://localhost:1313/blog.dev/tags/imvv/">IMVV</a></li>
+    </ul>
+  </footer>
+</article>
+    </main>
+    
+<footer class="footer">
+        <span>&copy; 2025 <a href="http://localhost:1313/blog.dev/">Encore un autre blog d&#39;un tahitien</a></span> · 
+
+    <span>
+        Powered by
+        <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &
+        <a href="https://github.com/adityatelange/hugo-PaperMod/" rel="noopener" target="_blank">PaperMod</a>
+    </span>
+</footer>
+<a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
+        <path d="M12 6H0l6-6z" />
+    </svg>
+</a>
+
+<script>
+    let menu = document.getElementById('menu')
+    if (menu) {
+        menu.scrollLeft = localStorage.getItem("menu-scroll-position");
+        menu.onscroll = function () {
+            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
+        }
+    }
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            var id = this.getAttribute("href").substr(1);
+            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+                    behavior: "smooth"
+                });
+            } else {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
+            }
+            if (id === "top") {
+                history.replaceState(null, null, " ");
+            } else {
+                history.pushState(null, null, `#${id}`);
+            }
+        });
+    });
+
+</script>
+<script>
+    var mybutton = document.getElementById("top-link");
+    window.onscroll = function () {
+        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
+            mybutton.style.visibility = "visible";
+            mybutton.style.opacity = "1";
+        } else {
+            mybutton.style.visibility = "hidden";
+            mybutton.style.opacity = "0";
+        }
+    };
+
+</script>
+<script>
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        if (document.body.className.includes("dark")) {
+            document.body.classList.remove('dark');
+            localStorage.setItem("pref-theme", 'light');
+        } else {
+            document.body.classList.add('dark');
+            localStorage.setItem("pref-theme", 'dark');
+        }
+    })
+
+</script>
+</body>
+
+</html>

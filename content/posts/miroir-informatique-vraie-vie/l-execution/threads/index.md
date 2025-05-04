@@ -1,15 +1,15 @@
 ---
-title: "IMVV — Section 2 — Chapitre 2 — Monothread, Multithread, Parallélisme et Concurrence, je ne peux pas tout faire en même temps !"
+title: "IMVV — Section 2 — Chapitre 3 — Monothread, Multithread, Parallélisme et Concurrence, je ne peux pas tout faire en même temps !"
 #description: <descriptive text here>
 date: 2025-05-01T10:40:55-10:00
-weight: 2
+weight: 3
 draft: false
 showToc: true
 image: ""
 tags: [Informatique, IMVV]
 categories: [Vulgarisation]
 ---
-Dans le précédent article, [IMVV — Section 2 — Chapitre 1 — Synchrone et Asynchrone, ou comment réagir au changement](../sync-async/), on a vu les différents modes d'exécution.
+Dans le précédent article, [IMVV — Section 2 — Chapitre 2 — Modes d'exécution synchrone et asynchrone, ou comment réagir au changement](../sync-async/), on a vu les différents modes d'exécution.
 
 On s'était arrêté sur le problème suivant : Comment faire pour répondre à la montée en charge, à l'accumulation de tâches ?
 
