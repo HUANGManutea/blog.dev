@@ -9,7 +9,7 @@ image: ""
 tags: [Informatique, IMVV]
 categories: [Vulgarisation]
 ---
-Dans l'article précédent [IMVV — Section 1 — Chapitre 2 — Autres structures de données, j'organise mon bordel](../structures-de-donnees/), on s'était arrêté sur ta question :
+Dans l'article précédent [IMVV — Section 1 — Chapitre 2 — Autres structures de données, j'organise mon bazar](../structures-de-donnees/), on s'était arrêté sur ta question :
 
 >Et c'est quoi le parcours de graphe?
 
@@ -46,7 +46,7 @@ Toute cette suite d'étapes est ce qu'on appelle un **algorithme**, et la façon
 
 Je te laisse chercher sur internet pourquoi on appelle ça un [algorithme](https://fr.wikipedia.org/wiki/Algorithme).
 
-## La boucle for — ou comment être *fiu*
+## La for loop — ou comment être *fiu*
 
 Ton meilleur ami Manutea te demande *"Comment tu as fait pour inviter toutes ces personnes à ton anniversaire ?"*. Laquelle de ces 2 phrases dirais-tu :
 - J'ai appelé Manutea, puis j'ai appelé Vai, puis j'ai appelé Purotu, puis j'ai appelé Heiarii, puis j'ai appelé Reva, puis j'ai appelé Jean, puis j'ai appelé Tiare, puis j'ai appelé Paul
@@ -59,7 +59,7 @@ Sans forcément y penser, tu utilises aussi une **variable** : un espace dans ta
 
 Cette manière de répéter une action avec une variable, c’est exactement ce qu’un ordinateur fait quand on lui demande de parcourir une liste.
 
-Si tu relis bien la 2ème phrase, tu verras que **pour chaque** est en gras. En anglais, *pour chaque* se dit *for each*, c'est pour ça qu'on l'appelle la **boucle for** dans la plupart des langages.
+Si tu relis bien la 2ème phrase, tu verras que **pour chaque** est en gras. En anglais, *pour chaque* se dit *for each*, c'est pour ça qu'on l'appelle la **for loop** dans la plupart des langages.
 
 Si on essayait d'écrire un **algorithme**, sous forme de **pseudo-code** simple pour décrire la 2ème phrase, ça donnerait :
 
@@ -76,7 +76,7 @@ Entre ces 2 lignes, les actions *"J'ai appelé le numéro correspondant au conta
 
 Par convention, on **indente** ce bloc — on le décale vers la droite — pour montrer visuellement qu'il est à l'intérieur de la boucle.
 
->Ok, et quel est le rapport entre la boucle for et *fiu* comme marqué dans le titre ?
+>Ok, et quel est le rapport entre la *for loop* et *fiu* comme marqué dans le titre ?
 
 Si on devait écrire l'algorithme de la 1ère phrase, ça donnerait :
 ```
@@ -101,7 +101,7 @@ mais pour te faire sentir la puissance de la boucle : un seul bloc, quelle que s
 
 Dans la vraie vie, tu fais un groupe Facebook avec tous tes amis et tu postes des messages d'informations dans le groupe pour organiser, idem pour un groupe SMS. Si t'es old school, tu postes un message dans le journal local et viendra qui verra. D'ailleurs j'en parlerai dans de prochains articles.
 
-## La boucle while — ou comment faire ses devoirs avant d'aller jouer
+## La while loop — ou comment faire ses devoirs avant d'aller jouer
 
 Quand tu étais plus jeune, on t'a sûrement déjà dit *"Fais d'abord tes devoirs, ensuite tu peux aller jouer"*, ou autrement dit *"**Tant que** tu n'a pas fini tes devoirs, tu travailles, ensuite tu peux aller jouer"*.
 
@@ -118,17 +118,17 @@ Je vais jouer
 
 Entre ces 2 lignes, l'action *"Je fais mes devoirs"* forme le **bloc** d'instructions.
 
-Tu l'auras remarqué, c'est très similaire à la **boucle for**, sauf qu'au lieu de parcourir des éléments, on vérifie une **condition**, et on répète la boucle si la condition n'est remplie.
+Tu l'auras remarqué, c'est très similaire à la **for loop**, sauf qu'au lieu de parcourir des éléments, on vérifie une **condition**, et on répète la boucle si la condition n'est remplie.
 
-On appelle ça une **boucle while**, car *Tant que* se dit *while* en anglais.
+On appelle ça une **while loop**, car *Tant que* se dit *while* en anglais.
 
-Ensuite, une fois que les devoirs sont finis, on *sort de la boucle*, on fait la suite des instructions, donc *"Je vais jouer"*. On aurait aussi pu avoir d'autres instructions après la **boucle for**, c'est juste que l'exemple ne s'y prêtait pas.
+Ensuite, une fois que les devoirs sont finis, on *sort de la boucle*, on fait la suite des instructions, donc *"Je vais jouer"*. On aurait aussi pu avoir d'autres instructions après la **for loop**, c'est juste que l'exemple ne s'y prêtait pas.
 
->Mais alors… pourquoi deux types de boucles si elles font (presque) la même chose ? Pourquoi une boucle for, et une boucle while ?
+>Mais alors… pourquoi deux types de boucles si elles font (presque) la même chose ? Pourquoi une for loop ET une while loop ?
 
 En fait, en fonction du problème qu'on veut résoudre :
-- dans certains cas on pourra compter, et dans ce cas on préfèrera utiliser une **boucle for**
-- dans certains cas on ne pourra pas compter, et dans ce cas on préfèrera utiliser une **boucle while**
+- dans certains cas on pourra compter, et dans ce cas on préfèrera utiliser une **for loop**
+- dans certains cas on ne pourra pas compter, et dans ce cas on préfèrera utiliser une **while loop**
 
 Par exemple, pour un enfant qui joue dehors:
 
@@ -143,8 +143,8 @@ Ici, impossible de compter.
 Mais tu commences peut-être à te rendre compte d'une supercherie.
 
 {{% miroir-informatique-vraie-vie-instant-dev %}}
-💡 En réalité, **toutes les boucles for peuvent être réécrites en boucle while**.  
-La **boucle for** n’est qu’une **boucle while optimisée**, écrite pour être plus simple à lire… quand on sait compter.
+💡 En réalité, **toutes les boucles for peuvent être réécrites en while loop**.  
+La **for loop** n’est qu’une **while loop optimisée**, écrite pour être plus simple à lire… quand on sait compter.
 
 Les 2 types de boucles sont des **instructions d'itération**, à la différence des **instructions** simples comme *"Je joue"*, les **instructions d'itération** permettre d'exécuter des **blocs** d'instructions de manière répétée.
 {{% /miroir-informatique-vraie-vie-instant-dev %}}
@@ -164,7 +164,7 @@ Nombre d'éléments: 8
 
 - une variable c'est juste un espace mémoire où on stocke une donnée (un tableau, une liste, un prénom, un numéro de téléphone)
 
-Si on reprend l'exemple de la **boucle for**:
+Si on reprend l'exemple de la **for loop**:
 
 ```
 Dans mon carnet d'adresses, pour chaque contact:
@@ -185,11 +185,11 @@ Tant que "index" est inférieur au nombre d'éléments (8) du carnet d'adresses:
 Fin tant que
 ```
 
-Comme tu le vois, c'est un peu plus compliqué, c'est pour ça qu'on préfère utiliser une **boucle for** quand on peut compter.
+Comme tu le vois, c'est un peu plus compliqué, c'est pour ça qu'on préfère utiliser une **for loop** quand on peut compter.
 
 ## L'instruction conditionnelle — ou pourquoi il faut respecter le code de la route
 
-Juste au-dessus, on parlait de **condition** dans la **boucle while**. Mais on n'a jamais expliqué ce que c'était.
+Juste au-dessus, on parlait de **condition** dans la **while loop**. Mais on n'a jamais expliqué ce que c'était.
 
 Une condition est une question qu'on se pose, et la réponse est soit “oui”, soit “non” — jamais les deux, jamais "un peu".
 

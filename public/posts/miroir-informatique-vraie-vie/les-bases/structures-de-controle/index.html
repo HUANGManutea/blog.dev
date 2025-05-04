@@ -7,7 +7,7 @@
 <meta name="robots" content="noindex, nofollow">
 <title>IMVV — Section 1 — Chapitre 3 — Structures de contrôle et algorithme, apprendre à réfléchir | Encore un autre blog d&#39;un tahitien</title>
 <meta name="keywords" content="Informatique, IMVV">
-<meta name="description" content="Dans l&rsquo;article précédent IMVV — Section 1 — Chapitre 2 — Autres structures de données, j&rsquo;organise mon bordel, on s&rsquo;était arrêté sur ta question :
+<meta name="description" content="Dans l&rsquo;article précédent IMVV — Section 1 — Chapitre 2 — Autres structures de données, j&rsquo;organise mon bazar, on s&rsquo;était arrêté sur ta question :
 
 Et c&rsquo;est quoi le parcours de graphe?
 Dans cet article, on va parler des structures de contrôle (control flow statements en anglais), qu&rsquo;on utilise dans des algorithmes (algorithms en anglais).
@@ -151,9 +151,9 @@ Avant d&rsquo;expliquer l&rsquo;algorithme que tu as fait, le parcours de graphe
                 <li>
                     <a href="#pseudo-code--lart-de-la-cuisine" aria-label="Pseudo-code — l&rsquo;art de la cuisine">Pseudo-code — l&rsquo;art de la cuisine</a></li>
                 <li>
-                    <a href="#la-boucle-for--ou-comment-%c3%aatre-fiu" aria-label="La boucle for — ou comment être fiu">La boucle for — ou comment être fiu</a></li>
+                    <a href="#la-for-loop--ou-comment-%c3%aatre-fiu" aria-label="La for loop — ou comment être fiu">La for loop — ou comment être fiu</a></li>
                 <li>
-                    <a href="#la-boucle-while--ou-comment-faire-ses-devoirs-avant-daller-jouer" aria-label="La boucle while — ou comment faire ses devoirs avant d&rsquo;aller jouer">La boucle while — ou comment faire ses devoirs avant d&rsquo;aller jouer</a></li>
+                    <a href="#la-while-loop--ou-comment-faire-ses-devoirs-avant-daller-jouer" aria-label="La while loop — ou comment faire ses devoirs avant d&rsquo;aller jouer">La while loop — ou comment faire ses devoirs avant d&rsquo;aller jouer</a></li>
                 <li>
                     <a href="#linstruction-conditionnelle--ou-pourquoi-il-faut-respecter-le-code-de-la-route" aria-label="L&rsquo;instruction conditionnelle — ou pourquoi il faut respecter le code de la route">L&rsquo;instruction conditionnelle — ou pourquoi il faut respecter le code de la route</a></li>
                 <li>
@@ -170,7 +170,7 @@ Avant d&rsquo;expliquer l&rsquo;algorithme que tu as fait, le parcours de graphe
     </details>
 </div>
 
-  <div class="post-content"><p>Dans l&rsquo;article précédent <a href="../structures-de-donnees/">IMVV — Section 1 — Chapitre 2 — Autres structures de données, j&rsquo;organise mon bordel</a>, on s&rsquo;était arrêté sur ta question :</p>
+  <div class="post-content"><p>Dans l&rsquo;article précédent <a href="../structures-de-donnees/">IMVV — Section 1 — Chapitre 2 — Autres structures de données, j&rsquo;organise mon bazar</a>, on s&rsquo;était arrêté sur ta question :</p>
 <blockquote>
 <p>Et c&rsquo;est quoi le parcours de graphe?</p></blockquote>
 <p>Dans cet article, on va parler des <strong>structures de contrôle</strong> (<em>control flow statements</em> en anglais), qu&rsquo;on utilise dans des <strong>algorithmes</strong> (<em>algorithms</em> en anglais).</p>
@@ -198,7 +198,7 @@ Démouler
 <blockquote>
 <p>Mais pourquoi on appelle ça un algorithme? on peut pas juste dire une suite d&rsquo;actions?</p></blockquote>
 <p>Je te laisse chercher sur internet pourquoi on appelle ça un <a href="https://fr.wikipedia.org/wiki/Algorithme">algorithme</a>.</p>
-<h2 id="la-boucle-for--ou-comment-être-fiu">La boucle for — ou comment être <em>fiu</em><a hidden class="anchor" aria-hidden="true" href="#la-boucle-for--ou-comment-être-fiu">#</a></h2>
+<h2 id="la-for-loop--ou-comment-être-fiu">La for loop — ou comment être <em>fiu</em><a hidden class="anchor" aria-hidden="true" href="#la-for-loop--ou-comment-être-fiu">#</a></h2>
 <p>Ton meilleur ami Manutea te demande <em>&ldquo;Comment tu as fait pour inviter toutes ces personnes à ton anniversaire ?&rdquo;</em>. Laquelle de ces 2 phrases dirais-tu :</p>
 <ul>
 <li>J&rsquo;ai appelé Manutea, puis j&rsquo;ai appelé Vai, puis j&rsquo;ai appelé Purotu, puis j&rsquo;ai appelé Heiarii, puis j&rsquo;ai appelé Reva, puis j&rsquo;ai appelé Jean, puis j&rsquo;ai appelé Tiare, puis j&rsquo;ai appelé Paul</li>
@@ -208,7 +208,7 @@ Démouler
 <p>La 2ème, elle, utilise une <strong>boucle</strong> — tu répètes la même action pour chaque contact.
 Sans forcément y penser, tu utilises aussi une <strong>variable</strong> : un espace dans ta tête pour mémoriser un numéro, que tu remplaces à chaque nouvel appel.</p>
 <p>Cette manière de répéter une action avec une variable, c’est exactement ce qu’un ordinateur fait quand on lui demande de parcourir une liste.</p>
-<p>Si tu relis bien la 2ème phrase, tu verras que <strong>pour chaque</strong> est en gras. En anglais, <em>pour chaque</em> se dit <em>for each</em>, c&rsquo;est pour ça qu&rsquo;on l&rsquo;appelle la <strong>boucle for</strong> dans la plupart des langages.</p>
+<p>Si tu relis bien la 2ème phrase, tu verras que <strong>pour chaque</strong> est en gras. En anglais, <em>pour chaque</em> se dit <em>for each</em>, c&rsquo;est pour ça qu&rsquo;on l&rsquo;appelle la <strong>for loop</strong> dans la plupart des langages.</p>
 <p>Si on essayait d&rsquo;écrire un <strong>algorithme</strong>, sous forme de <strong>pseudo-code</strong> simple pour décrire la 2ème phrase, ça donnerait :</p>
 <pre tabindex="0"><code>Dans mon carnet d&#39;adresses, pour chaque contact:
     J&#39;ai appelé le numéro correspondant au contact
@@ -218,7 +218,7 @@ Fin pour
 <p>Entre ces 2 lignes, les actions <em>&ldquo;J&rsquo;ai appelé le numéro correspondant au contact&rdquo;</em> et <em>&ldquo;J&rsquo;ai invité l&rsquo;ami&rdquo;</em> forment ce qu&rsquo;on appelle un <strong>bloc</strong> d&rsquo;instructions.</p>
 <p>Par convention, on <strong>indente</strong> ce bloc — on le décale vers la droite — pour montrer visuellement qu&rsquo;il est à l&rsquo;intérieur de la boucle.</p>
 <blockquote>
-<p>Ok, et quel est le rapport entre la boucle for et <em>fiu</em> comme marqué dans le titre ?</p></blockquote>
+<p>Ok, et quel est le rapport entre la <em>for loop</em> et <em>fiu</em> comme marqué dans le titre ?</p></blockquote>
 <p>Si on devait écrire l&rsquo;algorithme de la 1ère phrase, ça donnerait :</p>
 <pre tabindex="0"><code>J&#39;ai appelé Manutea
 J&#39;ai appelé Vai
@@ -235,7 +235,7 @@ J&#39;ai appelé Paul
 <p>Cet exemple n’est pas là pour dire que tu vas programmer ton téléphone —
 mais pour te faire sentir la puissance de la boucle : un seul bloc, quelle que soit la longueur de ta liste.</p>
 <p>Dans la vraie vie, tu fais un groupe Facebook avec tous tes amis et tu postes des messages d&rsquo;informations dans le groupe pour organiser, idem pour un groupe SMS. Si t&rsquo;es old school, tu postes un message dans le journal local et viendra qui verra. D&rsquo;ailleurs j&rsquo;en parlerai dans de prochains articles.</p>
-<h2 id="la-boucle-while--ou-comment-faire-ses-devoirs-avant-daller-jouer">La boucle while — ou comment faire ses devoirs avant d&rsquo;aller jouer<a hidden class="anchor" aria-hidden="true" href="#la-boucle-while--ou-comment-faire-ses-devoirs-avant-daller-jouer">#</a></h2>
+<h2 id="la-while-loop--ou-comment-faire-ses-devoirs-avant-daller-jouer">La while loop — ou comment faire ses devoirs avant d&rsquo;aller jouer<a hidden class="anchor" aria-hidden="true" href="#la-while-loop--ou-comment-faire-ses-devoirs-avant-daller-jouer">#</a></h2>
 <p>Quand tu étais plus jeune, on t&rsquo;a sûrement déjà dit <em>&ldquo;Fais d&rsquo;abord tes devoirs, ensuite tu peux aller jouer&rdquo;</em>, ou autrement dit <em>&quot;<strong>Tant que</strong> tu n&rsquo;a pas fini tes devoirs, tu travailles, ensuite tu peux aller jouer&quot;</em>.</p>
 <p>Si on devait écrire cet algorithme, ça donnerait:</p>
 <pre tabindex="0"><code>Tant que je n&#39;ai pas fini mes devoirs:
@@ -245,15 +245,15 @@ Fin tant que
 Je vais jouer
 </code></pre><p><em>&ldquo;Tant que je n&rsquo;ai pas fini mes devoirs&rdquo;</em> marque le <strong>début</strong> de la boucle, et &ldquo;Fin tant que&rdquo; marque la <strong>fin</strong> de la boucle.</p>
 <p>Entre ces 2 lignes, l&rsquo;action <em>&ldquo;Je fais mes devoirs&rdquo;</em> forme le <strong>bloc</strong> d&rsquo;instructions.</p>
-<p>Tu l&rsquo;auras remarqué, c&rsquo;est très similaire à la <strong>boucle for</strong>, sauf qu&rsquo;au lieu de parcourir des éléments, on vérifie une <strong>condition</strong>, et on répète la boucle si la condition n&rsquo;est remplie.</p>
-<p>On appelle ça une <strong>boucle while</strong>, car <em>Tant que</em> se dit <em>while</em> en anglais.</p>
-<p>Ensuite, une fois que les devoirs sont finis, on <em>sort de la boucle</em>, on fait la suite des instructions, donc <em>&ldquo;Je vais jouer&rdquo;</em>. On aurait aussi pu avoir d&rsquo;autres instructions après la <strong>boucle for</strong>, c&rsquo;est juste que l&rsquo;exemple ne s&rsquo;y prêtait pas.</p>
+<p>Tu l&rsquo;auras remarqué, c&rsquo;est très similaire à la <strong>for loop</strong>, sauf qu&rsquo;au lieu de parcourir des éléments, on vérifie une <strong>condition</strong>, et on répète la boucle si la condition n&rsquo;est remplie.</p>
+<p>On appelle ça une <strong>while loop</strong>, car <em>Tant que</em> se dit <em>while</em> en anglais.</p>
+<p>Ensuite, une fois que les devoirs sont finis, on <em>sort de la boucle</em>, on fait la suite des instructions, donc <em>&ldquo;Je vais jouer&rdquo;</em>. On aurait aussi pu avoir d&rsquo;autres instructions après la <strong>for loop</strong>, c&rsquo;est juste que l&rsquo;exemple ne s&rsquo;y prêtait pas.</p>
 <blockquote>
-<p>Mais alors… pourquoi deux types de boucles si elles font (presque) la même chose ? Pourquoi une boucle for, et une boucle while ?</p></blockquote>
+<p>Mais alors… pourquoi deux types de boucles si elles font (presque) la même chose ? Pourquoi une for loop ET une while loop ?</p></blockquote>
 <p>En fait, en fonction du problème qu&rsquo;on veut résoudre :</p>
 <ul>
-<li>dans certains cas on pourra compter, et dans ce cas on préfèrera utiliser une <strong>boucle for</strong></li>
-<li>dans certains cas on ne pourra pas compter, et dans ce cas on préfèrera utiliser une <strong>boucle while</strong></li>
+<li>dans certains cas on pourra compter, et dans ce cas on préfèrera utiliser une <strong>for loop</strong></li>
+<li>dans certains cas on ne pourra pas compter, et dans ce cas on préfèrera utiliser une <strong>while loop</strong></li>
 </ul>
 <p>Par exemple, pour un enfant qui joue dehors:</p>
 <pre tabindex="0"><code>Tant qu&#39;il fait beau:
@@ -264,8 +264,8 @@ Fin tant que
 <div class="instant-dev">
   <strong>Instant Dev</strong>
   <div class="instant-dev-content">
-    <p>💡 En réalité, <strong>toutes les boucles for peuvent être réécrites en boucle while</strong>.<br>
-La <strong>boucle for</strong> n’est qu’une <strong>boucle while optimisée</strong>, écrite pour être plus simple à lire… quand on sait compter.</p>
+    <p>💡 En réalité, <strong>toutes les boucles for peuvent être réécrites en while loop</strong>.<br>
+La <strong>for loop</strong> n’est qu’une <strong>while loop optimisée</strong>, écrite pour être plus simple à lire… quand on sait compter.</p>
 <p>Les 2 types de boucles sont des <strong>instructions d&rsquo;itération</strong>, à la différence des <strong>instructions</strong> simples comme <em>&ldquo;Je joue&rdquo;</em>, les <strong>instructions d&rsquo;itération</strong> permettre d&rsquo;exécuter des <strong>blocs</strong> d&rsquo;instructions de manière répétée.</p>
   </div>
 </div>
@@ -309,7 +309,7 @@ La <strong>boucle for</strong> n’est qu’une <strong>boucle while optimisée<
 <ul>
 <li>une variable c&rsquo;est juste un espace mémoire où on stocke une donnée (un tableau, une liste, un prénom, un numéro de téléphone)</li>
 </ul>
-<p>Si on reprend l&rsquo;exemple de la <strong>boucle for</strong>:</p>
+<p>Si on reprend l&rsquo;exemple de la <strong>for loop</strong>:</p>
 <pre tabindex="0"><code>Dans mon carnet d&#39;adresses, pour chaque contact:
     J&#39;appelle le numéro correspondant au contact
     J&#39;invite l&#39;ami
@@ -322,9 +322,9 @@ Tant que &#34;index&#34; est inférieur au nombre d&#39;éléments (8) du carnet
     Je l&#39;invite
     &#34;index&#34; prend la valeur &#34;index&#34; + 1
 Fin tant que
-</code></pre><p>Comme tu le vois, c&rsquo;est un peu plus compliqué, c&rsquo;est pour ça qu&rsquo;on préfère utiliser une <strong>boucle for</strong> quand on peut compter.</p>
+</code></pre><p>Comme tu le vois, c&rsquo;est un peu plus compliqué, c&rsquo;est pour ça qu&rsquo;on préfère utiliser une <strong>for loop</strong> quand on peut compter.</p>
 <h2 id="linstruction-conditionnelle--ou-pourquoi-il-faut-respecter-le-code-de-la-route">L&rsquo;instruction conditionnelle — ou pourquoi il faut respecter le code de la route<a hidden class="anchor" aria-hidden="true" href="#linstruction-conditionnelle--ou-pourquoi-il-faut-respecter-le-code-de-la-route">#</a></h2>
-<p>Juste au-dessus, on parlait de <strong>condition</strong> dans la <strong>boucle while</strong>. Mais on n&rsquo;a jamais expliqué ce que c&rsquo;était.</p>
+<p>Juste au-dessus, on parlait de <strong>condition</strong> dans la <strong>while loop</strong>. Mais on n&rsquo;a jamais expliqué ce que c&rsquo;était.</p>
 <p>Une condition est une question qu&rsquo;on se pose, et la réponse est soit “oui”, soit “non” — jamais les deux, jamais &ldquo;un peu&rdquo;.</p>
 <p>Quand on écrit <em>&ldquo;Tant que je n&rsquo;ai pas fini mes devoirs&rdquo;</em>, à chaque répétition on pose la question &ldquo;Est-ce que j&rsquo;ai fini mes devoirs?&rdquo;.</p>
 <p>En informatique, comme dans la vraie vie, une condition doit être claire.</p>

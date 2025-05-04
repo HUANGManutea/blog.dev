@@ -1,5 +1,5 @@
 ---
-title: "IMVV — Section 1 — Chapitre 2 — Autres structures de données, j'organise mon bordel"
+title: "IMVV — Section 1 — Chapitre 2 — Autres structures de données, j'organise mon bazar"
 weight: 2
 #description: <descriptive text here>
 date: 2025-04-29T15:41:48-10:00
@@ -133,7 +133,7 @@ En effet, avec les 2 dernières structures, tu dois parcourir les éléments un 
 
 Je m'emporte un peu? Peut-être.
 
-Pour résoudre ce problème, en informatique on a inventé le **tableau associatif** (ou *map* en anglais). On utilise le **tableau**, et on va profiter de l'**index** pour justement **indexer** les éléments.
+Pour résoudre ce problème, en informatique on a inventé le **tableau associatif** (ou *associatve array* en anglais, selon les langages de programmation on dit aussi *map* ou *dictionary*). On utilise le **tableau**, et on va profiter de l'**index** pour justement **indexer** les éléments.
 
 Pour cela, on a besoin de réfléchir un peu:
 - On sait que l'index est une position dans le tableau, donc un nombre

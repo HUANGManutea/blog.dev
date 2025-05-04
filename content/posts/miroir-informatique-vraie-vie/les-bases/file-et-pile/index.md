@@ -69,7 +69,7 @@ Mais c’est très utile pour remonter dans le temps, ou revenir sur ses pas, ex
     info="Le bouton 'Retour' (←) de ton navigateur||Les annulations successives (Undo, CTRL+Z) dans un éditeur de texte"
 >}}
 
-Si tu veux connaître d'autres structures de données, tu peux regarder le prochain article : [IMVV — Section 1 — Chapitre 2 — Autres structures de données, j'organise mon bordel](../structures-de-donnees/)
+Si tu veux connaître d'autres structures de données, tu peux regarder le prochain article : [IMVV — Section 1 — Chapitre 2 — Autres structures de données, j'organise mon bazar](../structures-de-donnees/)
 
 [← Retour à la section](../../les-bases/les-bases/)
 
